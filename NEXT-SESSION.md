@@ -112,16 +112,27 @@ Nothing about Term 4 is blocked.
 
 ## Decisions waiting on Matthew
 
-1. **Rewrite `year8-music`'s published history?** See below. **Recommendation:
+1. **The school's name is in this repo's pushed history**, in
+   `NEXT-SESSION.md`, written by the 16 August handoff in the sentence that
+   was explaining the name is *not* in the Year 8 repo. One occurrence, one
+   file, six commits, two of them pushed. It has never been in `docs/`, so it
+   has never been served, and it is out of the working tree as of this
+   session. **This one is different from items 2 and 4.** The standing rule is
+   "no school name anywhere in the repository", not "no teacher's first name",
+   and the school is not the one who chose to publish. **Recommendation:
+   rewrite the two pushed commits, or take the repo private for the ten
+   minutes it takes.** Matthew's call, and it is the first thing to settle
+   next session.
+2. **Rewrite `year8-music`'s published history?** See below. **Recommendation:
    no.**
-2. **The lesson page carries three pieces of torn tape, not two** - the plate's
+3. **The lesson page carries three pieces of torn tape, not two** - the plate's
    two corner strips plus the rail's current row. Either the two corners count
    as one act of taping the plate down, or the build has been over budget since
    the first commit. Inherited from comp D. A ruling is owed at the finish
    review.
-3. **`DIRECTION.md` and the comp D approval sidecar name Matthew**, and both
+4. **`DIRECTION.md` and the comp D approval sidecar name Matthew**, and both
    are already in pushed history. Same question as Year 8, smaller.
-4. **The `artist` field in a `listen` entry is never rendered, and the case for
+5. **The `artist` field in a `listen` entry is never rendered, and the case for
    deleting it is now stronger.** Comp D shows the title and a short meta only,
    and that is approved. The meta is `white-space:nowrap`, so a long performer
    name in it squeezes the title onto three lines. Term 1 input 04 tested the
@@ -136,9 +147,16 @@ Nothing about Term 4 is blocked.
 ## The Year 8 repo
 
 The previous handoff said `year8-music` had **the school's name** in it
-including in served pages. **That was wrong.** the school's name, its initials and "high
-school" all return zero on a word-boundary search across every blob in all 31
-commits; the apparent hits were substring and regex-wildcard noise.
+including in served pages. **That was wrong.** The school's name, its initials
+and the words "high school" all return zero on a word-boundary search across
+every blob in all 31 commits; the apparent hits were substring and
+regex-wildcard noise.
+
+**Do not write the search terms out here to make that claim checkable.** The
+16 August handoff did, and in doing so it put the school's name into this
+public repo for the first time, in the one sentence that was documenting its
+absence somewhere else. It is fixed forward above and is still in pushed
+history. See the ruling below.
 
 The real leak was **the teacher's first name on all 105 served pages**, baked
 in by `build.py`. Fixed forward to "the user", matching what this repo already
@@ -196,5 +214,5 @@ must not be shortcut, and Terms 1 and 2 each fitted comfortably in one session
 at that setting.
 
 If instead you are doing the finish review and DESIGN.md, **Opus, medium** as
-well. It is a judgement pass over an approved contract, and there are four
+well. It is a judgement pass over an approved contract, and there are five
 rulings queued for it.
