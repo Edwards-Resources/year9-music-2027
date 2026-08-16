@@ -2,9 +2,15 @@
 
 ## Where this stands, 16 August 2026
 
-**The scaffold is built and the lesson page reproduces comp D.** One git repo, local
-only, one commit, no GitHub remote. The world and the composition are unchanged; this
-session added the machinery under them.
+**The scaffold is built, the lesson page reproduces comp D, and the site is live.**
+
+- **https://edwards-resources.github.io/year9-music-2027/**
+- Repo: `Edwards-Resources/year9-music-2027`, public, Pages serving `main` `/docs`.
+- The history starts at `3f52abb`, which is the whole build as one commit. It was
+  deliberately rebuilt that way before the first push; see the redaction note below.
+
+The world and the composition are unchanged; this session added the machinery under
+them.
 
 | File | What it is |
 | --- | --- |
@@ -59,23 +65,35 @@ room is small on a lesson page and large only on the hub.
 **Fonts self-hosted**: Saira Stencil One plus the Chivo and Chivo Mono variable faces,
 latin subset, confirmed loading with their real weight axes. Nothing from a CDN.
 
+## The redaction, and why the history is one commit
+
+`PRODUCT.md` named both AT3 unseen excerpts with their YouTube ids, and
+`NEXT-SESSION.md` named them too. This repo is public, so that hands a student the
+paper, which is the exact thing the rule three lines above it exists to prevent. Both
+were redacted to a pointer at `Music7-10_Y9_RepertoireRegister.md`, which is off this
+repo and is the proper authority for repertoire.
+
+The three original local commits already contained the strings and git history is
+permanent, so the history was rebuilt as a single clean commit before the first push
+rather than layering a redaction on top of it. Verified across the whole history: no
+ids, no work titles, no school name.
+
+**The lesson for the content sessions: the register is the only place those two works
+are written down, and it must stay that way.** Do not copy them into a note here to
+make it easier to follow.
+
 ## The actual next task
 
-1. **The GitHub repo is still not created and nothing is pushed.** `year9-music-2027`
-   under `Edwards-Resources`, publishing at
-   `https://edwards-resources.github.io/year9-music-2027/`. **Ask Matthew first**, per
-   the standing rule. The repo name is load-bearing: `base` in `data/site.json` is
-   compiled into every internal link.
-2. **Design the term hub.** No approved comp. It currently renders as a page that says
+1. **Design the term hub.** No approved comp. It currently renders as a page that says
    so in as many words, with the registered input list under it, so nothing links into
    nowhere. B's multicore strip, thirty lessons as one line along the downstage edge,
    is the starting point, and this is where the plan drawing is allowed to be large and
    where the other three terms show through as ghost line. B rendered those ghosts
    weakly at 7 to 10 percent; rebuild the device before trusting it.
-3. **Design the home surface.** No comp at all. `docs/index.html` is currently a copy
+2. **Design the home surface.** No comp at all. `docs/index.html` is currently a copy
    of the current lesson page, which is the one thing home certainly has to do, and
    nothing more.
-4. Then the content pour, which is a different kind of session again. See below.
+3. Then the content pour, which is a different kind of session again. See below.
 
 ## What is genuinely missing
 
@@ -127,7 +145,14 @@ latin subset, confirmed loading with their real weight axes. Nothing from a CDN.
   at the commit; grep any new file before committing.
 - **No student names, work or marks**, ever. `noindex` on every page.
 - **Never `git stash` in these repos** now that `docs/` is tracked build output.
-- **The repos are public and git history is permanent. Ask Matthew before pushing.**
+- **The repo is public and live, and git history is permanent.** Sweep any new file
+  before committing, not just before pushing: once it is in a commit that has been
+  pushed, taking it out means rewriting published history. **Ask Matthew before
+  pushing.**
+- **`year8-music` has the same problem already, unfixed.** That repo is public and has
+  the school's name in it, including in served pages under `docs/`. Not this session's
+  job and not touched, but it needs one: scrubbing it means rewriting that repo's
+  published history, not a follow-up commit.
 
 ## Model and effort
 
