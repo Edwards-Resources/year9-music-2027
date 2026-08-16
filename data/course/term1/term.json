@@ -43,7 +43,40 @@
         "Room kit: guitars, bass, keys, drums, vocal PA.",
         "Role cards."
       ],
-      "enduring": "A band works because each player knows their role, their function and their balance."
+      "enduring": "A band works because each player knows their role, their function and their balance.",
+      "body": {
+        "lead": "We are learning what each player is responsible for in a band.",
+        "bring": "Your instrument",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Everybody is placed on a part today, and the four roles in the room are named while you are sitting behind them: melody, harmony, bass and groove."
+          },
+          {
+            "kind": "With the band",
+            "text": "The whole room plays one four-chord loop together. It will not sound good the first time. It is then fixed one role at a time, so you hear what each role was doing wrong."
+          },
+          {
+            "kind": "On your own",
+            "text": "Write down which role you are carrying and who else in the room is carrying it. Those are the people you listen to first."
+          }
+        ],
+        "criteria": [
+          "I can name my role in the ensemble.",
+          "I can say who I have to listen to."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Room kit: guitars, bass, keys, drums, vocal PA"
+          },
+          {
+            "n": "R2",
+            "text": "Role cards"
+          }
+        ]
+      }
     },
     {
       "number": 2,
@@ -70,7 +103,44 @@
         "Warm-up card.",
         "Hygiene supplies for shared mouthpieces."
       ],
-      "enduring": "Safe and respectful practice is a condition of playing, not an extra."
+      "enduring": "Safe and respectful practice is a condition of playing, not an extra.",
+      "body": {
+        "lead": "We are learning to work safely and respectfully in a music room.",
+        "bring": "Your instrument",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "The warm-up for voice and for hands is taught once, as a routine. From today it runs at the start of every lesson and nobody is reminded to do it."
+          },
+          {
+            "kind": "In the room",
+            "text": "Posture, volume and hearing. How to handle cables, amps and stands, and the order the room gets packed down in."
+          },
+          {
+            "kind": "On your own",
+            "text": "Learn the protocols for other people's instruments: hygiene, asking first, and reporting damage straight away rather than hoping nobody noticed."
+          }
+        ],
+        "criteria": [
+          "I can warm up without being led through it.",
+          "I can set up and pack down the room in the right order."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Room set-up map"
+          },
+          {
+            "n": "R2",
+            "text": "Warm-up card"
+          },
+          {
+            "n": "R3",
+            "text": "Hygiene supplies for shared mouthpieces"
+          }
+        ]
+      }
     },
     {
       "number": 3,
@@ -96,7 +166,39 @@
         "flat.io class notebook.",
         "Aural routine sheet 1."
       ],
-      "enduring": "Aural skill improves through short, regular, structured practice."
+      "enduring": "Aural skill improves through short, regular, structured practice.",
+      "body": {
+        "lead": "We are learning to identify the elements of music by ear and write down what we hear.",
+        "bring": "Headphones",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "flat.io opens today and the class notebook is set up. Nothing is composed in it yet: this is where your bookwork lives for the rest of the year."
+          },
+          {
+            "kind": "In the room",
+            "text": "The weekly aural routine starts now and does not stop. Ten minutes on metre, beat and pulse, heard first and named second."
+          },
+          {
+            "kind": "In flat.io",
+            "text": "Take the note entry drill: pitches placed on the stave from dictation, then checked against the answer."
+          }
+        ],
+        "criteria": [
+          "I can hear the metre of an excerpt.",
+          "I can write down what I heard correctly."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "flat.io class notebook"
+          },
+          {
+            "n": "R2",
+            "text": "Aural routine sheet 1"
+          }
+        ]
+      }
     },
     {
       "number": 4,
@@ -123,7 +225,62 @@
         "Chord shape cards.",
         "Listening set from the repertoire register."
       ],
-      "enduring": "The same small pattern sits underneath a great many songs."
+      "enduring": "The same small pattern sits underneath a great many songs.",
+      "body": {
+        "lead": "We are learning to hear a chord progression and play it back.",
+        "repertoire": "Popular music",
+        "bring": "Your instrument",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "The four-chord loop is heard across a set of songs before it is named. You work out that they share something, then you are told what it is: I, V, vi, IV."
+          },
+          {
+            "kind": "With the band",
+            "text": "The loop is sung first and then played, in two keys, so that it stays a shape in your hands rather than a set of letters on a page."
+          },
+          {
+            "kind": "On your own",
+            "text": "Find by ear where the loop starts again, and mark the change points on your chart."
+          }
+        ],
+        "criteria": [
+          "I can hear the four-chord loop and play it.",
+          "I can say where it starts again."
+        ],
+        "listen": [
+          {
+            "title": "Let It Be",
+            "artist": "The Beatles",
+            "meta": "The Beatles"
+          },
+          {
+            "title": "With or Without You",
+            "artist": "U2",
+            "meta": "U2"
+          },
+          {
+            "title": "Someone Like You",
+            "artist": "Adele",
+            "meta": "Adele"
+          }
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Listening set, three songs"
+          },
+          {
+            "n": "R2",
+            "text": "flat.io charts"
+          },
+          {
+            "n": "R3",
+            "text": "Chord shape cards"
+          }
+        ]
+      }
     },
     {
       "number": 5,
@@ -149,7 +306,41 @@
         "flat.io class library.",
         "Printed lead sheets for the class repertoire."
       ],
-      "enduring": "Reading a chart is a skill in its own right, and it comes before writing one."
+      "enduring": "Reading a chart is a skill in its own right, and it comes before writing one.",
+      "body": {
+        "lead": "We are learning to read the scores a band actually uses.",
+        "repertoire": "Popular music",
+        "bring": "Instrument and printed parts",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "The difference between a chord chart and a lead sheet is taught by playing from both of them, not by looking at them side by side."
+          },
+          {
+            "kind": "In the room",
+            "text": "Repeat signs, first and second time bars, and the road map of a song. This is how you know where to go next without anyone calling it out."
+          },
+          {
+            "kind": "On your own",
+            "text": "Follow a full lead sheet while the recording plays, and mark the bar where you lost your place. That bar is the one to practise."
+          }
+        ],
+        "criteria": [
+          "I can follow a lead sheet through a whole song.",
+          "I can find my place again when I lose it."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "flat.io class library"
+          },
+          {
+            "n": "R2",
+            "text": "Printed lead sheets for the class repertoire"
+          }
+        ]
+      }
     },
     {
       "number": 6,
@@ -175,7 +366,41 @@
         "AT1 notification and marking criteria.",
         "Class repertoire."
       ],
-      "enduring": "Performing to the room is a routine, so that the assessment is not the first time."
+      "enduring": "Performing to the room is a routine, so that the assessment is not the first time.",
+      "body": {
+        "lead": "We are learning what AT1 asks for and starting to perform to the room.",
+        "repertoire": "Popular music",
+        "bring": "Your instrument",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "AT1 is issued today: a cover, solo or in a group, performed in Week 8. The notification and the criteria are read together, and their words are the words we use from here on."
+          },
+          {
+            "kind": "In the room",
+            "text": "The performance cycle opens. Everybody plays or sings something short to the room today. It is not marked, and it is not optional."
+          },
+          {
+            "kind": "With the band",
+            "text": "Whole-class singing with the band behind it, listening for whether you are in tune with the harmony rather than only with yourself."
+          }
+        ],
+        "criteria": [
+          "I can perform something short to the class.",
+          "I can say one thing I would fix next time."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "AT1 notification and marking criteria"
+          },
+          {
+            "n": "R2",
+            "text": "Class repertoire"
+          }
+        ]
+      }
     },
     {
       "number": 7,
@@ -201,7 +426,41 @@
         "PA and amps.",
         "Recording device for playback comparison."
       ],
-      "enduring": "Balance is a musical decision made by the players, not by the desk."
+      "enduring": "Balance is a musical decision made by the players, not by the desk.",
+      "body": {
+        "lead": "We are learning to balance an ensemble so the part that matters can be heard.",
+        "repertoire": "Popular music",
+        "bring": "Your instrument",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "With the band",
+            "text": "The class piece is played three times: once too loud, once with the melody buried, once balanced. You name the difference rather than being told it."
+          },
+          {
+            "kind": "In the room",
+            "text": "Amp and PA levels are then set as a decision. Where the knob was left last time is not a reason."
+          },
+          {
+            "kind": "On your own",
+            "text": "Rehearse with your section alone, then against one other section, and fix the balance by changing your own volume first."
+          }
+        ],
+        "criteria": [
+          "I can hear when the important part is buried.",
+          "I can adjust my own volume to fix it."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "PA and amps"
+          },
+          {
+            "n": "R2",
+            "text": "Recording device for playback comparison"
+          }
+        ]
+      }
     },
     {
       "number": 8,
@@ -227,7 +486,41 @@
         "Vocal warm-up card.",
         "Class repertoire in two parts."
       ],
-      "enduring": "Hearing your own part inside the harmony is what makes an ensemble work."
+      "enduring": "Hearing your own part inside the harmony is what makes an ensemble work.",
+      "body": {
+        "lead": "We are learning to sing and play with melodic and harmonic awareness.",
+        "repertoire": "Popular music",
+        "bring": "Your instrument",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "The whole class sings the melody with the harmony underneath it, listening for the places where the harmony pulls the tune somewhere you did not expect."
+          },
+          {
+            "kind": "In pairs",
+            "text": "Take a short section in two parts. Harmonic awareness is not something you can be told about; it is what happens when the other line is in your ear."
+          },
+          {
+            "kind": "On your own",
+            "text": "Then play the melody on your own instrument, and keep it in tune with the part sounding against it."
+          }
+        ],
+        "criteria": [
+          "I can hold my line while another part sounds against it.",
+          "I can hear where the harmony changes what the melody does."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Vocal warm-up card"
+          },
+          {
+            "n": "R2",
+            "text": "Class repertoire in two parts"
+          }
+        ]
+      }
     },
     {
       "number": 9,
@@ -253,7 +546,40 @@
         "flat.io aural notebook.",
         "Aural routine sheet 3."
       ],
-      "enduring": "The ear is trained by naming what it already hears."
+      "enduring": "The ear is trained by naming what it already hears.",
+      "body": {
+        "lead": "We are learning to hear where the harmony changes and to write down what we hear.",
+        "repertoire": "Popular music",
+        "bring": "Headphones",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Week 3 of the routine: finding where the chord changes fall against the beat. Not which chord yet, just which beat."
+          },
+          {
+            "kind": "In flat.io",
+            "text": "Write a two-bar rhythm from the class repertoire into your aural notebook, from dictation."
+          },
+          {
+            "kind": "On your own",
+            "text": "Sing back a four-note pattern and then play it. Singing it first is the part that makes the playing work."
+          }
+        ],
+        "criteria": [
+          "I can mark the beat a chord changes on.",
+          "I can notate a two-bar rhythm from dictation."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "flat.io aural notebook"
+          },
+          {
+            "n": "R2",
+            "text": "Aural routine sheet 3"
+          }
+        ]
+      }
     },
     {
       "number": 10,
@@ -279,7 +605,40 @@
         "Cover and original pairs from the repertoire register.",
         "Comparison table."
       ],
-      "enduring": "A cover changes one thing at a time and leaves the rest alone, which is what makes it analysable."
+      "enduring": "A cover changes one thing at a time and leaves the rest alone, which is what makes it analysable.",
+      "body": {
+        "lead": "We are learning to compare two interpretations of the same song.",
+        "repertoire": "Popular music",
+        "bring": "Headphones",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "A cover and its original are played side by side. The class names every difference it can hear, then throws out all but the one that matters."
+          },
+          {
+            "kind": "In the room",
+            "text": "It is done again on a pair whose changed element is a different one, so what you take away is the method and not the answer."
+          },
+          {
+            "kind": "On your own",
+            "text": "Fill in the class comparison table for both pairs, and write the changed element as a sentence rather than a word."
+          }
+        ],
+        "criteria": [
+          "I can identify the element a cover changed.",
+          "I can describe the change accurately."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Cover and original pairs"
+          },
+          {
+            "n": "R2",
+            "text": "Comparison table"
+          }
+        ]
+      }
     },
     {
       "number": 11,
@@ -306,7 +665,44 @@
         "Model dot points, strong and weak.",
         "Comparison recordings."
       ],
-      "enduring": "Music applies ALARM to build well-formed dot points, not paragraphs."
+      "enduring": "Music applies ALARM to build well-formed dot points, not paragraphs.",
+      "body": {
+        "lead": "We are learning to write an analytical dot point that explains rather than lists.",
+        "repertoire": "Popular music",
+        "bring": "Headphones",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "ALARM goes on the wall today at the describe to explain rung, and it stays there for the rest of the year."
+          },
+          {
+            "kind": "In the room",
+            "text": "The well-formed dot point is modelled and then built in three parts: the feature, what it sounds like and where, and why it is there."
+          },
+          {
+            "kind": "In pairs",
+            "text": "Write three dot points on one comparison, swap, and mark each other's against the model rather than against what you thought of the song."
+          }
+        ],
+        "criteria": [
+          "I can name a feature and locate it.",
+          "I can say why it is there."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "ALARM matrix"
+          },
+          {
+            "n": "R2",
+            "text": "Model dot points, strong and weak"
+          },
+          {
+            "n": "R3",
+            "text": "Comparison recordings"
+          }
+        ]
+      }
     },
     {
       "number": 12,
@@ -332,7 +728,40 @@
         "AT1 repertoire form.",
         "Interpretation listening set."
       ],
-      "enduring": "Composer, performer and audience are three different positions on the same work."
+      "enduring": "Composer, performer and audience are three different positions on the same work.",
+      "body": {
+        "lead": "We are learning that a performance is an interpretation made for an audience.",
+        "repertoire": "Popular music",
+        "bring": "Headphones",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "AT1 repertoire is locked today. You state the song, which version of it, and who is playing what. After today it does not change."
+          },
+          {
+            "kind": "In the room",
+            "text": "One song is discussed from three positions: what the writer put down, what the performer decided, and what the audience actually receives."
+          },
+          {
+            "kind": "On your own",
+            "text": "Write why you chose this song and what you want the room to hear in it. You will be held to that in Week 8."
+          }
+        ],
+        "criteria": [
+          "I can explain why I chose this song.",
+          "I can say what I want the audience to hear."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "AT1 repertoire form"
+          },
+          {
+            "n": "R2",
+            "text": "Interpretation listening set"
+          }
+        ]
+      }
     },
     {
       "number": 13,
@@ -358,7 +787,40 @@
         "Studio versus live recordings of one song.",
         "Playback with headphones."
       ],
-      "enduring": "Technology is part of the interpretation, not a layer added on top of it."
+      "enduring": "Technology is part of the interpretation, not a layer added on top of it.",
+      "body": {
+        "lead": "We are learning how recording technology changes what we hear in a song.",
+        "repertoire": "Popular music",
+        "bring": "Headphones",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Reverb, compression, doubling and tuning, heard one at a time. Each of them changes what you believe about the room the singer was standing in."
+          },
+          {
+            "kind": "In the room",
+            "text": "The same song adapted for a different audience or purpose, and what is lost and gained each time it moves."
+          },
+          {
+            "kind": "On your own",
+            "text": "Find one production decision in your own AT1 recording that you cannot reproduce live, and plan what you will do instead."
+          }
+        ],
+        "criteria": [
+          "I can identify a production decision in a recording.",
+          "I can explain what it does to the listener."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Studio and live recordings of one song"
+          },
+          {
+            "n": "R2",
+            "text": "Playback with headphones"
+          }
+        ]
+      }
     },
     {
       "number": 14,
@@ -383,7 +845,43 @@
       "resources": [
         "Global music culture listening set from the repertoire register."
       ],
-      "enduring": "Aesthetic judgement is cultural, and naming that is part of listening well."
+      "enduring": "Aesthetic judgement is cultural, and naming that is part of listening well.",
+      "body": {
+        "lead": "We are learning that different musical cultures value different qualities.",
+        "repertoire": "Global music culture",
+        "bring": "Headphones",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "One cover from outside the anglophone mainstream: Angélique Kidjo's reading of Once in a Lifetime, a song the Talking Heads recorded first. This is where the global music culture area starts for the year."
+          },
+          {
+            "kind": "In the room",
+            "text": "What this style values, and how that differs from what you assumed music of this kind was for. Name the difference rather than ranking the two."
+          },
+          {
+            "kind": "On your own",
+            "text": "Write one dot point comparing the two aesthetics. Which one you prefer is not the question and is not the answer."
+          }
+        ],
+        "criteria": [
+          "I can describe what this style values.",
+          "I can compare it with what I expected to hear."
+        ],
+        "listen": [
+          {
+            "title": "Once in a Lifetime",
+            "artist": "Angélique Kidjo",
+            "meta": "Kidjo, 2018"
+          }
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Global music culture listening set"
+          }
+        ]
+      }
     },
     {
       "number": 15,
@@ -409,7 +907,41 @@
         "Class repertoire.",
         "Annotated charts."
       ],
-      "enduring": "The analysis a performer does is the same analysis a listener does, done with the hands."
+      "enduring": "The analysis a performer does is the same analysis a listener does, done with the hands.",
+      "body": {
+        "lead": "We are learning to analyse the elements of music in the repertoire we perform.",
+        "repertoire": "Popular music",
+        "bring": "Your instrument",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "With the band",
+            "text": "One section is played twice, changing a single element each time. You are analysing it from the inside, as the player making the change."
+          },
+          {
+            "kind": "In the room",
+            "text": "Which of those changes would you keep? What you keep says something about the song, and saying it out loud is the analysis."
+          },
+          {
+            "kind": "On your own",
+            "text": "Annotate your own AT1 chart with the elements you intend to change, and be able to say why for each one."
+          }
+        ],
+        "criteria": [
+          "I can change one element in my performance.",
+          "I can describe the effect of the change."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Class repertoire"
+          },
+          {
+            "n": "R2",
+            "text": "Annotated charts"
+          }
+        ]
+      }
     },
     {
       "number": 16,
@@ -435,7 +967,41 @@
         "Rehearsal log sheet.",
         "Practice rooms and the main room."
       ],
-      "enduring": "Rehearsal is a technique with steps, not simply playing the piece again."
+      "enduring": "Rehearsal is a technique with steps, not simply playing the piece again.",
+      "body": {
+        "lead": "We are learning to rehearse in a way that changes the performance.",
+        "repertoire": "Popular music",
+        "bring": "Your instrument",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Rehearsal technique is taught out loud: isolate, slow, repeat, restore. It is modelled on a real problem in this room, not on a hypothetical one."
+          },
+          {
+            "kind": "In the room",
+            "text": "The vocabulary of rehearsal is the vocabulary of what to do next. Saying that it went badly is not a rehearsal step."
+          },
+          {
+            "kind": "With the band",
+            "text": "Run one full cycle on your own AT1 piece and log what you fixed, in those terms."
+          }
+        ],
+        "criteria": [
+          "I can name a problem in musical terms.",
+          "I can run a rehearsal step that fixes it."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Rehearsal log sheet"
+          },
+          {
+            "n": "R2",
+            "text": "Practice rooms and the main room"
+          }
+        ]
+      }
     },
     {
       "number": 17,
@@ -461,7 +1027,41 @@
         "Audio interface, iPads, GarageBand.",
         "Headphones."
       ],
-      "enduring": "You cannot fix what you have not heard from outside."
+      "enduring": "You cannot fix what you have not heard from outside.",
+      "body": {
+        "lead": "We are learning to use recording to hear our own playing honestly.",
+        "repertoire": "Popular music",
+        "bring": "Your instrument",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "With the band",
+            "text": "The rehearsal is recorded on the room's interface or an iPad, then played straight back for balance, tuning and timing."
+          },
+          {
+            "kind": "In the room",
+            "text": "The mixing decisions that matter at this stage: level, pan, and why the vocal has to be given room to sit in."
+          },
+          {
+            "kind": "On your own",
+            "text": "Write two dot points on your own recording. Not on how it felt to play, on what is actually on the recording."
+          }
+        ],
+        "criteria": [
+          "I can record a rehearsal and play it back.",
+          "I can identify two specific things to change."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Audio interface, iPads and GarageBand"
+          },
+          {
+            "n": "R2",
+            "text": "Headphones"
+          }
+        ]
+      }
     },
     {
       "number": 18,
@@ -488,7 +1088,45 @@
         "Video recording.",
         "Feedback proforma."
       ],
-      "enduring": "Evaluation is only useful when it produces a next step."
+      "enduring": "Evaluation is only useful when it produces a next step.",
+      "body": {
+        "lead": "We are learning to evaluate our own performance and set a target from it.",
+        "repertoire": "Popular music",
+        "bring": "Your instrument",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "The first recorded feedback round. You perform to the class and take feedback against the AT1 criteria, on video, so that you can watch it back."
+          },
+          {
+            "kind": "In the room",
+            "text": "Feedback is given in the criteria's own words: one strength and one next step. Nothing else gets said."
+          },
+          {
+            "kind": "On your own",
+            "text": "Watch yourself back and write one technical target for the fortnight. One, and specific enough to check."
+          }
+        ],
+        "criteria": [
+          "I can watch myself back and judge it against the criteria.",
+          "I can set one specific target from what I saw."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "AT1 criteria"
+          },
+          {
+            "n": "R2",
+            "text": "Video recording"
+          },
+          {
+            "n": "R3",
+            "text": "Feedback proforma"
+          }
+        ]
+      }
     },
     {
       "number": 19,
@@ -515,7 +1153,45 @@
         "Recording device.",
         "Arrangement decision sheet."
       ],
-      "enduring": "Why this song, played this way, for this room, is the question a performer answers."
+      "enduring": "Why this song, played this way, for this room, is the question a performer answers.",
+      "body": {
+        "lead": "We are learning to make and defend arrangement decisions.",
+        "repertoire": "Popular music",
+        "bring": "Instrument and printed parts",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "The arrangement broken into the decisions it is made of: key, tempo, instrumentation, what gets cut and what gets repeated."
+          },
+          {
+            "kind": "In the room",
+            "text": "Two players take the same phrase and the room names the difference between them. That difference is personal style, and it is arrived at by trying things."
+          },
+          {
+            "kind": "On your own",
+            "text": "State what your performance is for and who it is for, then name one arrangement decision that serves it."
+          }
+        ],
+        "criteria": [
+          "I can explain one arrangement decision.",
+          "I can say what it does for the audience."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Charts"
+          },
+          {
+            "n": "R2",
+            "text": "Recording device"
+          },
+          {
+            "n": "R3",
+            "text": "Arrangement decision sheet"
+          }
+        ]
+      }
     },
     {
       "number": 20,
@@ -541,7 +1217,39 @@
         "School media protocols.",
         "Worked example of an attribution."
       ],
-      "enduring": "Copyright and consent are part of performing, not paperwork bolted on afterwards."
+      "enduring": "Copyright and consent are part of performing, not paperwork bolted on afterwards.",
+      "body": {
+        "lead": "We are learning the protocols that apply when a performance is shared.",
+        "bring": "Headphones",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "The moment somebody wants to post the rehearsal video. Copyright, permission, attribution, and what a school account may and may not publish."
+          },
+          {
+            "kind": "In the room",
+            "text": "Identity and information online, including who else is in the recording and whether they agreed to be in it."
+          },
+          {
+            "kind": "On your own",
+            "text": "Check your own group's recording against the protocols and write down what would have to happen before it could be posted anywhere."
+          }
+        ],
+        "criteria": [
+          "I can say what must be checked before a recording of my group is posted.",
+          "I can write a correct attribution."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "School media protocols"
+          },
+          {
+            "n": "R2",
+            "text": "Worked example of an attribution"
+          }
+        ]
+      }
     },
     {
       "number": 21,
@@ -567,7 +1275,41 @@
         "Video from round one for comparison.",
         "Running order."
       ],
-      "enduring": "Improvement that cannot be pointed to has not been evidenced."
+      "enduring": "Improvement that cannot be pointed to has not been evidenced.",
+      "body": {
+        "lead": "We are learning to show measurable improvement between two feedback rounds.",
+        "repertoire": "Popular music",
+        "bring": "Instrument and printed parts",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "The second recorded round, against the target you set in Week 6. The video from round one is played beside it."
+          },
+          {
+            "kind": "With the band",
+            "text": "A full run-through in performance order, with entries, endings and changeovers rehearsed. Week 8 is not the day to work out who is going first."
+          },
+          {
+            "kind": "On your own",
+            "text": "Write the last rehearsal log entry: what changed between round one and round two, and what you did to change it."
+          }
+        ],
+        "criteria": [
+          "I can show what improved since round one.",
+          "I can name what I changed to do it."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Video from round one"
+          },
+          {
+            "n": "R2",
+            "text": "Running order"
+          }
+        ]
+      }
     },
     {
       "number": 22,
@@ -594,7 +1336,45 @@
         "Recording setup.",
         "Running order."
       ],
-      "enduring": "Control of the instrument is what lets an interpretation be heard."
+      "enduring": "Control of the instrument is what lets an interpretation be heard.",
+      "body": {
+        "lead": "We are learning to perform with technical and expressive control under assessment conditions.",
+        "repertoire": "Popular music",
+        "bring": "Instrument and printed parts",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "With the band",
+            "text": "AT1 performances begin. You go on in the running order and play the cover you locked in Week 4."
+          },
+          {
+            "kind": "In the room",
+            "text": "Audience protocol applies and is enforced: how this class listens while one of its own is playing."
+          },
+          {
+            "kind": "Assessed",
+            "text": "Technical and expressive control, marked against the criteria you were given in Week 2. Nothing in them has changed since."
+          }
+        ],
+        "criteria": [
+          "I can perform my cover with control of tone and timing.",
+          "I can shape it expressively rather than only get through it."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "AT1 criteria"
+          },
+          {
+            "n": "R2",
+            "text": "Recording setup"
+          },
+          {
+            "n": "R3",
+            "text": "Running order"
+          }
+        ]
+      }
     },
     {
       "number": 23,
@@ -620,7 +1400,41 @@
         "PA, staging area, music stands.",
         "Recording setup."
       ],
-      "enduring": "Where you stand and how you finish are part of the performance."
+      "enduring": "Where you stand and how you finish are part of the performance.",
+      "body": {
+        "lead": "We are learning how staging and set-up affect what an audience receives.",
+        "repertoire": "Popular music",
+        "bring": "Instrument and printed parts",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "With the band",
+            "text": "The remaining performances. Each one is staged rather than played from a seat: you walk on, set up, play, finish, and acknowledge the room."
+          },
+          {
+            "kind": "In the room",
+            "text": "The room is reconfigured once during the lesson, so you hear what the same performance does from a different set-up."
+          },
+          {
+            "kind": "Assessed",
+            "text": "Marked against the same criteria as day one, and marking notes are taken live, while you play."
+          }
+        ],
+        "criteria": [
+          "I can set up, perform and finish without being prompted.",
+          "I can say what the staging did for the audience."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "PA, staging area and music stands"
+          },
+          {
+            "n": "R2",
+            "text": "Recording setup"
+          }
+        ]
+      }
     },
     {
       "number": 24,
@@ -647,7 +1461,43 @@
         "Reflection proforma.",
         "Performance video."
       ],
-      "enduring": "Reflection is against intent, not against how the student felt."
+      "enduring": "Reflection is against intent, not against how the student felt.",
+      "body": {
+        "lead": "We are learning to evaluate our own performance against what we set out to do.",
+        "bring": "Headphones",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "The written reflection happens now, while it is still fresh, and against the same criteria the task was marked on."
+          },
+          {
+            "kind": "In pairs",
+            "text": "Watch each other's video once and point to the moment where the intention is audible, or to the place where it stops being audible."
+          },
+          {
+            "kind": "On your own",
+            "text": "Judge whether your performance communicated what you intended, with evidence from the video. File it: the process log opens next week and this is its first entry."
+          }
+        ],
+        "criteria": [
+          "I can judge my performance against what I intended.",
+          "I can point to evidence for that judgement."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "AT1 criteria"
+          },
+          {
+            "n": "R2",
+            "text": "Reflection proforma"
+          },
+          {
+            "n": "R3",
+            "text": "Performance video"
+          }
+        ]
+      }
     },
     {
       "number": 25,
@@ -673,7 +1523,40 @@
         "Structure mapping sheet.",
         "Term repertoire."
       ],
-      "enduring": "A song's shape is a decision, and the listener hears the decision."
+      "enduring": "A song's shape is a decision, and the listener hears the decision.",
+      "body": {
+        "lead": "We are learning how a song is built out of sections.",
+        "repertoire": "Popular music",
+        "bring": "Headphones",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Verse and chorus pulled apart in this term's own repertoire. What actually changes at the chorus, and how the song tells you it is coming."
+          },
+          {
+            "kind": "In the room",
+            "text": "Three songs mapped on the board and then compared, so that the shape reads as a decision somebody made rather than as the way songs go."
+          },
+          {
+            "kind": "On your own",
+            "text": "Map the structure of your own AT1 song and mark what changes at each boundary."
+          }
+        ],
+        "criteria": [
+          "I can map a song's structure.",
+          "I can say what changes at each section boundary."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Structure mapping sheet"
+          },
+          {
+            "n": "R2",
+            "text": "Term repertoire"
+          }
+        ]
+      }
     },
     {
       "number": 26,
@@ -698,7 +1581,35 @@
       "resources": [
         "Process log template in flat.io or the class book."
       ],
-      "enduring": "The record of how a work was made is evidence in its own right."
+      "enduring": "The record of how a work was made is evidence in its own right.",
+      "body": {
+        "lead": "We are learning to document what we try, not only what we keep.",
+        "bring": "Process log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "The process log opens today and runs to the end of Year 9. A few sentences a draft: what you tried, what changed, what you kept."
+          },
+          {
+            "kind": "In the room",
+            "text": "One model entry is written together, then a weak one is improved, so you can see the difference between a record and a diary."
+          },
+          {
+            "kind": "On your own",
+            "text": "Try two different openings for your song and log both of them, including the one you are not going to use."
+          }
+        ],
+        "criteria": [
+          "I can write a log entry that records a decision.",
+          "I can give the reason for the decision."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Process log template in flat.io or the class book"
+          }
+        ]
+      }
     },
     {
       "number": 27,
@@ -725,7 +1636,43 @@
         "Supplied progression set.",
         "Drum loop bank."
       ],
-      "enduring": "Choosing well means having tried the alternatives."
+      "enduring": "Choosing well means having tried the alternatives.",
+      "body": {
+        "lead": "We are learning to experiment with compositional material before committing to it.",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "A set of progressions and a bank of grooves. You choose one of each and then test whether they actually go together."
+          },
+          {
+            "kind": "On your own",
+            "text": "Run the same progression at three tempos and in two metres. This is a deliberate experiment, not clicking about."
+          },
+          {
+            "kind": "In flat.io",
+            "text": "Enter the pairing you chose into the song template, and log why you kept that one and not the others."
+          }
+        ],
+        "criteria": [
+          "I can test more than one option.",
+          "I can say why I kept the one I kept."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "flat.io song template"
+          },
+          {
+            "n": "R2",
+            "text": "Supplied progression set"
+          },
+          {
+            "n": "R3",
+            "text": "Drum loop bank"
+          }
+        ]
+      }
     },
     {
       "number": 28,
@@ -752,7 +1699,43 @@
         "Lyric scaffold.",
         "Headphones."
       ],
-      "enduring": "Material is developed within a structure, not poured into one afterwards."
+      "enduring": "Material is developed within a structure, not poured into one afterwards.",
+      "body": {
+        "lead": "We are learning to develop musical material inside a fixed structure.",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "The chorus is written first, because it carries the hook and it sets the register everything else has to live under."
+          },
+          {
+            "kind": "In flat.io",
+            "text": "Write the melody over the progression you chose, using the structure template and the lyric scaffold."
+          },
+          {
+            "kind": "In pairs",
+            "text": "Play it to one other person and ask one question only: does that sound like a chorus?"
+          }
+        ],
+        "criteria": [
+          "I can write a chorus melody that fits the progression.",
+          "I can make it land as a hook."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "flat.io template"
+          },
+          {
+            "n": "R2",
+            "text": "Lyric scaffold"
+          },
+          {
+            "n": "R3",
+            "text": "Headphones"
+          }
+        ]
+      }
     },
     {
       "number": 29,
@@ -779,7 +1762,44 @@
         "Listening set.",
         "Process log."
       ],
-      "enduring": "A song says something, and the music has to agree with the words."
+      "enduring": "A song says something, and the music has to agree with the words.",
+      "body": {
+        "lead": "We are learning to communicate a personal or social view through a song.",
+        "repertoire": "Popular music",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Songs from this term's listening examined for the view they carry, and for how the music agrees with the words rather than only sitting underneath them."
+          },
+          {
+            "kind": "On your own",
+            "text": "Say in one sentence what your song is about before you write another bar, then keep that sentence where you can see it."
+          },
+          {
+            "kind": "In flat.io",
+            "text": "Draft the lyric against the scaffold and log what the song is about, in your own words."
+          }
+        ],
+        "criteria": [
+          "I can say what my song is about.",
+          "I can show one musical choice that supports it."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Lyric scaffold"
+          },
+          {
+            "n": "R2",
+            "text": "Listening set"
+          },
+          {
+            "n": "R3",
+            "text": "Process log"
+          }
+        ]
+      }
     },
     {
       "number": 30,
@@ -806,7 +1826,43 @@
         "Faulty file for correction.",
         "Note entry drill sheet."
       ],
-      "enduring": "Notation is a message to a player, so it has to be right."
+      "enduring": "Notation is a message to a player, so it has to be right.",
+      "body": {
+        "lead": "We are learning to notate a melody accurately enough for someone else to play it.",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Note entry is taken seriously for the first time: rhythm values, rests, ties, and where the melody sits against the chord underneath it."
+          },
+          {
+            "kind": "In the room",
+            "text": "A supplied file full of the usual errors is fixed on the board, and every error is named before it is corrected."
+          },
+          {
+            "kind": "In flat.io",
+            "text": "Notate your chorus melody, then play it back and check that what you hear is what you meant to write."
+          }
+        ],
+        "criteria": [
+          "I can enter a melody with correct rhythm.",
+          "I can find my own missing beats when I check it back."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "flat.io"
+          },
+          {
+            "n": "R2",
+            "text": "Faulty file for correction"
+          },
+          {
+            "n": "R3",
+            "text": "Note entry drill sheet"
+          }
+        ]
+      }
     },
     {
       "number": 31,
@@ -833,7 +1889,43 @@
         "Structure template.",
         "Playback speakers."
       ],
-      "enduring": "Contrast between sections is what makes a structure audible."
+      "enduring": "Contrast between sections is what makes a structure audible.",
+      "body": {
+        "lead": "We are learning to develop contrasting material inside one song.",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "The verse is written against the chorus: lower, less movement, more words. The contrast is the entire point of it."
+          },
+          {
+            "kind": "In flat.io",
+            "text": "Assemble the full structure, verse and chorus in order, and listen to it end to end."
+          },
+          {
+            "kind": "On your own",
+            "text": "Compare your verse with your chorus and keep adjusting until the difference is audible to somebody who has not heard it before."
+          }
+        ],
+        "criteria": [
+          "I can write a verse that is audibly different from my chorus.",
+          "I can explain how it is different."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "flat.io"
+          },
+          {
+            "n": "R2",
+            "text": "Structure template"
+          },
+          {
+            "n": "R3",
+            "text": "Playback speakers"
+          }
+        ]
+      }
     },
     {
       "number": 32,
@@ -860,7 +1952,43 @@
         "Lyric sheets.",
         "Process log."
       ],
-      "enduring": "Word stress and musical stress have to agree or the line sounds wrong."
+      "enduring": "Word stress and musical stress have to agree or the line sounds wrong.",
+      "body": {
+        "lead": "We are learning to make the music and the words serve the same idea.",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Lyric and melody are sung together for the first time. Where the stress lands on the wrong syllable, you hear it immediately."
+          },
+          {
+            "kind": "On your own",
+            "text": "Decide whether the music supports the view the lyric carries. Where it does not, one of the two has to change, and you choose which one."
+          },
+          {
+            "kind": "In flat.io",
+            "text": "Log what changed when the words met the tune."
+          }
+        ],
+        "criteria": [
+          "I can adjust my melody so the important words fall in the right place.",
+          "I can say which of the two I changed, and why."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "flat.io playback"
+          },
+          {
+            "n": "R2",
+            "text": "Lyric sheets"
+          },
+          {
+            "n": "R3",
+            "text": "Process log"
+          }
+        ]
+      }
     },
     {
       "number": 33,
@@ -887,7 +2015,43 @@
         "Feedback proforma.",
         "Process log."
       ],
-      "enduring": "An unassessed share is where risk is cheap, which is why it is here."
+      "enduring": "An unassessed share is where risk is cheap, which is why it is here.",
+      "body": {
+        "lead": "We are learning to share unfinished work and use the feedback we get on it.",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Drafts are played to the class and nothing is marked. Two dot points of feedback each, in the language we have been using all term."
+          },
+          {
+            "kind": "In the room",
+            "text": "What Term 2 needs from this work is named out loud: notation, structure, and the habit of logging."
+          },
+          {
+            "kind": "On your own",
+            "text": "Write the last log entry of the term: what you tried, what you kept, and what you would do differently."
+          }
+        ],
+        "criteria": [
+          "I can present a draft and take feedback on it.",
+          "I can record what I would change."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "flat.io playback"
+          },
+          {
+            "n": "R2",
+            "text": "Feedback proforma"
+          },
+          {
+            "n": "R3",
+            "text": "Process log"
+          }
+        ]
+      }
     }
   ]
 }
