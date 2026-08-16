@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comp B: The Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300..900;1,300..900&family=Chivo+Mono:wght@300..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --floor:#111214; --chalk:#F2F1EC; --chalk-dim:#8E8F8B; --hair:#313337;
+  --t1:#E8FF3A; --t2:#FF2D78; --t3:#FF6A1F; --t4:#3DFF7D;
+  --panel:#F4F3EE; --ink:#111214; --tape:var(--t2);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--floor);color:var(--chalk);font-family:Chivo,sans-serif;font-size:16px;line-height:1.5}
+.mono{font-family:"Chivo Mono",monospace;font-variant-numeric:tabular-nums}
+.tape{background:var(--tape);color:var(--ink);
+  clip-path:polygon(0 7%,2.5% 0,6% 9%,9% 1%,100% 0,99% 10%,100% 95%,96.5% 100%,93% 91%,90% 100%,0 100%,1.4% 89%);}
+
+/* head */
+header{padding:20px 40px 0;display:flex;align-items:flex-start;gap:30px;flex-wrap:wrap}
+header .code{font-family:"Chivo Mono",monospace;font-size:.74rem;letter-spacing:.2em;color:var(--chalk-dim);text-transform:uppercase}
+header h1{font-size:clamp(1.5rem,2.6vw,2rem);font-weight:900;letter-spacing:-.025em;text-transform:uppercase;line-height:1;margin-top:6px}
+header .terms{margin-left:auto;display:flex;gap:6px;align-items:center}
+header .terms i{font-style:normal;width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--hair);
+  font-family:"Chivo Mono",monospace;font-size:.8rem;color:var(--chalk-dim)}
+header .terms i.on{background:var(--t2);color:var(--ink);border-color:var(--t2);font-weight:800}
+
+/* the plan */
+.stage{position:relative;margin:18px 40px 0;border-bottom:4px solid var(--chalk)}
+.stage svg{display:block;width:100%;height:auto}
+.stage .caption{position:absolute;left:0;top:0;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--chalk-dim)}
+
+/* the multicore: 30 inputs along the downstage edge */
+.core{margin:0 40px;border-bottom:1px solid var(--hair);display:flex;overflow:hidden}
+.core .cell{flex:1;min-width:0;border-right:1px solid var(--hair);padding:10px 6px 12px;text-align:center;position:relative}
+.core .cell:last-child{border-right:0}
+.core .cell .n{font-family:"Chivo Mono",monospace;font-size:.68rem;color:var(--chalk-dim)}
+.core .cell.done .n{color:#5C5E62}
+.core .cell.now{padding:14px 6px}
+.core .cell.now .n{color:var(--ink);font-weight:800;font-size:.78rem}
+.core .cell.at::after{content:"";position:absolute;left:50%;bottom:4px;width:5px;height:5px;margin-left:-2.5px;background:var(--chalk)}
+.corelabel{margin:0 40px;display:flex;justify-content:space-between;padding:7px 0 0;
+  font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--chalk-dim)}
+
+/* lesson body */
+.body{margin:30px 40px 0;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:36px;align-items:start}
+.nowline{display:flex;gap:12px;align-items:center;margin-bottom:8px}
+.nowline .strip{padding:3px 15px;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;font-weight:800}
+.nowline .meta{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--chalk-dim)}
+h2{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:900;letter-spacing:-.035em;line-height:.98;max-width:15ch;margin-bottom:22px}
+
+.panel{background:var(--panel);color:var(--ink);padding:22px 24px;
+  clip-path:polygon(0 1.4%,1% 0,2.2% 1.6%,3.4% 0,100% 0,99.3% 1.8%,100% 98.2%,98.8% 100%,97.6% 98.4%,96.4% 100%,0 100%,.6% 98.2%);}
+.panel + .panel{margin-top:18px}
+.panel h3{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;font-weight:800;margin-bottom:11px}
+.panel .li{font-size:1.22rem;line-height:1.32;font-weight:600;max-width:34ch}
+.panel ol{list-style:none;counter-reset:c}
+.panel ol li{counter-increment:c;padding:10px 0 10px 34px;border-bottom:1px solid rgba(17,18,20,.14);position:relative;max-width:60ch}
+.panel ol li:last-child{border-bottom:0;padding-bottom:0}
+.panel ol li::before{content:counter(c,upper-alpha);position:absolute;left:0;top:10px;font-family:"Chivo Mono",monospace;font-size:.76rem;opacity:.5}
+
+.side h4{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--chalk-dim);font-weight:800;margin-bottom:9px}
+.side .row{display:grid;grid-template-columns:32px 1fr;gap:12px;padding:9px 0;border-bottom:1px solid var(--hair);font-size:.9rem}
+.side .row .n{font-family:"Chivo Mono",monospace;font-size:.74rem;color:var(--chalk-dim)}
+.side .block{margin-bottom:26px}
+.side .codes{display:flex;gap:8px;flex-wrap:wrap}
+.side .codes span{font-family:"Chivo Mono",monospace;font-size:.74rem;border:1px solid var(--hair);padding:4px 8px}
+.keep{margin-top:26px;border-top:1px solid var(--hair);padding-top:14px;font-size:1.02rem;max-width:44ch;color:var(--chalk)}
+.keep b{display:block;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--chalk-dim);margin-bottom:7px}
+
+footer{margin-top:44px;border-top:4px solid var(--chalk);padding:18px 40px 40px;display:flex;gap:24px;flex-wrap:wrap;align-items:baseline}
+footer b{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase}
+footer a{color:var(--chalk);font-size:.86rem;text-decoration:none;border-bottom:1px solid var(--hair)}
+@media(max-width:820px){.body{grid-template-columns:1fr}header,.stage,.core,.corelabel,.body,footer{margin-left:20px;margin-right:20px}header{padding-left:0;padding-right:0}}
+</style>
+</head>
+<body>
+<!-- COMP B: THE PLAN. The plan view leads and the thirty lessons run as a multicore along the downstage edge. -->
+
+<header>
+  <div>
+    <div class="code">9MUS1 &middot; 2027 &middot; Term 2</div>
+    <h1>Blues to Jazz</h1>
+  </div>
+  <div class="terms">
+    <i>1</i><i class="on">2</i><i>3</i><i>4</i>
+  </div>
+</header>
+
+<div class="stage">
+  <span class="caption">The room &middot; Week 1</span>
+  <svg viewBox="0 0 1200 300" role="img" aria-label="Plan view of the room with the band positions numbered">
+    <!-- ghost plans of terms 1, 3 and 4 -->
+    <g fill="none" stroke="#F2F1EC" stroke-width="1" opacity=".1">
+      <rect x="180" y="60" width="840" height="150"/>
+      <circle cx="330" cy="120" r="26"/><circle cx="600" cy="105" r="26"/><circle cx="870" cy="120" r="26"/>
+      <path d="M240 240 L960 240"/>
+    </g>
+    <g fill="none" stroke="#F2F1EC" stroke-width="1" opacity=".07">
+      <rect x="120" y="40" width="960" height="190"/>
+      <circle cx="260" cy="175" r="30"/><circle cx="940" cy="175" r="30"/>
+    </g>
+    <!-- live plan, term 2 -->
+    <g fill="none" stroke="#F2F1EC" stroke-width="1">
+      <rect x="150" y="46" width="900" height="176"/>
+      <line x1="150" y1="222" x2="1050" y2="222" stroke-width="3"/>
+      <circle cx="420" cy="96" r="30"/><circle cx="780" cy="96" r="30"/>
+      <circle cx="300" cy="176" r="30"/><circle cx="600" cy="176" r="30"/><circle cx="900" cy="176" r="30"/>
+      <path d="M330 238 L390 238 L372 268 L348 268 Z"/>
+      <path d="M810 238 L870 238 L852 268 L828 268 Z"/>
+    </g>
+    <g fill="#F2F1EC" font-family="Chivo Mono, monospace" font-size="17" text-anchor="middle">
+      <text x="420" y="102">1</text><text x="780" y="102">2</text>
+      <text x="300" y="182">3</text><text x="600" y="182">4</text><text x="900" y="182">5</text>
+    </g>
+    <g fill="#8E8F8B" font-family="Chivo, sans-serif" font-size="12" text-anchor="middle" letter-spacing="2.4">
+      <text x="420" y="66">DRUMS</text><text x="780" y="66">KEYS</text>
+      <text x="300" y="212">BASS</text><text x="600" y="212">GUITAR</text><text x="900" y="212">VOCAL</text>
+      <text x="360" y="284">WEDGE 1</text><text x="840" y="284">WEDGE 2</text>
+    </g>
+    <g fill="#8E8F8B" font-family="Chivo, sans-serif" font-size="11" letter-spacing="2.4">
+      <text x="150" y="36">STAGE LEFT</text>
+      <text x="1050" y="36" text-anchor="end">STAGE RIGHT</text>
+    </g>
+  </svg>
+</div>
+
+<div class="core">
+  <div class="cell done"><span class="n">01</span></div>
+  <div class="cell now tape"><span class="n">02</span></div>
+  <div class="cell"><span class="n">03</span></div>
+  <div class="cell"><span class="n">04</span></div>
+  <div class="cell"><span class="n">05</span></div>
+  <div class="cell"><span class="n">06</span></div>
+  <div class="cell"><span class="n">07</span></div>
+  <div class="cell"><span class="n">08</span></div>
+  <div class="cell"><span class="n">09</span></div>
+  <div class="cell"><span class="n">10</span></div>
+  <div class="cell"><span class="n">11</span></div>
+  <div class="cell"><span class="n">12</span></div>
+  <div class="cell"><span class="n">13</span></div>
+  <div class="cell"><span class="n">14</span></div>
+  <div class="cell"><span class="n">15</span></div>
+  <div class="cell"><span class="n">16</span></div>
+  <div class="cell"><span class="n">17</span></div>
+  <div class="cell"><span class="n">18</span></div>
+  <div class="cell"><span class="n">19</span></div>
+  <div class="cell"><span class="n">20</span></div>
+  <div class="cell at"><span class="n">21</span></div>
+  <div class="cell"><span class="n">22</span></div>
+  <div class="cell"><span class="n">23</span></div>
+  <div class="cell"><span class="n">24</span></div>
+  <div class="cell at"><span class="n">25</span></div>
+  <div class="cell at"><span class="n">26</span></div>
+  <div class="cell"><span class="n">27</span></div>
+  <div class="cell at"><span class="n">28</span></div>
+  <div class="cell"><span class="n">29</span></div>
+  <div class="cell"><span class="n">30</span></div>
+</div>
+<div class="corelabel"><span>Week 1</span><span>Week 5</span><span>Week 7 &middot; Part A due</span><span>Week 10</span></div>
+
+<div class="body">
+  <div>
+    <div class="nowline">
+      <span class="strip tape">On the desk</span>
+      <span class="meta">Input 02 &middot; Week 1 &middot; L10</span>
+    </div>
+    <h2>The 12-bar blues, heard and counted</h2>
+
+    <div class="panel">
+      <h3>What we are learning</h3>
+      <p class="li">We are learning to hear and count the 12-bar blues form.</p>
+    </div>
+
+    <div class="panel">
+      <h3>You can do it when</h3>
+      <ol>
+        <li>I can count a 12-bar chorus without help.</li>
+        <li>I can say where chords IV and V arrive.</li>
+      </ol>
+    </div>
+
+    <div class="keep">
+      <b>Worth keeping</b>
+      A genre is recognisable because of features that can be named.
+    </div>
+  </div>
+
+  <div class="side">
+    <div class="block">
+      <h4>In the room</h4>
+      <div class="row"><span class="n">01</span><span>The 12-bar form heard in three recordings, counted aloud, then diagrammed on the board.</span></div>
+      <div class="row"><span class="n">02</span><span>What makes a listener say &ldquo;this is a blues&rdquo; within two bars.</span></div>
+      <div class="row"><span class="n">03</span><span>Count a full chorus without the teacher and mark where the changes fall.</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Patched in</h4>
+      <div class="row"><span class="n">R1</span><span>Listening set, three eras</span></div>
+      <div class="row"><span class="n">R2</span><span>Form diagram, bars numbered</span></div>
+      <div class="row"><span class="n">R3</span><span>flat.io aural notebook</span></div>
+    </div>
+
+    <div class="block">
+      <h4>Outcomes</h4>
+      <div class="codes"><span>MU5-LIS-01</span><span>MU5-LIS-02</span></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <b>The blueprint</b>
+  <a href="#">12-bar progression</a>
+  <a href="#">Piano voicings</a>
+  <a href="#">Drum pattern</a>
+  <a href="#">Walking bass rules</a>
+</footer>
+</body>
+</html>

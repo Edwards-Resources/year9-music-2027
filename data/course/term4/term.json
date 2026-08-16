@@ -1,0 +1,830 @@
+{
+  "id": "term4",
+  "n": 4,
+  "name": "Level Up",
+  "tape": "--t4",
+  "focus": "Composing, music for games and screen",
+  "assessment": {
+    "no": 4,
+    "name": "AT4: Level Up",
+    "type": "Composed cue, process log and rationale",
+    "issued": "Week 2",
+    "due": "Week 8",
+    "weighting": "25%",
+    "marks": 20,
+    "outcomes": [
+      "MU5-COM-01",
+      "MU5-COM-02",
+      "MU5-LIS-02"
+    ]
+  },
+  "blueprint": [],
+  "lessons": [
+    {
+      "number": 1,
+      "week": 1,
+      "title": "Motif: the smallest usable idea",
+      "contentCode": "C1",
+      "contentPoint": "Compositional devices to generate material",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to generate musical material from a small idea.",
+      "criteria": [
+        "I can write a motif and develop it using at least two devices."
+      ],
+      "steps": [
+        "What a motif is and what makes one usable: short, distinctive, and able to survive being changed.",
+        "Compositional devices for generating material from a motif: repetition, sequence, inversion, augmentation, fragmentation.",
+        "Students generate four motifs in flat.io and keep the two that survive development."
+      ],
+      "resources": [
+        "flat.io.",
+        "Device reference sheet.",
+        "Screen and game listening set."
+      ],
+      "enduring": "A motif is built to be developed, not to be finished."
+    },
+    {
+      "number": 2,
+      "week": 1,
+      "title": "Leitmotif: an idea attached to something",
+      "contentCode": "C1",
+      "contentPoint": "Compositional devices to generate material",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning how a motif can carry meaning across a whole work.",
+      "criteria": [
+        "I can transform a motif so it means something different but stays recognisable."
+      ],
+      "steps": [
+        "Leitmotif as a technique: a motif attached to a character, place or idea, and changed as that thing changes.",
+        "Two contrasting screen works from the register examined for how the leitmotif is transformed.",
+        "Students attach one of their motifs to a character and write two transformations of it."
+      ],
+      "resources": [
+        "flat.io.",
+        "Listening set from the repertoire register."
+      ],
+      "enduring": "The same idea, changed, is how music tells a story over time."
+    },
+    {
+      "number": 3,
+      "week": 1,
+      "title": "Why game music loops and film music does not",
+      "contentCode": "L11",
+      "contentPoint": "Musical context and purpose",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning how a piece of music's purpose shapes what it is.",
+      "criteria": [
+        "I can explain how the purpose of a cue changes the way it is written."
+      ],
+      "steps": [
+        "The relationship between context and purpose: a film cue is written once for a fixed length; a game loop is written for an unknown one.",
+        "Two excerpts compared for how each solves its own problem.",
+        "Written response: one dot point on purpose and one on a musical feature that serves it."
+      ],
+      "resources": [
+        "Listening set.",
+        "ALARM matrix.",
+        "Comparison sheet."
+      ],
+      "enduring": "Context and purpose are musical facts, not background information."
+    },
+    {
+      "number": 4,
+      "week": 2,
+      "title": "AT4 issued, with the blueprint",
+      "contentCode": "C8",
+      "contentPoint": "Conventions of styles and media combined",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning what AT4 asks for and what it supplies.",
+      "criteria": [
+        "I can explain what is given to me in this task and what I have to bring."
+      ],
+      "steps": [
+        "Assessment Task 4 issued: a cue composed in flat.io, with the process log and a 250-word rationale, due Week 8.",
+        "The scaffolding handed over with it: the timing sheet with the hit points marked, the flat.io template and the motif bank. The harmonic frame is not supplied.",
+        "How conventions of different media combine, and which convention each student is writing inside."
+      ],
+      "resources": [
+        "AT4 notification and criteria.",
+        "Timing sheet.",
+        "flat.io template.",
+        "Motif bank."
+      ],
+      "enduring": "Conventions of different styles and media can be combined to create meaning."
+    },
+    {
+      "number": 5,
+      "week": 2,
+      "title": "Adaptive music, layered stems and the stinger",
+      "contentCode": "L11",
+      "contentPoint": "Musical context and purpose",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning how music can change in response to what a player does.",
+      "criteria": [
+        "I can write two layers that work alone and together."
+      ],
+      "steps": [
+        "How game music changes with the player: layered stems added and removed, and stingers triggered by events.",
+        "One game score examined for how the layers are built so that any combination works.",
+        "Students build a two-layer loop in flat.io where either layer works alone."
+      ],
+      "resources": [
+        "flat.io.",
+        "Game audio listening set.",
+        "Headphones."
+      ],
+      "enduring": "Adaptive music is a form problem before it is a technology problem."
+    },
+    {
+      "number": 6,
+      "week": 2,
+      "title": "Building a loop that bears repeating",
+      "contentCode": "C10",
+      "contentPoint": "Combining styles to create new ideas",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to combine styles and to write music that bears repetition.",
+      "criteria": [
+        "I can write an eight-bar loop that is still bearable after twenty plays."
+      ],
+      "steps": [
+        "What makes a loop survive its twentieth repetition: harmony that does not resolve too hard, variation inside it, and a seam that does not click.",
+        "Styles combined to create new ideas: an orchestral gesture over an electronic pulse, and what that combination means.",
+        "Each student's loop played twenty times in a row and judged."
+      ],
+      "resources": [
+        "flat.io.",
+        "Playback with loop enabled.",
+        "Headphones."
+      ],
+      "enduring": "Looping music has to bear repetition, which is a different problem from holding attention once."
+    },
+    {
+      "number": 7,
+      "week": 3,
+      "title": "Two media combined",
+      "contentCode": "C8",
+      "contentPoint": "Conventions of styles and media combined",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning how conventions from different media are combined.",
+      "criteria": [
+        "I can name the conventions my cue borrows and say why."
+      ],
+      "steps": [
+        "The game that scores like a film, and the film that scores like a game: conventions borrowed across media and what is gained.",
+        "Two works from the register compared for the conventions they mix.",
+        "Students identify which conventions their own cue will borrow."
+      ],
+      "resources": [
+        "Listening set.",
+        "Convention checklist.",
+        "Process log."
+      ],
+      "enduring": "Combining conventions deliberately is a compositional decision."
+    },
+    {
+      "number": 8,
+      "week": 3,
+      "title": "Context and purpose: what the music is for",
+      "contentCode": "L11",
+      "contentPoint": "Musical context and purpose",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to examine the relationship between context and purpose.",
+      "criteria": [
+        "I can explain what a cue is for and which element achieves it."
+      ],
+      "steps": [
+        "The relationship between a work's context and its purpose examined in three cues written for different jobs.",
+        "What the audience is being made to feel, and which element is doing it.",
+        "Timed writing: two dot points, one on purpose and one on the element that serves it."
+      ],
+      "resources": [
+        "Listening set.",
+        "ALARM matrix.",
+        "Timer."
+      ],
+      "enduring": "Music written for a job can be judged against the job."
+    },
+    {
+      "number": 9,
+      "week": 3,
+      "title": "Motif development: taking the bank apart",
+      "contentCode": "C1",
+      "contentPoint": "Compositional devices to generate material",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to choose material we can actually develop.",
+      "criteria": [
+        "I can choose a motif and show three developments of it."
+      ],
+      "steps": [
+        "The supplied motif bank examined: what each motif is built from and what it will and will not do.",
+        "Each student selects or writes their motif for AT4 and develops it three ways.",
+        "The choice and the developments logged."
+      ],
+      "resources": [
+        "Motif bank.",
+        "flat.io.",
+        "Process log."
+      ],
+      "enduring": "Choosing material well is choosing what will still be interesting in bar forty."
+    },
+    {
+      "number": 10,
+      "week": 4,
+      "title": "Reading a timing sheet",
+      "contentCode": "C9",
+      "contentPoint": "Composing for different purposes and audiences",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to write music to a fixed clock.",
+      "criteria": [
+        "I can choose a tempo that makes my hit points land on strong beats."
+      ],
+      "steps": [
+        "The timing sheet read and understood: events, times and which ones the music has to land on.",
+        "Tempo chosen so the hit points fall on musically useful beats, taught as arithmetic rather than as luck.",
+        "Each student marks their own hit points in the flat.io template."
+      ],
+      "resources": [
+        "Timing sheet.",
+        "flat.io template.",
+        "Tempo calculator."
+      ],
+      "enduring": "Writing to picture is writing to somebody else's clock."
+    },
+    {
+      "number": 11,
+      "week": 4,
+      "title": "Scoring to picture: the first 30 seconds",
+      "contentCode": "C9",
+      "contentPoint": "Composing for different purposes and audiences",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to compose for a specific purpose and audience.",
+      "criteria": [
+        "I can write 30 seconds of music that fits the scene it was written for."
+      ],
+      "steps": [
+        "The opening of the cue written to the picture, in the style and for the audience the brief names.",
+        "Entry, first hit point and the first change of mood, written and played against the scene.",
+        "Draft played against picture in class."
+      ],
+      "resources": [
+        "flat.io.",
+        "Scene playback.",
+        "Speakers."
+      ],
+      "enduring": "A cue is judged against the picture, not on its own."
+    },
+    {
+      "number": 12,
+      "week": 4,
+      "title": "Draft checkpoint 1",
+      "contentCode": "C6",
+      "contentPoint": "Annotating drafts to show intent",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to annotate a draft so it communicates our intent.",
+      "criteria": [
+        "I can mark my score so another player knows how to play it."
+      ],
+      "steps": [
+        "First logged checkpoint. Each draft annotated with dynamics, articulation and expressive markings so a player would know what was meant.",
+        "Why an unmarked score is an incomplete message, shown by having a classmate play an unmarked part.",
+        "Feedback on process, not a preview mark."
+      ],
+      "resources": [
+        "flat.io.",
+        "Marking reference sheet.",
+        "Instruments for testing."
+      ],
+      "enduring": "Notation without markings is only half the message."
+    },
+    {
+      "number": 13,
+      "week": 5,
+      "title": "Orchestration and register",
+      "contentCode": "C15",
+      "contentPoint": "Instrumentation, orchestration and interpretation",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning how interpretation changes with instrumentation and orchestration.",
+      "criteria": [
+        "I can orchestrate the same material two ways and explain the difference."
+      ],
+      "steps": [
+        "Who plays the idea, and what changes when somebody else plays it: the same eight bars heard in four orchestrations.",
+        "Register as a decision: the same line an octave lower is a different statement.",
+        "Students re-orchestrate their own opening two ways and choose."
+      ],
+      "resources": [
+        "flat.io playback.",
+        "Orchestration comparison files.",
+        "Headphones."
+      ],
+      "enduring": "Orchestration is a decision about meaning, not only about who is available."
+    },
+    {
+      "number": 14,
+      "week": 5,
+      "title": "Changing the instrumentation, changing the meaning",
+      "contentCode": "C15",
+      "contentPoint": "Instrumentation, orchestration and interpretation",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to examine how interpretation is affected by orchestration.",
+      "criteria": [
+        "I can explain how a change of instrumentation changed the meaning."
+      ],
+      "steps": [
+        "A professional cue examined in two versions, and what the change of forces does to the meaning.",
+        "Interpretation as something affected by orchestration rather than added to it.",
+        "Written response: one dot point on an orchestration decision and its effect."
+      ],
+      "resources": [
+        "Listening set.",
+        "Comparison recordings.",
+        "ALARM matrix."
+      ],
+      "enduring": "The same notes, differently scored, say different things."
+    },
+    {
+      "number": 15,
+      "week": 5,
+      "title": "Markings that tell a player what you meant",
+      "contentCode": "C6",
+      "contentPoint": "Annotating drafts to show intent",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to annotate a score appropriately to its style.",
+      "criteria": [
+        "I can mark my score so a sight-reader plays it the way I intended."
+      ],
+      "steps": [
+        "Dynamics, articulation and expressive markings applied across the whole draft, appropriately to the style.",
+        "Style-specific conventions: what an orchestral part expects and what a rhythm section part expects.",
+        "Peer test: a classmate sight-reads a passage and reports what they understood."
+      ],
+      "resources": [
+        "flat.io.",
+        "Instruments.",
+        "Marking reference sheet."
+      ],
+      "enduring": "The test of a marking is whether a stranger plays it right."
+    },
+    {
+      "number": 16,
+      "week": 6,
+      "title": "Composing for the audience and the purpose",
+      "contentCode": "C9",
+      "contentPoint": "Composing for different purposes and audiences",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to compose in a style and for a purpose.",
+      "criteria": [
+        "I can keep my cue consistent with the style and purpose I named."
+      ],
+      "steps": [
+        "The middle of the cue written, with the purpose and the audience restated before work begins.",
+        "Composing in a style for a stated purpose, and checking the writing against both.",
+        "Draft played against picture and adjusted."
+      ],
+      "resources": [
+        "flat.io.",
+        "Scene playback.",
+        "Brief."
+      ],
+      "enduring": "A brief is a constraint that makes the decisions easier, not harder."
+    },
+    {
+      "number": 17,
+      "week": 6,
+      "title": "Draft checkpoint 2",
+      "contentCode": "C6",
+      "contentPoint": "Annotating drafts to show intent",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to review a full draft against the brief.",
+      "criteria": [
+        "I can review my whole cue and list what still has to change."
+      ],
+      "steps": [
+        "Second logged checkpoint. Full draft reviewed for markings, playability and whether the hit points still land.",
+        "Reflection recorded in the log on what changed between checkpoints one and two.",
+        "Rationale drafting begins next week, so the log is read now with that in view."
+      ],
+      "resources": [
+        "flat.io.",
+        "Process log.",
+        "Timing sheet.",
+        "AT4 criteria."
+      ],
+      "enduring": "A checkpoint is for finding the gap, not for confirming progress."
+    },
+    {
+      "number": 18,
+      "week": 6,
+      "title": "Texture and layering",
+      "contentCode": "C15",
+      "contentPoint": "Instrumentation, orchestration and interpretation",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to write layers that work in more than one combination.",
+      "criteria": [
+        "I can build layers that still work when one is removed."
+      ],
+      "steps": [
+        "Layers built so they can be turned on and off, for the game brief, or so the texture thins and thickens with the scene, for the film brief.",
+        "How changes in instrumentation affect the interpretation of the same layer in a different combination.",
+        "Stems exported and played in combinations."
+      ],
+      "resources": [
+        "flat.io.",
+        "Export and playback.",
+        "Headphones."
+      ],
+      "enduring": "Writing in layers is writing several versions of the same music at once."
+    },
+    {
+      "number": 19,
+      "week": 7,
+      "title": "The 250-word rationale",
+      "contentCode": "C11",
+      "contentPoint": "Evaluating success and using feedback",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to explain compositional decisions in writing.",
+      "criteria": [
+        "I can write about a decision I made and connect it to what the cue is for."
+      ],
+      "steps": [
+        "What the rationale has to do: name the decisions, use the terminology, and connect each decision to the brief.",
+        "Deliberately half of Year 10 AT1's 500 words, so the rationale is a step rather than a cliff.",
+        "A model rationale read and marked against the criteria, then a weak one."
+      ],
+      "resources": [
+        "AT4 criteria.",
+        "Model rationales, strong and weak.",
+        "Word count tool."
+      ],
+      "enduring": "Evaluating your own work in writing is how the decisions become deliberate."
+    },
+    {
+      "number": 20,
+      "week": 7,
+      "title": "Rationale drafted and workshopped",
+      "contentCode": "C11",
+      "contentPoint": "Evaluating success and using feedback",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to use feedback to refine our own writing and work.",
+      "criteria": [
+        "I can revise my rationale so every claim points at something in the music."
+      ],
+      "steps": [
+        "First draft of the rationale written from the process log rather than from memory.",
+        "Peer feedback on whether each claim is supported by something audible in the cue.",
+        "Feedback used to refine, and the refinement logged."
+      ],
+      "resources": [
+        "Process log.",
+        "Draft rationale.",
+        "Feedback proforma."
+      ],
+      "enduring": "A claim that cannot be pointed at in the music is not a claim."
+    },
+    {
+      "number": 21,
+      "week": 7,
+      "title": "Sound sources, samples and intellectual property",
+      "contentCode": "C18",
+      "contentPoint": "Information, identity and intellectual property",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning the protocols that apply to the material we compose with.",
+      "criteria": [
+        "I can say where every sound in my project came from and whether I may use it."
+      ],
+      "steps": [
+        "Where the sounds came from: samples, libraries, licences and what may be used in submitted work.",
+        "Protocols for information, identity and intellectual property when composing and when sharing.",
+        "Each student audits their own project for anything that needs attribution."
+      ],
+      "resources": [
+        "Licence guidance.",
+        "Project audit sheet."
+      ],
+      "enduring": "Knowing what you may use is part of composing with technology."
+    },
+    {
+      "number": 22,
+      "week": 8,
+      "title": "Final revision against the rationale",
+      "contentCode": "C11",
+      "contentPoint": "Evaluating success and using feedback",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to evaluate our own success in communicating intent.",
+      "criteria": [
+        "I can make the cue and the rationale agree with each other."
+      ],
+      "steps": [
+        "The cue revised so that what the rationale claims is actually true of the music.",
+        "Where the two disagree, one of them changes, and the log records which and why.",
+        "Final playback against picture."
+      ],
+      "resources": [
+        "flat.io.",
+        "Scene playback.",
+        "Draft rationale.",
+        "Process log."
+      ],
+      "enduring": "The rationale and the piece are one submission, not two."
+    },
+    {
+      "number": 23,
+      "week": 8,
+      "title": "AT4 due",
+      "contentCode": "C18",
+      "contentPoint": "Information, identity and intellectual property",
+      "assessmentEvent": true,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to submit composed work complete and correctly attributed.",
+      "criteria": [
+        "I can submit all three parts of the task with correct attribution."
+      ],
+      "steps": [
+        "Assessment Task 4 submitted: the cue in flat.io, the process log and the 250-word rationale.",
+        "Submission protocols: attribution, file naming and what is included.",
+        "Students state one thing they would do differently with another fortnight."
+      ],
+      "resources": [
+        "flat.io submission.",
+        "AT4 criteria.",
+        "Submission checklist."
+      ],
+      "enduring": "The submission is the cue, the log and the rationale together."
+    },
+    {
+      "number": 24,
+      "week": 8,
+      "title": "Sharing work: what may be posted",
+      "contentCode": "C18",
+      "contentPoint": "Information, identity and intellectual property",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning the protocols that apply when compositions are shared.",
+      "criteria": [
+        "I can decide what from my project may be shared and justify it."
+      ],
+      "steps": [
+        "What may and may not be shared publicly from this project, and why the answer differs from the answer for a live cover.",
+        "Identity and information online, applied to a portfolio a student might actually build.",
+        "Sharing decisions recorded for the showcase next week."
+      ],
+      "resources": [
+        "School media protocols.",
+        "Licence guidance."
+      ],
+      "enduring": "Sharing decisions are made before the work is posted, not afterwards."
+    },
+    {
+      "number": 25,
+      "week": 9,
+      "title": "Showcase: cues played to the class",
+      "contentCode": "C19",
+      "contentPoint": "Analysing elements in own and others' compositions",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to analyse the elements of music in our own compositions and in others'.",
+      "criteria": [
+        "I can present my cue and discuss how I used the elements in it."
+      ],
+      "steps": [
+        "Cues played against their scenes to the class, with the composer introducing the brief in one sentence.",
+        "The elements analysed as each is heard, with the composer answering.",
+        "Recorded for the evidence file."
+      ],
+      "resources": [
+        "Playback and projection.",
+        "Element checklist."
+      ],
+      "enduring": "Presenting the work is where the analysis becomes public."
+    },
+    {
+      "number": 26,
+      "week": 9,
+      "title": "Evaluating the elements in our cues",
+      "contentCode": "C19",
+      "contentPoint": "Analysing elements in own and others' compositions",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to discuss the use of the elements in our own and others' compositions.",
+      "criteria": [
+        "I can analyse a classmate's cue and my own using precise terminology."
+      ],
+      "steps": [
+        "Three cues analysed in depth by the class, one film and two game, with the composers present.",
+        "Each student then writes the same analysis of their own work.",
+        "Vocabulary from the term used precisely and corrected where it is not."
+      ],
+      "resources": [
+        "Scores and audio.",
+        "Element checklist.",
+        "Term vocabulary list."
+      ],
+      "enduring": "Analysing your own work is the same skill as analysing anyone else's."
+    },
+    {
+      "number": 27,
+      "week": 9,
+      "title": "Listening beyond the unit",
+      "contentCode": "L1",
+      "contentPoint": "Evaluating live and recorded music",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to evaluate musical features and the communication of ideas.",
+      "criteria": [
+        "I can evaluate an unfamiliar work and support the judgement."
+      ],
+      "steps": [
+        "A live or recorded work heard and evaluated in full, outside the unit's repertoire, for how it communicates its ideas.",
+        "The year's listening skills applied to something nobody prepared for.",
+        "Written response in the AT3 format, unmarked."
+      ],
+      "resources": [
+        "Listening set.",
+        "ALARM matrix."
+      ],
+      "enduring": "Listening skill is only useful if it works on music nobody chose for you."
+    },
+    {
+      "number": 28,
+      "week": 10,
+      "title": "What Year 10 asks for next",
+      "contentCode": "L1",
+      "contentPoint": "Evaluating live and recorded music",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning where this year's work leads next.",
+      "criteria": [
+        "I can name what Year 10 will expect and where my work already meets it."
+      ],
+      "steps": [
+        "Year 10 AT1 previewed: a minute of programme music in flat.io with a 500-word rationale, and how AT4 was the rung below it.",
+        "The Year 10 units named, and what each will assume this class already has.",
+        "Students evaluate one of their own works against the Year 10 criteria for interest."
+      ],
+      "resources": [
+        "Year 10 course reference.",
+        "AT4 and Year 10 AT1 criteria side by side."
+      ],
+      "enduring": "The next rung is visible from this one, which is what makes it a rung."
+    },
+    {
+      "number": 29,
+      "week": 10,
+      "title": "Performance check-in",
+      "contentCode": "P13",
+      "contentPoint": "Evaluating own technique",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to evaluate our own technique and target the next step.",
+      "criteria": [
+        "I can name one technical target for next year and say why."
+      ],
+      "steps": [
+        "Each student plays something, and evaluates their own technique against where they were in Term 1.",
+        "A technical target set for Year 10, written down and kept.",
+        "Ensemble plays one piece from each term of the year."
+      ],
+      "resources": [
+        "Room kit.",
+        "Term 1 recordings for comparison.",
+        "Target sheet."
+      ],
+      "enduring": "Evaluating technique is what turns practice into progress."
+    },
+    {
+      "number": 30,
+      "week": 10,
+      "title": "The year closed",
+      "contentCode": "P13",
+      "contentPoint": "Evaluating own technique",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to evaluate a year's work as a whole.",
+      "criteria": [
+        "I can show, with evidence from my log, what changed in my musicianship."
+      ],
+      "steps": [
+        "The process log read end to end, from the Term 1 songwriting block to the AT4 rationale.",
+        "Each student writes one page on what changed in their musicianship this year, with evidence from the log.",
+        "Reports are written in this window; evidence gathered here still counts toward the on-balance judgement."
+      ],
+      "resources": [
+        "Process log.",
+        "Year's recordings and scores."
+      ],
+      "enduring": "A log kept all year is worth reading all at once."
+    }
+  ]
+}

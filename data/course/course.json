@@ -1,0 +1,10 @@
+{
+  "mark": "9MUS1",
+  "year": "2027",
+  "name": "Year 9 Music",
+  "syllabus": "Music 7-10 Syllabus (2024), Stage 5",
+  "currentLesson": 2,
+  "currentTerm": "term2",
+  "positionNote": "The live position, updated from debriefs once 2027 teaching starts. Until then it is set to Term 2 input 02, the lesson comp D was approved on, so the build can be checked against the comp.",
+  "terms": ["term1", "term2", "term3", "term4"]
+}

@@ -1,0 +1,257 @@
+/* The Plot: stage-floor black, chalk line, one fluoro gaffer tape per term.
+   The lesson page is comp D, .impeccable/mocks/comp-d-thedesk.html.
+
+   Two line weights only: a 1px chalk hairline for what is drawn, a 4px painted
+   keyline for what bounds. A third weight is a defect.
+   Two tape strips a page at most: one on the rail's current row, one holding
+   the plate down.
+   Black ink on every tape colour, never white. */
+
+@font-face{
+  font-family:"Chivo";
+  src:url("fonts/chivo-var.woff2") format("woff2");
+  font-weight:300 900; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Chivo Mono";
+  src:url("fonts/chivo-mono-var.woff2") format("woff2");
+  font-weight:300 800; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Saira Stencil One";
+  src:url("fonts/saira-stencil-one.woff2") format("woff2");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+
+:root{
+  --floor:#111214; --chalk:#F2F1EC; --chalk-dim:#8E8F8B; --chalk-past:#9A9B97; --hair:#313337;
+  --t1:#E8FF3A; --t2:#FF2D78; --t3:#FF6A1F; --t4:#3DFF7D;
+  --sheet:#F4F3EE; --ink:#141517; --ink-dim:#5D5F63; --rule:rgba(20,21,23,.18);
+  --tape:var(--t1);
+  --torn-tape:polygon(0 12%,4% 0,9% 14%,14% 2%,100% 0,97% 13%,100% 92%,95% 100%,90% 88%,85% 100%,0 100%,3% 86%);
+}
+body[data-term="term1"]{--tape:var(--t1)}
+body[data-term="term2"]{--tape:var(--t2)}
+body[data-term="term3"]{--tape:var(--t3)}
+body[data-term="term4"]{--tape:var(--t4)}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--floor);color:var(--chalk);
+  font-family:Chivo,system-ui,sans-serif;font-size:16px;line-height:1.5;
+  /* the floor, gridded the way a plot is drawn on graph paper */
+  background-image:repeating-linear-gradient(0deg,transparent 0 47px,rgba(242,241,236,.03) 47px 48px),
+                   repeating-linear-gradient(90deg,transparent 0 47px,rgba(242,241,236,.03) 47px 48px);
+}
+.mono{font-family:"Chivo Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+a{color:inherit}
+img,svg{max-width:100%}
+
+/* the three places the stencil face is allowed, and no others:
+   the class mark, the input list head, the lesson title */
+.floorbar .mark,.railhead b,.plate h1,.termhead h1{
+  font-family:"Saira Stencil One",Chivo,sans-serif;font-weight:400
+}
+
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-9999px;top:0;z-index:20;background:var(--chalk);color:var(--ink);padding:12px 18px;font-weight:700}
+.skip:focus{left:0}
+:focus-visible{outline:3px solid var(--tape);outline-offset:2px}
+
+/* ---------------------------------------------------------- the floor bar */
+.floorbar{display:flex;align-items:center;gap:22px;padding:15px 30px;border-bottom:1px solid var(--hair);flex-wrap:wrap}
+.floorbar .mark{font-size:1.2rem;letter-spacing:.05em;text-transform:uppercase;text-decoration:none}
+.floorbar .yr{font-size:.7rem;letter-spacing:.2em;color:var(--chalk-dim)}
+.floorbar nav{margin-left:auto;display:flex;gap:2px;flex-wrap:wrap}
+.floorbar nav a{
+  text-decoration:none;color:var(--chalk-dim);font-size:.71rem;letter-spacing:.16em;
+  text-transform:uppercase;padding:8px 14px;border:1px solid var(--hair)
+}
+.floorbar nav a:hover{color:var(--chalk);border-color:var(--chalk-dim)}
+.floorbar nav a.on{background:var(--tape);color:var(--ink);border-color:var(--tape);font-weight:800}
+
+/* ------------------------------------------------------------- the layout */
+.wrap{display:grid;grid-template-columns:312px minmax(0,1fr)}
+
+/* --------------------------------------------------- the rail, input list */
+.rail{border-right:1px solid var(--hair);padding-bottom:50px}
+/* the disclosure is a phone affordance only; at this width it is inert and
+   the list is always open, whatever state the element is in */
+.rail summary{list-style:none;pointer-events:none}
+.rail summary::-webkit-details-marker{display:none}
+.rail details > .railbody{display:block}
+.railhead{padding:20px 22px 12px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--hair)}
+.railhead b{font-size:.98rem;letter-spacing:.05em;text-transform:uppercase}
+.railhead i{font-style:normal;font-size:.68rem;letter-spacing:.1em;color:var(--chalk-dim)}
+.wk{padding:16px 22px 6px;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--chalk-dim);font-weight:800}
+.ch{display:grid;grid-template-columns:34px 1fr;gap:11px;padding:6px 22px;align-items:baseline;text-decoration:none;color:var(--chalk)}
+a.ch:hover{background:rgba(242,241,236,.05)}
+.ch .n{font-size:.76rem;color:var(--chalk-dim)}
+.ch .t{font-size:.9rem;line-height:1.3}
+/* already taught. 6.7:1, and the strike marker carries the state as well, so
+   it never rests on the contrast step alone. */
+.ch.done .t,.ch.done .n{color:var(--chalk-past)}
+.ch.done .n::after{content:" \00d7"}
+.ch.at .t{font-weight:800}
+.ch.at .n::after{content:" \25A0";font-size:.6em;vertical-align:middle}
+/* An input with no page yet is not dimmed. It is a real lesson in the term and
+   the comp's rail is chalk white; what it lacks is the link, not the standing.
+   Dimming it would mark 122 of the 123 as inactive until the content pour. */
+/* where the class is up to: the rail's one torn strip of the term's tape */
+.ch.now{
+  margin:3px 10px;padding:9px 12px;background:var(--tape);color:var(--ink);
+  clip-path:polygon(0 8%,3% 0,7% 10%,11% 1%,100% 0,98.5% 11%,100% 94%,96% 100%,92% 90%,88% 100%,0 100%,1.8% 88%);
+}
+.ch.now .n,.ch.now .t{color:var(--ink);font-weight:800}
+/* the page you have open. The 4px painted keyline, not a second tape strip. */
+.ch.reading{box-shadow:inset 4px 0 0 var(--chalk)}
+.ch.now.reading{box-shadow:inset 4px 0 0 var(--ink)}
+.railfoot{margin:22px 22px 0;padding-top:16px;border-top:1px solid var(--hair)}
+.railfoot b{display:block;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--chalk-dim);font-weight:800;margin-bottom:9px}
+.railfoot a,.railfoot .soon{display:block;font-size:.85rem;text-decoration:none;padding:6px 0;border-bottom:1px solid var(--hair)}
+.railfoot a:hover{color:var(--tape)}
+.railfoot .soon{color:var(--chalk-dim)}
+.railfoot .soon i{font-style:normal;display:block;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase}
+
+/* --------------------------------------------------------------- the plate */
+.stagearea{padding:42px 40px 60px}
+.plate-wrap{position:relative;max-width:960px}
+.tapestrip{position:absolute;width:124px;height:32px;background:var(--tape);clip-path:var(--torn-tape)}
+.tapestrip.tl{left:-10px;top:-13px;transform:rotate(-3.5deg)}
+.tapestrip.tr{right:-10px;top:-13px;transform:rotate(2.5deg)}
+.plate{
+  background:var(--sheet);color:var(--ink);padding-bottom:32px;
+  clip-path:polygon(0 .7%,.8% 0,1.7% .8%,2.6% 0,100% 0,99.5% .9%,100% 99.1%,99.2% 100%,98.3% 99.2%,97.4% 100%,0 100%,.4% 99.1%);
+}
+
+.titleblock{padding:34px 34px 0;border-bottom:2px solid var(--ink)}
+.titleblock .of{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:14px}
+.titleblock h1{font-size:clamp(2.1rem,4.6vw,3.7rem);line-height:.96;text-transform:uppercase;max-width:15ch}
+.tbgrid{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--rule);margin-top:26px}
+.tbgrid div{padding:11px 14px 13px 0;border-right:1px solid var(--rule)}
+.tbgrid div:last-child{border-right:0;padding-right:0}
+.tbgrid dt{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:4px}
+.tbgrid dd{font-size:.88rem;font-weight:600}
+
+.rider{display:grid;grid-template-columns:minmax(0,1fr) 300px}
+.clauses{padding:28px 34px 0;border-right:1px solid var(--rule)}
+.lead{font-size:clamp(1.35rem,2.2vw,1.72rem);line-height:1.22;font-weight:700;letter-spacing:-.018em;max-width:26ch;margin-bottom:30px}
+.cl{display:grid;grid-template-columns:46px 1fr;gap:16px;padding:16px 0;border-top:1px solid var(--rule)}
+.cl .n{font-size:.78rem;color:var(--ink-dim);padding-top:3px}
+.cl h3{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:6px;font-weight:800}
+.cl p{max-width:66ch}
+.sc{list-style:none}
+.sc li{padding:8px 0 8px 26px;position:relative;border-bottom:1px solid var(--rule);max-width:58ch}
+.sc li:last-child{border-bottom:0;padding-bottom:0}
+.sc li::before{content:"";position:absolute;left:0;top:16px;width:13px;height:1.5px;background:var(--ink)}
+
+.spec{padding:28px 30px 0}
+.spec h4{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim);font-weight:800;margin:0 0 10px}
+.spec .plot{border:1px solid var(--rule);padding:13px;margin-bottom:26px}
+.spec .plot h4{margin-bottom:9px}
+.spec .row{display:grid;grid-template-columns:30px 1fr;gap:10px;padding:9px 0;border-top:1px solid var(--rule);font-size:.86rem;line-height:1.34}
+.spec .row .n{font-size:.73rem;color:var(--ink-dim)}
+.spec .blk{margin-bottom:26px}
+.spec .codes span{font-size:.73rem;border:1px solid var(--rule);padding:4px 8px;display:inline-block;margin:0 5px 5px 0}
+.listen{border:1px solid var(--rule);padding:13px}
+.listen .tr{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-top:1px solid var(--rule);font-size:.84rem}
+.listen .tr:first-of-type{border-top:0}
+.listen .tr b{font-weight:600}
+.listen .tr span{font-size:.72rem;color:var(--ink-dim);white-space:nowrap}
+
+.keep{margin:30px 34px 0;border-top:2px solid var(--ink);padding-top:18px;font-size:1.1rem;line-height:1.35;max-width:50ch;font-weight:600}
+.keep b{display:block;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:8px;font-weight:800}
+
+/* --------------------------------------------- under the plate, the floor */
+.underplate{max-width:960px;margin-top:34px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.underplate a{text-decoration:none;font-size:.84rem;padding:10px 15px;border:1px solid var(--hair);color:var(--chalk)}
+.underplate a:hover{border-color:var(--chalk-dim)}
+.underplate .lbl{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--chalk-dim);font-weight:800}
+
+/* ------------------------------------------ the term page, not designed yet */
+.termpage{padding:42px 40px 70px;max-width:1100px}
+.termhead .of{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--chalk-dim);margin-bottom:14px}
+.termhead h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:.98;text-transform:uppercase}
+/* No accent stripe. The tape colours are fills and markers, never a rule down
+   the side of a note, and the 4px keyline bounds things rather than decorating
+   them. A 1px chalk hairline is the world's own weight and says enough. */
+.notdesigned{margin:26px 0 0;padding:16px 0 0;border-top:1px solid var(--hair);max-width:62ch;font-size:.92rem;color:var(--chalk)}
+.atbar{margin:28px 0 34px;display:flex;gap:10px 22px;flex-wrap:wrap;align-items:baseline;padding:14px 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);font-size:.86rem}
+.atbar .lbl{font-weight:800}
+.atbar .mono{font-size:.76rem;color:var(--chalk-dim)}
+.inputs{width:100%;border-collapse:collapse;font-size:.9rem}
+.inputs th{text-align:left;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--chalk-dim);font-weight:800;padding:8px 12px 8px 0;border-bottom:1px solid var(--hair)}
+.inputs td{padding:9px 12px 9px 0;border-bottom:1px solid var(--hair);vertical-align:baseline}
+.inputs .wkrow th{padding-top:22px;color:var(--chalk-dim);border-bottom:0}
+.inputs .n{color:var(--chalk-dim);font-size:.78rem;white-space:nowrap}
+.inputs .cd,.inputs .oc{color:var(--chalk-dim);font-size:.74rem;white-space:nowrap}
+.inputs .ti a{text-decoration-thickness:1px;text-underline-offset:3px}
+.inputs tr.done td{color:var(--chalk-past)}
+.inputs tr.at .ti{font-weight:800}
+.inputs tr.now td{background:var(--tape);color:var(--ink)}
+.inputs tr.now .n,.inputs tr.now .cd,.inputs tr.now .oc{color:var(--ink)}
+.inputs tr.now .ti{font-weight:800}
+
+/* ------------------------------------------------------------- the footer */
+.foot{border-top:1px solid var(--hair);padding:26px 30px 40px;color:var(--chalk-dim);font-size:.8rem;display:flex;gap:8px 30px;flex-wrap:wrap;justify-content:space-between}
+
+/* ----------------------------------------------------------- narrow screens
+   The rail is permanent, but 30 rows ahead of the lesson is not a page a
+   student can use with an instrument in their hands. On a phone it becomes a
+   disclosure that stays shut, with the taped current row showing through the
+   summary, and the lesson is what you land on. The comps were rendered at
+   1440 only, so everything below here is build work rather than comp. */
+@media(max-width:1100px){
+  .rider{grid-template-columns:1fr}
+  .clauses{border-right:0}
+  /* Once the spec is under the clauses rather than beside them it has the whole
+     plate to spread into, and a full-width plan drawing would break comp D's
+     rule that the room is small on a lesson page and large only on the hub.
+     The blocks go side by side instead, at the width they had in the column. */
+  .spec{padding-top:6px;border-top:1px solid var(--rule);
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,240px));gap:0 26px;align-items:start}
+  .spec .plot{max-width:240px}
+}
+@media(max-width:980px){
+  .wrap{grid-template-columns:1fr}
+  .rail{border-right:0;border-bottom:1px solid var(--hair);padding-bottom:0}
+  /* the list stays open, so the disclosure state and what a screen reader is
+     told never disagree, but it is capped so the lesson is not thirty rows
+     down the page. The skip link is the first thing in the tab order. */
+  .rail summary{pointer-events:auto;cursor:pointer}
+  .rail details:not([open]) > .railbody{display:none}
+  .railhead{padding:16px 18px}
+  .railbody{padding-bottom:16px;max-height:42vh;overflow-y:auto;overscroll-behavior:contain}
+  .railhead::after{content:"Hide";font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--chalk-dim);font-weight:800}
+  .rail details:not([open]) .railhead::after{content:"Show"}
+  .stagearea{padding:26px 16px 44px}
+  .tbgrid{grid-template-columns:repeat(2,1fr)}
+  .tbgrid div:last-child{padding-right:14px}
+  .titleblock,.clauses,.keep{padding-left:20px;padding-right:20px}
+  .keep{margin-left:20px;margin-right:20px;padding-left:0;padding-right:0}
+  .spec{padding-left:20px;padding-right:20px}
+  .termpage{padding:26px 16px 50px}
+  .floorbar{padding:12px 16px;gap:14px}
+  .floorbar nav{margin-left:0;width:100%}
+  .tapestrip{width:96px;height:26px}
+}
+@media(max-width:620px){
+  .tbgrid{grid-template-columns:1fr 1fr}
+  .cl{grid-template-columns:34px 1fr;gap:10px}
+  /* the outcomes column is the first thing a phone can lose: it is on the
+     lesson page, and the input list is for finding a lesson */
+  .inputs .oc{display:none}
+  .foot{padding:22px 16px 34px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+
+@media print{
+  body{background:#fff;color:#000;background-image:none}
+  .rail,.floorbar,.underplate,.tapestrip{display:none}
+  .plate{clip-path:none;border:1px solid #000}
+  .wrap{display:block}
+}

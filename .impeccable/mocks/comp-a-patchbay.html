@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comp A: The Patch Bay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300..900;1,300..900&family=Chivo+Mono:wght@300..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --floor:#111214; --floor-hi:#191A1D; --chalk:#F2F1EC; --chalk-dim:#90918C;
+  --hair:#33353A; --keyline:#F2F1EC;
+  --t1:#E8FF3A; --t2:#FF2D78; --t3:#FF6A1F; --t4:#3DFF7D;
+  --panel:#F4F3EE; --ink:#111214;
+  --tape:var(--t2);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--floor);color:var(--chalk);font-family:Chivo,sans-serif;font-size:16px;line-height:1.5;
+  background-image:repeating-linear-gradient(0deg,transparent 0 39px,rgba(242,241,236,.035) 39px 40px),
+                   repeating-linear-gradient(90deg,transparent 0 39px,rgba(242,241,236,.035) 39px 40px);}
+.mono{font-family:"Chivo Mono",monospace;font-variant-numeric:tabular-nums}
+
+/* torn tape */
+.tape{background:var(--tape);color:var(--ink);
+  clip-path:polygon(0 6%,2% 0,5% 8%,8% 1%,100% 0,99% 9%,100% 96%,97% 100%,94% 92%,91% 100%,0 100%,1% 90%);}
+
+/* ---- head plate ---- */
+.plate{border-bottom:4px solid var(--keyline);padding:22px 32px 18px;display:flex;align-items:flex-end;gap:34px;flex-wrap:wrap}
+.plate h1{font-size:clamp(2rem,4.4vw,3.5rem);font-weight:900;letter-spacing:-.035em;line-height:.9;text-transform:uppercase}
+.plate .sub{color:var(--chalk-dim);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;margin-top:8px}
+.plate .right{margin-left:auto;text-align:right}
+.plate .right .code{font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;color:var(--chalk-dim)}
+.plate .right .wk{font-size:1.5rem;font-weight:800;letter-spacing:-.02em}
+.termbar{display:flex;gap:0;border-top:1px solid var(--hair)}
+.termbar span{flex:1;padding:7px 14px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--chalk-dim);border-right:1px solid var(--hair)}
+.termbar span:last-child{border-right:0}
+.termbar span.on{background:var(--tape);color:var(--ink);font-weight:800}
+
+/* ---- layout ---- */
+.wrap{display:grid;grid-template-columns:328px 1fr;min-height:70vh}
+.rail{border-right:4px solid var(--keyline);padding:0 0 40px}
+.railhead{padding:16px 20px 10px;border-bottom:1px solid var(--hair);display:flex;justify-content:space-between;align-items:baseline}
+.railhead b{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800}
+.railhead i{font-style:normal;font-size:.68rem;letter-spacing:.14em;color:var(--chalk-dim)}
+.wk{padding:14px 20px 5px;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--chalk-dim);border-top:1px solid var(--hair)}
+.ch{display:grid;grid-template-columns:38px 1fr;gap:12px;padding:6px 20px;align-items:baseline}
+.ch .n{font-family:"Chivo Mono",monospace;font-size:.8rem;color:var(--chalk-dim);font-variant-numeric:tabular-nums}
+.ch .t{font-size:.92rem;line-height:1.28}
+.ch.done .t{color:var(--chalk-dim)}
+.ch.done .n::after{content:" \00d7";color:var(--chalk-dim)}
+.ch.now{padding:9px 20px;margin:2px 8px}
+.ch.now .n,.ch.now .t{color:var(--ink)}
+.ch.now .t{font-weight:800}
+.ch.now .n{font-weight:800}
+.ch.at{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);margin-top:4px;padding-top:9px;padding-bottom:9px}
+.ch.at .t::after{content:" \2014 assessment";display:none}
+.ch.at .t{text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;font-weight:800}
+
+/* ---- main ---- */
+.main{padding:26px 34px 60px;display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:34px;align-items:start}
+.now-line{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.now-line .strip{display:inline-block;padding:3px 16px;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:800}
+.now-line .dot{width:9px;height:9px;background:var(--tape);border-radius:50%}
+.now-line .meta{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--chalk-dim)}
+h2.lesson{font-size:clamp(1.9rem,3.5vw,2.9rem);font-weight:900;letter-spacing:-.03em;line-height:1;margin:6px 0 20px;max-width:16ch}
+
+.panel{background:var(--panel);color:var(--ink);padding:20px 22px 22px;margin-bottom:20px;
+  clip-path:polygon(0 1.5%,1.2% 0,2.6% 1.8%,4% 0,100% 0,99.2% 2%,100% 98%,98.6% 100%,97.2% 98.2%,95.8% 100%,0 100%,.7% 98%);}
+.panel h3{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;font-weight:800;margin-bottom:12px}
+.panel p{max-width:66ch;margin-bottom:9px}
+.panel .li{font-size:1.12rem;line-height:1.35;font-weight:600;max-width:40ch;margin-bottom:14px}
+.panel ul{list-style:none;border-top:1px solid rgba(17,18,20,.22)}
+.panel li{padding:8px 0 8px 30px;border-bottom:1px solid rgba(17,18,20,.14);position:relative;max-width:62ch}
+.panel li::before{content:attr(data-n);position:absolute;left:0;top:8px;font-family:"Chivo Mono",monospace;font-size:.78rem;opacity:.55}
+
+.clauses{border-top:1px solid var(--hair)}
+.clause{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:13px 0;border-bottom:1px solid var(--hair)}
+.clause .n{font-family:"Chivo Mono",monospace;font-size:.78rem;color:var(--chalk-dim)}
+.clause p{max-width:64ch}
+.sec{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--chalk-dim);margin:26px 0 8px;font-weight:800}
+
+aside .plot{border:1px solid var(--hair);padding:14px}
+aside h4{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--chalk-dim);margin-bottom:10px;font-weight:800}
+aside .patch{margin-top:20px;border-top:1px solid var(--hair)}
+aside .patch div{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:8px 0;border-bottom:1px solid var(--hair);font-size:.84rem}
+aside .patch .n{font-family:"Chivo Mono",monospace;font-size:.74rem;color:var(--chalk-dim)}
+aside .out{margin-top:20px}
+aside .out code{font-family:"Chivo Mono",monospace;font-size:.74rem;display:block;padding:5px 0;border-bottom:1px solid var(--hair);color:var(--chalk)}
+.foot{border-top:4px solid var(--keyline);padding:18px 34px;display:flex;gap:26px;flex-wrap:wrap;align-items:center}
+.foot b{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase}
+.foot a{color:var(--chalk);font-size:.86rem;text-decoration:none;border-bottom:1px solid var(--hair);padding-bottom:2px}
+@media(max-width:900px){.wrap{grid-template-columns:1fr}.rail{border-right:0;border-bottom:4px solid var(--keyline)}.main{grid-template-columns:1fr;padding:22px}}
+</style>
+</head>
+<body>
+<!-- COMP A: THE PATCH BAY. Input list dominant, plan reduced to a corner plate. -->
+
+<div class="plate">
+  <div>
+    <h1>Blues<br>to Jazz</h1>
+    <div class="sub">Term 2 &middot; Jazz &middot; 10 weeks</div>
+  </div>
+  <div class="right">
+    <div class="code">9MUS1 &middot; 2027</div>
+    <div class="wk">Week 1 &middot; Lesson 02</div>
+  </div>
+</div>
+<div class="termbar">
+  <span>1 Like a Version</span><span class="on">2 Blues to Jazz</span><span>3 Sounds of Australia</span><span>4 Level Up</span>
+</div>
+
+<div class="wrap">
+  <div class="rail">
+    <div class="railhead"><b>Input list</b><i>30 ch</i></div>
+
+    <div class="wk">Week 1</div>
+    <div class="ch done"><span class="n">01</span><span class="t">AT2 issued, both parts at once</span></div>
+    <div class="ch now tape"><span class="n">02</span><span class="t">The 12-bar blues, heard and counted</span></div>
+    <div class="ch"><span class="n">03</span><span class="t">Playing the 12-bar form</span></div>
+
+    <div class="wk">Week 2</div>
+    <div class="ch"><span class="n">04</span><span class="t">Roman numerals I, IV and V</span></div>
+    <div class="ch"><span class="n">05</span><span class="t">The blues scale in the hands</span></div>
+    <div class="ch"><span class="n">06</span><span class="t">Aural routine: swing, syncopation and backbeat</span></div>
+
+    <div class="wk">Week 3</div>
+    <div class="ch"><span class="n">07</span><span class="t">Riffs and bass lines transcribed by ear</span></div>
+    <div class="ch"><span class="n">08</span><span class="t">The blues&rsquo; West African roots</span></div>
+    <div class="ch"><span class="n">09</span><span class="t">Music that carried a people&rsquo;s story</span></div>
+
+    <div class="wk">Week 4</div>
+    <div class="ch"><span class="n">10</span><span class="t">Improvising over the form: first choruses</span></div>
+    <div class="ch"><span class="n">11</span><span class="t">Head, solos, head</span></div>
+    <div class="ch"><span class="n">12</span><span class="t">Walking bass: root on the change</span></div>
+
+    <div class="wk">Week 5</div>
+    <div class="ch"><span class="n">13</span><span class="t">Comping, and the voicings supplied</span></div>
+    <div class="ch"><span class="n">14</span><span class="t">Trading fours</span></div>
+    <div class="ch"><span class="n">15</span><span class="t">Jazz drum notation</span></div>
+
+    <div class="wk">Week 6</div>
+    <div class="ch"><span class="n">16</span><span class="t">Taking a risk in a solo</span></div>
+    <div class="ch"><span class="n">17</span><span class="t">Recreating two supplied melodies</span></div>
+    <div class="ch"><span class="n">18</span><span class="t">The class band plays a standard</span></div>
+
+    <div class="wk">Week 7</div>
+    <div class="ch"><span class="n">19</span><span class="t">Composing the 16-bar blues: melody first</span></div>
+    <div class="ch"><span class="n">20</span><span class="t">Writing the bass and the drum part</span></div>
+    <div class="ch at"><span class="n">21</span><span class="t">AT2 Part A due</span></div>
+
+    <div class="wk">Week 8</div>
+    <div class="ch"><span class="n">22</span><span class="t">Part A feedback: is it playable</span></div>
+    <div class="ch"><span class="n">23</span><span class="t">Fixing the unplayable</span></div>
+    <div class="ch"><span class="n">24</span><span class="t">Rehearsing your own blues</span></div>
+
+    <div class="wk">Week 9</div>
+    <div class="ch at"><span class="n">25</span><span class="t">AT2 Part B performances, day 1</span></div>
+    <div class="ch at"><span class="n">26</span><span class="t">AT2 Part B performances, day 2</span></div>
+    <div class="ch"><span class="n">27</span><span class="t">Listening back to your own performance</span></div>
+
+    <div class="wk">Week 10</div>
+    <div class="ch at"><span class="n">28</span><span class="t">AT2 Part B performances, day 3</span></div>
+    <div class="ch"><span class="n">29</span><span class="t">Evaluating the elements in our blues</span></div>
+    <div class="ch"><span class="n">30</span><span class="t">Feedback used: what would change next time</span></div>
+  </div>
+
+  <div class="main">
+    <div>
+      <div class="now-line">
+        <span class="strip tape">On the desk</span>
+        <span class="dot"></span>
+        <span class="meta">Channel 02 &middot; Week 1</span>
+      </div>
+      <h2 class="lesson">The 12-bar blues, heard and counted</h2>
+
+      <div class="panel">
+        <h3>What we are learning</h3>
+        <p class="li">We are learning to hear and count the 12-bar blues form.</p>
+        <h3>You can do it when</h3>
+        <ul>
+          <li data-n="A">I can count a 12-bar chorus without help.</li>
+          <li data-n="B">I can say where chords IV and V arrive.</li>
+        </ul>
+      </div>
+
+      <div class="sec">In the room</div>
+      <div class="clauses">
+        <div class="clause"><span class="n">01</span><p>The 12-bar form heard in three recordings, counted aloud, then diagrammed on the board.</p></div>
+        <div class="clause"><span class="n">02</span><p>How the genre is characterised: what makes a listener say &ldquo;this is a blues&rdquo; within two bars.</p></div>
+        <div class="clause"><span class="n">03</span><p>Count a full chorus without the teacher, and mark where the chord changes fall.</p></div>
+      </div>
+
+      <div class="sec">Worth keeping</div>
+      <div class="clauses">
+        <div class="clause"><span class="n">&mdash;</span><p>A genre is recognisable because of features that can be named.</p></div>
+      </div>
+    </div>
+
+    <aside>
+      <div class="plot">
+        <h4>The room</h4>
+        <svg viewBox="0 0 200 176" width="100%" role="img" aria-label="Plan view of the band set-up">
+          <g fill="none" stroke="#33353A" stroke-width="1">
+            <rect x="14" y="14" width="172" height="120"/>
+            <circle cx="60" cy="52" r="13"/><circle cx="140" cy="52" r="13"/>
+            <circle cx="40" cy="100" r="13"/><circle cx="100" cy="100" r="13"/><circle cx="160" cy="100" r="13"/>
+          </g>
+          <g fill="none" stroke="#F2F1EC" stroke-width="1">
+            <rect x="20" y="20" width="160" height="112"/>
+            <line x1="20" y1="132" x2="180" y2="132" stroke-width="2"/>
+            <circle cx="66" cy="46" r="14"/><circle cx="134" cy="46" r="14"/>
+            <circle cx="46" cy="96" r="14"/><circle cx="100" cy="96" r="14"/><circle cx="154" cy="96" r="14"/>
+            <path d="M40 140 L60 140 L54 152 L46 152 Z"/><path d="M140 140 L160 140 L154 152 L146 152 Z"/>
+          </g>
+          <g fill="#F2F1EC" font-family="Chivo Mono, monospace" font-size="9" text-anchor="middle">
+            <text x="66" y="49">1</text><text x="134" y="49">2</text>
+            <text x="46" y="99">3</text><text x="100" y="99">4</text><text x="154" y="99">5</text>
+          </g>
+          <g fill="#90918C" font-family="Chivo, sans-serif" font-size="7.5" text-anchor="middle" letter-spacing="1">
+            <text x="66" y="30">DRUMS</text><text x="134" y="30">KEYS</text>
+            <text x="46" y="120">BASS</text><text x="100" y="120">GTR</text><text x="154" y="120">VOX</text>
+            <text x="100" y="166">DOWNSTAGE</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="patch">
+        <h4 style="margin:16px 0 0">Patched in</h4>
+        <div><span class="n">R1</span><span>Listening set, three eras</span></div>
+        <div><span class="n">R2</span><span>Form diagram, bars numbered</span></div>
+        <div><span class="n">R3</span><span>flat.io aural notebook</span></div>
+      </div>
+
+      <div class="out">
+        <h4>Outcomes</h4>
+        <code>MU5-LIS-01</code>
+        <code>MU5-LIS-02</code>
+        <h4 style="margin-top:16px">Content</h4>
+        <code>L10</code>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<div class="foot">
+  <b>The blueprint</b>
+  <a href="#">12-bar progression</a>
+  <a href="#">Piano voicings</a>
+  <a href="#">Drum pattern</a>
+  <a href="#">Walking bass rules</a>
+</div>
+</body>
+</html>

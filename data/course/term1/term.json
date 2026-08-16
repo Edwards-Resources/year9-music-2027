@@ -1,0 +1,893 @@
+{
+  "id": "term1",
+  "n": 1,
+  "name": "Like a Version",
+  "tape": "--t1",
+  "focus": "Performing, popular music",
+  "assessment": {
+    "no": 1,
+    "name": "AT1: Like a Version",
+    "type": "Performance",
+    "issued": "Week 2",
+    "due": "Week 8",
+    "weighting": "25%",
+    "marks": 20,
+    "outcomes": [
+      "MU5-PER-01",
+      "MU5-PER-02"
+    ]
+  },
+  "blueprint": [],
+  "lessons": [
+    {
+      "number": 1,
+      "week": 1,
+      "title": "The room becomes a band",
+      "contentCode": "P7",
+      "contentPoint": "Ensemble role, function and balance",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning what each player is responsible for in a band.",
+      "criteria": [
+        "I can name my role in the ensemble and say who I have to listen to."
+      ],
+      "steps": [
+        "Instrument allocation. Every student is placed on a part and the four ensemble roles are named in the room: melody, harmony, bass, groove.",
+        "The class plays a single four-chord loop together, badly, then fixes it one role at a time.",
+        "Students record in their books which role they are carrying and who else is carrying it."
+      ],
+      "resources": [
+        "Room kit: guitars, bass, keys, drums, vocal PA.",
+        "Role cards."
+      ],
+      "enduring": "A band works because each player knows their role, their function and their balance."
+    },
+    {
+      "number": 2,
+      "week": 1,
+      "title": "Safe practice, set-up and pack-down",
+      "contentCode": "P12",
+      "contentPoint": "Safe vocal and instrumental practices",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to work safely and respectfully in a music room.",
+      "criteria": [
+        "I can warm up, set up and pack down without being told each step."
+      ],
+      "steps": [
+        "Warm-up routine for voice and for hands, taught as a routine to be repeated every lesson from now on.",
+        "Posture, volume and hearing. Cable, amp and stand handling, and the pack-down order for the room.",
+        "The protocols of working with other people's instruments: hygiene, asking, and reporting damage."
+      ],
+      "resources": [
+        "Room set-up map.",
+        "Warm-up card.",
+        "Hygiene supplies for shared mouthpieces."
+      ],
+      "enduring": "Safe and respectful practice is a condition of playing, not an extra."
+    },
+    {
+      "number": 3,
+      "week": 1,
+      "title": "flat.io opens, and the weekly aural routine begins",
+      "contentCode": "L19",
+      "contentPoint": "Aurally identifying the elements",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to identify the elements of music by ear and write what we hear.",
+      "criteria": [
+        "I can hear the metre of an excerpt and write it down correctly."
+      ],
+      "steps": [
+        "Students log in to flat.io and set up the class notebook. Nothing is composed: this is where bookwork lives.",
+        "The weekly aural routine starts and does not stop for the rest of the year. Ten minutes: metre, beat and pulse, identified by ear and written up.",
+        "Note entry drill: pitches placed on the stave from dictation, checked against the answer."
+      ],
+      "resources": [
+        "flat.io class notebook.",
+        "Aural routine sheet 1."
+      ],
+      "enduring": "Aural skill improves through short, regular, structured practice."
+    },
+    {
+      "number": 4,
+      "week": 2,
+      "title": "The four-chord loop, heard then played",
+      "contentCode": "L6",
+      "contentPoint": "Identifying, singing or playing patterns",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to hear a chord progression and play it back.",
+      "criteria": [
+        "I can hear the four-chord loop, play it, and say where it repeats."
+      ],
+      "steps": [
+        "The four-chord loop (I, V, vi, IV) heard across a set of songs chosen from the register, and identified by ear before it is named.",
+        "The loop sung, then played, in two keys.",
+        "Students identify by ear where the loop starts again, and mark the change points on the chart."
+      ],
+      "resources": [
+        "flat.io charts.",
+        "Chord shape cards.",
+        "Listening set from the repertoire register."
+      ],
+      "enduring": "The same small pattern sits underneath a great many songs."
+    },
+    {
+      "number": 5,
+      "week": 2,
+      "title": "Reading a chart, reading a lead sheet",
+      "contentCode": "P4",
+      "contentPoint": "Performing from a range of scores",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to read the scores a band actually uses.",
+      "criteria": [
+        "I can follow a lead sheet through a whole song without losing my place."
+      ],
+      "steps": [
+        "The difference between a chord chart and a lead sheet, taught by playing from both.",
+        "Repeat signs, first and second time bars, and the road map of a song.",
+        "Students follow a full lead sheet while the recording plays and mark where they lost their place."
+      ],
+      "resources": [
+        "flat.io class library.",
+        "Printed lead sheets for the class repertoire."
+      ],
+      "enduring": "Reading a chart is a skill in its own right, and it comes before writing one."
+    },
+    {
+      "number": 6,
+      "week": 2,
+      "title": "AT1 issued, and the first performance to the room",
+      "contentCode": "P1",
+      "contentPoint": "Singing with melodic and harmonic awareness",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning what AT1 asks for and starting to perform to the room.",
+      "criteria": [
+        "I can perform a short piece to the class and say what I would fix next time."
+      ],
+      "steps": [
+        "Assessment Task 1 issued: a performance of a chosen cover, solo or ensemble, due Week 8. The notification and criteria are read together and the criteria language is used from here on.",
+        "The performance cycle opens. Every student plays or sings something short to the room this lesson, unmarked.",
+        "Whole-class singing with the band, attending to tuning against the harmony."
+      ],
+      "resources": [
+        "AT1 notification and marking criteria.",
+        "Class repertoire."
+      ],
+      "enduring": "Performing to the room is a routine, so that the assessment is not the first time."
+    },
+    {
+      "number": 7,
+      "week": 3,
+      "title": "Balance in the room",
+      "contentCode": "P7",
+      "contentPoint": "Ensemble role, function and balance",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to balance an ensemble so the important part is heard.",
+      "criteria": [
+        "I can adjust my volume so that the part that matters can be heard."
+      ],
+      "steps": [
+        "The band plays the class piece three times: once too loud, once with the melody buried, once balanced. Students name the difference.",
+        "Amp and PA levels set as a decision rather than by habit.",
+        "Each section rehearses alone, then against one other section."
+      ],
+      "resources": [
+        "PA and amps.",
+        "Recording device for playback comparison."
+      ],
+      "enduring": "Balance is a musical decision made by the players, not by the desk."
+    },
+    {
+      "number": 8,
+      "week": 3,
+      "title": "Singing the top line, playing the parts",
+      "contentCode": "P1",
+      "contentPoint": "Singing with melodic and harmonic awareness",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to sing and play with melodic and harmonic awareness.",
+      "criteria": [
+        "I can hold my line while another part sounds against it."
+      ],
+      "steps": [
+        "Whole-class singing of the melody with harmonic accompaniment, attending to tuning and to where the harmony pulls the melody.",
+        "Two-part singing on a short section, so that harmonic awareness is experienced rather than described.",
+        "Each student then plays the melody on their instrument."
+      ],
+      "resources": [
+        "Vocal warm-up card.",
+        "Class repertoire in two parts."
+      ],
+      "enduring": "Hearing your own part inside the harmony is what makes an ensemble work."
+    },
+    {
+      "number": 9,
+      "week": 3,
+      "title": "Aural routine: metre, beat and the chord change",
+      "contentCode": "L6",
+      "contentPoint": "Identifying, singing or playing patterns",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to hear where harmony changes and to write down what we hear.",
+      "criteria": [
+        "I can mark the beat a chord changes on and notate a two-bar rhythm."
+      ],
+      "steps": [
+        "Aural routine, week 3: identifying where the chord changes fall against the beat.",
+        "Rhythmic dictation of a two-bar pattern from the class repertoire, written into flat.io.",
+        "Students sing back a four-note melodic pattern and then play it."
+      ],
+      "resources": [
+        "flat.io aural notebook.",
+        "Aural routine sheet 3."
+      ],
+      "enduring": "The ear is trained by naming what it already hears."
+    },
+    {
+      "number": 10,
+      "week": 4,
+      "title": "Cover versus original: the one changed element",
+      "contentCode": "L2",
+      "contentPoint": "Analysing and comparing repertoire",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to compare two interpretations of the same song.",
+      "criteria": [
+        "I can identify the element a cover changed and describe the change accurately."
+      ],
+      "steps": [
+        "A cover and its original side by side. Students name every difference, then keep the one that matters most.",
+        "Repeated with a pair whose changed element is different, so the method transfers rather than the answer.",
+        "Class builds the comparison table that will be used for the rest of the block."
+      ],
+      "resources": [
+        "Cover and original pairs from the repertoire register.",
+        "Comparison table."
+      ],
+      "enduring": "A cover changes one thing at a time and leaves the rest alone, which is what makes it analysable."
+    },
+    {
+      "number": 11,
+      "week": 4,
+      "title": "ALARM and the well-formed dot point",
+      "contentCode": "L7",
+      "contentPoint": "Written, verbal and multimodal analysis",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to write an analytical dot point that explains rather than lists.",
+      "criteria": [
+        "I can write a dot point that names a feature, locates it and says why it is there."
+      ],
+      "steps": [
+        "ALARM introduced as a visible classroom tool at the describe to explain rung, and it stays on the wall.",
+        "The well-formed dot point modelled then built: the feature, what it sounds like and where, and why it is there.",
+        "Students write three dot points on one comparison and mark each other's against the model."
+      ],
+      "resources": [
+        "ALARM matrix.",
+        "Model dot points, strong and weak.",
+        "Comparison recordings."
+      ],
+      "enduring": "Music applies ALARM to build well-formed dot points, not paragraphs."
+    },
+    {
+      "number": 12,
+      "week": 4,
+      "title": "AT1 repertoire locked, and why this song",
+      "contentCode": "P14",
+      "contentPoint": "Interpreting a range of genres and styles",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning that a performance is an interpretation made for an audience.",
+      "criteria": [
+        "I can explain why I chose this song and what I want the audience to hear."
+      ],
+      "steps": [
+        "AT1 repertoire locked. Each student or group states the song, the version and the parts.",
+        "The same song discussed from three positions: what the composer wrote, what the performer decided, and what the audience receives.",
+        "Interpretation as a decision: two performances of one piece in different genres, and what each is for."
+      ],
+      "resources": [
+        "AT1 repertoire form.",
+        "Interpretation listening set."
+      ],
+      "enduring": "Composer, performer and audience are three different positions on the same work."
+    },
+    {
+      "number": 13,
+      "week": 5,
+      "title": "What the studio did",
+      "contentCode": "L3",
+      "contentPoint": "Technologies in repertoire",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning how recording technology changes what we hear in a song.",
+      "criteria": [
+        "I can identify a production decision and explain its effect on the listener."
+      ],
+      "steps": [
+        "Production compared as well as performance: reverb, compression, doubling, tuning and how each changes what the listener believes about the room.",
+        "How a song is adapted for a different audience or purpose, and what is lost and gained each time.",
+        "Students identify one production decision in their own AT1 recording that they cannot reproduce live, and plan around it."
+      ],
+      "resources": [
+        "Studio versus live recordings of one song.",
+        "Playback with headphones."
+      ],
+      "enduring": "Technology is part of the interpretation, not a layer added on top of it."
+    },
+    {
+      "number": 14,
+      "week": 5,
+      "title": "A cover from outside the anglophone mainstream",
+      "contentCode": "L16",
+      "contentPoint": "Aesthetic qualities across styles",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning that different musical cultures value different qualities.",
+      "criteria": [
+        "I can describe what this style values and compare it with what I expected."
+      ],
+      "steps": [
+        "One cover studied from outside the anglophone mainstream, chosen from the register. The global music culture area is first met here.",
+        "What is aesthetically valued in this style, and how that differs from what the class assumed.",
+        "Written comparison of the two aesthetics, one dot point each."
+      ],
+      "resources": [
+        "Global music culture listening set from the repertoire register."
+      ],
+      "enduring": "Aesthetic judgement is cultural, and naming that is part of listening well."
+    },
+    {
+      "number": 15,
+      "week": 5,
+      "title": "Playing the difference",
+      "contentCode": "P23",
+      "contentPoint": "Analysing elements in performed repertoire",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to analyse the elements of music in the repertoire we perform.",
+      "criteria": [
+        "I can change one element in my performance and describe the effect."
+      ],
+      "steps": [
+        "The class plays one section of a song twice, changing a single element each time, and analyses the result as performers rather than listeners.",
+        "Discussion: which of these changes would you keep, and what does that tell you about the song?",
+        "Students annotate their own AT1 chart with the elements they intend to change."
+      ],
+      "resources": [
+        "Class repertoire.",
+        "Annotated charts."
+      ],
+      "enduring": "The analysis a performer does is the same analysis a listener does, done with the hands."
+    },
+    {
+      "number": 16,
+      "week": 6,
+      "title": "Rehearsal that fixes rather than describes",
+      "contentCode": "P2",
+      "contentPoint": "Rehearsing solo and ensemble repertoire",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to rehearse in a way that changes the performance.",
+      "criteria": [
+        "I can name a problem in musical terms and run a rehearsal step that fixes it."
+      ],
+      "steps": [
+        "Rehearsal technique taught explicitly: isolate, slow, repeat, restore. Modelled by the teacher on a real problem in the room.",
+        "The vocabulary of rehearsal: the terms used to say what to do next, not to describe what went wrong.",
+        "Each group runs one rehearsal cycle on their own AT1 piece and logs what they fixed."
+      ],
+      "resources": [
+        "Rehearsal log sheet.",
+        "Practice rooms and the main room."
+      ],
+      "enduring": "Rehearsal is a technique with steps, not simply playing the piece again."
+    },
+    {
+      "number": 17,
+      "week": 6,
+      "title": "Recording a rehearsal and listening back",
+      "contentCode": "P9",
+      "contentPoint": "Technology to record and mix performances",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to use recording to hear our own playing honestly.",
+      "criteria": [
+        "I can record a rehearsal and identify two specific things to change."
+      ],
+      "steps": [
+        "The rehearsal recorded on the room's interface or an iPad, then played back for balance, tuning and timing.",
+        "Basic mixing decisions: level, pan, and why the vocal needs space.",
+        "Students write two dot points on their own recording."
+      ],
+      "resources": [
+        "Audio interface, iPads, GarageBand.",
+        "Headphones."
+      ],
+      "enduring": "You cannot fix what you have not heard from outside."
+    },
+    {
+      "number": 18,
+      "week": 6,
+      "title": "Feedback round 1",
+      "contentCode": "P13",
+      "contentPoint": "Evaluating own technique",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to evaluate our own performance and set a target from it.",
+      "criteria": [
+        "I can identify one specific technical target from watching myself back."
+      ],
+      "steps": [
+        "First recorded feedback round. Each student or group performs to the class and receives structured feedback against the AT1 criteria.",
+        "Feedback given in the criteria's own language, one strength and one next step.",
+        "Students set a written target for the fortnight."
+      ],
+      "resources": [
+        "AT1 criteria.",
+        "Video recording.",
+        "Feedback proforma."
+      ],
+      "enduring": "Evaluation is only useful when it produces a next step."
+    },
+    {
+      "number": 19,
+      "week": 7,
+      "title": "Arrangement choices: why this song, played this way",
+      "contentCode": "P10",
+      "contentPoint": "Personal style through experimentation",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to make and defend arrangement decisions.",
+      "criteria": [
+        "I can explain one arrangement decision and what it does for the audience."
+      ],
+      "steps": [
+        "The arrangement examined as a set of decisions: key, tempo, instrumentation, what is cut and what is repeated.",
+        "Personal style discussed through experimentation: two students play the same phrase and the class names the difference.",
+        "Each group states the purpose of their performance and who it is for."
+      ],
+      "resources": [
+        "Charts.",
+        "Recording device.",
+        "Arrangement decision sheet."
+      ],
+      "enduring": "Why this song, played this way, for this room, is the question a performer answers."
+    },
+    {
+      "number": 20,
+      "week": 7,
+      "title": "Sharing a recording: copyright, permission and identity",
+      "contentCode": "P21",
+      "contentPoint": "Information, identity and copyright when sharing",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning the protocols that apply when a performance is shared.",
+      "criteria": [
+        "I can say what I must check before a recording of my group is posted."
+      ],
+      "steps": [
+        "The moment a student wants to post the rehearsal: copyright, permission, attribution and what a school account may and may not publish.",
+        "Identity and information online, including who else is in the recording and whether they agreed.",
+        "The school's protocols applied to a real example from this class."
+      ],
+      "resources": [
+        "School media protocols.",
+        "Worked example of an attribution."
+      ],
+      "enduring": "Copyright and consent are part of performing, not paperwork bolted on afterwards."
+    },
+    {
+      "number": 21,
+      "week": 7,
+      "title": "Feedback round 2, and the run-through",
+      "contentCode": "P13",
+      "contentPoint": "Evaluating own technique",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to show measurable improvement between two feedback rounds.",
+      "criteria": [
+        "I can show what improved since round one and name what I changed to do it."
+      ],
+      "steps": [
+        "Second recorded feedback round, against the target set in Week 6.",
+        "Full run-through in performance order, with entries, endings and changeovers rehearsed.",
+        "Final rehearsal log entry: what changed between round one and round two."
+      ],
+      "resources": [
+        "Video from round one for comparison.",
+        "Running order."
+      ],
+      "enduring": "Improvement that cannot be pointed to has not been evidenced."
+    },
+    {
+      "number": 22,
+      "week": 8,
+      "title": "AT1 performances, day 1",
+      "contentCode": "P6",
+      "contentPoint": "Technical and expressive control",
+      "assessmentEvent": true,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to perform with technical and expressive control under assessment conditions.",
+      "criteria": [
+        "I can perform my chosen cover with control of tone, timing and expression."
+      ],
+      "steps": [
+        "Assessment Task 1 performances begin. Technical and expressive control assessed against the criteria issued in Week 2.",
+        "Audience protocol taught and enforced: how a class listens to a classmate.",
+        "Marking notes taken live against the criteria."
+      ],
+      "resources": [
+        "AT1 criteria.",
+        "Recording setup.",
+        "Running order."
+      ],
+      "enduring": "Control of the instrument is what lets an interpretation be heard."
+    },
+    {
+      "number": 23,
+      "week": 8,
+      "title": "AT1 performances, day 2, and staging",
+      "contentCode": "P11",
+      "contentPoint": "Performance spaces, set-ups and staging",
+      "assessmentEvent": true,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning how staging and set-up affect what an audience receives.",
+      "criteria": [
+        "I can set up, perform and finish in a way that communicates to the room."
+      ],
+      "steps": [
+        "Remaining performances. Each is staged rather than played from a seat: entry, set-up, the piece, the ending, the acknowledgement.",
+        "The effect of the set-up on communication discussed after each performance.",
+        "Room reconfigured once during the lesson so the class experiences the difference."
+      ],
+      "resources": [
+        "PA, staging area, music stands.",
+        "Recording setup."
+      ],
+      "enduring": "Where you stand and how you finish are part of the performance."
+    },
+    {
+      "number": 24,
+      "week": 8,
+      "title": "Reflection against the criteria",
+      "contentCode": "P17",
+      "contentPoint": "Reflecting on communicating intent",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to evaluate our own performance against its stated intent.",
+      "criteria": [
+        "I can judge whether my performance communicated what I intended, with evidence."
+      ],
+      "steps": [
+        "Written reflection immediately after performing, against the same criteria the task was marked on.",
+        "Students state what they set out to communicate and whether it landed.",
+        "Reflections filed for the process log, which opens formally next week."
+      ],
+      "resources": [
+        "AT1 criteria.",
+        "Reflection proforma.",
+        "Performance video."
+      ],
+      "enduring": "Reflection is against intent, not against how the student felt."
+    },
+    {
+      "number": 25,
+      "week": 9,
+      "title": "Verse and chorus taken apart",
+      "contentCode": "C3",
+      "contentPoint": "Developing material within macrostructures",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning how a song is built out of sections.",
+      "criteria": [
+        "I can map a song's structure and say what changes at each section boundary."
+      ],
+      "steps": [
+        "Verse and chorus structure taken apart in the term's own repertoire: what changes at the chorus, and how the song signals it.",
+        "Macrostructure mapped on the board for three songs, then compared.",
+        "Students map the structure of their own AT1 song."
+      ],
+      "resources": [
+        "Structure mapping sheet.",
+        "Term repertoire."
+      ],
+      "enduring": "A song's shape is a decision, and the listener hears the decision."
+    },
+    {
+      "number": 26,
+      "week": 9,
+      "title": "The process log opens",
+      "contentCode": "C2",
+      "contentPoint": "Techniques and structures to refine material",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to document what we try, not only what we keep.",
+      "criteria": [
+        "I can write a log entry that records a decision and the reason for it."
+      ],
+      "steps": [
+        "The process log opens and runs to the end of Year 9. A few sentences per draft: what was tried, what changed, what was kept.",
+        "A model log entry written together, then a weak one improved.",
+        "Students experiment with two openings for their song and log both."
+      ],
+      "resources": [
+        "Process log template in flat.io or the class book."
+      ],
+      "enduring": "The record of how a work was made is evidence in its own right."
+    },
+    {
+      "number": 27,
+      "week": 9,
+      "title": "Choosing a progression and a groove",
+      "contentCode": "C2",
+      "contentPoint": "Techniques and structures to refine material",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to experiment with compositional material before committing to it.",
+      "criteria": [
+        "I can test more than one option and say why I kept the one I kept."
+      ],
+      "steps": [
+        "Students choose a progression from a supplied set and a groove to sit it on, then test the pairing.",
+        "Experimenting deliberately: the same progression at three tempos and in two metres.",
+        "The chosen pairing entered into flat.io from the template."
+      ],
+      "resources": [
+        "flat.io song template.",
+        "Supplied progression set.",
+        "Drum loop bank."
+      ],
+      "enduring": "Choosing well means having tried the alternatives."
+    },
+    {
+      "number": 28,
+      "week": 10,
+      "title": "Writing the chorus first",
+      "contentCode": "C3",
+      "contentPoint": "Developing material within macrostructures",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to develop musical material inside a fixed structure.",
+      "criteria": [
+        "I can write a chorus melody that fits the progression and lands as a hook."
+      ],
+      "steps": [
+        "The chorus written first, because it carries the hook and sets the register for everything else.",
+        "Melody written over the chosen progression in flat.io, with the structure template and lyric scaffold supplied.",
+        "Peer listening: does the chorus sound like a chorus?"
+      ],
+      "resources": [
+        "flat.io template.",
+        "Lyric scaffold.",
+        "Headphones."
+      ],
+      "enduring": "Material is developed within a structure, not poured into one afterwards."
+    },
+    {
+      "number": 29,
+      "week": 10,
+      "title": "What the song is about",
+      "contentCode": "C12",
+      "contentPoint": "Personal, social or ethical views",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to communicate a personal or social view through a song.",
+      "criteria": [
+        "I can say what my song is about and show one musical choice that supports it."
+      ],
+      "steps": [
+        "The lyric carries a view. Students state in one sentence what their song is about before they write another bar.",
+        "Songs from the term's listening examined for the view they carry and how the music supports it.",
+        "Lyric drafted against the scaffold and logged."
+      ],
+      "resources": [
+        "Lyric scaffold.",
+        "Listening set.",
+        "Process log."
+      ],
+      "enduring": "A song says something, and the music has to agree with the words."
+    },
+    {
+      "number": 30,
+      "week": 10,
+      "title": "Notating melody over the progression",
+      "contentCode": "C2",
+      "contentPoint": "Techniques and structures to refine material",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to notate a melody accurately enough for someone else to play it.",
+      "criteria": [
+        "I can enter a melody in flat.io with correct rhythm and no missing beats."
+      ],
+      "steps": [
+        "Note entry in flat.io taken seriously for the first time: rhythm values, rests, ties and where the melody sits against the chord.",
+        "Common notation errors identified and fixed in a supplied faulty file.",
+        "Students notate the chorus melody accurately and play it back."
+      ],
+      "resources": [
+        "flat.io.",
+        "Faulty file for correction.",
+        "Note entry drill sheet."
+      ],
+      "enduring": "Notation is a message to a player, so it has to be right."
+    },
+    {
+      "number": 31,
+      "week": 11,
+      "title": "The verse, and making it different",
+      "contentCode": "C3",
+      "contentPoint": "Developing material within macrostructures",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to develop contrasting material inside one song.",
+      "criteria": [
+        "I can write a verse that is audibly different from my chorus and explain how."
+      ],
+      "steps": [
+        "The verse written against the chorus: lower register, less movement, more words. The contrast is the point.",
+        "Students compare their verse and chorus and adjust until the difference is audible.",
+        "Full structure assembled in flat.io."
+      ],
+      "resources": [
+        "flat.io.",
+        "Structure template.",
+        "Playback speakers."
+      ],
+      "enduring": "Contrast between sections is what makes a structure audible."
+    },
+    {
+      "number": 32,
+      "week": 11,
+      "title": "Lyric and music together",
+      "contentCode": "C12",
+      "contentPoint": "Personal, social or ethical views",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to make the music and the words serve the same idea.",
+      "criteria": [
+        "I can adjust my melody so the important words fall in the right place."
+      ],
+      "steps": [
+        "Lyric and melody sung together for the first time, and adjusted where the stress falls wrongly.",
+        "Does the music support the view the lyric carries? Where it does not, one of the two changes.",
+        "Log entry on what changed when the words met the tune."
+      ],
+      "resources": [
+        "flat.io playback.",
+        "Lyric sheets.",
+        "Process log."
+      ],
+      "enduring": "Word stress and musical stress have to agree or the line sounds wrong."
+    },
+    {
+      "number": 33,
+      "week": 11,
+      "title": "Share and log: closing the term",
+      "contentCode": "C2",
+      "contentPoint": "Techniques and structures to refine material",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to share unfinished work and use feedback on it.",
+      "criteria": [
+        "I can present a draft, take feedback and record what I would change."
+      ],
+      "steps": [
+        "Drafts played to the class, unmarked. Two dot points of feedback each.",
+        "Final log entry for the term: what was tried, what was kept, what the student would do differently.",
+        "Term closed by naming what Term 2 needs from this work: notation, structure and the log habit."
+      ],
+      "resources": [
+        "flat.io playback.",
+        "Feedback proforma.",
+        "Process log."
+      ],
+      "enduring": "An unassessed share is where risk is cheap, which is why it is here."
+    }
+  ]
+}

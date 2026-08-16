@@ -1,0 +1,902 @@
+{
+  "id": "term2",
+  "n": 2,
+  "name": "Blues to Jazz",
+  "tape": "--t2",
+  "focus": "Composing and performing, jazz",
+  "assessment": {
+    "no": 2,
+    "name": "AT2: Blues to Jazz",
+    "type": "Composition and performance",
+    "issued": "Week 1",
+    "due": "Part A Week 7, Part B Weeks 9 to 10",
+    "weighting": "25%",
+    "marks": 20,
+    "outcomes": [
+      "MU5-COM-01",
+      "MU5-COM-02",
+      "MU5-PER-01"
+    ]
+  },
+  "blueprint": [
+    {
+      "title": "12-bar progression",
+      "slug": "12-bar-progression",
+      "built": false
+    },
+    {
+      "title": "Piano voicings",
+      "slug": "piano-voicings",
+      "built": false
+    },
+    {
+      "title": "Drum pattern",
+      "slug": "drum-pattern",
+      "built": false
+    },
+    {
+      "title": "Walking bass rules",
+      "slug": "walking-bass-rules",
+      "built": false
+    }
+  ],
+  "lessons": [
+    {
+      "number": 1,
+      "week": 1,
+      "title": "AT2 issued, both parts at once",
+      "contentCode": "C5",
+      "contentPoint": "Reflecting on and documenting process",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning what AT2 asks for and how its two parts fit together.",
+      "criteria": [
+        "I can explain what Part A and Part B each require and when each is due."
+      ],
+      "steps": [
+        "Assessment Task 2 issued, both parts published together so students know from the first lesson that the piece they write is the piece they will play.",
+        "The blueprint handed over with the notification: the progression, the piano voicings, the drum pattern and the walking bass rules.",
+        "The process log restarted for this task, with checkpoints set for Weeks 3, 6 and 8."
+      ],
+      "resources": [
+        "AT2 notification and criteria.",
+        "Blueprint pack.",
+        "Process log."
+      ],
+      "enduring": "Documenting the process is part of composing, not a report on it afterwards."
+    },
+    {
+      "number": 2,
+      "week": 1,
+      "title": "The 12-bar blues, heard and counted",
+      "contentCode": "L10",
+      "contentPoint": "How genre and style are characterised",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to hear and count the 12-bar blues form.",
+      "criteria": [
+        "I can count a 12-bar chorus and say where chords IV and V arrive."
+      ],
+      "steps": [
+        "The 12-bar form heard in three recordings from the register, counted aloud, then diagrammed on the board.",
+        "How the genre is characterised: what makes a listener say this is a blues within two bars.",
+        "Students count a full chorus without the teacher and mark where the chord changes fall."
+      ],
+      "resources": [
+        "Listening set from the repertoire register.",
+        "Form diagram."
+      ],
+      "enduring": "A genre is recognisable because of features that can be named.",
+      "body": {
+        "lead": "We are learning to hear and count the 12-bar blues form.",
+        "repertoire": "Jazz",
+        "bring": "Headphones",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "The 12-bar form heard in three recordings from the listening set, counted aloud together, then diagrammed on the board bar by bar."
+          },
+          {
+            "kind": "In the room",
+            "text": "How the genre is characterised: what makes a listener say “this is a blues” within two bars. Name the features rather than the feeling."
+          },
+          {
+            "kind": "On your own",
+            "text": "Count a full chorus without the teacher, and mark where the changes to chord IV and chord V fall."
+          }
+        ],
+        "criteria": [
+          "I can count a 12-bar chorus without help.",
+          "I can say where chords IV and V arrive."
+        ],
+        "listen": [
+          {
+            "title": "Sweet Home Chicago",
+            "artist": "Robert Johnson",
+            "meta": "1930s"
+          },
+          {
+            "title": "Hoochie Coochie Man",
+            "artist": "Muddy Waters",
+            "meta": "1950s"
+          },
+          {
+            "title": "Pride and Joy",
+            "artist": "Stevie Ray Vaughan",
+            "meta": "1980s"
+          }
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Listening set, three eras"
+          },
+          {
+            "n": "R2",
+            "text": "Form diagram, bars numbered"
+          },
+          {
+            "n": "R3",
+            "text": "flat.io aural notebook"
+          }
+        ]
+      }
+    },
+    {
+      "number": 3,
+      "week": 1,
+      "title": "Playing the 12-bar form",
+      "contentCode": "P15",
+      "contentPoint": "Conventions of a period, genre or style",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to play the 12-bar blues with the conventions of the style.",
+      "criteria": [
+        "I can play my part through a full chorus with a swing feel."
+      ],
+      "steps": [
+        "The whole room plays the 12-bar form: chords, bass, drums and a riff, with parts matched to ability.",
+        "The conventions of the style applied as they are played: swing feel, backbeat, dynamics that build across a chorus.",
+        "Repeated until the room can start and finish together without counting aloud."
+      ],
+      "resources": [
+        "Room kit.",
+        "Part sheets at three levels.",
+        "Backing track."
+      ],
+      "enduring": "Playing a style means applying its conventions, not only its notes."
+    },
+    {
+      "number": 4,
+      "week": 2,
+      "title": "Roman numerals I, IV and V",
+      "contentCode": "L10",
+      "contentPoint": "How genre and style are characterised",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to name chords by their function in the key.",
+      "criteria": [
+        "I can label a progression with Roman numerals and transpose it."
+      ],
+      "steps": [
+        "Roman numerals attached to chords the class already plays, then to the blues form.",
+        "Why numerals rather than letters: the form transposed to two more keys in the same lesson.",
+        "Written work: label the chords in three supplied progressions."
+      ],
+      "resources": [
+        "Numeral chart.",
+        "flat.io worksheets.",
+        "Keyboards."
+      ],
+      "enduring": "Naming a chord by its function is what lets a form move between keys."
+    },
+    {
+      "number": 5,
+      "week": 2,
+      "title": "The blues scale in the hands",
+      "contentCode": "P15",
+      "contentPoint": "Conventions of a period, genre or style",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to play the blues scale and hear its blue notes.",
+      "criteria": [
+        "I can play the blues scale in one key and find the blue notes in it."
+      ],
+      "steps": [
+        "The blues scale learned by playing it in one key across the room's instruments, then heard in the repertoire.",
+        "Blue notes located and bent or leaned on, so the sound is experienced before it is defined.",
+        "Call and response using only the scale, teacher to class."
+      ],
+      "resources": [
+        "Scale sheets per instrument.",
+        "Backing track."
+      ],
+      "enduring": "The scale is a sound before it is a set of notes."
+    },
+    {
+      "number": 6,
+      "week": 2,
+      "title": "Aural routine: swing, syncopation and backbeat",
+      "contentCode": "L10",
+      "contentPoint": "How genre and style are characterised",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to hear and name the rhythmic features of this style.",
+      "criteria": [
+        "I can tell a swung excerpt from a straight one and say what makes it swing."
+      ],
+      "steps": [
+        "Aural routine continues from Term 1 with this term's content: straight against swung quavers, identified by ear.",
+        "Syncopation and backbeat named in short excerpts and clapped back.",
+        "Written into the flat.io aural notebook."
+      ],
+      "resources": [
+        "flat.io aural notebook.",
+        "Paired excerpts, straight and swung."
+      ],
+      "enduring": "The features that define a style can be heard, named and reproduced."
+    },
+    {
+      "number": 7,
+      "week": 3,
+      "title": "Riffs and bass lines transcribed by ear",
+      "contentCode": "L5",
+      "contentPoint": "Transcribing using relevant notations",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to write down what we hear using the right notation.",
+      "criteria": [
+        "I can transcribe a two-bar riff accurately enough for someone to play it."
+      ],
+      "steps": [
+        "Short riffs and bass lines transcribed by ear straight into flat.io, in the notation the style actually uses.",
+        "Transcription method taught: find the first note, find the shape, then fix the rhythm.",
+        "Checkpoint 1 of the process log."
+      ],
+      "resources": [
+        "flat.io.",
+        "Slowed-down audio.",
+        "Transcription sheets."
+      ],
+      "enduring": "Transcription is listening made permanent."
+    },
+    {
+      "number": 8,
+      "week": 3,
+      "title": "The blues' West African roots",
+      "contentCode": "L12",
+      "contentPoint": "Music influencing and challenging ideas",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning where the blues came from and what it carried with it.",
+      "criteria": [
+        "I can describe two features of the blues and trace each to its source."
+      ],
+      "steps": [
+        "Where this music came from: call and response, blue notes and the relationship between work song, spiritual and the blues.",
+        "West African musical practice studied in its own right, from the repertoire register, not only as a source.",
+        "This carries the global music culture repertoire area for Year 9."
+      ],
+      "resources": [
+        "Listening set from the repertoire register.",
+        "Timeline handout."
+      ],
+      "enduring": "Music carries the history of the people who made it."
+    },
+    {
+      "number": 9,
+      "week": 3,
+      "title": "Music that carried a people's story",
+      "contentCode": "L12",
+      "contentPoint": "Music influencing and challenging ideas",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning how music can influence and challenge ideas.",
+      "criteria": [
+        "I can explain how a piece of music affected the people who heard it."
+      ],
+      "steps": [
+        "How this music influenced and challenged ideas well beyond where it started, at local, national and international levels.",
+        "One recorded example examined for what it was for, who it was for, and what changed because of it.",
+        "Written response: two well-formed dot points on context."
+      ],
+      "resources": [
+        "Listening set.",
+        "ALARM matrix.",
+        "Context word bank."
+      ],
+      "enduring": "Music does work in the world, not only in the room."
+    },
+    {
+      "number": 10,
+      "week": 4,
+      "title": "Improvising over the form: first choruses",
+      "contentCode": "P8",
+      "contentPoint": "Improvising to develop ideas",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to improvise inside a form.",
+      "criteria": [
+        "I can play one chorus of improvisation that stays in the scale and leaves space."
+      ],
+      "steps": [
+        "Everyone improvises. One chorus each over the backing, using the blues scale and nothing else.",
+        "The rule taught first: play fewer notes and leave space, because the form is doing half the work.",
+        "Recorded, so students hear their own first attempt."
+      ],
+      "resources": [
+        "Backing tracks at two tempos.",
+        "Recording device."
+      ],
+      "enduring": "Improvising is composing at speed inside rules everyone knows."
+    },
+    {
+      "number": 11,
+      "week": 4,
+      "title": "Head, solos, head",
+      "contentCode": "P22",
+      "contentPoint": "Manipulating elements when improvising and performing",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to manipulate the elements while improvising.",
+      "criteria": [
+        "I can change one element deliberately during my solo and name it afterwards."
+      ],
+      "steps": [
+        "The structure of a jazz performance: head, solos, head, and who signals each change.",
+        "The class plays the whole structure with three soloists, then swaps.",
+        "Elements manipulated deliberately in the solo: dynamics and register chosen in advance."
+      ],
+      "resources": [
+        "Backing tracks.",
+        "Head chart.",
+        "Running order."
+      ],
+      "enduring": "A solo is shaped, not simply filled."
+    },
+    {
+      "number": 12,
+      "week": 4,
+      "title": "Walking bass: root on the change",
+      "contentCode": "P22",
+      "contentPoint": "Manipulating elements when improvising and performing",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning how a walking bass line is built.",
+      "criteria": [
+        "I can build a walking bass line that lands on the root at every change."
+      ],
+      "steps": [
+        "The walking bass rules supplied and applied: root on the change, approach the next chord by step or semitone.",
+        "Everyone plays a walking bass line on their own instrument, at pitch or in octaves.",
+        "The rules written into the process log for use in Part A."
+      ],
+      "resources": [
+        "Walking bass rule card.",
+        "Bass, keys and low register instruments."
+      ],
+      "enduring": "A simple rule, applied consistently, produces a line that works."
+    },
+    {
+      "number": 13,
+      "week": 5,
+      "title": "Comping, and the voicings supplied",
+      "contentCode": "P22",
+      "contentPoint": "Manipulating elements when improvising and performing",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to accompany a soloist rather than to play under them.",
+      "criteria": [
+        "I can comp behind a soloist without covering them."
+      ],
+      "steps": [
+        "The supplied piano and guitar voicings taught and played, with the rhythmic placement that makes them comping rather than strumming.",
+        "Comping behind a soloist: listening for space and staying out of the melody's register.",
+        "Elements manipulated while accompanying: dynamics, texture and density."
+      ],
+      "resources": [
+        "Voicing sheets.",
+        "Keys and guitars.",
+        "Backing tracks."
+      ],
+      "enduring": "Accompaniment is a set of decisions made in real time."
+    },
+    {
+      "number": 14,
+      "week": 5,
+      "title": "Trading fours",
+      "contentCode": "P8",
+      "contentPoint": "Improvising to develop ideas",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to improvise responsively rather than in turn.",
+      "criteria": [
+        "I can answer another player's four bars with something related to them."
+      ],
+      "steps": [
+        "Four-bar phrases traded between players, then between a player and the drums.",
+        "Listening as the condition of the exercise: the answer has to respond to the question.",
+        "Recorded and played back, with two dot points on what was answered."
+      ],
+      "resources": [
+        "Backing tracks.",
+        "Recording device.",
+        "Trading order."
+      ],
+      "enduring": "Improvisation is a conversation when the players are listening."
+    },
+    {
+      "number": 15,
+      "week": 5,
+      "title": "Jazz drum notation",
+      "contentCode": "L5",
+      "contentPoint": "Transcribing using relevant notations",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to read and write drum notation on a staff.",
+      "criteria": [
+        "I can read the supplied jazz drum pattern and notate it correctly."
+      ],
+      "steps": [
+        "Jazz drum notation formalised out of Year 8's beat grids: the ride pattern, the backbeat, the hi-hat on two and four.",
+        "The supplied drum pattern read from notation and played, then written out from memory.",
+        "Notation entered into flat.io using the drum staff."
+      ],
+      "resources": [
+        "flat.io drum staff.",
+        "Kit and practice pads.",
+        "Pattern sheet."
+      ],
+      "enduring": "A grid and a staff say the same thing, and the staff travels further."
+    },
+    {
+      "number": 16,
+      "week": 6,
+      "title": "Taking a risk in a solo",
+      "contentCode": "P16",
+      "contentPoint": "Creative risk and audience response",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to take creative risks and strengthen musical intent.",
+      "criteria": [
+        "I can take a deliberate risk in a solo and carry it through."
+      ],
+      "steps": [
+        "Creative risk in improvisation: what happens when a player leaves the scale, and how they get back.",
+        "Each student takes one deliberate risk in a chorus, and the class names what it did to the audience.",
+        "Discussion: a wrong note held with confidence and a wrong note flinched at are different events."
+      ],
+      "resources": [
+        "Backing tracks.",
+        "Recording device."
+      ],
+      "enduring": "Risk taken deliberately is part of performing, not a failure of accuracy."
+    },
+    {
+      "number": 17,
+      "week": 6,
+      "title": "Recreating two supplied melodies",
+      "contentCode": "C20",
+      "contentPoint": "Manipulating elements to create musical ideas",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning how a blues head is built before we write one.",
+      "criteria": [
+        "I can reproduce a supplied head accurately and describe how it is made."
+      ],
+      "steps": [
+        "Two supplied blues heads recreated note for note in flat.io, before any original writing.",
+        "What each head does with the elements: range, rhythm, repetition and where it leaves space for the response.",
+        "Students annotate both with what they intend to borrow."
+      ],
+      "resources": [
+        "flat.io files of the two heads.",
+        "Annotation sheet."
+      ],
+      "enduring": "Copying a model accurately is how the model becomes usable."
+    },
+    {
+      "number": 18,
+      "week": 6,
+      "title": "The class band plays a standard",
+      "contentCode": "P16",
+      "contentPoint": "Creative risk and audience response",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to perform a complete piece with intent.",
+      "criteria": [
+        "I can play a full performance with the band and say what we set out to communicate."
+      ],
+      "steps": [
+        "The class band plays one jazz standard from the register end to end, with solos.",
+        "Performance intent named before playing: what should this audience feel by bar 24?",
+        "Checkpoint 2 of the process log."
+      ],
+      "resources": [
+        "Charts.",
+        "Room kit.",
+        "Recording device.",
+        "Process log."
+      ],
+      "enduring": "A performance is aimed at somebody."
+    },
+    {
+      "number": 19,
+      "week": 7,
+      "title": "Composing the 16-bar blues: melody first",
+      "contentCode": "C4",
+      "contentPoint": "Sound sources and digital technologies",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to compose a melody over a given harmonic frame.",
+      "criteria": [
+        "I can write a 16-bar melody that fits the progression and has a shape."
+      ],
+      "steps": [
+        "Part A composition begins. Melody written first over the supplied progression, in flat.io.",
+        "Elements manipulated deliberately: register, rhythm, repetition and where the phrase ends.",
+        "Sound sources and playback used to test rather than to decorate."
+      ],
+      "resources": [
+        "flat.io template with the progression already entered.",
+        "Headphones."
+      ],
+      "enduring": "Composing inside a frame that already works is where the musical decisions become visible."
+    },
+    {
+      "number": 20,
+      "week": 7,
+      "title": "Writing the bass and the drum part",
+      "contentCode": "C14",
+      "contentPoint": "Writing for the performers' capabilities",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to write parts that the people in this room can play.",
+      "criteria": [
+        "I can write a bass and drum part that my classmates can read and play."
+      ],
+      "steps": [
+        "Walking bass written using the supplied rules; drum part entered from the supplied pattern and varied.",
+        "Writing for the capability of the actual player: range, hand position, and what is possible at tempo.",
+        "Students consult the classmate who will play each part."
+      ],
+      "resources": [
+        "flat.io.",
+        "Range charts per instrument.",
+        "The players themselves."
+      ],
+      "enduring": "A composer writes for the performer, not for the page."
+    },
+    {
+      "number": 21,
+      "week": 7,
+      "title": "AT2 Part A due",
+      "contentCode": "C5",
+      "contentPoint": "Reflecting on and documenting process",
+      "assessmentEvent": true,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to submit composed work with the record of how it was made.",
+      "criteria": [
+        "I can submit a complete score and a log that shows my decisions."
+      ],
+      "steps": [
+        "Part A submitted: the 16-bar blues in flat.io with melody, walking bass and drum part, plus the process log.",
+        "Log read alongside the score, so the decisions and the artefact are marked together.",
+        "Students state one thing they expect to have to change."
+      ],
+      "resources": [
+        "flat.io submission link.",
+        "Process log.",
+        "AT2 criteria."
+      ],
+      "enduring": "The log is assessed evidence, not a rough draft of the piece."
+    },
+    {
+      "number": 22,
+      "week": 8,
+      "title": "Part A feedback: is it playable",
+      "contentCode": "C14",
+      "contentPoint": "Writing for the performers' capabilities",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to judge our own writing against what a player can do.",
+      "criteria": [
+        "I can identify what in my piece is unplayable and say how I will fix it."
+      ],
+      "steps": [
+        "Marked Part A returned this week, a fortnight before Part B, so an unplayable piece can still be fixed.",
+        "Feedback focused on playability: range, tempo, page turns, and whether the drum part is humanly possible.",
+        "Each student logs the feedback and the plan."
+      ],
+      "resources": [
+        "Marked scores.",
+        "Feedback proforma.",
+        "Process log."
+      ],
+      "enduring": "Marking Part A before Part B is played is what makes the fix possible."
+    },
+    {
+      "number": 23,
+      "week": 8,
+      "title": "Fixing the unplayable",
+      "contentCode": "C7",
+      "contentPoint": "Working safely and respectfully with others",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to work on each other's music respectfully and usefully.",
+      "criteria": [
+        "I can give and take feedback on a piece without taking over it."
+      ],
+      "steps": [
+        "Revision workshop. Players and composers work in pairs, and the player reads the part aloud on their instrument.",
+        "Protocols for working on somebody else's work: what may be suggested and what is the composer's call.",
+        "Revised files saved as a new version so the change is visible in the log."
+      ],
+      "resources": [
+        "flat.io versions.",
+        "Instruments.",
+        "Pairing list."
+      ],
+      "enduring": "Working respectfully with others is a condition of workshopping music."
+    },
+    {
+      "number": 24,
+      "week": 8,
+      "title": "Rehearsing your own blues",
+      "contentCode": "P3",
+      "contentPoint": "Performing in a range of styles, including own compositions",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to perform our own compositions with an ensemble.",
+      "criteria": [
+        "I can rehearse my own piece with the band and direct the tempo and feel."
+      ],
+      "steps": [
+        "The class band rehearses the student compositions, two or three per lesson from here on.",
+        "Performing your own composition: the composer counts it in and takes responsibility for the tempo.",
+        "Checkpoint 3 of the process log."
+      ],
+      "resources": [
+        "Printed parts.",
+        "Room kit.",
+        "Process log."
+      ],
+      "enduring": "Hearing your own writing played is the fastest feedback there is."
+    },
+    {
+      "number": 25,
+      "week": 9,
+      "title": "AT2 Part B performances, day 1",
+      "contentCode": "P3",
+      "contentPoint": "Performing in a range of styles, including own compositions",
+      "assessmentEvent": true,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to perform our own composition in a range of styles.",
+      "criteria": [
+        "I can perform my own piece with the band, including an improvised chorus."
+      ],
+      "steps": [
+        "Part B begins: each student's own blues performed with the class band, including one improvised chorus.",
+        "Assessed against the criteria issued in Week 1.",
+        "Audience protocol maintained, and every performance recorded."
+      ],
+      "resources": [
+        "AT2 criteria.",
+        "Room kit.",
+        "Recording setup.",
+        "Running order."
+      ],
+      "enduring": "The piece a student wrote and the piece a student plays should be the same piece."
+    },
+    {
+      "number": 26,
+      "week": 9,
+      "title": "AT2 Part B performances, day 2",
+      "contentCode": "P3",
+      "contentPoint": "Performing in a range of styles, including own compositions",
+      "assessmentEvent": true,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to present and perform our own work to an audience.",
+      "criteria": [
+        "I can introduce my piece and perform it under assessment conditions."
+      ],
+      "steps": [
+        "Performances continue.",
+        "Each composer introduces their piece in one sentence: what it is for and what to listen for.",
+        "Marking notes taken live against the criteria."
+      ],
+      "resources": [
+        "AT2 criteria.",
+        "Recording setup."
+      ],
+      "enduring": "Presenting the work is part of performing it."
+    },
+    {
+      "number": 27,
+      "week": 9,
+      "title": "Listening back to your own performance",
+      "contentCode": "L9",
+      "contentPoint": "Evaluating own performances and compositions",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to evaluate our own performances and compositions from a recording.",
+      "criteria": [
+        "I can separate what my piece does from how I played it."
+      ],
+      "steps": [
+        "Each student listens to their own recording and writes two dot points on it, one on the composition and one on the performance.",
+        "Reflection distinguishing the two: a good piece played badly and a weak piece played well sound different.",
+        "Entries filed in the process log."
+      ],
+      "resources": [
+        "Recordings.",
+        "Headphones.",
+        "Process log.",
+        "AT2 criteria."
+      ],
+      "enduring": "You hear your own work differently once it is a recording."
+    },
+    {
+      "number": 28,
+      "week": 10,
+      "title": "AT2 Part B performances, day 3",
+      "contentCode": "P3",
+      "contentPoint": "Performing in a range of styles, including own compositions",
+      "assessmentEvent": true,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to perform our own compositions to a finished standard.",
+      "criteria": [
+        "I can perform my piece as a finished item rather than as a draft."
+      ],
+      "steps": [
+        "Final performances, including any deferred or rescheduled.",
+        "The class band plays two of the strongest student pieces again for the room.",
+        "Recording archived for the process log and for the Year 10 handover."
+      ],
+      "resources": [
+        "Room kit.",
+        "Recording setup."
+      ],
+      "enduring": "A piece is finished when it has been played well, not when it has been written."
+    },
+    {
+      "number": 29,
+      "week": 10,
+      "title": "Evaluating the elements in our blues",
+      "contentCode": "C19",
+      "contentPoint": "Analysing elements in own and others' compositions",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to analyse the elements of music in our own and each other's compositions.",
+      "criteria": [
+        "I can discuss how the elements were used in a classmate's piece and in my own."
+      ],
+      "steps": [
+        "Three student pieces analysed by the class for how the elements were used, with the composer present and answering.",
+        "The same analysis applied by each student to their own piece in writing.",
+        "Vocabulary from the term used precisely, and corrected where it is not."
+      ],
+      "resources": [
+        "Scores and recordings.",
+        "Element checklist.",
+        "Term vocabulary list."
+      ],
+      "enduring": "Analysing your own work is the same skill as analysing anyone else's."
+    },
+    {
+      "number": 30,
+      "week": 10,
+      "title": "Feedback used: what would change next time",
+      "contentCode": "C11",
+      "contentPoint": "Evaluating success and using feedback",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to use feedback to refine and improve our work.",
+      "criteria": [
+        "I can show what I changed because of feedback and what I would change next."
+      ],
+      "steps": [
+        "Final log entry for AT2: what the feedback said, what was changed because of it, and what would change in the next piece.",
+        "Success in communicating intent evaluated against what the student said they were aiming at in Week 1.",
+        "Term closed by naming what Term 3 needs: the writing, and the aural routine that makes the paper survivable."
+      ],
+      "resources": [
+        "Process log.",
+        "Marked criteria.",
+        "Week 1 statement of intent."
+      ],
+      "enduring": "Feedback that does not produce a change has not been used."
+    }
+  ]
+}

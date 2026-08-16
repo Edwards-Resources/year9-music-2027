@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+
+# Machine-local, not project state.
+.impeccable/hook.cache.json
+
+# Preview server config. It points at a session scratchpad path that stops
+# existing when the session ends, and the working entry lives in
+# School Master/.claude/launch.json anyway.
+.claude/

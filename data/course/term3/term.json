@@ -1,0 +1,826 @@
+{
+  "id": "term3",
+  "n": 3,
+  "name": "Sounds of Australia",
+  "tape": "--t3",
+  "focus": "Listening, music of Australia",
+  "assessment": {
+    "no": 3,
+    "name": "AT3: Sounds of Australia",
+    "type": "Aural examination",
+    "issued": "Week 4",
+    "due": "Week 8",
+    "weighting": "25%",
+    "marks": 20,
+    "outcomes": [
+      "MU5-LIS-01",
+      "MU5-LIS-02"
+    ]
+  },
+  "blueprint": [],
+  "lessons": [
+    {
+      "number": 1,
+      "week": 1,
+      "title": "What Australian music is, and who decides",
+      "contentCode": "L13",
+      "contentPoint": "Identity, values and experience in a work",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning how music reflects the identity and experience of the people who make it.",
+      "criteria": [
+        "I can explain what a work reflects about the people who made it."
+      ],
+      "steps": [
+        "The question opened rather than answered: is a work Australian because of where it was made, who made it, what it is about, or how it sounds?",
+        "Three contrasting works from the register examined for the identities and experiences they reflect.",
+        "Students write a provisional answer and keep it to revisit in Week 10."
+      ],
+      "resources": [
+        "Listening set from the repertoire register.",
+        "Provisional answer sheet."
+      ],
+      "enduring": "A work reflects personal and shared identities, values and experiences."
+    },
+    {
+      "number": 2,
+      "week": 1,
+      "title": "The well-formed dot point, taught explicitly",
+      "contentCode": "L8",
+      "contentPoint": "Terminology and text structures",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to write an analytical dot point in the form a marker expects.",
+      "criteria": [
+        "I can write a dot point with a feature, a location and a reason."
+      ],
+      "steps": [
+        "The dot point taught as a form: the feature, what it sounds like and where in the excerpt, then why it is there.",
+        "Text structure and terminology taught together, because a precise word in the wrong structure still loses the mark.",
+        "Three dot points written on one short excerpt and marked live."
+      ],
+      "resources": [
+        "ALARM matrix.",
+        "Model responses, strong and weak.",
+        "AT3 criteria."
+      ],
+      "enduring": "Music applies ALARM to build well-formed dot points, not paragraphs."
+    },
+    {
+      "number": 3,
+      "week": 1,
+      "title": "Aural routine in examination format",
+      "contentCode": "L20",
+      "contentPoint": "Analysing elements in repertoire",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to analyse the elements of music under examination conditions.",
+      "criteria": [
+        "I can write an analytical response to a single element in the time allowed."
+      ],
+      "steps": [
+        "The weekly aural routine moves into examination format from this week: excerpt played three times, one element, written response.",
+        "The timing of the real paper introduced now so it is routine by Week 8.",
+        "Responses marked against the AT3 criteria and returned the same lesson."
+      ],
+      "resources": [
+        "flat.io aural notebook.",
+        "Timer.",
+        "AT3 criteria.",
+        "Excerpt set."
+      ],
+      "enduring": "An examination measures a routine that was built long before the paper."
+    },
+    {
+      "number": 4,
+      "week": 2,
+      "title": "One element per dot point: pitch and melody",
+      "contentCode": "L20",
+      "contentPoint": "Analysing elements in repertoire",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to analyse pitch and melody precisely.",
+      "criteria": [
+        "I can describe a melody's shape and range and say what it achieves."
+      ],
+      "steps": [
+        "Pitch and melody in Australian repertoire: range, contour, intervals and where the melody sits in the texture.",
+        "The same excerpt heard three times with a different pitch question each time.",
+        "Timed writing: two dot points on melody, marked against the criteria."
+      ],
+      "resources": [
+        "Excerpt set.",
+        "Melodic contour diagrams.",
+        "Timer."
+      ],
+      "enduring": "Precision about one element beats vagueness about four."
+    },
+    {
+      "number": 5,
+      "week": 2,
+      "title": "Identity in a song: whose experience is this",
+      "contentCode": "L13",
+      "contentPoint": "Identity, values and experience in a work",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to explain how a work reflects shared understandings and values.",
+      "criteria": [
+        "I can point to a musical feature that carries the meaning of a work."
+      ],
+      "steps": [
+        "A work examined for whose experience it carries and how the music carries it, not only the lyric.",
+        "Values and identity in music discussed with care and with evidence.",
+        "Written response: one dot point on a musical feature that carries the meaning."
+      ],
+      "resources": [
+        "Listening set.",
+        "Context word bank.",
+        "ALARM matrix."
+      ],
+      "enduring": "The meaning of a work is carried by the music, not only by the words."
+    },
+    {
+      "number": 6,
+      "week": 2,
+      "title": "Playing an Australian work",
+      "contentCode": "P14",
+      "contentPoint": "Interpreting a range of genres and styles",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to interpret repertoire from a particular genre and style.",
+      "criteria": [
+        "I can play in the style of the work rather than just the notes of it."
+      ],
+      "steps": [
+        "The class band plays an Australian work from the register, interpreting rather than reproducing it.",
+        "The genre's conventions identified in the playing: what has to be right for this to sound like what it is.",
+        "Performance recorded for comparison with the original."
+      ],
+      "resources": [
+        "Charts.",
+        "Room kit.",
+        "Recording device."
+      ],
+      "enduring": "Performing a style is applying its conventions, not only its pitches."
+    },
+    {
+      "number": 7,
+      "week": 3,
+      "title": "One element per dot point: texture and tone colour",
+      "contentCode": "L20",
+      "contentPoint": "Analysing elements in repertoire",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to analyse texture and tone colour precisely.",
+      "criteria": [
+        "I can describe the layers in an excerpt and what each contributes."
+      ],
+      "steps": [
+        "Texture and tone colour analysed in three Australian works: how many layers, what each is doing, and what each sound source contributes.",
+        "Layer-by-layer listening with the mix isolated where recordings allow.",
+        "Timed writing: two dot points, marked against the criteria."
+      ],
+      "resources": [
+        "Excerpt set.",
+        "Layer diagram sheet.",
+        "Timer."
+      ],
+      "enduring": "Texture is countable, and counting it is where the analysis starts."
+    },
+    {
+      "number": 8,
+      "week": 3,
+      "title": "Structure and duration in the same excerpt",
+      "contentCode": "L20",
+      "contentPoint": "Analysing elements in repertoire",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to analyse structure and duration as separate questions.",
+      "criteria": [
+        "I can map an excerpt's structure and describe its use of duration."
+      ],
+      "steps": [
+        "Structure and duration: sections, proportions, metre, tempo and how the piece uses time.",
+        "One excerpt mapped for structure, then the same excerpt analysed for duration, so students feel the difference between the two questions.",
+        "Timed writing under examination conditions."
+      ],
+      "resources": [
+        "Excerpt set.",
+        "Structure map sheet.",
+        "Timer."
+      ],
+      "enduring": "Two questions about time are not the same question."
+    },
+    {
+      "number": 9,
+      "week": 3,
+      "title": "Marking a dot point against the criteria",
+      "contentCode": "L8",
+      "contentPoint": "Terminology and text structures",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to judge a response the way a marker judges it.",
+      "criteria": [
+        "I can award a mark against the criteria and justify it."
+      ],
+      "steps": [
+        "Students mark real responses, anonymised, against the AT3 marking criteria, then justify the marks awarded.",
+        "The marker's view made visible: what a vague response costs and why.",
+        "Each student remarks their own Week 1 response."
+      ],
+      "resources": [
+        "Anonymised responses.",
+        "AT3 criteria.",
+        "Marked exemplars."
+      ],
+      "enduring": "Understanding the criteria is faster than guessing what is wanted."
+    },
+    {
+      "number": 10,
+      "week": 4,
+      "title": "AT3 issued: what the paper examines",
+      "contentCode": "L8",
+      "contentPoint": "Terminology and text structures",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning what AT3 asks for and how the term's work prepares for it.",
+      "criteria": [
+        "I can describe the paper's structure and what each part asks of me."
+      ],
+      "steps": [
+        "Assessment Task 3 issued: an aural paper of about 30 minutes, sat in Week 8. It names the elements it examines.",
+        "The shape of the paper: objective identification items, short written answers, one partly unseen excerpt, no extended response.",
+        "Students map the paper against the writing they have already done."
+      ],
+      "resources": [
+        "AT3 notification and criteria.",
+        "Sample question set."
+      ],
+      "enduring": "Nothing on the paper is a surprise except the excerpt."
+    },
+    {
+      "number": 11,
+      "week": 4,
+      "title": "Protocols first",
+      "contentCode": "L17",
+      "contentPoint": "Place, Country and Languages, and protocols",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning the protocols that govern how we study this music.",
+      "criteria": [
+        "I can state the protocols that apply and why they exist."
+      ],
+      "steps": [
+        "Before any listening: the protocols for studying the music of Aboriginal and Torres Strait Islander Peoples.",
+        "What the class may do with this material, what it may not do, and why permission and attribution are not formalities.",
+        "The school's consultation process explained, including that repertoire for this block is chosen through it."
+      ],
+      "resources": [
+        "School and community consultation guidance.",
+        "NESA protocols material."
+      ],
+      "enduring": "Protocols come before the listening, not alongside it."
+    },
+    {
+      "number": 12,
+      "week": 4,
+      "title": "Place, Country and Languages in the music",
+      "contentCode": "L17",
+      "contentPoint": "Place, Country and Languages, and protocols",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to identify and describe how Place, Country and Languages are reflected in this music.",
+      "criteria": [
+        "I can describe how a work reflects Place, Country or Languages."
+      ],
+      "steps": [
+        "How Place, Country and Languages are reflected in the music, heard in repertoire selected through consultation.",
+        "The relationship between a work and the Country it belongs to, described in the terms the community uses.",
+        "Written response with the protocols applied to the way it is written."
+      ],
+      "resources": [
+        "Repertoire selected through consultation.",
+        "Context material."
+      ],
+      "enduring": "Understanding the protocols informs how the music is studied and interpreted."
+    },
+    {
+      "number": 13,
+      "week": 5,
+      "title": "Listening with the protocols applied",
+      "contentCode": "L17",
+      "contentPoint": "Place, Country and Languages, and protocols",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to apply respectful protocols while we analyse.",
+      "criteria": [
+        "I can analyse this music and attribute it correctly."
+      ],
+      "steps": [
+        "Extended listening from the consulted repertoire, with the protocols explicitly applied to how the class listens, discusses and writes.",
+        "Attribution practised: naming the artist, the community and the source correctly, every time.",
+        "Timed writing on one element."
+      ],
+      "resources": [
+        "Consulted repertoire.",
+        "Attribution model.",
+        "Timer."
+      ],
+      "enduring": "Correct attribution is part of the analysis, not an afterthought."
+    },
+    {
+      "number": 14,
+      "week": 5,
+      "title": "How music influences and challenges ideas",
+      "contentCode": "L12",
+      "contentPoint": "Music influencing and challenging ideas",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning how music can influence and challenge ideas.",
+      "criteria": [
+        "I can explain what a work argued and how the music carried the argument."
+      ],
+      "steps": [
+        "Music as an argument: how a work can influence and challenge ideas at local, national and international levels.",
+        "One Australian work examined for what changed because of it.",
+        "Written response: two dot points, one on a musical feature and one on its effect."
+      ],
+      "resources": [
+        "Listening set.",
+        "Context material.",
+        "ALARM matrix."
+      ],
+      "enduring": "Music does work in the world, and the working is audible."
+    },
+    {
+      "number": 15,
+      "week": 5,
+      "title": "Music and public argument in Australia",
+      "contentCode": "L12",
+      "contentPoint": "Music influencing and challenging ideas",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to evaluate music's effect at more than one scale.",
+      "criteria": [
+        "I can distinguish a local effect from a national one and give evidence."
+      ],
+      "steps": [
+        "A second work examined for the same question in a different decade, so the point is about music rather than about one song.",
+        "Cultural understanding developed at local, national and international levels, named as three different scales of effect.",
+        "Timed writing under examination conditions."
+      ],
+      "resources": [
+        "Listening set.",
+        "Timeline.",
+        "Timer."
+      ],
+      "enduring": "The same music can mean different things at different distances."
+    },
+    {
+      "number": 16,
+      "week": 6,
+      "title": "Performing music created or inspired by Aboriginal and Torres Strait Islander Peoples",
+      "contentCode": "P20",
+      "contentPoint": "Cultural significance and protocols in performance",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to apply protocols when performing this music.",
+      "criteria": [
+        "I can state what I must check before performing this work and do it."
+      ],
+      "steps": [
+        "Performance of repertoire selected through the school's consultation, with the protocols applied to the performance itself.",
+        "What may be performed, by whom, in what setting, and what must be asked first.",
+        "Rehearsal with attribution stated as part of the performance."
+      ],
+      "resources": [
+        "Consulted repertoire.",
+        "Protocol checklist.",
+        "Room kit."
+      ],
+      "enduring": "Cultural significance and protocols apply to performing, not only to listening."
+    },
+    {
+      "number": 17,
+      "week": 6,
+      "title": "Cultural significance in performance",
+      "contentCode": "P20",
+      "contentPoint": "Cultural significance and protocols in performance",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning that cultural significance changes how music should be performed.",
+      "criteria": [
+        "I can explain how the significance of this work affects the way we play it."
+      ],
+      "steps": [
+        "The performance refined, with attention to what the music is for and how that changes how it should be played.",
+        "Discussion of restrictions and permissions as musical facts rather than administrative ones.",
+        "Recorded, with the recording's use agreed in advance."
+      ],
+      "resources": [
+        "Consulted repertoire.",
+        "Recording agreement.",
+        "Room kit."
+      ],
+      "enduring": "How a work is performed is part of respecting what it is."
+    },
+    {
+      "number": 18,
+      "week": 6,
+      "title": "Australian art music",
+      "contentCode": "L20",
+      "contentPoint": "Analysing elements in repertoire",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to analyse the elements of music in Australian art music.",
+      "criteria": [
+        "I can analyse an art music work using the correct terminology."
+      ],
+      "steps": [
+        "Australian art music studied as the unit's art music thread: the notated concert tradition here, and composers writing in and against it.",
+        "One work analysed across two elements, with the terminology of the concert tradition taught alongside.",
+        "Timed writing, marked against the criteria."
+      ],
+      "resources": [
+        "Art music listening set from the repertoire register.",
+        "Score extracts."
+      ],
+      "enduring": "The concert tradition is one Australian music among several."
+    },
+    {
+      "number": 19,
+      "week": 7,
+      "title": "The first cold excerpt",
+      "contentCode": "L21",
+      "contentPoint": "Evaluating how elements are manipulated and combined",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to analyse a work we have never heard before.",
+      "criteria": [
+        "I can produce a full response to an unfamiliar excerpt in the time allowed."
+      ],
+      "steps": [
+        "The first genuinely unseen excerpt, checked against the repertoire register so it is unseen in fact and not only in intention.",
+        "Method for an unfamiliar work: what to listen for first, second and third, and what to write while the excerpt is still playing.",
+        "Full timed response, marked and returned the same lesson."
+      ],
+      "resources": [
+        "Unseen excerpt verified against the repertoire register.",
+        "Timer."
+      ],
+      "enduring": "An unseen excerpt tests listening, which is why it cannot be a work the class has met."
+    },
+    {
+      "number": 20,
+      "week": 7,
+      "title": "Writing the context sentence",
+      "contentCode": "L18",
+      "contentPoint": "Context written up with correct terminology",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to write about context in the form an examination expects.",
+      "criteria": [
+        "I can write a context statement that is supported by what I heard."
+      ],
+      "steps": [
+        "Context written in examination form: what the excerpt suggests about style, culture, history or society, in correct terminology and without invention.",
+        "The difference between a defensible inference and a guess, shown in marked examples.",
+        "Timed writing on context only."
+      ],
+      "resources": [
+        "Marked examples.",
+        "Context word bank.",
+        "Timer."
+      ],
+      "enduring": "A context claim has to be supported by the sound, not by a hunch."
+    },
+    {
+      "number": 21,
+      "week": 7,
+      "title": "Examination technique",
+      "contentCode": "L18",
+      "contentPoint": "Context written up with correct terminology",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning the technique that makes the paper survivable.",
+      "criteria": [
+        "I can budget my time across the paper and use each playing for a different purpose."
+      ],
+      "steps": [
+        "Reading the question, budgeting the time, and using the three playings differently rather than identically.",
+        "What to do when the first playing produces nothing, and how to recover on the second.",
+        "Full practice paper begun under timing."
+      ],
+      "resources": [
+        "Practice paper.",
+        "Timer.",
+        "Answer booklet."
+      ],
+      "enduring": "Technique is worth marks that knowledge alone does not collect."
+    },
+    {
+      "number": 22,
+      "week": 8,
+      "title": "Last practice paper, marked in class",
+      "contentCode": "L21",
+      "contentPoint": "Evaluating how elements are manipulated and combined",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to find and close our own gaps before the real paper.",
+      "criteria": [
+        "I can identify my weakest question type and say how I will handle it."
+      ],
+      "steps": [
+        "Final practice paper sat under full conditions, then marked in class against the guideline.",
+        "The two questions that cost the class the most marks identified and retaught on the spot.",
+        "Each student writes one line on what they will do differently on Thursday."
+      ],
+      "resources": [
+        "Practice paper and marking guideline.",
+        "Timer."
+      ],
+      "enduring": "The last rehearsal is for finding the gap, not for confirming the strengths."
+    },
+    {
+      "number": 23,
+      "week": 8,
+      "title": "AT3 sat",
+      "contentCode": "L21",
+      "contentPoint": "Evaluating how elements are manipulated and combined",
+      "assessmentEvent": true,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to evaluate how the elements are manipulated and combined under examination conditions.",
+      "criteria": [
+        "I can complete the paper in the time allowed, with a response to every question."
+      ],
+      "steps": [
+        "Assessment Task 3 sat: aural paper, about 30 minutes, under examination conditions.",
+        "Objective identification items and short written answers, one partly unseen excerpt, no extended response.",
+        "Papers collected and the excerpt list confirmed against the register for the record."
+      ],
+      "resources": [
+        "AT3 paper, audio and answer booklets.",
+        "Timer.",
+        "Examination seating."
+      ],
+      "enduring": "The paper measures the routine, and the routine has been running since Week 1."
+    },
+    {
+      "number": 24,
+      "week": 8,
+      "title": "Post-paper debrief",
+      "contentCode": "L21",
+      "contentPoint": "Evaluating how elements are manipulated and combined",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning from the paper while it is still fresh.",
+      "criteria": [
+        "I can say which question type cost me marks and why."
+      ],
+      "steps": [
+        "Immediate debrief while the paper is fresh: which excerpt was hardest and why, and what the class would want to have practised more.",
+        "The unseen excerpt replayed and analysed properly, without marks attached.",
+        "Notes taken for the Term 4 and Year 10 planning."
+      ],
+      "resources": [
+        "The paper and its audio.",
+        "Whiteboard."
+      ],
+      "enduring": "The debrief is worth more than the mark if it happens the same week."
+    },
+    {
+      "number": 25,
+      "week": 9,
+      "title": "Arranging an Australian work",
+      "contentCode": "C13",
+      "contentPoint": "Adapting or arranging for new purposes",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to arrange an existing work for a different purpose and audience.",
+      "criteria": [
+        "I can plan an arrangement that suits the players in this room."
+      ],
+      "steps": [
+        "An Australian work from the term's repertoire arranged for the people and instruments actually in the room.",
+        "What changes when the forces change: register, texture, who carries the melody and what is lost.",
+        "Arrangement plan drafted and logged."
+      ],
+      "resources": [
+        "Charts.",
+        "Instrument range charts.",
+        "Process log."
+      ],
+      "enduring": "Arranging is a decision about purpose, audience and forces."
+    },
+    {
+      "number": 26,
+      "week": 9,
+      "title": "Protocols when arranging",
+      "contentCode": "C17",
+      "contentPoint": "Cultural significance and protocols in composing",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to apply protocols when we adapt somebody else's music.",
+      "criteria": [
+        "I can check my arrangement against the protocols and say what I may not change."
+      ],
+      "steps": [
+        "Cultural significance and respectful protocols applied to arranging, including what may not be arranged and why.",
+        "Permission, attribution and intellectual property in a real case.",
+        "Each arrangement plan checked against the protocols before work continues."
+      ],
+      "resources": [
+        "Protocol checklist.",
+        "Consultation guidance.",
+        "Process log."
+      ],
+      "enduring": "Some material may be studied and not adapted, and knowing the difference is the skill."
+    },
+    {
+      "number": 27,
+      "week": 9,
+      "title": "Arrangement workshop, draft 1",
+      "contentCode": "C13",
+      "contentPoint": "Adapting or arranging for new purposes",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to test an arrangement by playing it.",
+      "criteria": [
+        "I can identify what is not working in my arrangement once I hear it."
+      ],
+      "steps": [
+        "First draft played in the room, badly, and fixed in front of the class.",
+        "The gap between the plan and the sound identified and closed.",
+        "Log entry on what changed when the arrangement was first heard."
+      ],
+      "resources": [
+        "Room kit.",
+        "Draft parts.",
+        "Process log."
+      ],
+      "enduring": "An arrangement is a hypothesis until somebody plays it."
+    },
+    {
+      "number": 28,
+      "week": 10,
+      "title": "Arrangement workshop, draft 2",
+      "contentCode": "C13",
+      "contentPoint": "Adapting or arranging for new purposes",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-COM-01",
+        "MU5-COM-02"
+      ],
+      "intention": "We are learning to refine an arrangement through rehearsal.",
+      "criteria": [
+        "I can bring my arrangement to a standard the class can perform."
+      ],
+      "steps": [
+        "Second draft rehearsed, with the fixes from draft one applied.",
+        "Balance, entries and endings rehearsed as they were in Term 1.",
+        "Final parts printed and the running order set."
+      ],
+      "resources": [
+        "Room kit.",
+        "Revised parts.",
+        "Running order."
+      ],
+      "enduring": "The second draft is where the arrangement becomes playable."
+    },
+    {
+      "number": 29,
+      "week": 10,
+      "title": "Arrangements performed to the class",
+      "contentCode": "P14",
+      "contentPoint": "Interpreting a range of genres and styles",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-PER-01",
+        "MU5-PER-02"
+      ],
+      "intention": "We are learning to interpret and present a work we have arranged.",
+      "criteria": [
+        "I can present my arrangement and explain the decisions in it."
+      ],
+      "steps": [
+        "Arrangements performed to the class, unmarked, with the attribution stated before each.",
+        "Each arranger says in one sentence what they changed and why.",
+        "Recorded for the process log and for the evidence file."
+      ],
+      "resources": [
+        "Room kit.",
+        "Recording device.",
+        "Attribution notes."
+      ],
+      "enduring": "Presenting the reasoning is part of presenting the work."
+    },
+    {
+      "number": 30,
+      "week": 10,
+      "title": "AT3 feedback, and the log entry that closes the term",
+      "contentCode": "L18",
+      "contentPoint": "Context written up with correct terminology",
+      "assessmentEvent": false,
+      "outcomes": [
+        "MU5-LIS-01",
+        "MU5-LIS-02"
+      ],
+      "intention": "We are learning to use examination feedback to improve the next piece of writing.",
+      "criteria": [
+        "I can rewrite a weak response and show what improved."
+      ],
+      "steps": [
+        "Marked papers returned with written feedback, read against the criteria rather than against the mark.",
+        "Each student writes a context response again, on the excerpt they did worst on, and compares the two.",
+        "Term closed by naming what Term 4 needs: the writing turns into a rationale."
+      ],
+      "resources": [
+        "Marked papers.",
+        "AT3 criteria.",
+        "Process log."
+      ],
+      "enduring": "Feedback that does not produce a rewrite has not been used."
+    }
+  ]
+}
