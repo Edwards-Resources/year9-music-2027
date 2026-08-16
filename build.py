@@ -12,8 +12,12 @@ overwritten.
 
 World: The Plot. The governing composition for the lesson page is
 .impeccable/mocks/comp-d-thedesk.html, approved 16 August 2026. The term hub
-and the home surface have no approved comp yet and are built here as honest
-placeholders, not as designs.
+and the home surface were designed in the build rather than comped; what they
+are and what they departed from is in DESIGN-NOTES.md.
+
+The room drawings live in plots.py, which is imported rather than inlined
+because four hub-scale plans are more SVG than this file can carry and stay
+readable.
 """
 
 import html
@@ -22,6 +26,8 @@ import os
 import re
 import shutil
 from datetime import date
+
+import plots
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "data")
@@ -171,38 +177,11 @@ def rail(site, term, current_no, reading_no):
 
 
 # --------------------------------------------------------------- the drawing
+# The lesson page's small drawing. plots.py carries it, same as the hub's.
 
 
-def plot_band():
-    """The room drawn from above. Small, and on a lesson page it lives in the
-    spec column (comp D, binding). Chalk hairline plus one 2px keyline for the
-    downstage edge; the ghost rectangle behind is the same room before the band
-    is placed in it."""
-    return """<svg viewBox="0 0 220 152" width="100%" role="img" aria-label="Plan view of the band set-up: drums and keys upstage, bass, guitar and vocals downstage, with two monitor wedges at the downstage edge">
-  <g fill="none" stroke="rgba(20,21,23,.14)" stroke-width="1">
-    <rect x="16" y="14" width="188" height="100"/>
-    <circle cx="76" cy="42" r="13"/><circle cx="144" cy="42" r="13"/>
-  </g>
-  <g fill="none" stroke="#141517" stroke-width="1">
-    <rect x="22" y="20" width="176" height="94"/>
-    <line x1="22" y1="114" x2="198" y2="114" stroke-width="2"/>
-    <circle cx="82" cy="46" r="14"/><circle cx="138" cy="46" r="14"/>
-    <circle cx="58" cy="88" r="14"/><circle cx="110" cy="88" r="14"/><circle cx="162" cy="88" r="14"/>
-    <path d="M60 122 L80 122 L74 136 L66 136 Z"/><path d="M140 122 L160 122 L154 136 L146 136 Z"/>
-  </g>
-  <g fill="#141517" font-family="Chivo Mono, monospace" font-size="9" text-anchor="middle">
-    <text x="82" y="49">1</text><text x="138" y="49">2</text>
-    <text x="58" y="91">3</text><text x="110" y="91">4</text><text x="162" y="91">5</text>
-  </g>
-  <g fill="#5D5F63" font-family="Chivo, sans-serif" font-size="7" text-anchor="middle" letter-spacing="1.1">
-    <text x="82" y="31">DRUMS</text><text x="138" y="31">KEYS</text>
-    <text x="58" y="108">BASS</text><text x="110" y="108">GTR</text><text x="162" y="108">VOX</text>
-    <text x="110" y="148">DOWNSTAGE</text>
-  </g>
-</svg>"""
+PLOTS = {"band": plots.small_stage}
 
-
-PLOTS = {"band": plot_band}
 
 
 # --------------------------------------------------------------- the lesson
@@ -247,7 +226,7 @@ def lesson_page(site, course, term, lesson, current_no):
 
     spec = []
     if b.get("plot") in PLOTS:
-        spec.append(f'<div class="plot"><h4>The room</h4>{PLOTS[b["plot"]]()}</div>')
+        spec.append(f'<div class="plot"><h4>Stage plot</h4>{PLOTS[b["plot"]]()}</div>')
     if b.get("listen"):
         tracks = "".join(f'<div class="tr"><b>{e(t["title"])}</b><span class="mono">{e(t["meta"])}</span></div>'
                          for t in b["listen"])
@@ -304,13 +283,60 @@ def lesson_page(site, course, term, lesson, current_no):
                   b["lead"], term=term, active_id=term["id"])
 
 
-# ------------------------------------------------- term hub, not designed yet
+# ------------------------------------------------------------- the term hub
+
+
+def multicore(site, term, current_no, live):
+    """Thirty inputs as a single line along the downstage edge, held from comp B
+    and built here for the first time.
+
+    The strip is plugged into the room: it sits directly under the drawing's
+    downstage edge, with no gap, so the channels read as running out of the
+    room rather than as a row of boxes beneath a picture. Every channel is the
+    same width, which on this surface is the point rather than the failing the
+    thesis complains about; on a multicore the channels *are* equal, and what
+    separates them is what is patched into each.
+    """
+    base = site["base"]
+    cells = []
+    for l in term["lessons"]:
+        cls = ["cell"]
+        if live and l["number"] == current_no:
+            cls.append("now")
+        elif live and current_no is not None and l["number"] < current_no:
+            cls.append("done")
+        if is_assessment(l):
+            cls.append("at")
+        n = f'<span class="n mono">{l["number"]:02d}</span>'
+        # The number alone is not a name. The title rides with it, unseen, so
+        # the strip is usable without the drawing.
+        name = f'<span class="vh">{e(l["title"])}</span>'
+        if l.get("body"):
+            cells.append(f'<a class="{" ".join(cls)}" '
+                         f'href="{base}/{term["id"]}/{l["number"]:02d}/">{n}{name}</a>')
+        else:
+            cells.append(f'<span class="{" ".join(cls)}">{n}{name}</span>')
+
+    # The week ruler. Each week is flexed by how many inputs it holds, so its
+    # boundaries fall exactly where the channels change week.
+    weeks, order = {}, []
+    for l in term["lessons"]:
+        if l["week"] not in weeks:
+            weeks[l["week"]] = 0
+            order.append(l["week"])
+        weeks[l["week"]] += 1
+    ruler = "".join(f'<span style="flex:{weeks[w]} 1 0">{w}</span>' for w in order)
+
+    return f"""<nav class="core-wrap" aria-label="{e(term['name'])} input strip">
+  <div class="core">{"".join(cells)}</div>
+  <div class="ruler">{ruler}</div>
+  <span class="rlbl" aria-hidden="true">Week</span>
+</nav>"""
 
 
 def term_page(site, course, term, current_no, reading_term):
-    """No approved comp. B's multicore strip is the starting point and that is a
-    design session, not this one, so this page says so plainly and gives the
-    input list at full width rather than pretending to be a hub."""
+    """The term hub. The room is large here and nowhere else, the multicore runs
+    out of its downstage edge, and the full input list sits under both."""
     a = term["assessment"]
     live = term["id"] == reading_term
     rows, week = [], None
@@ -338,30 +364,56 @@ def term_page(site, course, term, current_no, reading_term):
 
     built = sum(1 for l in term["lessons"] if l.get("body"))
     if built == 0:
-        state = "None of them has a page on the site yet."
+        state = "No input has a page on the site yet."
     elif built == len(term["lessons"]):
-        state = "Every one of them has a page, and every title below opens it."
+        state = "Every input has a page."
     elif built == 1:
-        state = "One of them has a page so far, and it is the one title you can click."
+        state = "One input has a page so far."
     else:
-        state = (f"So far {built} of them have a page, "
-                 "and those are the titles you can click.")
+        state = f"{built} inputs have a page so far."
+
+    # Where the class is, stated in words as well as marked on the strip.
+    if live and current_no is not None:
+        cur = next((l for l in term["lessons"] if l["number"] == current_no), None)
+        standing = (f'<p class="standing"><span class="strip">On the desk</span>'
+                    f'<span class="mono">Input {current_no:02d}</span>'
+                    f'<span>{e(cur["title"])}</span></p>') if cur else ""
+    else:
+        standing = ('<p class="standing"><span class="mono">Not the current unit</span>'
+                    f'<span>{state}</span></p>')
+
+    blueprint = ""
+    if term.get("blueprint"):
+        items = "".join(
+            (f'<a href="{site["base"]}/{term["id"]}/blueprint/{b["slug"]}/">{e(b["title"])}</a>'
+             if b.get("built") else
+             f'<span class="soon">{e(b["title"])}<i>not on the site yet</i></span>')
+            for b in term["blueprint"])
+        blueprint = f'<div class="bpbar"><b>The blueprint</b><div>{items}</div></div>'
 
     body = f"""<main class="termpage" id="main">
   <div class="termhead">
     <p class="of mono">Unit {term['n']} of 4 &middot; {len(term['lessons'])} inputs &middot; {e(term['focus'])}</p>
     <h1>{e(term['name'])}</h1>
+    {standing}
   </div>
-  <p class="notdesigned"><b>This page is not designed yet.</b> The term hub is
-  the next design session and it has no approved composition. What follows is
-  the registered input list, plainly, so nothing links into nowhere.
-  {state}</p>
+
+  <div class="plan">
+    <div class="planinner">
+      <div class="sheet">{plots.large(term["n"])}</div>
+      {multicore(site, term, current_no, live)}
+    </div>
+  </div>
+
   <div class="atbar">
     <span class="lbl">{e(a['name'])}</span>
     <span>{e(a['type'])}</span>
     <span class="mono">Issued {e(a['issued'])} &middot; due {e(a['due'])} &middot; {e(a['weighting'])}</span>
     <span>Task and rubric in Canvas</span>
   </div>
+  {blueprint}
+
+  <h2 class="listhead">Every input<i class="mono">{state}</i></h2>
   <table class="inputs">
     <thead><tr><th>CH</th><th>Input</th><th>Content</th><th>Outcomes</th></tr></thead>
     <tbody>{"".join(rows)}</tbody>
@@ -369,6 +421,97 @@ def term_page(site, course, term, current_no, reading_term):
 </main>"""
     return layout(site, course, TERMS, term["name"], body,
                   f"{term['name']}, input by input.", term=term, active_id=term["id"])
+
+
+# ---------------------------------------------------------- the home surface
+
+
+def home_page(site, course, terms, current_term, current_no):
+    """The front door.
+
+    Two jobs, in this order. Put the class on the lesson it is actually on,
+    because that is the one thing home certainly has to do and it is what the
+    board is opened for at the start of a period. Then show the whole year as
+    four units, because this world's argument is that the student is standing
+    on all of it and only one set of lines is live.
+
+    No plan drawing here. The room is large on the term hub and small on a
+    lesson page; a fifth, year-sized room would be a third scale of the same
+    device and would say nothing the four unit blocks do not already say.
+    """
+    base = site["base"]
+    total = sum(len(t["lessons"]) for t in terms)
+
+    # On the desk. The lead is a sentence, so it reads on a taped panel and
+    # never on the black floor. This is the page's one torn strip.
+    cur = next((l for l in current_term["lessons"]
+                if l["number"] == current_no), None)
+    if cur and cur.get("body"):
+        href = f'{base}/{current_term["id"]}/{cur["number"]:02d}/'
+        desk = f"""<div class="deskplate">
+      <span class="tapestrip tl" aria-hidden="true"></span>
+      <article class="plate">
+        <div class="titleblock">
+          <p class="of mono">On the desk &middot; {e(current_term['name'])} &middot; input {cur['number']:02d} of {len(current_term['lessons'])}</p>
+          <h2><a href="{href}">{e(cur['title'])}</a></h2>
+        </div>
+        <p class="desklead">{e(cur['body']['lead'])}</p>
+        <p class="deskgo"><a href="{href}">Open input {cur['number']:02d}</a>
+          <a class="alt" href="{base}/{current_term['id']}/">All {len(current_term['lessons'])} inputs</a></p>
+      </article>
+    </div>"""
+    else:
+        # Honest rather than empty: name the position, admit there is no page.
+        where = f"input {current_no:02d}" if current_no else "the start of the unit"
+        desk = f"""<div class="deskplate">
+      <span class="tapestrip tl" aria-hidden="true"></span>
+      <article class="plate">
+        <div class="titleblock">
+          <p class="of mono">On the desk &middot; {e(current_term['name'])}</p>
+          <h2>{e(current_term['name'])}</h2>
+        </div>
+        <p class="desklead">The class is on {where}. That input has no page on
+          the site yet, so the unit's input list is the way in.</p>
+        <p class="deskgo"><a href="{base}/{current_term['id']}/">All {len(current_term['lessons'])} inputs</a></p>
+      </article>
+    </div>"""
+
+    units = []
+    for t in terms:
+        n_l = len(t["lessons"])
+        live = t["id"] == current_term["id"]
+        built = sum(1 for l in t["lessons"] if l.get("body"))
+        if live and current_no is not None:
+            pos = f"On input {current_no:02d}"
+        elif t["n"] < current_term["n"]:
+            pos = "Taught"
+        else:
+            pos = "Ahead"
+        pages = ("no pages yet" if built == 0
+                 else "1 page" if built == 1 else f"{built} pages")
+        units.append(f"""<a class="unit{' live' if live else ''}" href="{base}/{t['id']}/"
+      data-term="{t['id']}">
+      <span class="un mono">{t['n']}</span>
+      <span class="uname">{e(t['name'])}</span>
+      <span class="ufocus">{e(t['focus'])}</span>
+      <span class="umeta mono">{n_l} inputs &middot; {e(t['assessment']['type'])} &middot; {e(t['assessment']['weighting'])}</span>
+      <span class="upos mono">{pos} &middot; {pages}</span>
+    </a>""")
+
+    body = f"""<main class="home" id="main">
+  <div class="homehead">
+    <h1>Year 9 Music</h1>
+    <p class="of mono">{e(course['syllabus'])} &middot; four units &middot; {total} inputs</p>
+  </div>
+
+  {desk}
+
+  <h2 class="yearhead">The year</h2>
+  <div class="units">{"".join(units)}</div>
+</main>"""
+    return layout(site, course, terms, site["title"], body,
+                  f"Year 9 Music {course['year']}, unit by unit and input by input.",
+                  term=current_term)
 
 
 # --------------------------------------------------------------------- main
@@ -404,14 +547,7 @@ def main():
             pages += 1
             lessons += 1
 
-    # The home surface has no comp either. Until it has one, the front door is
-    # the lesson the class is on, which is the one thing home certainly must do.
-    home = next((l for l in current_term["lessons"]
-                 if l["number"] == current_no and l.get("body")), None)
-    if home:
-        write(["index.html"], lesson_page(site, course, current_term, home, current_no))
-    else:
-        write(["index.html"], term_page(site, course, current_term, current_no, reading_term))
+    write(["index.html"], home_page(site, course, TERMS, current_term, current_no))
     pages += 1
 
     shutil.copytree(ASSETS, os.path.join(OUT, "assets"))

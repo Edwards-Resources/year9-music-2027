@@ -48,9 +48,12 @@ body{
 a{color:inherit}
 img,svg{max-width:100%}
 
-/* the three places the stencil face is allowed, and no others:
-   the class mark, the input list head, the lesson title */
-.floorbar .mark,.railhead b,.plate h1,.termhead h1{
+/* The three places the stencil face is allowed, and no others: the class mark,
+   the input list head, and the page's own subject name. That last one is the
+   lesson title on a lesson page, the unit name on the term hub, and on home
+   the title of the lesson on the desk, which is a lesson title shown early.
+   One selector. Do not widen it. */
+.floorbar .mark,.railhead b,.plate h1,.termhead h1,.deskplate .titleblock h2{
   font-family:"Saira Stencil One",Chivo,sans-serif;font-weight:400
 }
 
@@ -169,15 +172,81 @@ a.ch:hover{background:rgba(242,241,236,.05)}
 .underplate a:hover{border-color:var(--chalk-dim)}
 .underplate .lbl{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--chalk-dim);font-weight:800}
 
-/* ------------------------------------------ the term page, not designed yet */
-.termpage{padding:42px 40px 70px;max-width:1100px}
+/* -------------------------------------------------------------- the term hub
+   The one surface where the room is large. The multicore runs out of its
+   downstage edge: the drawing stops at that edge and the strip starts 0px
+   under it, so the channels read as coming out of the room. */
+.termpage{padding:42px 40px 70px;max-width:1180px}
 .termhead .of{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--chalk-dim);margin-bottom:14px}
 .termhead h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:.98;text-transform:uppercase}
 /* No accent stripe. The tape colours are fills and markers, never a rule down
    the side of a note, and the 4px keyline bounds things rather than decorating
    them. A 1px chalk hairline is the world's own weight and says enough. */
-.notdesigned{margin:26px 0 0;padding:16px 0 0;border-top:1px solid var(--hair);max-width:62ch;font-size:.92rem;color:var(--chalk)}
-.atbar{margin:28px 0 34px;display:flex;gap:10px 22px;flex-wrap:wrap;align-items:baseline;padding:14px 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);font-size:.86rem}
+.standing{margin-top:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:.9rem}
+/* the hub's first tape strip, on the words that say where the class is */
+.standing .strip{
+  background:var(--tape);color:var(--ink);font-weight:800;padding:4px 16px;
+  font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;
+  clip-path:polygon(0 9%,3% 0,7% 11%,11% 1%,100% 0,98% 12%,100% 93%,96% 100%,92% 89%,88% 100%,0 100%,2% 87%);
+}
+.standing .mono{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--chalk-dim)}
+
+/* No label over the drawing. The sheet names itself inside its own frame, the
+   way production paperwork does, and a caption above it collided with the
+   outermost ghost label anyway. */
+.sheet{margin:30px 0 0}
+.plot-large{display:block;width:100%;height:auto}
+
+/* ------------------------------------------------------------- the multicore
+   Held from comp B, built here. Every channel the same width, which on this
+   surface is the point: on a multicore the channels are equal and what
+   separates them is what is patched into each.
+
+   CORE_INSET matches ROOM_X in plots.py (60 of 1200). The strip therefore
+   starts under the room's left wall and ends under its right one, which is
+   what makes it read as running out of the downstage edge. Change one and you
+   must change the other. */
+.core-wrap{--core-inset:5%;padding:0 var(--core-inset);position:relative}
+.core{display:flex}
+.core .cell{
+  flex:1 1 0;min-width:0;border-right:1px solid var(--hair);
+  padding:12px 2px 15px;text-align:center;position:relative;
+  text-decoration:none;color:var(--chalk);display:block
+}
+.core .cell:first-child{border-left:1px solid var(--hair)}
+.core .cell .n{font-size:.66rem;color:var(--chalk-dim);letter-spacing:.02em}
+a.cell:hover{background:rgba(242,241,236,.07)}
+a.cell:hover .n{color:var(--chalk)}
+.core .cell.done .n{color:var(--chalk-past)}
+/* an assessment event: the same square marker the rail uses */
+.core .cell.at::after{content:"";position:absolute;left:50%;bottom:6px;width:5px;height:5px;margin-left:-2.5px;background:var(--chalk)}
+.core .cell.done.at::after{background:var(--chalk-past)}
+/* Where the class is up to: the hub's second and last torn strip. A channel is
+   about 30px wide, so the tear is on the top and bottom edges only. Tearing all
+   four sides at this width is not a torn strip, it is a jagged blob. */
+.core .cell.now{
+  background:var(--tape);
+  clip-path:polygon(0 9%,26% 0,55% 7%,78% 1%,100% 8%,100% 91%,74% 100%,46% 92%,22% 99%,0 90%);
+}
+.core .cell.now .n{color:var(--ink);font-weight:800;font-size:.72rem}
+.core .cell.now.at::after{background:var(--ink)}
+/* the week ruler mirrors the strip's geometry exactly, so a week boundary
+   falls on a channel boundary rather than near one */
+.ruler{display:flex;padding-top:8px;border-top:1px solid var(--hair);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--chalk-dim)}
+.ruler span{min-width:0;text-align:center;overflow:hidden;border-right:1px solid transparent}
+/* in the gutter the room's own wall leaves, so it labels the ruler without
+   taking a share of the flex row and pushing every week off its channel */
+.rlbl{position:absolute;left:0;bottom:0;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--chalk-dim);font-weight:800}
+
+.listhead{margin:40px 0 0;padding-bottom:10px;border-bottom:4px solid var(--chalk);display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;font-size:.86rem;letter-spacing:.22em;text-transform:uppercase;font-weight:800}
+.listhead i{font-style:normal;font-size:.7rem;letter-spacing:.12em;color:var(--chalk-dim);font-weight:400;text-transform:none}
+.bpbar{margin:0 0 4px;padding:14px 0;border-bottom:1px solid var(--hair);display:flex;gap:10px 22px;flex-wrap:wrap;align-items:baseline}
+.bpbar b{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--chalk-dim);font-weight:800}
+.bpbar > div{display:flex;gap:8px 18px;flex-wrap:wrap;align-items:baseline}
+.bpbar a{font-size:.86rem;text-underline-offset:3px}
+.bpbar .soon{font-size:.86rem;color:var(--chalk-dim)}
+.bpbar .soon i{font-style:normal;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;padding-left:7px}
+.atbar{margin:28px 0 0;display:flex;gap:10px 22px;flex-wrap:wrap;align-items:baseline;padding:14px 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);font-size:.86rem}
 .atbar .lbl{font-weight:800}
 .atbar .mono{font-size:.76rem;color:var(--chalk-dim)}
 .inputs{width:100%;border-collapse:collapse;font-size:.9rem}
@@ -189,9 +258,81 @@ a.ch:hover{background:rgba(242,241,236,.05)}
 .inputs .ti a{text-decoration-thickness:1px;text-underline-offset:3px}
 .inputs tr.done td{color:var(--chalk-past)}
 .inputs tr.at .ti{font-weight:800}
-.inputs tr.now td{background:var(--tape);color:var(--ink)}
-.inputs tr.now .n,.inputs tr.now .cd,.inputs tr.now .oc{color:var(--ink)}
+/* The current input is already taped twice on this page: on the standing line
+   and on its channel in the multicore. A third tape fill down here would be a
+   third strip and it would say nothing the other two have not. The table marks
+   it the way the rail marks the page you are reading, with the 4px keyline. */
+.inputs tr.now td{box-shadow:inset 0 4px 0 var(--chalk),inset 0 -4px 0 var(--chalk)}
+.inputs tr.now td:first-child{box-shadow:inset 4px 0 0 var(--chalk),inset 0 4px 0 var(--chalk),inset 0 -4px 0 var(--chalk)}
 .inputs tr.now .ti{font-weight:800}
+.inputs tr.now .n::after{content:" \25C0";font-size:.62em;vertical-align:middle}
+
+/* ----------------------------------------------------------- the home surface
+   Two jobs in this order: put the class on the lesson it is on, then show the
+   whole year as four units. No plan drawing here. The room is large on the hub
+   and small on a lesson page, and a third, year-sized room would be the same
+   device at a third scale saying nothing the four unit blocks do not. */
+.home{padding:42px 40px 70px;max-width:1180px}
+.homehead h1{font-size:clamp(2rem,4.4vw,3.1rem);line-height:1;text-transform:uppercase;font-weight:900;letter-spacing:-.03em}
+.homehead .of{margin-top:12px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--chalk-dim)}
+
+/* on the desk. The page's one torn strip, on the one thing home must do. */
+.deskplate{position:relative;margin:36px 0 0;max-width:820px}
+.deskplate .plate{padding-bottom:26px}
+.deskplate .titleblock{padding:30px 30px 0;border-bottom:2px solid var(--ink)}
+.deskplate .titleblock h2{
+  font-size:clamp(1.8rem,3.6vw,2.9rem);line-height:1;text-transform:uppercase;
+  max-width:17ch;padding-bottom:24px
+}
+.deskplate .titleblock h2 a{text-decoration:none}
+.deskplate .titleblock h2 a:hover{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+.desklead{padding:22px 30px 0;font-size:clamp(1.1rem,1.7vw,1.32rem);line-height:1.3;font-weight:700;max-width:40ch}
+.deskgo{padding:22px 30px 0;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.deskgo a{
+  text-decoration:none;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;
+  font-weight:800;padding:12px 20px;background:var(--ink);color:var(--sheet)
+}
+.deskgo a:hover{background:#2C2E31}
+.deskgo a.alt{background:none;color:var(--ink);border:1px solid var(--rule)}
+.deskgo a.alt:hover{background:none;border-color:var(--ink)}
+
+/* The year. Four units on the floor.
+
+   Each unit carries its own tape colour, but as a chip on the unit number with
+   black ink on it, not as a bar across the top of the block. Four coloured bars
+   side by side read as a rainbow, and a square-cut bar of gaffer colour is the
+   thing rule 6 exists to refuse. The chip is a marker, which is what the tapes
+   are allowed to be, and it is small enough that four of them sit together
+   without shouting. Which unit is live is said by the 4px chalk keyline and by
+   the words in the corner, never by the colour. */
+.yearhead{margin:52px 0 0;padding-bottom:10px;border-bottom:4px solid var(--chalk);font-size:.86rem;letter-spacing:.22em;text-transform:uppercase;font-weight:800}
+.units{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:var(--hair)}
+.unit{
+  --utape:var(--chalk);
+  background:var(--floor);padding:22px 20px 20px;text-decoration:none;color:var(--chalk);
+  display:grid;grid-template-rows:auto auto auto 1fr auto;gap:8px;
+  border-top:4px solid transparent
+}
+.unit[data-term="term1"]{--utape:var(--t1)}
+.unit[data-term="term2"]{--utape:var(--t2)}
+.unit[data-term="term3"]{--utape:var(--t3)}
+.unit[data-term="term4"]{--utape:var(--t4)}
+.unit:hover{background:rgba(242,241,236,.05)}
+.unit .un{
+  font-size:1.5rem;line-height:1;background:var(--utape);color:var(--ink);
+  font-weight:800;padding:2px 11px;justify-self:start
+}
+.unit .uname{font-size:1.16rem;line-height:1.15;font-weight:800;text-transform:uppercase;letter-spacing:-.01em}
+.unit .ufocus{font-size:.85rem;color:var(--chalk-dim);line-height:1.35}
+.unit .umeta{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--chalk-dim);padding-top:6px}
+.unit .upos{
+  font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800;
+  margin-top:10px;padding-top:10px;border-top:1px solid var(--hair);color:var(--chalk-dim)
+}
+/* the live unit: the 4px painted keyline, the same weight the rail uses for the
+   page you have open, plus the words in the corner */
+.unit.live{border-top-color:var(--chalk)}
+.unit.live .upos{color:var(--chalk)}
 
 /* ------------------------------------------------------------- the footer */
 .foot{border-top:1px solid var(--hair);padding:26px 30px 40px;color:var(--chalk-dim);font-size:.8rem;display:flex;gap:8px 30px;flex-wrap:wrap;justify-content:space-between}
@@ -232,6 +373,17 @@ a.ch:hover{background:rgba(242,241,236,.05)}
   .keep{margin-left:20px;margin-right:20px;padding-left:0;padding-right:0}
   .spec{padding-left:20px;padding-right:20px}
   .termpage{padding:26px 16px 50px}
+  /* The sheet and the strip pan together as one thing.
+
+     Thirty channels across a phone is 11px each, which cannot hold a two-digit
+     number, and the sheet at this width is a 1200-unit drawing in 340 points,
+     which cannot be read either. Scrolling them separately would break the
+     alignment that is the whole device, so they scroll inside one container at
+     the width they need, and you drag across the unit the way you would drag
+     across a large sheet on a desk. The full input list is underneath for
+     anyone who would rather not. */
+  .plan{overflow-x:auto;overscroll-behavior-x:contain;padding-bottom:6px}
+  .planinner{min-width:720px}
   .floorbar{padding:12px 16px;gap:14px}
   .floorbar nav{margin-left:0;width:100%}
   .tapestrip{width:96px;height:26px}
