@@ -4,11 +4,12 @@
 
 **All three surfaces are built. The content is not.**
 
-- Live at **https://edwards-resources.github.io/year9-music-2027/** — but the live
-  site is still the *previous* commit. This session's work is committed and
-  **not pushed**.
+- Live at **https://edwards-resources.github.io/year9-music-2027/**, and the live
+  site is this session's work. Pushed and **verified against the live URL**, not
+  against the push: home, all four term hubs, the lesson page and the stylesheet
+  all return 200, and the four unit sheets are serving.
 - Repo `Edwards-Resources/year9-music-2027`, public, Pages serving `main` `/docs`.
-- Last commit: `518f7e5 Design and build the term hub and the home surface`
+- Last commit: `5cac94a Point the handoff at the content pour`
 
 | File | What it is |
 | --- | --- |
@@ -77,16 +78,14 @@ Start with Term 2, since input 02 is already authored and is the model to match.
 
 ## Decisions waiting on Matthew
 
-1. **Push both repos?** Nothing has been pushed. Year 9 is one commit ahead of
-   live; `year8-music` is one commit ahead.
-2. **Rewrite `year8-music`'s published history?** See below. **Recommendation:
+1. **Rewrite `year8-music`'s published history?** See below. **Recommendation:
    no.**
-3. **The lesson page carries three pieces of torn tape, not two** — the plate's
+2. **The lesson page carries three pieces of torn tape, not two** — the plate's
    two corner strips plus the rail's current row. Either the two corners count as
    one act of taping the plate down, or the build has been over budget since the
    first commit. Inherited from comp D, not introduced this session. A ruling is
    owed at the finish review.
-4. **`DIRECTION.md` and the comp D approval sidecar name Matthew**, and both are
+3. **`DIRECTION.md` and the comp D approval sidecar name Matthew**, and both are
    already in pushed history. Same question as Year 8, smaller.
 
 ## The Year 8 repo
@@ -98,8 +97,8 @@ apparent hits were substring and regex-wildcard noise.
 
 The real leak was **the teacher's first name on all 105 served pages**, baked in
 by `build.py`. Fixed forward to "the user", matching what this repo already does,
-plus the same name out of `PRODUCT.md` and three source comments. Committed as
-`9d8d85a`, not pushed.
+plus the same name out of `PRODUCT.md` and three source comments. Pushed, and
+the live pages were checked: the name returns zero on every one of them.
 
 **Why not rewrite the history:** it is his own first name, on his own resources,
 published under an org called `Edwards-Resources` at `edwards-resources.github.io`.
