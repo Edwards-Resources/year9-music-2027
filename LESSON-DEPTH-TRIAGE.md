@@ -193,13 +193,18 @@ embed, then guide.
 1. **A only, or A and B?** 34 explains and about 8,500 words, or 47 and about 11,750.
    Recommendation: **A only first**, all four terms, then look at the B list against real
    pages rather than against this table.
-2. **Does Year 9 get a `worked` block as well?** Three inputs want a model answer with the
-   reasoning shown rather than 250 words of prose: T1 #26, T3 #09 and T4 #19. Year 10 has
-   `worked` and `check`; Year 9 has neither. Recommendation: **yes to `worked`, no to
-   `check`**, since Year 9 has no gapfill for `check` to answer.
+2. **Does Year 9 get a `worked` block as well?** **Ruled yes on 17 August 2026, and no to
+   `check`.** T1 #26, T3 #09 and T4 #19 take a `worked` block instead of a 250-word
+   explain: a model answer with the reasoning shown, and a zero-mark answer that looks
+   fine and is not. No `check`, since Year 9 has no gapfill for it to answer.
 3. **Confirm the four guides**, or cut to two. Recommendation: **keep four**, one per term,
    but build them after the embedding work rather than alongside it.
 
 ## Sign-off
 
-Not signed off. No content is to be written against this list until it is.
+**Signed off by the teacher, 17 August 2026**, with the three rulings above: four guides, A
+only with individual Bs promoted against the named gate, T3 #14 promoted before starting,
+and `worked` yes / `check` no.
+
+Written so far: the `explain` and the `guide` on T1 #04. Everything else on this list is
+still to be written.

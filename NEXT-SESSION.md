@@ -109,26 +109,29 @@ Most likely to be promoted once writing starts, on current reading: **T2 #15**
 (drum notation, since Part A requires writing a drum part) and **T1 #01** (the
 four ensemble roles, which three later explains lean on).
 
-## The `worked` block, still unruled
+## The `worked` block: ruled yes, 17 August 2026
 
-**Does Year 9 get a `worked` block as well?** Asked on 17 August and not yet
-ruled on. Cheaper now than when it was asked: the read section exists, so this
-is a third block inside a settled frame rather than new composition. It is not more exposition: it is one exam
-question, one full-mark answer, the reasoning broken into ALARM rungs, and **a
-zero-mark answer that looks fine and is not**. The zero answer is the half that
-does the work, and the whole block is cheaper than an explain, about 150 words.
+**Matthew ruled yes to `worked` and no to `check`**, on the recommendation. Not
+built. It is the third read block and it goes in the frame the other two now
+establish, so it is a composition inside a settled section rather than new
+design.
 
-Three inputs want one instead of 250 words of prose, and in all three the
+It is not more exposition: it is one exam question, one full-mark answer, the
+reasoning broken into ALARM rungs, and **a zero-mark answer that looks fine and
+is not**. The zero answer is the half that does the work, and the whole block is
+about 150 words, cheaper than an explain.
+
+Three inputs take one **instead of** 250 words of prose, and in all three the
 lesson already contains a worked example that currently only happens out loud:
 
 - **T3 #09**, students mark real anonymised responses and justify the mark
 - **T4 #19**, a strong rationale read and marked, then a weak one
 - **T1 #26**, a model log entry written together, then a weak one improved
 
-Recommendation on file: **yes to `worked`, no to `check`**, since Year 9 has no
-gapfill for `check` to answer. Year 10's `build.py` has both and is the
-reference implementation, but the rendering has to be redesigned for this
-world, not ported.
+No `check`, because Year 9 has no gapfill for it to answer. Year 10's `build.py`
+has both and is the reference for what they carry, **not** for how they look:
+that world is a zine and this one is not. Build it with its content in one go,
+the way the guide was, so it can be looked at rather than taken on trust.
 
 ## The embed is done, 17 August 2026
 
@@ -198,16 +201,12 @@ commit message beside the A that forced it.
 
 ## Decisions waiting on Matthew
 
-1. **Does Year 9 get a `worked` block?** Still open, and now cheaper than it was:
-   the read section exists, so a `worked` block is a third block inside a
-   settled frame rather than new composition. See above. **Recommendation: yes to
-   `worked`, no to `check`.**
-2. **The third work in input 04's cue sheet.** Its audio will not download, so it
+1. **The third work in input 04's cue sheet.** Its audio will not download, so it
    has no cue times. Four or five, set with the recording playing, and it joins
    the cue sheet and comes out of `listen`.
-3. **Rewrite `year8-music`'s published history?** See below. **Recommendation:
+2. **Rewrite `year8-music`'s published history?** See below. **Recommendation:
    no.**
-4. **Home's four unit blocks are equal weight**, which is the one arrangement
+3. **Home's four unit blocks are equal weight**, which is the one arrangement
    the thesis names and refuses. The review's ruling is **unequal weight, not a
    drawing**: the live unit takes the block and carries its own inputs, the
    other three compress to a line each, which is the live/not-live logic the
@@ -215,16 +214,16 @@ commit message beside the A that forced it.
    withdrawn, because a third instance of the sheet is the metaphor doing
    overtime, which `DESIGN-NOTES.md` had already ruled out once. Half a session
    with Opus.
-5. **`DIRECTION.md` and the comp D approval sidecar name Matthew**, and both are
+4. **`DIRECTION.md` and the comp D approval sidecar name Matthew**, and both are
    already in pushed history. Same question as Year 8, smaller.
-6. **Whether to push.** The repo is six commits ahead of the live site. The embed
-   and the first two read blocks are what a class would notice.
-7. **Should the player break out of the 240px listen block?** It renders at
+5. **Should the player break out of the 240px listen block?** It renders at
    210px and YouTube's own controls are cramped there. It is a decision about
    the spec column rather than about this block, and Matthew is the one
    projecting it in a room. One line either way.
 
-Settled and no longer decisions: the push and history rewrite of 17 August; the
+Settled and no longer decisions: `worked` yes and `check` no (17 August); the
+push of 17 August night, which put the embed and both read blocks live; the push
+and history rewrite of 17 August; the
 three torn strips are two acts of taping; the `artist` field is rendered rather
 than deleted under a rule written into `DESIGN.md`; `bring` is a closed set of
 seven and the seventh is recorded with its source; the guide count and the
