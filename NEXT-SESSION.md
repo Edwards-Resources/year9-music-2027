@@ -182,20 +182,51 @@ one item is left for Matthew. It is all in the commit message of `8214b06` and i
   has any, though `PRODUCT.md` says Term 4 supplies a timing sheet, a template
   and a bank of motifs. This is authoring work, not design work, and it is now
   the largest real gap in the site.
+- **Nothing is embedded.** `PRODUCT.md` names "the year's repertoire with
+  embedded listening" as a must-carry, and separately says audio and video are
+  embedded from their host, never uploaded. `build.py` carries no `iframe` or
+  embed code anywhere, and the `listen` block is a plain text list: title,
+  artist, duration. This despite all 26 repertoire picks across all four terms
+  being fully verified with live YouTube ids, sitting in
+  `Music7-10_Y9_RepertoireRegister.md`. The ids were deliberately never written
+  into `data/` because nothing renders one yet, per the standing note carried
+  since the Term 2 pour. Spotted by Matthew, 17 August 2026, checking the live
+  site. Design and data work: the block needs a rendered player and `data/`
+  needs an `id` field per track, term by term.
+- **No book-work or on-screen fill-in content at all.** The sibling Year 10 site
+  has two block types built for exactly this: `explain` (about 250 words, for
+  anything a student needs to write in their book that currently only lives in
+  Matthew's head or a slide deck) and `guide` (a cue table for a video he'd stop
+  and talk over). Neither block type exists in Year 9's `build.py` or its
+  lesson data. What Year 9 has instead is `clauses`, which describe what
+  happens in the room rather than carry teaching content or a worksheet a
+  student fills in on screen. Also spotted 17 August 2026. On Year 10 this
+  content went in triaged, lesson by lesson, with Matthew's sign-off on the
+  list before any writing started, specifically to stop it turning into a
+  textbook. The same triage pass has never been run for Year 9.
 
 ## Decisions waiting on Matthew
 
 1. **Rewrite `year8-music`'s published history?** See below. **Recommendation:
    no.**
-2. **Home's four unit blocks are equal weight**, which is the one arrangement the
+2. **Embedded listening and book-work content: build for every lesson, or
+   triage first?** Both gaps above are real and both are undecided in scope.
+   **Recommendation: triage before writing**, the Year 10 precedent. For
+   embedding, that likely means every `listen` block gets a player (the ids
+   are already verified, so this is closer to mechanical than the book-work
+   question). For book-work, decide lesson by lesson whether something needs
+   to go in a student's book at all before writing prose for it, the same test
+   Year 10 used: does this introduce something new the student writes down, or
+   would Matthew stop and talk over it. Get sign-off on the list before
+   writing.
+3. **Home's four unit blocks are equal weight**, which is the one arrangement the
    thesis names and refuses. The review's ruling is **unequal weight, not a
    drawing**: the live unit takes the block and carries its own inputs, the other
    three compress to a line each, which is the live/not-live logic the hub's
    ghost bracket already owns. A year-scale drawing was proposed and withdrawn,
    because a third instance of the sheet is the metaphor doing overtime, which
-   `DESIGN-NOTES.md` had already ruled out once. **This is the only design work
-   left on the site.** Half a session with Opus.
-3. **`DIRECTION.md` and the comp D approval sidecar name Matthew**, and both are
+   `DESIGN-NOTES.md` had already ruled out once. Half a session with Opus.
+4. **`DIRECTION.md` and the comp D approval sidecar name Matthew**, and both are
    already in pushed history. Same question as Year 8, smaller.
 
 Settled this session: the push, and the history rewrite that cleared the artist
@@ -288,10 +319,24 @@ history. Matthew's call, and it is still open.
 
 ## Model and effort
 
-**Opus, medium** for home's unequal-weight rebuild, which is the only design work
-left on the site and the recommended next task. It is a composition decision on
-the one surface that never had a comp, and the fix has to be looked at beside the
-incumbent before it is kept.
+**Opus, medium** to triage the book-work gap first, before any of it is written:
+walk all 123 lessons and mark which ones actually need an `explain` or `guide`
+block against the Year 10 test, and get Matthew's sign-off on the list. This is
+a judgement call, not writing, and doing it wrong in either direction is
+expensive: too little and the absent-student problem stays unsolved, too much
+and it turns into a textbook, which is exactly what triage stopped on Year 10.
+
+**Sonnet, medium** for embedding the verified repertoire once the block design
+is settled: add an `id` field per track across all four terms' `data/`, wire a
+player into the `listen` block in `build.py`, and rebuild. Mechanical, since
+every id is already verified and sitting in the register.
+
+**Opus, medium** for home's unequal-weight rebuild. A composition decision on
+the one surface that never had a comp, and the fix has to be looked at beside
+the incumbent before it is kept.
 
 **Sonnet, medium** for the four blueprint sheets when they are written. They are
 authored teaching material on an established page shape, not new design.
+
+**Sonnet, medium** for writing the book-work content itself once the triage list
+above is approved. Routine authoring against a settled scope, not a design task.
