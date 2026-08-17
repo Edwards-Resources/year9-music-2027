@@ -41,6 +41,41 @@ written. See input 02 of `term2` for the shape: `lead`, `clauses`, `criteria`,
 An input with no body still appears in the input list and on the term page. It just
 has no link.
 
+## The read: `explain` and `guide`
+
+Two optional blocks that sit under the rider, in that order whatever order the data is
+in. `LESSON-DEPTH-TRIAGE.md` says which inputs get one; do not add either to an input
+the triage did not name. Input 04 of `term1` carries both and is the worked example.
+
+An `explain` is about 250 words. One per input. `body` items are `p`, `h` (a subhead)
+or `ul`, and `**bold**` and `_italic_` work inside any of them:
+
+```json
+"explain": {
+  "title": "I, V, vi and IV: what the numbers are doing",
+  "body": [{ "p": "..." }, { "h": "..." }, { "ul": ["...", "..."] }]
+}
+```
+
+A `guide` is a cue sheet. `at` is seconds into the recording:
+
+```json
+"guide": {
+  "brief": "Press a name to play it from the top, or a time to drop into that moment.",
+  "works": [{ "title": "With or Without You", "meta": "U2", "embed": "fRBOfkeCF7A",
+              "cues": [{ "at": 8, "text": "..." }] }]
+}
+```
+
+**A work in the cue sheet is not also a row in `listen`.** All four guide inputs already
+list the works their guide walks, so take them out of `listen` when you write the guide;
+the build fails if you do not.
+
+**Cue times are measured, never remembered.** A timestamp is a claim about a recording
+and a wrong one fails in front of a class. `tools/loop.py` measures a chord loop's length
+and where each pass starts, from the audio; anything it cannot reach waits for someone
+with the recording and an ear.
+
 ## The live position
 
 `currentTerm` and `currentLesson` in `data/course/course.json`. That is the one row in

@@ -1,21 +1,60 @@
 # Next session: Year 9 Music 2027
 
-## Where this stands, 17 August 2026
+## Where this stands, 17 August 2026 (night)
 
-**All three surfaces are built, all four terms are poured, the finish review is
-closed, the book-work triage is ruled on, and the repertoire is embedded. The
-next task is the `guide` and `explain` blocks, which the embed was blocking.**
+**Both read blocks are designed, built and documented. `explain` and `guide`
+exist in `build.py`, in the CSS, in `site.js` and in `DESIGN.md`, and Term 1
+input 04 carries a real one of each. The next task is writing the other 34
+explains and three guides, which is authoring against a settled shape.**
 
 - Live at **https://edwards-resources.github.io/year9-music-2027/**. The live
-  site is the 17 August push; the repo is four commits ahead of it.
+  site is the 17 August push; the repo is now six commits ahead of it.
 - Repo `Edwards-Resources/year9-music-2027`, public, Pages serving `main`
   `/docs`.
-- The work commit is `7e88582 Embed the verified repertoire in the listen
-  block`, with two handoff commits above it. **None of the four pushed.**
+- The work commits are `7e88582 Embed the verified repertoire in the listen
+  block` and the read-block commit above it. **None pushed.**
 - Session write-ups in the vault at `projects/School Master/Session Logs/2026/`:
-  `Year 9 Repertoire Embedded and the Listen Player.md` (this session), `Year 9
-  Lesson Depth Triage.md`, `Year 9 Finish Review and DESIGN.md`, and one per
-  term pour. All linked from that folder's `_index.md`.
+  `Year 9 Repertoire Embedded and the Listen Player.md`, `Year 9 Lesson Depth
+  Triage.md`, `Year 9 Finish Review and DESIGN.md`, and one per term pour. All
+  linked from that folder's `_index.md`. **This session is not yet written up.**
+
+### What the two blocks are
+
+Read the new section of `DESIGN.md` (**The read: the cue sheet and the long
+version**) before writing either. The short version:
+
+- Neither is a fourth clause. Every clause `kind` names where the doing happens
+  and there is no doing in either, so both are **sections of the document**,
+  siblings of the title block and the keep block, opened by the same 2px ink
+  rule and sitting on the plate's own left edge with their content in a 66ch
+  column.
+- **The long version** (`explain`): label, its own title, about 250 words.
+- **The cue sheet** (`guide`): a list of works, each with the name as the player
+  control and its cue times **in the 46px gutter the clause numbers use**, so one
+  column of figures runs down the whole plate. Only the time is a link; the cue
+  text stays text.
+- The order on the page is guide then explain, fixed in `build.py` not in the
+  data, because you hear a thing before you are told what it is.
+- `.play` is no longer scoped to `.listen`: the name of a work is the control on
+  both blocks, from one `play_link()`. **One player at a time on the page**, not
+  one per block.
+- `assert_no_doubled_work()` fails the build if a work is in both the cue sheet
+  and the listen block on one page. Proven by mutation.
+
+### Cue times are measured, and this is the constraint on the other three guides
+
+A cue time is a claim about a recording and a wrong one fails in front of a
+class. `tools/loop.py` is new: it pulls the chord grid out of the audio, finds
+the loop length by self-similarity and finds where each pass starts. Input 04's
+eight cue times came out of it. The check that it works is the tempo, and both
+measured loops match their recording's published tempo.
+
+**Two of that lesson's three works are cued. The third would not download at
+all** (403 on every client tried), so it has no cues and stays in the listen
+block, which is also the case that proves the guard. Adding it is a few minutes
+for someone with the recording playing. Expect the same failure on some works in
+the other three guides: when it happens, the cues wait for an ear rather than
+being guessed at.
 
 | File | What it is |
 | --- | --- |
@@ -24,11 +63,12 @@ next task is the `guide` and `explain` blocks, which the embed was blocking.**
 | `DESIGN.md` | The design system as built, with every ruling and every gap. **System of record for the design.** |
 | `DESIGN-NOTES.md` | The build record for the hub and home. Says so at the top. |
 | `LESSON-DEPTH-TRIAGE.md` | Which of the 123 inputs get book-work content, and which do not. Governs the pour. |
-| `README.md` | How to build, how to author a lesson, what a `listen` track looks like, what must never go on the site. |
+| `README.md` | How to build, how to author a lesson, the `explain` and `guide` data shapes, what must never go on the site. |
 | `build.py` | Reads `data/`, writes `docs/`. Standard library only. |
-| `assets/site.js` | **New.** The only script on the site. Unfolds a recording inside a listen row, and carries the seek seam the guide's cue times will use. |
+| `assets/site.js` | The only script on the site. Unfolds a recording inside a listen row or a cue sheet's work, and seeks it from a cue time. One player at a time on the page. |
 | `plots.py` | The four unit sheets at hub scale, plus the small stage plot. |
 | `tools/extract_program.py` | Pulls the lesson skeleton out of the four unit programs. |
+| `tools/loop.py` | **New.** Measures a chord loop off the audio: its length, and where each pass starts. Where a guide's cue times come from. Needs numpy and scipy, which the build does not. |
 | `data/` | `site.json`, `course/course.json`, four `course/termN/term.json`. |
 | `docs/` | Build output. Generated, never edited by hand. |
 | `.impeccable/mocks/comp-d-thedesk.html` | Comp D, approved. Governs the lesson page only. |
@@ -69,10 +109,11 @@ Most likely to be promoted once writing starts, on current reading: **T2 #15**
 (drum notation, since Part A requires writing a drum part) and **T1 #01** (the
 four ensemble roles, which three later explains lean on).
 
-## The one question still open
+## The `worked` block, still unruled
 
-**Does Year 9 get a `worked` block as well?** Asked and explained; the session
-ended before it was ruled on. It is not more exposition: it is one exam
+**Does Year 9 get a `worked` block as well?** Asked on 17 August and not yet
+ruled on. Cheaper now than when it was asked: the read section exists, so this
+is a third block inside a settled frame rather than new composition. It is not more exposition: it is one exam
 question, one full-mark answer, the reasoning broken into ALARM rungs, and **a
 zero-mark answer that looks fine and is not**. The zero answer is the half that
 does the work, and the whole block is cheaper than an explain, about 150 words.
@@ -127,18 +168,19 @@ rather than a session's judgement:
 
 ## The next task
 
-**The four guides**, then the 35 explains. The guide is what the embed was
-blocking: a cue table whose timestamps cannot seek a player is a list of
-numbers, and now they can.
+**The remaining three guides, then the 34 explains.** Both shapes are settled and
+rendered, so this is authoring rather than design. `LESSON-DEPTH-TRIAGE.md` says
+which inputs get what and `README.md` carries both data shapes.
 
-Two things the world already decides for the block design, before anyone opens
-the CSS:
+Guides first, for the same reason as last time: there are only three, each needs
+`tools/loop.py` run against its works before a single time is written, and a
+download failure on any of them is better found now than in the middle of the
+explains. They are T2 #02, T3 #14 and T4 #02. **T3 #14 sits outside the Weeks 4
+to 6 block on purpose and the block still carries no guide at all.**
 
-- An `explain` is sustained prose, and **long white prose never sits on the
-  black field**, so it sits on the sheet. It is the first block in this world
-  that is **read rather than done**, so it cannot take a clause `kind`.
-- A `guide`'s timestamps are counts, and counts here are mono, like the input
-  numbers on the rail. That grammar already exists.
+Then the explains, in term order. The gate on promoting a B stands: promote only
+when writing an A hits content that is not there, and name every promotion in the
+commit message beside the A that forced it.
 
 ## What is still genuinely missing
 
@@ -156,11 +198,16 @@ the CSS:
 
 ## Decisions waiting on Matthew
 
-1. **Does Year 9 get a `worked` block?** See above. **Recommendation: yes to
+1. **Does Year 9 get a `worked` block?** Still open, and now cheaper than it was:
+   the read section exists, so a `worked` block is a third block inside a
+   settled frame rather than new composition. See above. **Recommendation: yes to
    `worked`, no to `check`.**
-2. **Rewrite `year8-music`'s published history?** See below. **Recommendation:
+2. **The third work in input 04's cue sheet.** Its audio will not download, so it
+   has no cue times. Four or five, set with the recording playing, and it joins
+   the cue sheet and comes out of `listen`.
+3. **Rewrite `year8-music`'s published history?** See below. **Recommendation:
    no.**
-3. **Home's four unit blocks are equal weight**, which is the one arrangement
+4. **Home's four unit blocks are equal weight**, which is the one arrangement
    the thesis names and refuses. The review's ruling is **unequal weight, not a
    drawing**: the live unit takes the block and carries its own inputs, the
    other three compress to a line each, which is the live/not-live logic the
@@ -168,11 +215,11 @@ the CSS:
    withdrawn, because a third instance of the sheet is the metaphor doing
    overtime, which `DESIGN-NOTES.md` had already ruled out once. Half a session
    with Opus.
-4. **`DIRECTION.md` and the comp D approval sidecar name Matthew**, and both are
+5. **`DIRECTION.md` and the comp D approval sidecar name Matthew**, and both are
    already in pushed history. Same question as Year 8, smaller.
-5. **Whether to push.** The repo is four commits ahead of the live site, and the
-   embed is the first of those four that a class would notice.
-6. **Should the player break out of the 240px listen block?** It renders at
+6. **Whether to push.** The repo is six commits ahead of the live site. The embed
+   and the first two read blocks are what a class would notice.
+7. **Should the player break out of the 240px listen block?** It renders at
    210px and YouTube's own controls are cramped there. It is a decision about
    the spec column rather than about this block, and Matthew is the one
    projecting it in a room. One line either way.

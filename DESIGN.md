@@ -208,7 +208,9 @@ over to it. They are not available anywhere else.
 
 **The frame.** Every page is a floor bar across the top (class mark, year, term nav) and a footer, both hairline-bounded, with the surface between them.
 
-**The lesson page** is a two-column grid: a fixed 312px left rail and a fluid stage area. The rail is permanent and carries all thirty channels of the term, not a window onto them. The stage area holds one plate at max 960px, taped at its two top corners, and a row of floor buttons under it. Inside the plate, a title block, then a meta row ruled into as many cells as the lesson has fields (three, four or five via `tbgrid c3/c4/c5`, so an assessment lesson carrying no repertoire keeps even cells), then a rider grid of a fluid clause column beside a fixed 300px spec column, then the keep-this block.
+**The lesson page** is a two-column grid: a fixed 312px left rail and a fluid stage area. The rail is permanent and carries all thirty channels of the term, not a window onto them. The stage area holds one plate at max 960px, taped at its two top corners, and a row of floor buttons under it. Inside the plate, a title block, then a meta row ruled into as many cells as the lesson has fields (three, four or five via `tbgrid c3/c4/c5`, so an assessment lesson carrying no repertoire keeps even cells), then a rider grid of a fluid clause column beside a fixed 300px spec column, then **the read** where the lesson has one, then the keep-this block.
+
+**The plate's sections** are the document's own divisions and each is opened by the 2px ink rule: title block, rider, read, keep. The read is where a `guide` and an `explain` sit, in that order and fixed in `build.py` rather than by the data, because the teaching order is that you hear a thing before you are told what it is. Each read block takes the plate's own left edge, and its content sits in a 66ch column under a full-width rule, so the section divider spans the document and the paperwork inside it does not.
 
 **The term hub** is the one surface where the room is large: max 1180px, unit head and standing line, then the unit's full-width SVG sheet, then the multicore strip running out of its bottom edge, then the assessment bar, the blueprint bar and the full input table. The multicore's `--core-inset` (5%) must equal `SH_X/ROOM_X` in `plots.py` (60 of 1200) or the strip stops reading as plugged into the sheet. Change one and you change the other.
 
@@ -298,7 +300,32 @@ Three rulings inside that, in the order they were forced:
 - **Not a button in its own column.** A 24px control column was built first and cost the work's name 34px in a block that is 240 wide, which put all three of Term 4 input 08's titles onto two lines each. The mark inside the name costs one line's indent and nothing on the rest, and it makes the whole title the target, which is what a tracklist does everywhere else these students have met one.
 - **The player is the block's width**, 210px inside the 240px block inside the 300px spec column. Small, and deliberately not broken out of the column: the recording belongs under the work it names. If the room needs it bigger, that is one rule, and it is a decision about the spec column rather than about this block.
 
+### The read: the cue sheet and the long version
+
+Added 17 August 2026. The first two blocks in this world that are **read rather than done**, which is the fact that decides everything about them.
+
+Neither is a fourth clause. Every clause carries a `kind` and every kind names where the doing happens (In the room, With the band, On your own, In flat.io); there is no doing in either of these, so neither can take one. They are sections of the document instead, siblings of the title block and the keep block, and they take that structure's furniture: the plate's own left edge, and the 2px ink rule that already divides this sheet.
+
+Both are on the sheet rather than the floor because both are paragraphs. That is the Two Grounds Rule, not a preference.
+
+**The long version** (`explain`) is one block of about 250 words on an input that introduces something a student writes in their book. `LESSON-DEPTH-TRIAGE.md` governs which inputs get one. A label in caps, the explain's own title at the 1.1rem step, then prose at 66ch with optional caps subheads and a list. The list marker is the success criteria's dash, which is now the sheet's one list marker, but without the rule under each item: the criteria are a checklist and are ruled like one, and this is a set inside a paragraph's argument.
+
+**The cue sheet** (`guide`) is a work and the times in it worth stopping at. Four in 123 inputs, one per term. It is a list of works rather than one work with a list under it, because three of the four walk more than one. A work's name is the control that plays it, its locating fact sits in mono at the end of its line, and its cues hang under it: **the time in the 46px gutter the clause numbers use directly above, so one column of figures runs down the whole plate**. Works are separated by a 1px sheet rule; cues are not ruled from each other, because ruling every row of a short list inside an already-ruled section turns the sheet into a spreadsheet.
+
+Four rulings inside it:
+
+- **Only the time is a link.** The cue text stays text, so it can be read off a projector and copied into a book without being pressed by accident. The time is a real `watch?t=` link before site.js makes it a seek, which is the same progressive-enhancement rule the listen block was built on.
+- **The player opens above that work's own cues**, so pressing a cue leaves the rest of the list where it was. It is capped at 480px rather than run to the block's width: this sits on a document, and half a metre of another company's chrome is not a document. That cap is a decision about this block and deliberately does not answer the open question about the listen block's 210px player, which is a question about the spec column.
+- **Held to 66ch, not to the plate.** Full width throws the artist out to the right margin half a plate from the work it names, and leaves the rule under each work crossing empty sheet.
+- **A cue is never a toggle.** Pressing 1:04 has one obvious meaning and closing the player is not it.
+
+**The name of a work is the control, on both blocks that name one.** The listen block established this on 17 August and the guide inherits it rather than inventing a second way to start a player, so `.play` is no longer scoped to `.listen` and `build.py`'s `play_link()` is written once. A student who has learned the control on one block does not meet a button on the next.
+
+**One player at a time on the page**, not one per block. The listen block's original rule was per block, which was complete for every case that existed and wrong for the first new one: two tracks playing over each other in a classroom is the whole room's problem, and it is just as much the room's problem when one is in the cue sheet and the other is in the listen block.
+
 `assets/site.js` is the only script on the site and this is all it does.
+
+**Held by the build:** a work walked through in the cue sheet may not also be a row in the listen block on the same page. All four guide inputs already carry a listen block holding exactly the works their guide walks, so the default outcome of authoring a guide is the same names printed twice on one plate. `assert_no_doubled_work()` fails the build, proven by mutation.
 
 ### Focus on the sheet
 The term's tape is the focus colour, which holds on the floor: every tape reads between 5.26 and 16.78 to 1 against it. **On the sheet it does not.** Tape on cream runs 1.01 to 1 (Term 1), 1.20 (Term 4), 2.58 (Term 3) and 3.20 (Term 2), so in two of the four units a keyboard user would get no visible ring at all. **Inside the plate the ring is ink**, same 3px at the same 2px offset, 16.44 to 1.
@@ -365,4 +392,6 @@ Four blocks on a hairline-gap grid. Each carries its own term colour as a **chip
   four one-off display sizes. Nothing is broken by it and no size is far from a
   role, but it is a ramp held by hand rather than by tokens. New work takes the
   nearest existing step; it does not add a seventeenth.
-- **Rules with no enforcement.** The tape budget, the two line weights, the three stencil places and the closed `bring` set are all conventions held by review, not by the build. `build.py` and `plots.py` validate none of them; only the stencil rule has a single CSS selector that makes widening it a visible act.
+- **Rules with no enforcement.** The tape budget, the two line weights, the three stencil places and the closed `bring` set are all conventions held by review, not by the build. `build.py` and `plots.py` validate none of them; only the stencil rule has a single CSS selector that makes widening it a visible act, and only the doubled-work rule has a build guard.
+- **One explain and one guide exist.** Both block types are built, documented and rendered, on Term 1 input 04. The other 34 explains and three guides are authored content and are not written. The design is settled; what it is filled with is not.
+- **Cue times have to be measured, and only two are.** Term 1 input 04's cue times were measured off the recordings rather than remembered: chroma against the 24 triads gives the chord grid, self-similarity at every lag from 3 to 20 seconds gives the loop length, and folding tonic-ness onto that period gives where each pass starts. With or Without You measures an 8.73s loop at 110.0 BPM and Someone Like You a 7.11s loop at 135 BPM, both matching the published tempo, which is the check that the method works. **Let It Be could not be fetched**, so it has no cues and stays in the listen block. A guide's cue times are a claim about a recording; they are measured or they wait for an ear.

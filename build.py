@@ -47,6 +47,35 @@ def e(s):
     return re.sub(r"(?<=\w)&#x27;(?=\w)", "’", html.escape(str(s), quote=True))
 
 
+def rich(s):
+    """Escape first, then allow a two-mark inline vocabulary: **bold** and
+    _italic_.
+
+    Everywhere else on this site the data is a label, a title or a single
+    sentence, and `e()` is enough. The read blocks are the first sustained prose
+    in the build and some of it has to emphasise inside a sentence: the first
+    appearance of a word the student is being handed, and the name of a work.
+    Escaping before converting means hand-edited data cannot inject markup.
+
+    Unbalanced marks are left alone rather than guessed at, so an apostrophe or
+    a stray underscore in a lesson never eats the rest of a paragraph.
+    """
+    out = e(s)
+    for mark, tag in (("**", "strong"), ("_", "em")):
+        parts = out.split(mark)
+        if len(parts) % 2 == 1:
+            out = "".join(p if i % 2 == 0 else f"<{tag}>{p}</{tag}>"
+                          for i, p in enumerate(parts))
+    return out
+
+
+def mmss(sec):
+    """A cue time. Minutes are not padded and seconds always are, which is how a
+    player writes it and so how a student will read it back off the screen."""
+    sec = int(sec)
+    return f"{sec // 60}:{sec % 60:02d}"
+
+
 def write(path_parts, markup):
     path = os.path.join(OUT, *path_parts)
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -213,6 +242,29 @@ def by(track):
     return f'<i>{e(artist)}</i>'
 
 
+def play_link(vid, title):
+    """The name of a work, as the control that plays it.
+
+    Written once and used by both blocks that name a recording. The listen block
+    established the ruling on 17 August 2026 and the guide inherits it rather
+    than inventing a second way to start a player: a student who has learned
+    that a work's name is pressable on one block should not have to learn a
+    button on the next.
+
+    Both marks ride in the link and the CSS shows one. Swapping the shape in the
+    stylesheet keeps the state in one place, and site.js only ever has to set
+    aria-expanded. With scripting off this is what the markup says it is, a link
+    to the recording.
+    """
+    marks = ('<svg class="mark go" viewBox="0 0 10 12" aria-hidden="true">'
+             '<path d="M0 0 10 6 0 12Z"/></svg>'
+             '<svg class="mark stop" viewBox="0 0 10 12" aria-hidden="true">'
+             '<path d="M0 1H10V11H0Z"/></svg>')
+    return (f'<a class="play" href="https://www.youtube.com/watch?v={vid}"'
+            f' data-yt="{vid}" data-work="{title}">'
+            f'{marks}<span class="vh">Play </span>{title}</a>')
+
+
 def track_row(track):
     """One row of the listen block, with its player folded away.
 
@@ -243,18 +295,77 @@ def track_row(track):
         # The register's rule is that nothing is written into a lesson before it
         # is verified, so this is the shape of a pick still going through that.
         return f'<div class="tr"><span class="w"><b>{title}</b>{by(track)}</span>{meta}</div>'
-    vid = e(track["embed"])
-    # Both marks ride in the link and the CSS shows one. Swapping the shape in
-    # the stylesheet keeps the state in one place, and site.js only ever has to
-    # set aria-expanded.
-    marks = ('<svg class="mark go" viewBox="0 0 10 12" aria-hidden="true">'
-             '<path d="M0 0 10 6 0 12Z"/></svg>'
-             '<svg class="mark stop" viewBox="0 0 10 12" aria-hidden="true">'
-             '<path d="M0 1H10V11H0Z"/></svg>')
-    play = (f'<a class="play" href="https://www.youtube.com/watch?v={vid}"'
-            f' data-yt="{vid}" data-work="{title}">'
-            f'{marks}<span class="vh">Play </span>{title}</a>')
+    play = play_link(e(track["embed"]), title)
     return f'<div class="tr"><span class="w"><b>{play}</b>{by(track)}</span>{meta}</div>'
+
+
+def guide_block(g):
+    """The cue sheet: a work, and the times in it worth stopping at.
+
+    A guide exists where the teacher would stop the recording and talk over it,
+    which the depth triage found four times in 123 inputs. Three of those four
+    walk more than one work, so the block is a list of works rather than one
+    work with a list under it.
+
+    The composition is the world's own: a cue time is a count, counts here are
+    mono, and the number gutter it sits in is the 46px the clause numbers use
+    directly above it, so one column of figures runs down the whole plate. The
+    cue text is a sentence, which is why this is not in the 300px spec column
+    with the listen block.
+
+    Only the time is a link. The cue text stays text so it can be read off a
+    projector and copied into a book without a student pressing it by accident,
+    and the time is a real `watch?t=` link before site.js makes it a seek.
+
+    The player folds out under the work's own name, above that work's cues, so
+    a teacher pressing a cue sees the recording and the rest of the list at
+    once. It is capped rather than run to the block's full width: this sits on
+    a document, and half a metre of another company's chrome is not a document.
+    """
+    works = []
+    for w in g["works"]:
+        vid = e(w["embed"])
+        cues = "".join(
+            f'<li><a class="cue mono" data-at="{int(c["at"])}"'
+            f' href="https://www.youtube.com/watch?v={vid}&amp;t={int(c["at"])}s">'
+            f'{mmss(c["at"])}<span class="vh"> into {e(w["title"])}</span></a>'
+            f'<span>{rich(c["text"])}</span></li>'
+            for c in w["cues"])
+        meta = f'<span class="mono">{e(w["meta"])}</span>' if w.get("meta") else ""
+        works.append(f'<div class="gw"><h3>{play_link(vid, e(w["title"]))}{meta}</h3>'
+                     f'<ol class="cues">{cues}</ol></div>')
+    brief = f'<p class="brief">{rich(g["brief"])}</p>' if g.get("brief") else ""
+    return (f'<section class="read guide"><h2>Cue sheet</h2>{brief}'
+            f'<div class="gws">{"".join(works)}</div></section>')
+
+
+def explain_block(x):
+    """The long version: the taught content, written down.
+
+    The first block in this world that is read rather than done, which is what
+    decides everything about it. It cannot take a clause `kind`, because every
+    clause kind names where the doing happens and there is no doing here. So it
+    is not a fourth clause; it is a section of the document, a sibling of the
+    title block and the keep block, and it takes the plate's own left edge and
+    the 2px ink rule that already divides this sheet.
+
+    It is on the sheet rather than the floor because it is a paragraph, which
+    is the two grounds rule and not a preference.
+
+    One per input and about 250 words, per the depth triage. The subheads and
+    the list are there because a definition set reads better broken up than as
+    four paragraphs; they are not licence to grow the block.
+    """
+    parts = []
+    for item in x["body"]:
+        if "h" in item:
+            parts.append(f'<h4>{rich(item["h"])}</h4>')
+        elif "ul" in item:
+            parts.append("<ul>" + "".join(f"<li>{rich(i)}</li>" for i in item["ul"]) + "</ul>")
+        else:
+            parts.append(f'<p>{rich(item["p"])}</p>')
+    return (f'<section class="read explain"><h2>The long version</h2>'
+            f'<h3>{rich(x["title"])}</h3>{"".join(parts)}</section>')
 
 
 def lesson_page(site, course, term, lesson, current_no):
@@ -306,6 +417,16 @@ def lesson_page(site, course, term, lesson, current_no):
         codes = "".join(f'<span class="mono">{e(c)}</span>' for c in lesson["outcomes"])
         spec.append(f'<div class="blk"><h4>Outcomes</h4><div class="codes">{codes}</div></div>')
 
+    # The read, under the rider and above the keep. The order inside it is the
+    # teaching order and is fixed here rather than by the data: you hear the
+    # thing before you are told what it is, which is what clause 01 of the one
+    # input carrying both actually says.
+    read = ""
+    if b.get("guide"):
+        read += guide_block(b["guide"])
+    if b.get("explain"):
+        read += explain_block(b["explain"])
+
     keep = ""
     if lesson.get("enduring"):
         keep = f'<div class="keep"><b>Worth keeping</b>{e(lesson["enduring"])}</div>'
@@ -340,7 +461,7 @@ def lesson_page(site, course, term, lesson, current_no):
           </div>
           <div class="spec">{"".join(spec)}</div>
         </div>
-        {keep}
+        {read}{keep}
       </article>
     </div>
     <div class="underplate">{"".join(under)}</div>
@@ -589,11 +710,41 @@ def home_page(site, course, terms, current_term, current_no):
 TERMS = []
 
 
+def assert_no_doubled_work(terms):
+    """A work walked through in the cue sheet is not also a row in the listen
+    block on the same page.
+
+    All four guide inputs already carry a listen block holding exactly the works
+    the guide walks, so the default outcome of authoring a guide is the same
+    three names printed twice on one plate, once as a list and once as a cue
+    sheet. The guide is the fuller of the two, so it takes the works and the
+    listen block keeps whatever is left. Where nothing is left, the author drops
+    the listen block, which is what the four guide inputs will do.
+
+    Held by the build rather than by review because it is the one new rule here
+    that an author would break by adding rather than by forgetting.
+    """
+    for term in terms:
+        for lesson in term["lessons"]:
+            b = lesson.get("body") or {}
+            if not b.get("guide"):
+                continue
+            walked = {w["title"].strip().lower() for w in b["guide"]["works"]}
+            listed = {t["title"].strip().lower() for t in b.get("listen") or []}
+            both = walked & listed
+            if both:
+                raise SystemExit(
+                    f"{term['id']} input {lesson['number']:02d}: "
+                    f"{', '.join(sorted(both))} is in both the cue sheet and the "
+                    "listen block. The cue sheet keeps it; take it out of listen.")
+
+
 def main():
     global TERMS
     site = load("site.json")
     course = load("course", "course.json")
     TERMS = [load("course", t, "term.json") for t in course["terms"]]
+    assert_no_doubled_work(TERMS)
 
     reading_term = course.get("currentTerm") or TERMS[0]["id"]
     current_term = next(t for t in TERMS if t["id"] == reading_term)

@@ -189,18 +189,65 @@ a.ch:hover{background:rgba(242,241,236,.05)}
 .listen .tr b{font-weight:600;display:block}
 .listen .tr i{font-style:normal;display:block;font-size:.74rem;color:var(--ink-dim);margin-top:1px}
 .listen .tr .mono{font-size:.72rem;color:var(--ink-dim);white-space:nowrap;padding-top:2px}
-/* The mark hangs to the left of the name and a wrapped second line runs under
-   the first rather than under the mark, so the block's left edge is the one it
-   had before there was anything to press. */
-.listen .play{text-decoration:none;display:inline-block;padding-left:15px;text-indent:-15px}
-.listen .play .mark{width:8px;height:9px;fill:var(--ink);margin-right:7px;text-indent:0}
-.listen .play:hover{text-decoration:underline;text-underline-offset:3px}
+/* The name of a work is the control, on both blocks that name one. The mark
+   hangs to the left of the name and a wrapped second line runs under the first
+   rather than under the mark, so the block's left edge is the one it had before
+   there was anything to press. Not scoped to .listen: the guide's cue sheet
+   uses the same control, and a student who has learned it on one block should
+   not meet a different one on the next. */
+.play{text-decoration:none;display:inline-block;padding-left:15px;text-indent:-15px}
+.play .mark{width:8px;height:9px;fill:var(--ink);margin-right:7px;text-indent:0}
+.play:hover{text-decoration:underline;text-underline-offset:3px}
 /* Open: a stop mark. The player being there is the plainer signal, but the
    name is a toggle and a triangle on an open row reads as "play it again". */
-.listen .play .stop,.listen .play[aria-expanded="true"] .go{display:none}
-.listen .play[aria-expanded="true"] .stop{display:inline}
-.listen .frame{grid-column:1/-1;margin:10px 0 3px;aspect-ratio:16/9;border:1px solid var(--rule)}
-.listen .frame iframe{width:100%;height:100%;border:0;display:block}
+.play .stop,.play[aria-expanded="true"] .go{display:none}
+.play[aria-expanded="true"] .stop{display:inline}
+.frame{margin:10px 0 3px;aspect-ratio:16/9;border:1px solid var(--rule)}
+.frame iframe{width:100%;height:100%;border:0;display:block}
+.listen .frame{grid-column:1/-1}
+
+/* ------------------------------------------------ the read: guide, explain */
+/* The first blocks in this world that are read rather than done. Neither is a
+   fourth clause: a clause kind names where the doing happens and there is no
+   doing here. Each is a section of the document, a sibling of the title block
+   and the keep block, so it takes the plate's own left edge and the 2px ink
+   rule that already divides this sheet into sections. */
+.read{margin:30px 34px 0;border-top:2px solid var(--ink);padding-top:20px}
+.read>h2{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim);font-weight:800;margin-bottom:14px}
+.read>h3{font-size:1.1rem;line-height:1.28;font-weight:700;letter-spacing:-.014em;max-width:38ch;margin-bottom:14px}
+.read p{max-width:66ch;margin-bottom:13px}
+.read p:last-child{margin-bottom:0}
+.read h4{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim);font-weight:800;margin:22px 0 9px}
+/* The same dash the success criteria use. One list marker on the sheet, and no
+   rule under each item: the criteria are a checklist and are ruled like one,
+   this is a set of things inside a paragraph's argument. */
+.read ul{list-style:none;margin-bottom:13px}
+.read ul li{padding:5px 0 5px 26px;position:relative;max-width:64ch}
+.read ul li::before{content:"";position:absolute;left:0;top:15px;width:13px;height:1.5px;background:var(--ink)}
+
+.guide .brief{margin-bottom:6px}
+/* Held to the reading measure rather than run to the plate's width. Full width
+   throws the artist out to the right margin, half a plate away from the work it
+   names, and leaves the rule under each work crossing empty sheet. The section
+   rule above is full width because it divides the document; the paperwork
+   inside it sits in a column, like the prose in the block next to it. */
+.gws{max-width:66ch}
+.gw{border-top:1px solid var(--rule);padding:13px 0 4px}
+.gw:first-child{border-top:0}
+.gw>h3{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:baseline;
+       font-size:.88rem;font-weight:600;letter-spacing:normal;max-width:none;margin:0}
+.gw>h3 .mono{font-size:.72rem;color:var(--ink-dim);white-space:nowrap;font-weight:400}
+/* The cue time sits in the 46px gutter the clause numbers use directly above,
+   so one column of figures runs down the plate. No rule per cue: this is a
+   short list inside a section that is already ruled, and ruling every row of it
+   turns the sheet into a spreadsheet. */
+.cues{list-style:none;margin-top:9px}
+.cues li{display:grid;grid-template-columns:46px 1fr;gap:16px;padding:4px 0;font-size:.9rem;line-height:1.4;max-width:64ch}
+.cue{font-size:.78rem;color:var(--ink-dim);text-decoration:none;padding-top:2px}
+.cue:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+/* Capped rather than run to the block's width. This sits on a document, and
+   half a metre of another company's chrome is not a document. */
+.guide .frame{max-width:480px}
 
 .keep{margin:30px 34px 0;border-top:2px solid var(--ink);padding-top:18px;font-size:1.1rem;line-height:1.35;max-width:50ch;font-weight:600}
 .keep b{display:block;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:8px;font-weight:800}
@@ -446,7 +493,9 @@ a.cell:hover .n{color:var(--chalk)}
 
 @media print{
   body{background:#fff;color:#000;background-image:none}
-  .rail,.floorbar,.underplate,.tapestrip{display:none}
+  /* A player is meaningless on paper. The cue times stay, as the text they
+     already are, and the work's name stays as a link. */
+  .rail,.floorbar,.underplate,.tapestrip,.frame{display:none}
   .plate{clip-path:none;border:1px solid #000}
   .wrap{display:block}
 }
