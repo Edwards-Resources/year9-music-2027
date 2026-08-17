@@ -6,15 +6,14 @@
 is closed. The site is 123 of 123 inputs and the build is finished by its own
 contract's definition.**
 
-- Live at **https://edwards-resources.github.io/year9-music-2027/**. The live
-  site is still the **16 August** build. All four pours are committed and
-  **not pushed**. Ask before pushing, and read the history note below first.
+- Live at **https://edwards-resources.github.io/year9-music-2027/**. Pushed and
+  checked against the live URL on 17 August 2026: home, `term3/index.html` and
+  `term3/07/index.html` all return 200. All four terms are live and complete.
 - Repo `Edwards-Resources/year9-music-2027`, public, Pages serving `main`
   `/docs`.
-- Last pushed commit: `3cb15fb`. Everything after it is local. The tip is
-  `88306ff Sharpen the handoff after the review`, on top of `83cef7c`, `8214b06
-  Close the finish review and write DESIGN.md`, `c8b7640` and the four pour
-  commits.
+- Last pushed commit: `5d9f05e Record the commit line and the vault write-up in
+  the handoff`. History from `2b40718` to `5d9f05e` was rewritten before this
+  push to take an artist name out of one commit; see the leak note below.
 - Session write-up in the vault at
   `projects/School Master/Session Logs/2026/Year 9 Finish Review and DESIGN.md`,
   linked from that folder's `_index.md`.
@@ -133,23 +132,21 @@ the AT3 notification says "Bring pens. No notes, no devices." So the set is
 seven now, the seventh comes from the school's own task notification, and it is
 used only where a paper is sat under examination conditions.
 
-## A leak to settle before pushing
+## A leak that was settled before pushing
 
-**One of the two barred works is named, by artist, in three commits that have
-not been pushed**: `a8ba328`, `bd8ed4e` and `b5f18e5`. In every case it is in
-`NEXT-SESSION.md` and nowhere else, in a sentence about the verification record
-rather than about the work. It has never been in `docs/`, so it has never been
-served, and none of the three commits has reached GitHub.
+**Done, 17 August 2026.** One of the two barred works (the Week 7 excerpt) was
+named by artist in the commit that first recorded the Term 2 repertoire
+verification, in a sentence about the verification record rather than about the
+work itself. It was never in `docs/`, so it was never served. The commit was
+rewritten with `git rebase -i` (the artist reference replaced with
+"the barred-work rows"), the whole 14-commit stack was replayed on top of it,
+and the rewritten history was checked with `git log -p | grep` before pushing:
+zero hits for the artist's name or the work's title anywhere in the pushed
+history. All 15 commits, `2b40718` through `5d9f05e`, are now pushed and live.
 
-It is out of the working tree as of this handoff. **The question is whether to
-take it out of those three commits before pushing**, and because none of them is
-pushed this is a local rewrite of the tip three, not the published-history
-problem of the last session. **Recommendation: rewrite them.** It costs nothing
-while they are local and it cannot be done at all once they are not.
-
-The general lesson is the one the last session already recorded and this session
-repeated: the handoff file is the thing that leaks, because it is the only file
-in this repo that discusses what must not be on the site.
+The general lesson, recorded by two sessions running now: the handoff file is
+the thing that leaks, because it is the only file in this repo that discusses
+what must not be on the site. Sweep it hardest, every time, before committing.
 
 ## The finish review, 17 August 2026
 
@@ -188,10 +185,9 @@ one item is left for Matthew. It is all in the commit message of `8214b06` and i
 
 ## Decisions waiting on Matthew
 
-1. **Push?** The live site is still the 16 August build and is four terms
-   behind. **Recommendation: settle the history question above, then push**, so
-   the site goes live complete.
-2. **Rewrite the three unpushed commits?** See above. **Recommendation: yes.**
+1. **Push?** Done, 17 August 2026. The site is live and complete.
+2. **Rewrite the three unpushed commits?** Done, same session. See the leak note
+   above.
 3. **Rewrite `year8-music`'s published history?** See below. **Recommendation:
    no.**
 4. **Home's four unit blocks are equal weight**, which is the one arrangement the
