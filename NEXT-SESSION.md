@@ -11,9 +11,9 @@ contract's definition.**
   `term3/07/index.html` all return 200. All four terms are live and complete.
 - Repo `Edwards-Resources/year9-music-2027`, public, Pages serving `main`
   `/docs`.
-- Last pushed commit: `5d9f05e Record the commit line and the vault write-up in
-  the handoff`. History from `2b40718` to `5d9f05e` was rewritten before this
-  push to take an artist name out of one commit; see the leak note below.
+- Last pushed commit: `482b24e Record the history rewrite and the push in the
+  handoff`. History from `2b40718` to `5d9f05e` was rewritten before pushing to
+  take an artist name out of one commit; see the leak note below.
 - Session write-up in the vault at
   `projects/School Master/Session Logs/2026/Year 9 Finish Review and DESIGN.md`,
   linked from that folder's `_index.md`.
@@ -185,12 +185,9 @@ one item is left for Matthew. It is all in the commit message of `8214b06` and i
 
 ## Decisions waiting on Matthew
 
-1. **Push?** Done, 17 August 2026. The site is live and complete.
-2. **Rewrite the three unpushed commits?** Done, same session. See the leak note
-   above.
-3. **Rewrite `year8-music`'s published history?** See below. **Recommendation:
+1. **Rewrite `year8-music`'s published history?** See below. **Recommendation:
    no.**
-4. **Home's four unit blocks are equal weight**, which is the one arrangement the
+2. **Home's four unit blocks are equal weight**, which is the one arrangement the
    thesis names and refuses. The review's ruling is **unequal weight, not a
    drawing**: the live unit takes the block and carries its own inputs, the other
    three compress to a line each, which is the live/not-live logic the hub's
@@ -198,8 +195,11 @@ one item is left for Matthew. It is all in the commit message of `8214b06` and i
    because a third instance of the sheet is the metaphor doing overtime, which
    `DESIGN-NOTES.md` had already ruled out once. **This is the only design work
    left on the site.** Half a session with Opus.
-5. **`DIRECTION.md` and the comp D approval sidecar name Matthew**, and both are
+3. **`DIRECTION.md` and the comp D approval sidecar name Matthew**, and both are
    already in pushed history. Same question as Year 8, smaller.
+
+Settled this session: the push, and the history rewrite that cleared the artist
+name out before pushing. See the leak note above.
 
 Settled at the finish review and no longer decisions: the three torn strips are
 two acts of taping; the `artist` field is rendered rather than deleted, under a
@@ -288,12 +288,10 @@ history. Matthew's call, and it is still open.
 
 ## Model and effort
 
-**Haiku, low** for the history rewrite and the push, once Matthew has decided.
-It is mechanical and the decisions are written down above.
-
 **Opus, medium** for home's unequal-weight rebuild, which is the only design work
-left. It is a composition decision on the one surface that never had a comp, and
-the fix has to be looked at beside the incumbent before it is kept.
+left on the site and the recommended next task. It is a composition decision on
+the one surface that never had a comp, and the fix has to be looked at beside the
+incumbent before it is kept.
 
 **Sonnet, medium** for the four blueprint sheets when they are written. They are
 authored teaching material on an established page shape, not new design.
