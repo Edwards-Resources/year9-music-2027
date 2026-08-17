@@ -101,7 +101,7 @@ All under `Year 9 (2027)/Program and Assessment/`:
 **What does not exist yet, and must not be assumed:**
 
 - **No lesson content.** Unlike Year 11, which had 50 written lesson resources to pour in, Year 9 has unit-program rows only. Those rows are a real skeleton, not a scaffold, but the prose a student reads has to be authored.
-- **No verified YouTube ids except two.** Only the two AT3 unseen excerpts have been through the check, and both of those are barred from the site, so neither the works nor their ids are recorded here. See the repertoire register. The other 24 picks are named works with no ids sourced. Every one needs the full order before it is written into a lesson: Apple explicitness flag, then oEmbed for a live id and the right channel, then duration.
+- ~~No verified YouTube ids except two.~~ **Closed 17 August 2026.** All 26 picks have been through the full check, and the 24 that are not the barred excerpts are now embedded: every `listen` row on the site plays its recording in place. The ids stay in the repertoire register, which is off this repo; the site carries only the 24 that a class is meant to hear. The check order still governs anything new: Apple explicitness flag, then oEmbed for a live id on the right channel, then duration.
 - **No AT3 exam paper.** The notification promises about 30 minutes and four criteria at 5 marks each, and the excerpts are chosen, but the student booklet, marking guidelines and running sheet have not been built.
 - **No claim about student performance or engagement**, and none is to be invented.
 

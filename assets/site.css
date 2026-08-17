@@ -66,7 +66,16 @@ img,svg{max-width:100%}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .skip{position:absolute;left:-9999px;top:0;z-index:20;background:var(--chalk);color:var(--ink);padding:12px 18px;font-weight:700}
 .skip:focus{left:0}
+/* The term's tape is the focus colour, which holds on the floor: every tape
+   reads between 5.3 and 16.8 to 1 against it. On the sheet it does not. Tape on
+   cream runs 1.01 (Term 1), 1.20 (Term 4), 2.58 (Term 3) and 3.20 (Term 2), so
+   a keyboard user in two of the four units gets no visible ring at all. The
+   ground decides the mark here exactly as it decides the type: chalk on the
+   floor, ink on the sheet. Same 3px at the same 2px offset, ink instead of
+   tape, 16.4 to 1. Nothing focusable sat on the sheet until the listen block
+   gained a control, which is why this only appears now. */
 :focus-visible{outline:3px solid var(--tape);outline-offset:2px}
+.plate :focus-visible{outline-color:var(--ink)}
 
 /* ---------------------------------------------------------- the floor bar */
 .floorbar{display:flex;align-items:center;gap:22px;padding:15px 30px;border-bottom:1px solid var(--hair);flex-wrap:wrap}
@@ -167,13 +176,31 @@ a.ch:hover{background:rgba(242,241,236,.05)}
 .spec .row .n{font-size:.73rem;color:var(--ink-dim)}
 .spec .blk{margin-bottom:26px}
 .spec .codes span{font-size:.73rem;border:1px solid var(--rule);padding:4px 8px;display:inline-block;margin:0 5px 5px 0}
+/* The work, the artist under it where the meta has not said it, the locating
+   fact in mono at the right, and the player on a second grid row spanning both
+   columns, so the list keeps its shape and a recording appears under the work
+   it belongs to. The name of the work is the control; track_row() in build.py
+   carries why it is not a button in a column of its own. */
 .listen{border:1px solid var(--rule);padding:13px}
-.listen .tr{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-top:1px solid var(--rule);font-size:.84rem}
+.listen .tr{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:start;
+            padding:7px 0;border-top:1px solid var(--rule);font-size:.84rem}
 .listen .tr:first-of-type{border-top:0}
 .listen .tr .w{min-width:0}
 .listen .tr b{font-weight:600;display:block}
 .listen .tr i{font-style:normal;display:block;font-size:.74rem;color:var(--ink-dim);margin-top:1px}
-.listen .tr .mono{font-size:.72rem;color:var(--ink-dim);white-space:nowrap}
+.listen .tr .mono{font-size:.72rem;color:var(--ink-dim);white-space:nowrap;padding-top:2px}
+/* The mark hangs to the left of the name and a wrapped second line runs under
+   the first rather than under the mark, so the block's left edge is the one it
+   had before there was anything to press. */
+.listen .play{text-decoration:none;display:inline-block;padding-left:15px;text-indent:-15px}
+.listen .play .mark{width:8px;height:9px;fill:var(--ink);margin-right:7px;text-indent:0}
+.listen .play:hover{text-decoration:underline;text-underline-offset:3px}
+/* Open: a stop mark. The player being there is the plainer signal, but the
+   name is a toggle and a triangle on an open row reads as "play it again". */
+.listen .play .stop,.listen .play[aria-expanded="true"] .go{display:none}
+.listen .play[aria-expanded="true"] .stop{display:inline}
+.listen .frame{grid-column:1/-1;margin:10px 0 3px;aspect-ratio:16/9;border:1px solid var(--rule)}
+.listen .frame iframe{width:100%;height:100%;border:0;display:block}
 
 .keep{margin:30px 34px 0;border-top:2px solid var(--ink);padding-top:18px;font-size:1.1rem;line-height:1.35;max-width:50ch;font-weight:600}
 .keep b{display:block;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:8px;font-weight:800}

@@ -69,15 +69,18 @@
         "listen": [
           {
             "title": "Khe Sanh",
-            "meta": "Cold Chisel"
+            "meta": "Cold Chisel",
+            "embed": "ckYN_D1W-Pg"
           },
           {
             "title": "A Foreign Affair",
-            "meta": "Client Liaison"
+            "meta": "Client Liaison",
+            "embed": "cODalKSgb7E"
           },
           {
             "title": "Chandelier",
-            "meta": "Sia"
+            "meta": "Sia",
+            "embed": "8DS-h67qEiY"
           }
         ],
         "patched": [
@@ -400,7 +403,8 @@
         "listen": [
           {
             "title": "Great Southern Land",
-            "meta": "Icehouse"
+            "meta": "Icehouse",
+            "embed": "IOBd0PwQouE"
           }
         ],
         "patched": [
@@ -534,7 +538,8 @@
         "listen": [
           {
             "title": "Sounds of Then",
-            "meta": "GANGgajang"
+            "meta": "GANGgajang",
+            "embed": "AsRzDFf5GCA"
           }
         ],
         "patched": [
@@ -911,7 +916,8 @@
         "listen": [
           {
             "title": "I Was Only 19",
-            "meta": "Redgum, 1983"
+            "meta": "Redgum, 1983",
+            "embed": "d7Rg8JmYV5o"
           }
         ],
         "patched": [
@@ -981,11 +987,13 @@
         "listen": [
           {
             "title": "I Was Only 19",
-            "meta": "Redgum, 1983"
+            "meta": "Redgum, 1983",
+            "embed": "d7Rg8JmYV5o"
           },
           {
             "title": "77%",
-            "meta": "The Herd, 2003"
+            "meta": "The Herd, 2003",
+            "embed": "SMKn4tJIGyU"
           }
         ],
         "patched": [
@@ -1184,7 +1192,8 @@
         "listen": [
           {
             "title": "Kakadu",
-            "meta": "Sculthorpe, 1988"
+            "meta": "Sculthorpe, 1988",
+            "embed": "U2ikX7DSaig"
           }
         ],
         "patched": [
@@ -1621,7 +1630,8 @@
         "listen": [
           {
             "title": "Great Southern Land",
-            "meta": "Icehouse"
+            "meta": "Icehouse",
+            "embed": "IOBd0PwQouE"
           }
         ],
         "patched": [

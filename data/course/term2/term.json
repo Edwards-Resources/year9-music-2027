@@ -156,17 +156,20 @@
           {
             "title": "Sweet Home Chicago",
             "artist": "Robert Johnson",
-            "meta": "1930s"
+            "meta": "1930s",
+            "embed": "aXTQeNIoiwo"
           },
           {
             "title": "Hoochie Coochie Man",
             "artist": "Muddy Waters",
-            "meta": "1950s"
+            "meta": "1950s",
+            "embed": "sSnxwnPkgas"
           },
           {
             "title": "Pride and Joy",
             "artist": "Stevie Ray Vaughan",
-            "meta": "1980s"
+            "meta": "1980s",
+            "embed": "I3MTGhRC82s"
           }
         ],
         "patched": [
@@ -551,12 +554,14 @@
           {
             "title": "Rosie",
             "artist": "Alan Lomax field recording",
-            "meta": "Work song"
+            "meta": "Work song",
+            "embed": "Tab5CQOPcBk"
           },
           {
             "title": "Wade in the Water",
             "artist": "Fisk Jubilee Singers",
-            "meta": "Spiritual"
+            "meta": "Spiritual",
+            "embed": "M3tKJ8gSKSk"
           }
         ],
         "patched": [
@@ -623,12 +628,14 @@
           {
             "title": "Rosie",
             "artist": "Alan Lomax field recording",
-            "meta": "Work song"
+            "meta": "Work song",
+            "embed": "Tab5CQOPcBk"
           },
           {
             "title": "Wade in the Water",
             "artist": "Fisk Jubilee Singers",
-            "meta": "Spiritual"
+            "meta": "Spiritual",
+            "embed": "M3tKJ8gSKSk"
           }
         ],
         "patched": [
@@ -1141,12 +1148,14 @@
           {
             "title": "C Jam Blues",
             "artist": "Duke Ellington",
-            "meta": "Ellington"
+            "meta": "Ellington",
+            "embed": "dLrC-BZiFuA"
           },
           {
             "title": "Now's the Time",
             "artist": "Charlie Parker",
-            "meta": "Parker"
+            "meta": "Parker",
+            "embed": "RP29Qn00_Nw"
           }
         ],
         "patched": [
@@ -1215,7 +1224,8 @@
           {
             "title": "C Jam Blues",
             "artist": "Duke Ellington",
-            "meta": "The standard"
+            "meta": "The standard",
+            "embed": "dLrC-BZiFuA"
           }
         ],
         "patched": [

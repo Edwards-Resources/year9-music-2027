@@ -288,14 +288,29 @@ Character: a document taped to the floor.
 A grid ruled into as many cells as the lesson has fields, in three sizes (3, 4 or 5). Dim label caps over a 600-weight value. Below 980 it goes two-up. Never one double-width cell.
 
 ### The listen block
-A bordered list of tracks: work in 600, artist under it in dim, duration in mono at the right. **The artist line prints only where the meta field has not already said it.** `build.py`'s `by()` suppresses it when a word of the artist appears in the meta string. For authors: `title` is the work, `meta` is the locating fact (an era in some terms, an artist in others), and `artist` renders only when it adds a name the row does not already carry.
+A bordered list of tracks: work in 600, artist under it in dim, the locating fact in mono at the right. **The artist line prints only where the meta field has not already said it.** `build.py`'s `by()` suppresses it when a word of the artist appears in the meta string. For authors: `title` is the work, `meta` is the locating fact (an era in some terms, an artist in others), and `artist` renders only when it adds a name the row does not already carry.
+
+**The name of the work is the player**, added 17 August 2026 with the verified repertoire ids. A triangle hangs to the left of the name, and pressing it unfolds the recording on a second grid row directly under that work, as a `youtube-nocookie` frame at 16:9 bounded by a 1px sheet rule. The mark becomes a stop square while it is open, one player at a time in a block, and the row's name is a real link to the recording so the block still works with scripting off.
+
+Three rulings inside that, in the order they were forced:
+
+- **Not permanent frames.** Term 3 input 01 and Term 4 input 08 both carry three works. Embedded outright that is about 500px of another company's chrome sitting on the sheet and the block stops being a list. Folded away, the block is unchanged until a student asks for a track, and nothing is requested from the host until they do.
+- **Not a button in its own column.** A 24px control column was built first and cost the work's name 34px in a block that is 240 wide, which put all three of Term 4 input 08's titles onto two lines each. The mark inside the name costs one line's indent and nothing on the rest, and it makes the whole title the target, which is what a tracklist does everywhere else these students have met one.
+- **The player is the block's width**, 210px inside the 240px block inside the 300px spec column. Small, and deliberately not broken out of the column: the recording belongs under the work it names. If the room needs it bigger, that is one rule, and it is a decision about the spec column rather than about this block.
+
+`assets/site.js` is the only script on the site and this is all it does.
+
+### Focus on the sheet
+The term's tape is the focus colour, which holds on the floor: every tape reads between 5.26 and 16.78 to 1 against it. **On the sheet it does not.** Tape on cream runs 1.01 to 1 (Term 1), 1.20 (Term 4), 2.58 (Term 3) and 3.20 (Term 2), so in two of the four units a keyboard user would get no visible ring at all. **Inside the plate the ring is ink**, same 3px at the same 2px offset, 16.44 to 1.
+
+This is the ground deciding the mark exactly as it already decides the type: chalk on the floor, ink on the sheet. It is not a second focus token and there is still no separate focus colour. Nothing focusable sat on the sheet at all until the listen block gained a control on 17 August 2026, which is why the gap only surfaced then.
 
 ### Buttons
 Two families, one per ground.
 - **Plate button (primary):** solid ink on sheet, sheet-coloured label caps at 800, 12×20 padding, square. **Hover:** ink lightens to #2C2E31.
 - **Plate button (alt):** transparent with a 1px sheet-rule border and ink type. **Hover:** border to full ink, no fill.
 - **Floor button:** transparent with a 1px hairline border and chalk type, 10×15 padding. **Hover:** border to chalk-dim. This is the row under the plate.
-- **Focus (all interactive elements):** a 3px outline in the term's tape at 2px offset. There is no separate focus token; the term colour is the focus colour.
+- **Focus (all interactive elements):** a 3px outline at 2px offset, in the term's tape on the floor and in ink on the sheet. There is no separate focus token; the term colour is the focus colour and the ground supplies it. See **Focus on the sheet** below for why the plate differs and the numbers behind it.
 
 ### The multicore (signature)
 The term's thirty lessons as one line of equal-width channels running out of the sheet's downstage edge, with a week ruler mirroring its flex geometry exactly so a week boundary lands on a channel boundary. Every channel is the same width and on this surface that is the point: on a multicore the channels *are* equal, and what separates them is what is patched into each. Hairline-bounded cells, mono numbers, a ▪ under an assessment, chalk-past for taught, and the term's tape (torn top and bottom) on the current channel. The "Week" label sits in the 5% gutter, outside the flex row, because a label in the row pushes every week off its channel.

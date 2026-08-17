@@ -107,6 +107,7 @@ def layout(site, course, terms, title, body, description="", term=None, active_i
   <p>{e(site['canvasNote'])}</p>
   <p class="mono">Updated {date.today().strftime('%-d %B %Y')}</p>
 </footer>
+<script src="{base}/assets/site.js" defer></script>
 </body>
 </html>
 """
@@ -212,6 +213,50 @@ def by(track):
     return f'<i>{e(artist)}</i>'
 
 
+def track_row(track):
+    """One row of the listen block, with its player folded away.
+
+    The row keeps the documented block shape: work, artist under it where the
+    meta field has not said it, locating fact in mono at the right. What is new
+    is that **the name of the work is the control**, marked with a triangle and
+    playing the recording inside the row.
+
+    The control is the name rather than a button in its own column because the
+    column is 300px and the block sits inside it at 240. A 24px control column
+    took 34px off the work name and put three of Term 4 input 08's three titles
+    onto two lines each; a mark inside the name costs one line's indent and
+    nothing on the rest. It also makes the whole title the target, which is
+    what a tracklist does everywhere else a student has met one.
+
+    Not three permanent iframes either. Term 3 input 01 and Term 4 input 08
+    both carry three works; embedded outright that is 500px of another
+    company's chrome sitting on the sheet and the block stops being a list.
+    Folded away, the block is unchanged until a student asks for a track, and
+    nothing is requested from the host until they do.
+
+    With scripting off the control is what the markup says it is: a link to the
+    recording. site.js upgrades it into a player in place.
+    """
+    title, meta = e(track["title"]), f'<span class="mono">{e(track["meta"])}</span>'
+    if not track.get("embed"):
+        # A track with no verified id keeps its row and is simply not playable.
+        # The register's rule is that nothing is written into a lesson before it
+        # is verified, so this is the shape of a pick still going through that.
+        return f'<div class="tr"><span class="w"><b>{title}</b>{by(track)}</span>{meta}</div>'
+    vid = e(track["embed"])
+    # Both marks ride in the link and the CSS shows one. Swapping the shape in
+    # the stylesheet keeps the state in one place, and site.js only ever has to
+    # set aria-expanded.
+    marks = ('<svg class="mark go" viewBox="0 0 10 12" aria-hidden="true">'
+             '<path d="M0 0 10 6 0 12Z"/></svg>'
+             '<svg class="mark stop" viewBox="0 0 10 12" aria-hidden="true">'
+             '<path d="M0 1H10V11H0Z"/></svg>')
+    play = (f'<a class="play" href="https://www.youtube.com/watch?v={vid}"'
+            f' data-yt="{vid}" data-work="{title}">'
+            f'{marks}<span class="vh">Play </span>{title}</a>')
+    return f'<div class="tr"><span class="w"><b>{play}</b>{by(track)}</span>{meta}</div>'
+
+
 def lesson_page(site, course, term, lesson, current_no):
     """comp D. The plate is the reading surface and long prose never sits on the
     black floor."""
@@ -251,9 +296,7 @@ def lesson_page(site, course, term, lesson, current_no):
     if b.get("plot") in PLOTS:
         spec.append(f'<div class="plot"><h4>Stage plot</h4>{PLOTS[b["plot"]]()}</div>')
     if b.get("listen"):
-        tracks = "".join(f'<div class="tr"><span class="w"><b>{e(t["title"])}</b>{by(t)}</span>'
-                         f'<span class="mono">{e(t["meta"])}</span></div>'
-                         for t in b["listen"])
+        tracks = "".join(track_row(t) for t in b["listen"])
         spec.append(f'<div class="blk"><h4>Listen</h4><div class="listen">{tracks}</div></div>')
     if b.get("patched"):
         rows = "".join(f'<div class="row"><span class="n mono">{e(p["n"])}</span><span>{e(p["text"])}</span></div>'

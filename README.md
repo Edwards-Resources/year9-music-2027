@@ -52,6 +52,21 @@ No track goes into a lesson without the full check, in this order: Apple explici
 flag, then oEmbed for a live video id on the right channel, then duration. Two works
 are barred from the site outright because they are the Term 3 unseen excerpts.
 
+A `listen` track is `title`, `meta`, an optional `artist` and the verified id in
+`embed`:
+
+```json
+{ "title": "Let It Be", "artist": "The Beatles", "meta": "The Beatles",
+  "embed": "CGj85pVzRJs" }
+```
+
+`title` is the work, `meta` is the locating fact for that term (an era in some, an
+artist in others), and `artist` renders only where it adds a name the row does not
+already carry. `embed` makes the work's name playable in place. A track with no
+`embed` still gets its row and simply cannot be played, which is the shape of a pick
+still going through the check above. The ids themselves live in
+`Music7-10_Y9_RepertoireRegister.md`, which is off this repo and stays there.
+
 ## What must never go on this site
 
 Student names, student work, marks, markbook data, NESA past papers or marking

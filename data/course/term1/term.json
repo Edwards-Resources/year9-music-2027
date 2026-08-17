@@ -253,17 +253,20 @@
           {
             "title": "Let It Be",
             "artist": "The Beatles",
-            "meta": "The Beatles"
+            "meta": "The Beatles",
+            "embed": "CGj85pVzRJs"
           },
           {
             "title": "With or Without You",
             "artist": "U2",
-            "meta": "U2"
+            "meta": "U2",
+            "embed": "fRBOfkeCF7A"
           },
           {
             "title": "Someone Like You",
             "artist": "Adele",
-            "meta": "Adele"
+            "meta": "Adele",
+            "embed": "hLQl3WQQoQ0"
           }
         ],
         "patched": [
@@ -872,7 +875,8 @@
           {
             "title": "Once in a Lifetime",
             "artist": "Angélique Kidjo",
-            "meta": "Kidjo, 2018"
+            "meta": "Kidjo, 2018",
+            "embed": "zvHorNgDxE4"
           }
         ],
         "patched": [

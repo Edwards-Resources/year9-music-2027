@@ -135,12 +135,14 @@
           {
             "title": "Cornfield Chase",
             "artist": "Hans Zimmer",
-            "meta": "Zimmer, 2014"
+            "meta": "Zimmer, 2014",
+            "embed": "JuSsvM8B4Jc"
           },
           {
             "title": "Merry-Go-Round of Life",
             "artist": "Joe Hisaishi",
-            "meta": "Hisaishi, 2004"
+            "meta": "Hisaishi, 2004",
+            "embed": "2pQKqQ9sG50"
           }
         ],
         "patched": [
@@ -207,12 +209,14 @@
           {
             "title": "Cornfield Chase",
             "artist": "Hans Zimmer",
-            "meta": "Zimmer, 2014"
+            "meta": "Zimmer, 2014",
+            "embed": "JuSsvM8B4Jc"
           },
           {
             "title": "First Steps",
             "artist": "Lena Raine",
-            "meta": "Celeste, 2018"
+            "meta": "Celeste, 2018",
+            "embed": "N8OHSXvneOE"
           }
         ],
         "patched": [
@@ -352,7 +356,8 @@
           {
             "title": "First Steps",
             "artist": "Lena Raine",
-            "meta": "Celeste, 2018"
+            "meta": "Celeste, 2018",
+            "embed": "N8OHSXvneOE"
           }
         ],
         "patched": [
@@ -479,12 +484,14 @@
           {
             "title": "The Last of Us",
             "artist": "Gustavo Santaolalla",
-            "meta": "2013"
+            "meta": "2013",
+            "embed": "Pt1pOY3_W64"
           },
           {
             "title": "The Grid",
             "artist": "Daft Punk",
-            "meta": "Tron: Legacy, 2010"
+            "meta": "Tron: Legacy, 2010",
+            "embed": "4-J4duzP8Ng"
           }
         ],
         "patched": [
@@ -551,17 +558,20 @@
           {
             "title": "Cornfield Chase",
             "artist": "Hans Zimmer",
-            "meta": "Zimmer, 2014"
+            "meta": "Zimmer, 2014",
+            "embed": "JuSsvM8B4Jc"
           },
           {
             "title": "First Steps",
             "artist": "Lena Raine",
-            "meta": "Celeste, 2018"
+            "meta": "Celeste, 2018",
+            "embed": "N8OHSXvneOE"
           },
           {
             "title": "The Grid",
             "artist": "Daft Punk",
-            "meta": "Tron: Legacy, 2010"
+            "meta": "Tron: Legacy, 2010",
+            "embed": "4-J4duzP8Ng"
           }
         ],
         "patched": [
@@ -942,7 +952,8 @@
           {
             "title": "The Last of Us",
             "artist": "Gustavo Santaolalla",
-            "meta": "2013"
+            "meta": "2013",
+            "embed": "Pt1pOY3_W64"
           }
         ],
         "patched": [
