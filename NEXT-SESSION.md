@@ -2,15 +2,14 @@
 
 ## Where this stands, 17 August 2026
 
-**All three surfaces are built. Terms 1 and 2 are poured. Terms 3 and 4 are
-not.**
+**All three surfaces are built. Terms 1, 2 and 4 are poured. Term 3 is not.**
 
 - Live at **https://edwards-resources.github.io/year9-music-2027/**. The live
-  site is still the **16 August** build; the Term 2 pour and this session's
-  Term 1 pour are both committed and **not pushed**. Ask before pushing.
+  site is still the **16 August** build. The Term 2, Term 1 and Term 4 pours
+  are all committed and **not pushed**. Ask before pushing.
 - Repo `Edwards-Resources/year9-music-2027`, public, Pages serving `main`
   `/docs`.
-- Last commit: `5a012f0 Pour the Term 1 lesson bodies`
+- Last commit: `5cb2e7b Pour the Term 4 lesson bodies`
 
 | File | What it is |
 | --- | --- |
@@ -27,84 +26,110 @@ not.**
 
 ## What was built this session
 
-**Term 1 poured: 33 bodies, so all 33 inputs of Like a Version have a page.**
-The site is now 63 of 123. Written to the house style the Term 2 pour set, and
-that style now holds across two whole terms, so treat it as settled rather than
-as a Term 2 habit:
+### Ruling 1 is settled and done
 
-- `lead` is one sentence, the learning intention in the student's own words. It
-  is also the page description and the line on the home desk plate, so it has
-  to read alone.
-- `clauses` are three, from six kinds and no more. Across 63 lessons the split
-  is now In the room 92, On your own 47, With the band 24, In flat.io 16,
-  In pairs 6, Assessed 4.
-- **In the room** and **With the band** describe what happens; the other four
-  are addressed to the student as instructions. Order them by what actually
-  happens first in the lesson, not by scale. Term 2's input 25 already put
-  **With the band** ahead of **In the room**, and three Term 1 lessons needed
-  the same, because a clause that says "which of those changes would you keep"
-  cannot come before the clause that made the changes.
-- **Assessed** is spent twice per term, on the lessons where marks are being
-  taken while the student plays. In Term 1 that is inputs 22 and 23, the two
-  AT1 performance days. The clause carries the marking fact only, not the
-  lesson.
-- `criteria` are short "I can" statements, usually two, split out of the
-  program's single longer criterion. Reading level is a product constraint.
-- `bring` is a short noun phrase from the fixed set: Headphones, Your
-  instrument, Process log, Instrument and log, Instrument and printed parts,
-  Headphones and log. Term 1 used five of the six.
-- `plot: band` is on the **15** Term 1 lessons where the room is genuinely set
-  up as a band, against Term 2's 14. Higher is correct here: Term 1 is the
-  performance unit. It is off every lesson spent at a screen.
-- `patched` is the program's resource list, numbered R1 up.
+**The school's name is out of this repo's pushed history.** Matthew chose the
+rewrite with the repo left public. What was actually there, checked before
+acting: one occurrence per commit, in `NEXT-SESSION.md` only, in six commits,
+two of them pushed. Never in `docs/`, so never served. The initials sat in the
+same line of the same six commits and the working tree had already dropped
+both, so both were stripped.
 
-**The Term 1 repertoire is fully verified.** All four picks went the full order
-before being written in: Apple explicitness flag, then oEmbed for a live id on
-the right channel, then duration. All four are `notExplicit` and all four sit
-on an official or Topic channel. **The ids are in the repertoire register, off
-this repo**, following the Term 2 precedent.
+All ten commits were rewritten, and the tip tree came out byte-identical to
+before, so `docs/` was untouched. The push was **deliberately only up to the
+rewritten old tip** (`3cb15fb`, formerly `fa3bc75`), so the history was fixed
+without also publishing the Terms 1, 2 and 4 pours, which is still Matthew's
+call. `origin/main` was re-scanned after the push and is clean. The local
+backup refs were dropped and the reflogs expired, so a future `--all` search
+does not turn up a false alarm the way the last one did.
 
-Two carry a judgement recorded with them. The U2 and Kidjo picks are the
-Topic-channel album masters rather than the official video uploads, because
-those uploads are a 4-second and an **84-second** edit respectively, and both
-lessons need the whole recording. The Kidjo gap is the one that mattered.
+**One thing worth carrying forward:** a force-push does not delete the old
+commits from GitHub. They are unreachable but stay fetchable by exact SHA until
+GitHub garbage-collects. Nobody has those SHAs, so the residual risk is
+theoretical, but it is not zero and the deletion-and-recreate option was the
+only one that would have closed it completely.
 
-**Input 10 has no Listen block on purpose.** It is the cover-versus-original
-lesson and the register holds no verified pair for it. An unverified track put
-on the site to fill a panel is exactly what the verification order exists to
-stop. The clause prose carries the lesson without naming a pair.
+### Term 4 poured
+
+**30 bodies, so all 30 inputs of Level Up have a page.** The site is now 93 of
+123, and the house style is unchanged from the two terms that set it. Three
+things this unit does differently, all because it is a composing unit rather
+than a performing one, and none of them a drift:
+
+- **`Assessed` is spent once, not twice.** The rule was two per term because
+  Terms 1 and 2 each had two days of marks taken while a student played. This
+  term has one marked moment, the AT4 submission, so it is spent once, on input
+  23. The two draft checkpoints are explicitly not marks and do not get it.
+- **`plot: band` is on one lesson**, the Week 10 performance check-in, against
+  Terms 1 and 2 at 15 and 14. The rest of the term is at a screen and drawing a
+  band plot on it would be a lie about the room.
+- **`In flat.io` carries 13 clauses**, against 16 across the whole of Terms 1
+  and 2 together. Every composing lesson has exactly one.
+
+Everything else lands where the first two terms did: 90 clauses, mean 21.8
+words against their 20.9; leads mean 11.7 words against 12.9; three clauses
+everywhere; `bring` from the fixed set of six, using four of them.
+
+**The Term 4 repertoire is fully verified.** All five went the full order:
+Apple explicitness flag, then oEmbed for a live id on the right channel, then
+duration. All five are `notExplicit`, all five sit on an official, artist or
+Topic channel, and **the ids are in the repertoire register, off this repo**.
+Two carry a judgement recorded with them. The Studio Ghibli film soundtrack is
+not on Apple Music in Australia, so the Hisaishi taught is his own Royal
+Philharmonic recording, which is also what his official channel carries. Daft
+Punk's main theme has no official video upload, only Topic, while the official
+channel carries other cues from the same score.
+
+**Only the main theme of The Last of Us is verified**, not the fuller cue the
+Week 5 orchestration lesson pairs it against. So only the main theme is named
+on the site and the clause prose carries the other one, the same way Term 1
+input 10 handles its missing pair.
+
+**Input 27 has no Listen block on purpose.** It is the deliberately unfamiliar
+work, chosen to be outside the unit's repertoire, so there is nothing to name.
+
+**One small ruling taken in passing.** The Last of Us first went in with
+`meta: "Santaolalla, 2013"` and the meta was wide enough to wrap the title onto
+two lines, exactly the squeeze open ruling 5 describes. It was cut to `"2013"`,
+because the title already names the work. So the Term 4 convention is: the meta
+identifies whatever the title does not. For a cue title nobody would place, that
+is the composer or the film (`"Zimmer, 2014"`, `"Celeste, 2018"`); for a work
+whose title is its own name, the year alone. This is more evidence for ruling 5,
+not against it: identification is being carried by `meta` again, and `artist`
+still has never been read.
 
 ## The actual next task
 
-**Pour Term 3 or Term 4. One term per session.**
+**Pour Term 3. It is the last one.** 30 bodies, and it is the hardest of the
+four, which is why it was left until last:
 
-60 of 123 inputs still have no authored body, so no page. They appear in the
-input list, the multicore and the term table with no link, which is honest and
-looks deliberate. The extractor's `steps`, `intention` and `criteria` are in
-the **teacher's voice** and are not student-facing prose. Cost it as writing,
-not as conversion. Term 1 took one session at Opus medium, 33 bodies plus four
-repertoire checks, and had room to spare.
-
-**Do Term 4 next and Term 3 last.** Term 3 carries the ATSI protocol block and
-the two barred works, and it has eight repertoire picks against Term 4's five.
-Nothing about Term 4 is blocked.
-
-## What is genuinely missing
-
-- **60 lesson bodies.** Term 3 (30), Term 4 (30).
-- **13 of the 26 repertoire picks are still unverified**: 8 in Term 3, 5 in
-  Term 4. Thirteen are now done. Every remaining track needs the full order
-  before it goes into a lesson: **Apple explicitness flag, then oEmbed for a
-  live id and the right channel, then duration.** That order, every time. Where
-  an official video upload turns out to be an edit, take the Topic-channel
-  master and record why, as Terms 1 and 2 both now do.
+- **Nine repertoire picks are still unverified**, more than any other term had.
+  Note this is nine, not the eight the last handoff said; the Flume entry says
+  its verification is recorded in Section 3 but it carries no record in
+  `FORWARD`, so check that one rather than assuming it is done.
 - **The two verified Term 3 unseen excerpts are barred from the site**, and
   **neither is named anywhere in this repository**, which is public. They live
   in `Music7-10_Y9_RepertoireRegister.md`, off this repo, and that is the only
   place they are written down. **Do not copy them into a note here to make it
   easier to follow.**
-- **The Term 3 ATSI protocol block, Weeks 4 to 6, is deliberately empty** until
-  Matthew selects through the school's consultation.
+- **The ATSI protocol block, Weeks 4 to 6, is deliberately empty** until Matthew
+  selects through the school's consultation. Do not fill it, and do not write
+  around it in a way that pretends it is not there.
+
+Cost it as writing, not as conversion: the extractor's `steps`, `intention` and
+`criteria` are in the teacher's voice. Term 4 took well under one session at
+Opus medium including the five repertoire checks, and Term 1 took one session
+for 33 bodies plus four checks.
+
+## What is genuinely missing
+
+- **30 lesson bodies**, all of them Term 3.
+- **9 of the 26 repertoire picks are still unverified**, all in Term 3.
+  Seventeen are done. Every remaining track needs the full order: **Apple
+  explicitness flag, then oEmbed for a live id and the right channel, then
+  duration.** That order, every time. Where an official upload turns out to be
+  an edit, or does not exist, take the Topic master and record why, as all three
+  poured terms now do.
 - **No AT4 exam paper.** Open on the program thread, not this one.
 - **No DESIGN.md and no finish review.** The direction contract ends with
   "unreviewed and undocumented is unfinished". `DESIGN-NOTES.md` is a record of
@@ -112,17 +137,11 @@ Nothing about Term 4 is blocked.
 
 ## Decisions waiting on Matthew
 
-1. **The school's name is in this repo's pushed history**, in
-   `NEXT-SESSION.md`, written by the 16 August handoff in the sentence that
-   was explaining the name is *not* in the Year 8 repo. One occurrence, one
-   file, six commits, two of them pushed. It has never been in `docs/`, so it
-   has never been served, and it is out of the working tree as of this
-   session. **This one is different from items 2 and 4.** The standing rule is
-   "no school name anywhere in the repository", not "no teacher's first name",
-   and the school is not the one who chose to publish. **Recommendation:
-   rewrite the two pushed commits, or take the repo private for the ten
-   minutes it takes.** Matthew's call, and it is the first thing to settle
-   next session.
+1. **Push the three pours?** The live site is still the 16 August build and is
+   three terms behind the repo. The history rewrite was pushed on its own
+   deliberately, so this is now a clean, separate yes or no. **Recommendation:
+   push once Term 3 is poured**, so the site goes live complete rather than
+   three-quarters done.
 2. **Rewrite `year8-music`'s published history?** See below. **Recommendation:
    no.**
 3. **The lesson page carries three pieces of torn tape, not two** - the plate's
@@ -131,32 +150,31 @@ Nothing about Term 4 is blocked.
    the first commit. Inherited from comp D. A ruling is owed at the finish
    review.
 4. **`DIRECTION.md` and the comp D approval sidecar name Matthew**, and both
-   are already in pushed history. Same question as Year 8, smaller.
+   are already in pushed history. Same question as Year 8, smaller. Note the
+   history rewrite in item 1 above did **not** touch this; it was scoped to the
+   school's name, which is a different rule and a different party.
 5. **The `artist` field in a `listen` entry is never rendered, and the case for
-   deleting it is now stronger.** Comp D shows the title and a short meta only,
-   and that is approved. The meta is `white-space:nowrap`, so a long performer
-   name in it squeezes the title onto three lines. Term 1 input 04 tested the
-   third workaround and it is the good one: where the artist name is short, put
-   it in `meta` and let it do the identifying. The Beatles, U2 and Adele all
-   render on one line beside their titles. Term 2 input 17 had already done
-   this with Ellington and Parker. So identification is being carried by `meta`
-   or by clause prose in all 63 pages and `artist` has never once been read.
-   **Recommendation: the field goes at the finish review.** A second line in
-   the block is the alternative and nobody has needed it yet.
+   deleting it is now stronger again.** Comp D shows the title and a short meta
+   only, and that is approved. The meta is `white-space:nowrap`, so a long name
+   in it squeezes the title. Term 4 hit this a third time and solved it the same
+   way the other two did, by shortening the meta. Across all 93 pages,
+   identification is carried by `meta` or by clause prose, and `artist` has
+   never once been read. **Recommendation: the field goes at the finish review.**
+   A second line in the block is the alternative and nobody has needed it yet.
 
 ## The Year 8 repo
 
-The previous handoff said `year8-music` had **the school's name** in it
+The 16 August handoff said `year8-music` had **the school's name** in it
 including in served pages. **That was wrong.** The school's name, its initials
-and the words "high school" all return zero on a word-boundary search across
-every blob in all 31 commits; the apparent hits were substring and
+and the words for a high school all return zero on a word-boundary search
+across every blob in all 31 commits; the apparent hits were substring and
 regex-wildcard noise.
 
 **Do not write the search terms out here to make that claim checkable.** The
 16 August handoff did, and in doing so it put the school's name into this
 public repo for the first time, in the one sentence that was documenting its
-absence somewhere else. It is fixed forward above and is still in pushed
-history. See the ruling below.
+absence somewhere else. That is now fixed in history as well as forward, per
+ruling 1 above.
 
 The real leak was **the teacher's first name on all 105 served pages**, baked
 in by `build.py`. Fixed forward to "the user", matching what this repo already
@@ -200,18 +218,19 @@ history. Matthew's call, and it is still open.
   `School Master/Tools/y9_repertoire_register.py` and the generator is re-run;
   editing the markdown by hand is thrown away on the next run.
 - **`.claude/launch.json` in this repo points at a dead scratchpad directory**
-  from the session that wrote it, and its port is usually already taken by
-  another chat's server. Serving the build needs a directory whose child is
-  named `year9-music-2027`, because `base` is `/year9-music-2027`. This session
-  used a symlink in its own scratchpad and a config named `year9-t1` in the
-  School Master root `.claude/launch.json`.
+  from the session that wrote it, and so do all three `year9` configs in the
+  School Master root. Serving the build needs a directory whose child is named
+  `year9-music-2027`, because `base` is `/year9-music-2027`. This session used a
+  symlink in its own scratchpad and a config named `year9-t4` on port 8814 in
+  the School Master root `.claude/launch.json`. That one is now dead too.
 
 ## Model and effort
 
-**Opus, medium**, for the next term's pour: it is student-facing writing
-against a registered program, the repertoire checks have a strict order that
-must not be shortcut, and Terms 1 and 2 each fitted comfortably in one session
-at that setting.
+**Opus, medium**, for the Term 3 pour: it is student-facing writing against a
+registered program, nine repertoire checks have a strict order that must not be
+shortcut, and there are two barred works and an empty ATSI block to write around
+without pretending either is not there. Terms 1, 2 and 4 each fitted comfortably
+in one session at that setting, and this one is the heaviest of the four.
 
 If instead you are doing the finish review and DESIGN.md, **Opus, medium** as
 well. It is a judgement pass over an approved contract, and there are five
