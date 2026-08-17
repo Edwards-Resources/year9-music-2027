@@ -1,0 +1,353 @@
+---
+name: Year 9 Music 2027
+description: A stage plot and input list for a year of music, drawn in chalk on a black floor and taped down.
+colors:
+  floor: "#111214"
+  floor-grid: "rgba(242,241,236,.03)"
+  chalk: "#F2F1EC"
+  chalk-dim: "#8E8F8B"
+  chalk-past: "#9A9B97"
+  hair: "#63656A"
+  ghost: "rgba(242,241,236,.26)"
+  sheet: "#F4F3EE"
+  ink: "#141517"
+  ink-hover: "#2C2E31"
+  ink-dim: "#5D5F63"
+  rule: "rgba(20,21,23,.18)"
+  tape-t1: "#E8FF3A"
+  tape-t2: "#FF2D78"
+  tape-t3: "#FF6A1F"
+  tape-t4: "#3DFF7D"
+typography:
+  display:
+    fontFamily: "Saira Stencil One, Chivo, sans-serif"
+    fontSize: "clamp(2.1rem, 4.6vw, 3.7rem)"
+    fontWeight: 400
+    lineHeight: 0.96
+    letterSpacing: "normal"
+  headline:
+    fontFamily: "Chivo, system-ui, sans-serif"
+    fontSize: "clamp(2rem, 4.4vw, 3.1rem)"
+    fontWeight: 900
+    lineHeight: 1
+    letterSpacing: "-0.03em"
+  title:
+    fontFamily: "Chivo, system-ui, sans-serif"
+    fontSize: "clamp(1.35rem, 2.2vw, 1.72rem)"
+    fontWeight: 700
+    lineHeight: 1.22
+    letterSpacing: "-0.018em"
+  body:
+    fontFamily: "Chivo, system-ui, sans-serif"
+    fontSize: "16px"
+    fontWeight: 400
+    lineHeight: 1.5
+    letterSpacing: "normal"
+  label:
+    fontFamily: "Chivo, system-ui, sans-serif"
+    fontSize: "0.62rem"
+    fontWeight: 800
+    lineHeight: 1.5
+    letterSpacing: "0.22em"
+  mono:
+    fontFamily: "Chivo Mono, ui-monospace, monospace"
+    fontSize: "0.72rem"
+    fontWeight: 400
+    lineHeight: 1.5
+    letterSpacing: "0.14em"
+    fontFeature: "tabular-nums"
+rounded:
+  none: "0"
+spacing:
+  grid: "48px"
+  rail-gutter: "22px"
+  plate-gutter: "34px"
+  page-gutter: "40px"
+  page-gutter-narrow: "16px"
+components:
+  nav-channel:
+    textColor: "{colors.chalk-dim}"
+    padding: "8px 14px"
+    rounded: "{rounded.none}"
+    typography: "{typography.label}"
+  nav-channel-active:
+    backgroundColor: "{colors.tape-t1}"
+    textColor: "{colors.ink}"
+    padding: "8px 14px"
+    rounded: "{rounded.none}"
+  rail-row:
+    textColor: "{colors.chalk}"
+    padding: "6px 22px"
+    rounded: "{rounded.none}"
+  rail-row-now:
+    backgroundColor: "{colors.tape-t1}"
+    textColor: "{colors.ink}"
+    padding: "9px 12px"
+    rounded: "{rounded.none}"
+  rail-row-done:
+    textColor: "{colors.chalk-past}"
+    padding: "6px 22px"
+  plate:
+    backgroundColor: "{colors.sheet}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.none}"
+    padding: "34px 34px 32px"
+  tape-strip:
+    backgroundColor: "{colors.tape-t1}"
+    textColor: "{colors.ink}"
+    width: "124px"
+    height: "32px"
+    rounded: "{rounded.none}"
+  plate-button:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.sheet}"
+    padding: "12px 20px"
+    rounded: "{rounded.none}"
+  plate-button-hover:
+    backgroundColor: "{colors.ink-hover}"
+    textColor: "{colors.sheet}"
+  plate-button-alt:
+    textColor: "{colors.ink}"
+    padding: "12px 20px"
+    rounded: "{rounded.none}"
+  floor-button:
+    textColor: "{colors.chalk}"
+    padding: "10px 15px"
+    rounded: "{rounded.none}"
+  unit-chip:
+    backgroundColor: "{colors.tape-t1}"
+    textColor: "{colors.ink}"
+    padding: "2px 11px"
+    rounded: "{rounded.none}"
+---
+
+# Design System: Year 9 Music 2027
+
+## Overview
+
+**Creative North Star: "The Plot"**
+
+The stage plot and input list a band hands a sound engineer. The whole year is one room drawn from above in chalk line on a black stage floor, and every lesson is a numbered input on a list beside it. Nothing here is decorated; everything is production paperwork, which is a genre that has to survive being read in a dark room by someone with both hands full. That is the same job the site has: it is projected in a daylit classroom and operated by a teacher holding an instrument.
+
+The system's material logic is three surfaces stacked. The **floor** is black and gridded, and it carries drawn line, labels and lists. The **sheet** is a white panel laid on the floor and taped down, and it is where sustained reading happens. The **tape** is one fluoro colour per term, torn at the ends, used only as fill and marker and always carrying black ink. Long white prose never sits on the black field. Colour never sits as type on the black field. Every drawn thing is one of exactly two line weights.
+
+The world refuses two things by name. It refuses the course-site default of equal-weight lesson cards in a grid, where week one and week nine look identical, and it refuses the light paper ground shared by the three sibling teaching sites. Year 8's Tour Tee is the sharpest anti-reference because this cohort has just spent a year inside it.
+
+**Key Characteristics:**
+- Black stage floor with a faint 48px drawn grid; white taped panels for anything longer than a list
+- Two line weights only: 1px chalk hairline, 4px painted keyline
+- Four fluoro tape colours, one per term, always with black ink, always torn at the ends
+- Square corners everywhere; no shadows, no gradients, no radii
+- Stencil display face in three places per page and no more
+- Position is stated twice: by a marker or keyline and by a word, never by colour alone
+- No motion authored anywhere
+
+## Colors
+
+A near-black stage floor, a chalk white line on it, a warm white sheet laid over it, and exactly one fluoro gaffer tape colour live at a time.
+
+### Primary
+- **Gaffer Yellow, Term 1** (`{colors.tape-t1}`): the live term's tape on every Term 1 surface. Fills the rail's current row, the hub's standing strip and its live channel, the plate's corner strips, the active nav channel, the unit chip and the focus ring.
+- **Gaffer Magenta, Term 2** (`{colors.tape-t2}`): the same slot on Term 2 surfaces.
+- **Gaffer Orange, Term 3** (`{colors.tape-t3}`): the same slot on Term 3 surfaces.
+- **Gaffer Green, Term 4** (`{colors.tape-t4}`): the same slot on Term 4 surfaces.
+
+The four are never in play at once except on home's year strip, where they appear as four small chips on unit numbers. `--tape` resolves from `body[data-term]`, so every component reads "the term's colour" and never a named term.
+
+### Neutral
+- **Stage Floor** (`{colors.floor}`): the page ground on every surface.
+- **Floor Grid** (`{colors.floor-grid}`): the 48px repeating graph-paper ruling on the body. Texture, not structure; it is deliberately below the contrast floor and must stay there.
+- **Chalk** (`{colors.chalk}`): everything drawn or written on the floor, and the 4px painted keyline.
+- **Chalk Dim** (`{colors.chalk-dim}`): labels, eyebrows, meta lines, week rulers, inactive nav, deck text. Also the ghost drawing's labels at 5.76:1.
+- **Chalk Past** (`{colors.chalk-past}`): a lesson already taught, in the rail and the input table, at 6.7:1. Never used alone: the strike marker travels with it.
+- **Hairline** (`{colors.hair}`): every 1px structural rule and control border on the floor at 3.21:1. The 1px weight of the world.
+- **Ghost** (`{colors.ghost}`): the other three units' sheets, drawn as dashed brackets in SVG at about 2.4:1.
+- **Sheet** (`{colors.sheet}`): the taped white panel.
+- **Ink** (`{colors.ink}`): all type on sheet and on tape; also the plate's 2px section dividers and the solid plate button.
+- **Ink Dim** (`{colors.ink-dim}`): field labels, channel numbers and secondary lines inside the sheet.
+- **Sheet Rule** (`{colors.rule}`): every 1px rule drawn inside the sheet.
+
+Two colours sit outside this palette on purpose, both in the print block only:
+`#fff` for the ground and `#000` for type and the plate's border. Print is paper
+and ink rather than a floor and a sheet, and the screen palette does not carry
+over to it. They are not available anywhere else.
+
+### Named Rules
+
+**The Black Ink Rule.** Type on a tape colour is always ink, never white, and a tape colour is never used as type on the floor. The four fluoros are fills and markers only.
+
+**The Never-Colour-Alone Rule.** No state is carried by colour by itself. The current row is taped *and* carries the word marking the position *and* the channel number. A taught lesson is dimmed *and* struck with a × glyph. The live unit is chalk-keylined *and* says so in its corner.
+
+**The Two Grounds Rule.** A paragraph belongs on the sheet. The floor carries labels, lists, numbers, drawn line and nothing that needs sustained reading. This is the daylit-projector constraint before it is a style rule.
+
+**The Structure-Not-Texture Rule.** `--hair` at #63656A (3.21:1) draws structure and must clear the 3:1 non-text floor; `--floor-grid` at rgba(242,241,236,.03) is texture and stays faint. They are separate tokens and neither may be tuned to the other. *Watch item:* at 3.21:1 the hub input table reads more ruled than before. If it tips toward a spreadsheet, thin the rules' extent, never dim the token back.
+
+## Typography
+
+**Display Font:** Saira Stencil One (self-hosted, 400 only)
+**Body Font:** Chivo (self-hosted variable, 300–900)
+**Label/Mono Font:** Chivo Mono (self-hosted variable, 300–800, tabular figures)
+
+**Character:** A stencilled crate mark over a grotesque built for signage. Chivo and Chivo Mono are one superfamily, so the site is two families rather than three, and the stencil is a voice used sparingly enough to stay a voice. A third face is a defect.
+
+### Hierarchy
+- **Display** (Saira Stencil One 400, clamp 2.1–3.7rem, line-height .96, uppercase, max 15ch): the page's own subject name. The lesson title on a lesson page, the unit name on a hub, the desk lesson's title on home. Also the class mark (1.2rem) and the input list head (.98rem) at their own sizes.
+- **Headline** (Chivo 900, clamp 2–3.1rem, line-height 1, letter-spacing -.03em, uppercase): home's h1 only. Home is the one surface whose heading is not the stencil.
+- **Title** (Chivo 700, clamp 1.35–1.72rem, line-height 1.22, max 26ch): the lesson's lead sentence on the plate, and home's desk lead.
+- **Body** (Chivo 400, 16px, line-height 1.5, max 66ch in clauses, 58ch in success criteria): everything read at length, always on the sheet.
+- **Label** (Chivo 800, .60–.72rem, letter-spacing .20–.22em, uppercase): field names, section heads, week markers, position lines, table headers. The site's most-used voice by count.
+- **Mono** (Chivo Mono, .72–.78rem, tabular figures): channel numbers, durations, dates, codes and any figure that has to line up in a column.
+
+### Named Rules
+
+**The Three Places Rule.** The stencil face appears in exactly three places on any page: the class mark, the input list head, and the page's own subject name. On a lesson page those are the mark, the rail head and the h1. On a hub the unit name occupies the slot the rail head holds elsewhere, so the count is three there too. *Cited deviation from DIRECTION.md's literal list, kept because the per-page count never rises.* The CSS selector that enforces it is a single rule and is not to be extended again.
+
+**The One Selector Rule.** The stencil is granted by one CSS selector. Any new surface that wants the display voice takes one of the three existing slots; it does not add a fourth.
+
+## Layout
+
+**The frame.** Every page is a floor bar across the top (class mark, year, term nav) and a footer, both hairline-bounded, with the surface between them.
+
+**The lesson page** is a two-column grid: a fixed 312px left rail and a fluid stage area. The rail is permanent and carries all thirty channels of the term, not a window onto them. The stage area holds one plate at max 960px, taped at its two top corners, and a row of floor buttons under it. Inside the plate, a title block, then a meta row ruled into as many cells as the lesson has fields (three, four or five via `tbgrid c3/c4/c5`, so an assessment lesson carrying no repertoire keeps even cells), then a rider grid of a fluid clause column beside a fixed 300px spec column, then the keep-this block.
+
+**The term hub** is the one surface where the room is large: max 1180px, unit head and standing line, then the unit's full-width SVG sheet, then the multicore strip running out of its bottom edge, then the assessment bar, the blueprint bar and the full input table. The multicore's `--core-inset` (5%) must equal `SH_X/ROOM_X` in `plots.py` (60 of 1200) or the strip stops reading as plugged into the sheet. Change one and you change the other.
+
+**Home** is max 1180px: heading, the desk plate at max 820px, then the four unit blocks on an auto-fit grid at minmax(250px, 1fr) with a 1px hairline gap doing the ruling.
+
+**Rhythm.** Gutters run 40px at page level, 34px inside the plate, 22px in the rail, 16px at narrow widths. The body grid is 48px, which is the drawing's own unit.
+
+**Responsive.** Three breakpoints, all build work; the comps were rendered at 1440 only.
+- **1100:** the rider collapses to one column and the spec blocks lay out side by side at their column width rather than spreading full-width, because a full-width plan drawing would break the rule that the room is small on a lesson page.
+- **980:** the rail moves above the plate and becomes a disclosure. It stays in the DOM and open, capped at 42vh with contained scroll, so the disclosure state and what a screen reader is told never disagree. On the hub, the sheet and the multicore pan together inside one contained horizontal scroller at min-width 720px, deliberately: a week boundary must land on a channel boundary, and scrolling them apart would break the alignment that is the whole device.
+- **620:** the outcomes column of the input table is dropped, header cell included. It is the first thing a phone can lose because it is on the lesson page and the table's job is finding a lesson.
+
+Mobile is proven at 390: `documentElement.scrollWidth` equals `clientWidth` on home, hub and lesson. No document overflow.
+
+**Print** strips the floor to white, hides rail, floor bar, floor buttons and tape, and gives the plate a 1px black border in place of its torn clip-path.
+
+**Motion.** None is authored anywhere in the system, on purpose: the page is operated with hands busy and there is nothing for an animation to tell it. `prefers-reduced-motion` still nulls animation and transition as a guard.
+
+## Elevation & Depth
+
+**No shadows, no gradients.** Depth is stated three ways and only three ways.
+
+1. **Ground change.** The sheet is a lighter panel physically laid on the floor. That is the only figure/ground step in the system.
+2. **Tape.** A torn strip holds something down or marks a row. It is the one thing that reads as attached rather than drawn.
+3. **The ghost layer.** On a hub, the other three units are drawn as dashed brackets stepped back by unit distance: a top edge and two side stubs running down to where the live sheet starts, which is what a stack of paper looks like from above.
+
+`box-shadow` appears in the system only as a flat inset keyline, never as a cast shadow.
+
+### Named Rules
+
+**The Ghost Bracket Rule.** A non-live unit is a bracket at 26% (about 2.4:1) with a 5-5 dash, not a faded rectangle. 7 to 10 percent was tried and is about 1.1:1 on this floor, which is absent rather than weak; a full ghost rectangle crosses the live sheet and turns the drawing to mud. The **dash** carries "not live", not the fade. The ghost's *labels* are chalk-dim at 5.76:1 and are not ghosted: the line is the ghost, the label is not.
+
+**The Keyline-Not-Tape Rule.** "The one you have open" is the 4px painted chalk keyline, always: inset on the rail's reading row, top and bottom inset on the hub table's current row, a top border on home's live unit. Tape says where the class is; the keyline says where you are.
+
+## Shapes
+
+Square corners everywhere. `border-radius` is zero across the entire stylesheet and there is no radius scale to draw from.
+
+Form comes from tearing rather than rounding. Four hand-authored `clip-path` polygons carry it, each tuned to its own size:
+- the plate's near-straight torn sheet edge (a document, so the tear is subtle)
+- the `--torn-tape` polygon on the plate's 124×32 corner strips
+- the rail's current-row strip, torn on all four sides
+- the multicore channel, about 30px wide, torn on the **top and bottom edges only**, because tearing all four sides at that width is not a torn strip, it is a jagged blob
+
+Lines come in two weights and no others. 1px is chalk hairline (`--hair` on the floor, `--rule` on the sheet, `stroke-width="1"` in the drawings), 4px is the painted keyline (`border-bottom: 4px solid var(--chalk)` on section heads, inset box-shadows on current rows, `stroke-width="4"` on the sheet's downstage edge). The plate's internal section dividers are 2px solid ink, an in-sheet weight that belongs to the document rather than to the floor.
+
+### Named Rules
+
+**The Torn Ends Rule.** Every edge of tape is torn. A square-cut bar of gaffer colour reads as a rectangle with a colour in it, which is the card this world exists to refuse. The tear polygon is authored per size; do not reuse the 124px polygon on a 30px element.
+
+**The Two Weights Rule.** 1px for what is drawn, 4px for what bounds. A third weight on the floor is a defect.
+
+## Components
+
+### Floor bar and term navigation
+The site's one persistent chrome: class mark in stencil, year in dim label caps, then the four terms as bordered channels pushed right. **Style:** hairline border, dim label type, square, transparent. **Hover:** text to chalk, border to chalk-dim. **Active:** filled with the term's tape, ink type at weight 800, border matched to the fill. At narrow widths the nav drops to its own full-width row.
+
+### The rail (input list)
+Character: a channel list on a patch bay. Every lesson of the term, numbered from 01, grouped under dim week headers. A row is a 34px number column beside the title.
+- **Default:** chalk title, dim number. A lesson with no page yet is *not* dimmed; it is a real lesson in the term and what it lacks is the link, not the standing.
+- **Hover (linked rows):** a 5% chalk wash.
+- **Taught:** chalk-past type plus a ` ×` after the number.
+- **Assessment:** a filled ▪ after the number.
+- **Now (where the class is up to):** the term's tape as a torn strip inset from the rail edges, ink type at 800.
+- **Reading (the page you are on):** a 4px chalk keyline inset on the left edge, flipping to ink when the row is also taped.
+- **Narrow:** becomes a disclosure with a Show/Hide affordance in the head, capped at 42vh with contained scroll.
+
+### The plate
+Character: a document taped to the floor.
+- **Shape:** square, torn sheet edge via clip-path, no shadow.
+- **Background:** sheet; all interior type is ink or ink-dim.
+- **Tape:** two corner strips, top left rotated -3.5° and top right rotated 2.5°, sized 124×32 (96×26 below 980).
+- **Internal padding:** 34px, dropping to 20px below 980.
+- **Rules:** 2px ink under the title block and above the keep block; 1px sheet-rule everywhere else.
+
+### The meta row
+A grid ruled into as many cells as the lesson has fields, in three sizes (3, 4 or 5). Dim label caps over a 600-weight value. Below 980 it goes two-up. Never one double-width cell.
+
+### The listen block
+A bordered list of tracks: work in 600, artist under it in dim, duration in mono at the right. **The artist line prints only where the meta field has not already said it.** `build.py`'s `by()` suppresses it when a word of the artist appears in the meta string. For authors: `title` is the work, `meta` is the locating fact (an era in some terms, an artist in others), and `artist` renders only when it adds a name the row does not already carry.
+
+### Buttons
+Two families, one per ground.
+- **Plate button (primary):** solid ink on sheet, sheet-coloured label caps at 800, 12×20 padding, square. **Hover:** ink lightens to #2C2E31.
+- **Plate button (alt):** transparent with a 1px sheet-rule border and ink type. **Hover:** border to full ink, no fill.
+- **Floor button:** transparent with a 1px hairline border and chalk type, 10×15 padding. **Hover:** border to chalk-dim. This is the row under the plate.
+- **Focus (all interactive elements):** a 3px outline in the term's tape at 2px offset. There is no separate focus token; the term colour is the focus colour.
+
+### The multicore (signature)
+The term's thirty lessons as one line of equal-width channels running out of the sheet's downstage edge, with a week ruler mirroring its flex geometry exactly so a week boundary lands on a channel boundary. Every channel is the same width and on this surface that is the point: on a multicore the channels *are* equal, and what separates them is what is patched into each. Hairline-bounded cells, mono numbers, a ▪ under an assessment, chalk-past for taught, and the term's tape (torn top and bottom) on the current channel. The "Week" label sits in the 5% gutter, outside the flex row, because a label in the row pushes every week off its channel.
+
+### The unit sheets (signature)
+Four SVG drawings, one per unit, all built by `plots.py` on one shared frame: a 1080×250 sheet bounded by a 1px chalk rule, named in its own top corner the way production paperwork is, ghost brackets stepped above it, a 4px painted downstage edge below. **What is shared is the frame, not the drawing.** Inside the frame each unit is the document that unit's musicians actually use: a stage plot, a chord chart, a listening set-up, a cue sheet. Do not force a fifth unit into a floor plan because the first one was one.
+
+### Input table
+The full term list as a ruled table: hairline rules, dim mono numbers, dim label headers, week rows as spanning sub-headers. Taught rows go chalk-past; the current row takes the 4px chalk keyline top and bottom plus a ◀ after its number, never a third tape fill.
+
+### Unit blocks (home)
+Four blocks on a hairline-gap grid. Each carries its own term colour as a **chip on the unit number** with ink on it, never as a bar across the block. Four coloured bars side by side read as a rainbow. The live unit is said by a 4px chalk top border and by the words in its corner, never by the colour.
+
+## Do's and Don'ts
+
+### Do:
+- **Do** put anything longer than a list on the sheet. Labels, numbers, drawn line and short lists live on the floor; a paragraph does not.
+- **Do** state every position and status twice: a marker or keyline plus a word. Colour is never the only carrier.
+- **Do** keep the tape budget at two acts per page. A lesson page's three strips are two acts: the corner pair holds one object down, the rail's row marks the row. A hub spends its two on the standing line and the live channel. A fourth mark is a defect.
+- **Do** draw structure at `--hair` (3.21:1) and leave texture at `--floor-grid`. If a surface reads over-ruled, shorten the rules' extent.
+- **Do** author a torn polygon per element size.
+- **Do** treat `--core-inset` in the stylesheet and `SH_X` in `plots.py` as one number in two files.
+- **Do** keep `bring` to its closed set of seven: the six instrument, log and headphone values plus "Pens", which comes from the school's own assessment task notification and is used only where a paper is sat under examination conditions. An eighth has to be argued for.
+- **Do** self-host every face. Nothing loads from a CDN.
+
+### Don't:
+- **Don't** put white type on a tape colour, or a tape colour as type on the floor.
+- **Don't** introduce a third line weight on the floor, a corner radius, a gradient, or a cast shadow.
+- **Don't** widen the stencil selector. Three places per page; a new surface takes one of the three slots.
+- **Don't** add a fourth face. Chivo and Chivo Mono are one superfamily and that is the budget.
+- **Don't** cut tape square. A square-cut bar of gaffer colour is the card this world exists to refuse.
+- **Don't** render a non-live state as a fade alone. The dash carries "not live"; the fade only accompanies it, and ghost labels stay at full AA.
+- **Don't** dim a lesson that has no page yet. It lacks the link, not the standing.
+- **Don't** draw the room at a third scale. It is large on the hub, small in a lesson page's spec column, and absent on home.
+- **Don't** add motion. The page is operated hands-busy.
+- **Don't** add a decorative element to the eyebrow line (see below). It survives on the argument that it is pure state.
+
+### Cited deviations, carried knowingly
+
+**The eyebrow above the heading.** `INPUT 02 OF 30 · ON THE DESK` on a lesson page and `UNIT 2 OF 4 · 30 INPUTS` on a hub sit above the h1, which the craft floor bans. Kept because the line is not decorative: it carries the input number and the live position state, which is the site's core job and the STORY's one promise; it restates nothing in the heading; it is native to production paperwork; and it is in the composition the user approved. The hub's descriptive clause was cut from this line and now reads under the h1 as a deck, because a description above a heading is decoration. **This is a deviation kept for these specific reasons on these two surfaces, not a licence for eyebrows on new surfaces.** Nothing decorative may join the remaining line.
+
+**The stencil on the hub.** DIRECTION.md's literal list is class mark, input list head, lesson title. The hub has no rail head, so the unit name takes that slot. Per-page count stays at three. The selector is closed.
+
+### Known gaps in the system
+
+- **The blueprint sheets do not exist.** `data/course/term2/term.json` carries four sheets flagged `built: false`; no other term carries any. PRODUCT.md lists the composing blueprints under must-carry and the STORY block promises a student can get back to the blueprint, the progression, the voicings and the rules without asking twice. **That half of STORY is unmet.** The rail's foot and the hub's blueprint bar name the missing sheets on one line rather than one dead label each, which is a smaller absence, not a filled one.
+- **Home's four unit blocks are equal weight**, which is the arrangement the THESIS names and refuses. **Open, remedy with the user.** The finish review's ruling is unequal weight: the live unit takes the block and carries its own inputs, the other three compress to a line each. Explicitly *not* a year-scale drawing, because a third instance of the sheet is the metaphor doing overtime.
+- **No AT3 exam paper**, so no examination-paper surface exists in the system yet.
+- **The type ramp is looser than six roles.** The six above are the roles the
+  system reasons in, but `assets/site.css` carries sixteen literal font sizes,
+  most of them small steps inside the label and mono bands (.66 to .90rem) plus
+  four one-off display sizes. Nothing is broken by it and no size is far from a
+  role, but it is a ramp held by hand rather than by tokens. New work takes the
+  nearest existing step; it does not add a seventeenth.
+- **Rules with no enforcement.** The tape budget, the two line weights, the three stencil places and the closed `bring` set are all conventions held by review, not by the build. `build.py` and `plots.py` validate none of them; only the stencil rule has a single CSS selector that makes widening it a visible act.

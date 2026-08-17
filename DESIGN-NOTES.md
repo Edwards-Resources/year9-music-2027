@@ -107,14 +107,31 @@ words in the corner, never by the colour.
   alignment that is the whole device. The full input list is underneath for
   anyone who would rather not drag.
 
+## Settled at the finish review, 17 August 2026
+
+The finish review ran on 17 August 2026 and `DESIGN.md` is written. **`DESIGN.md`
+is now the system of record for this site's design**; this file stays as the
+build record for the two surfaces that had no comp, and nothing below overrides
+it.
+
+- **The three pieces of torn tape are two acts.** A corner pair holds one object
+  down, one strip marks the row. The approval sidecar's own wording is the
+  reading. A fourth mark is a defect.
+- **`--hair` is fixed.** `#313337` at 1.48:1 is now `#63656A` at 3.21:1. It draws
+  only structural rules and control borders; the floor's background grid is a
+  separate faint rgba and stayed where it was.
+- **The ghost bracket stands as built.** The review first asked for the other
+  three units' real drawings at 7 to 10 percent and withdrew it once this file
+  was in front of it. The bracket at 26 percent with the dash carrying "not live"
+  is the answer. The ghost labels are chalk-dim at 5.76:1 and are not ghosted.
+
 ## Still open
 
-- **The lesson page carries three pieces of torn tape, not two**: `tapestrip.tl`,
-  `tapestrip.tr` and the rail's current row. This is inherited from comp D and
-  predates this session. Either the two corner strips count as one act of taping
-  the plate down, or the build has been over budget since the first commit.
-  **A ruling is owed at the finish review.** Not changed here, because comp D is
-  approved and this is not a defect I introduced.
-- `--hair` at `#313337` is 1.48:1 on the floor. Carried over from the previous
-  session's open questions; still unresolved.
-- No DESIGN.md and no finish review.
+- **Home's four unit blocks are equal weight**, which is the arrangement the
+  THESIS names and refuses. The review's ruling is unequal weight: the live unit
+  takes the block and carries its own inputs, the other three compress to a line
+  each. **Explicitly not a year-scale drawing**, which is the call this file made
+  above and which the review accepted. Waiting on the user.
+- **The four blueprint sheets do not exist**, so half the STORY block is unmet.
+  The rail and the hub bar now name them on one line instead of four dead
+  labels, which is a smaller absence, not a filled one.

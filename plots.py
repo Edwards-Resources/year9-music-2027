@@ -393,8 +393,10 @@ def small_stage():
     # wedges on the edge
     o.append(f'<g {st}><path d="M84 112 h26 l-5 12 h-16 Z"/>'
              f'<path d="M150 112 h26 l-5 12 h-16 Z"/></g>')
+    # One label, on the left where the floor is empty. The drawing carried
+    # "STAGE PLOT" in its own corner as well as in the heading above it, and
+    # "DOWNSTAGE EDGE" ran straight through the right-hand wedge at this size.
     o.append(f'<g fill="{dim}" font-family="Chivo, sans-serif" font-size="7" '
-             f'letter-spacing="1.1"><text x="14" y="20">STAGE PLOT</text>'
-             f'<text x="206" y="120" text-anchor="end">DOWNSTAGE EDGE</text></g>')
+             f'letter-spacing="1.1"><text x="14" y="121">DOWNSTAGE</text></g>')
     return (f'<svg viewBox="0 0 220 134" width="100%" role="img" '
             f'aria-label="{SMALL_ALT}">{"".join(o)}</svg>')

@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-17T00:00:00Z",
+  "title": "Design System: Year 9 Music 2027",
+  "extensions": {
+    "colorMeta": {
+      "floor": {
+        "role": "neutral",
+        "displayName": "Stage Floor",
+        "canonical": "#111214",
+        "tonalRamp": ["#08080A", "#111214", "#1D1F22", "#2C2E31", "#43454A", "#63656A", "#8E8F8B", "#C9C8C2"]
+      },
+      "chalk": {
+        "role": "neutral",
+        "displayName": "Chalk Line",
+        "canonical": "#F2F1EC",
+        "tonalRamp": ["#24231F", "#3A3934", "#55544E", "#71706A", "#8E8D87", "#ADACA5", "#D0CFC9", "#F2F1EC"]
+      },
+      "chalk-dim": {
+        "role": "neutral",
+        "displayName": "Chalk Dim",
+        "canonical": "#8E8F8B",
+        "tonalRamp": ["#1F201E", "#333430", "#4B4C48", "#646560", "#8E8F8B", "#ADAEAA", "#CCCDC9", "#EBECE8"]
+      },
+      "chalk-past": {
+        "role": "neutral",
+        "displayName": "Chalk Past",
+        "canonical": "#9A9B97",
+        "tonalRamp": ["#212220", "#353632", "#4E4F4B", "#676864", "#818280", "#9A9B97", "#C0C1BD", "#E4E5E1"]
+      },
+      "hair": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#63656A",
+        "tonalRamp": ["#151619", "#232529", "#33353A", "#47494E", "#63656A", "#84868B", "#A9ABB0", "#D2D4D8"]
+      },
+      "ghost": {
+        "role": "neutral",
+        "displayName": "Ghost Line",
+        "canonical": "rgba(242,241,236,.26)",
+        "tonalRamp": ["rgba(242,241,236,.05)", "rgba(242,241,236,.10)", "rgba(242,241,236,.18)", "rgba(242,241,236,.26)", "rgba(242,241,236,.40)", "rgba(242,241,236,.58)", "rgba(242,241,236,.78)", "rgba(242,241,236,1)"]
+      },
+      "floor-grid": {
+        "role": "neutral",
+        "displayName": "Floor Grid",
+        "canonical": "rgba(242,241,236,.03)",
+        "tonalRamp": ["rgba(242,241,236,.01)", "rgba(242,241,236,.02)", "rgba(242,241,236,.03)", "rgba(242,241,236,.05)", "rgba(242,241,236,.08)", "rgba(242,241,236,.12)", "rgba(242,241,236,.18)", "rgba(242,241,236,.26)"]
+      },
+      "sheet": {
+        "role": "neutral",
+        "displayName": "Taped Sheet",
+        "canonical": "#F4F3EE",
+        "tonalRamp": ["#26251F", "#3C3B34", "#57564E", "#737269", "#909085", "#AFAEA4", "#D2D1CA", "#F4F3EE"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#141517",
+        "tonalRamp": ["#0A0A0B", "#141517", "#212326", "#2C2E31", "#42444A", "#5D5F63", "#8B8D92", "#C3C5C9"]
+      },
+      "ink-dim": {
+        "role": "neutral",
+        "displayName": "Ink Dim",
+        "canonical": "#5D5F63",
+        "tonalRamp": ["#131416", "#202225", "#2F3134", "#434549", "#5D5F63", "#7F8186", "#A6A8AC", "#D0D2D5"]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Sheet Rule",
+        "canonical": "rgba(20,21,23,.18)",
+        "tonalRamp": ["rgba(20,21,23,.04)", "rgba(20,21,23,.08)", "rgba(20,21,23,.12)", "rgba(20,21,23,.18)", "rgba(20,21,23,.28)", "rgba(20,21,23,.45)", "rgba(20,21,23,.70)", "rgba(20,21,23,1)"]
+      },
+      "tape-t1": {
+        "role": "primary",
+        "displayName": "Gaffer Yellow, Term 1",
+        "canonical": "#E8FF3A",
+        "tonalRamp": ["#2A2F00", "#434B00", "#5F6A00", "#7D8B02", "#9CAD0D", "#BCCF1D", "#E8FF3A", "#F3FF9A"]
+      },
+      "tape-t2": {
+        "role": "primary",
+        "displayName": "Gaffer Magenta, Term 2",
+        "canonical": "#FF2D78",
+        "tonalRamp": ["#3A0018", "#5B0027", "#7E0037", "#A30049", "#C8005C", "#EC0F6E", "#FF2D78", "#FF8FB6"]
+      },
+      "tape-t3": {
+        "role": "primary",
+        "displayName": "Gaffer Orange, Term 3",
+        "canonical": "#FF6A1F",
+        "tonalRamp": ["#331000", "#4F1B00", "#6E2800", "#8F3600", "#B14500", "#D45500", "#FF6A1F", "#FFAA7C"]
+      },
+      "tape-t4": {
+        "role": "primary",
+        "displayName": "Gaffer Green, Term 4",
+        "canonical": "#3DFF7D",
+        "tonalRamp": ["#002A11", "#00431E", "#005E2D", "#007B3D", "#00994E", "#0FB960", "#3DFF7D", "#A3FFC4"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Stencil Display",
+        "purpose": "The page's own subject name, plus the class mark and the input list head. Three places per page and no more; granted by one CSS selector that must not be widened."
+      },
+      "headline": {
+        "displayName": "Home Headline",
+        "purpose": "Home's h1 only. The one heading in the system that is not the stencil face."
+      },
+      "title": {
+        "displayName": "Lead",
+        "purpose": "The lesson's lead sentence on the plate and home's desk lead. Always on the sheet, never on the floor."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Everything read at length. Capped at 66ch in clauses, 58ch in success criteria. Sheet only."
+      },
+      "label": {
+        "displayName": "Label Caps",
+        "purpose": "Field names, section heads, week markers, position lines, table headers. The most-used voice by count, on both grounds."
+      },
+      "mono": {
+        "displayName": "Channel Mono",
+        "purpose": "Channel numbers, durations, dates, codes and any figure that has to line up in a column. Tabular figures always."
+      }
+    },
+    "shadows": [
+      {
+        "name": "keyline-reading",
+        "value": "inset 4px 0 0 var(--chalk)",
+        "purpose": "The page you have open, on a rail row. Flips to var(--ink) when the row is also taped. Flat inset keyline, not a cast shadow."
+      },
+      {
+        "name": "keyline-current-row",
+        "value": "inset 0 4px 0 var(--chalk), inset 0 -4px 0 var(--chalk)",
+        "purpose": "The current input in the hub's table. Used instead of a third tape fill, which would say nothing the standing line and the taped channel have not."
+      }
+    ],
+    "motion": [],
+    "breakpoints": [
+      { "name": "rider-collapse", "value": "1100px" },
+      { "name": "rail-disclosure", "value": "980px" },
+      { "name": "drop-outcomes", "value": "620px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Term Channel (nav)",
+      "kind": "nav",
+      "refersTo": "nav-channel",
+      "description": "The four terms in the floor bar. Bordered channels; the live term is filled with its tape colour.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-ch\" href=\"#\">Term 1</a><a class=\"ds-nav-ch ds-on\" href=\"#\">Term 2</a><a class=\"ds-nav-ch\" href=\"#\">Term 3</a><a class=\"ds-nav-ch\" href=\"#\">Term 4</a></nav>",
+      "css": ".ds-nav{display:flex;gap:2px;flex-wrap:wrap;font-family:Chivo,system-ui,sans-serif}.ds-nav-ch{text-decoration:none;color:#8E8F8B;font-size:.71rem;letter-spacing:.16em;text-transform:uppercase;padding:8px 14px;border:1px solid #63656A;border-radius:0}.ds-nav-ch:hover{color:#F2F1EC;border-color:#8E8F8B}.ds-nav-ch:focus-visible{outline:3px solid #FF2D78;outline-offset:2px}.ds-nav-ch.ds-on{background:#FF2D78;color:#141517;border-color:#FF2D78;font-weight:800}"
+    },
+    {
+      "name": "Rail Row",
+      "kind": "nav",
+      "refersTo": "rail-row",
+      "description": "One lesson in the term's input list. Default, taught, current and reading states.",
+      "html": "<div class=\"ds-rail\"><a class=\"ds-ch ds-done\" href=\"#\"><span class=\"ds-n\">04</span><span class=\"ds-t\">Twelve bars, three chords</span></a><a class=\"ds-ch\" href=\"#\"><span class=\"ds-n\">05</span><span class=\"ds-t\">Comping the changes</span></a><a class=\"ds-ch ds-now ds-reading\" href=\"#\"><span class=\"ds-n\">06</span><span class=\"ds-t\">Walking the bass</span></a></div>",
+      "css": ".ds-rail{font-family:Chivo,system-ui,sans-serif;background:#111214;padding:10px 0}.ds-ch{display:grid;grid-template-columns:34px 1fr;gap:11px;padding:6px 22px;align-items:baseline;text-decoration:none;color:#F2F1EC;border-radius:0}.ds-ch:hover{background:rgba(242,241,236,.05)}.ds-ch:focus-visible{outline:3px solid #FF2D78;outline-offset:2px}.ds-ch .ds-n{font-family:\"Chivo Mono\",ui-monospace,monospace;font-variant-numeric:tabular-nums;font-size:.76rem;color:#8E8F8B}.ds-ch .ds-t{font-size:.9rem;line-height:1.3}.ds-ch.ds-done .ds-t,.ds-ch.ds-done .ds-n{color:#9A9B97}.ds-ch.ds-done .ds-n::after{content:\" \\00d7\"}.ds-ch.ds-now{margin:3px 10px;padding:9px 12px;background:#FF2D78;color:#141517;clip-path:polygon(0 8%,3% 0,7% 10%,11% 1%,100% 0,98.5% 11%,100% 94%,96% 100%,92% 90%,88% 100%,0 100%,1.8% 88%)}.ds-ch.ds-now .ds-n,.ds-ch.ds-now .ds-t{color:#141517;font-weight:800}.ds-ch.ds-reading{box-shadow:inset 4px 0 0 #F2F1EC}.ds-ch.ds-now.ds-reading{box-shadow:inset 4px 0 0 #141517}"
+    },
+    {
+      "name": "Taped Plate",
+      "kind": "card",
+      "refersTo": "plate",
+      "description": "The reading surface: a white sheet taped to the floor at both top corners, with a stencil title block and the ruled meta row.",
+      "html": "<div class=\"ds-plate-wrap\"><span class=\"ds-tape ds-tl\"></span><span class=\"ds-tape ds-tr\"></span><div class=\"ds-plate\"><div class=\"ds-titleblock\"><p class=\"ds-of\">Input 06 of 30 &middot; On the desk</p><h1 class=\"ds-h1\">Walking the bass</h1><dl class=\"ds-tbgrid\"><div><dt>Week</dt><dd>2</dd></div><div><dt>Bring</dt><dd>Your instrument</dd></div><div><dt>Outcome</dt><dd>MU5-PER-01</dd></div></dl></div></div></div>",
+      "css": ".ds-plate-wrap{position:relative;max-width:620px;font-family:Chivo,system-ui,sans-serif}.ds-tape{position:absolute;width:124px;height:32px;background:#FF2D78;clip-path:polygon(0 12%,4% 0,9% 14%,14% 2%,100% 0,97% 13%,100% 92%,95% 100%,90% 88%,85% 100%,0 100%,3% 86%)}.ds-tl{left:-10px;top:-13px;transform:rotate(-3.5deg)}.ds-tr{right:-10px;top:-13px;transform:rotate(2.5deg)}.ds-plate{background:#F4F3EE;color:#141517;padding-bottom:32px;clip-path:polygon(0 .7%,.8% 0,1.7% .8%,2.6% 0,100% 0,99.5% .9%,100% 99.1%,99.2% 100%,98.3% 99.2%,97.4% 100%,0 100%,.4% 99.1%)}.ds-titleblock{padding:34px 34px 0;border-bottom:2px solid #141517}.ds-of{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#5D5F63;margin:0 0 14px}.ds-h1{font-family:\"Saira Stencil One\",Chivo,sans-serif;font-weight:400;font-size:clamp(2.1rem,4.6vw,3.7rem);line-height:.96;text-transform:uppercase;max-width:15ch;margin:0}.ds-tbgrid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(20,21,23,.18);margin:26px 0 0}.ds-tbgrid div{padding:11px 14px 13px 0;border-right:1px solid rgba(20,21,23,.18)}.ds-tbgrid div:last-child{border-right:0;padding-right:0}.ds-tbgrid dt{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:#5D5F63;margin-bottom:4px}.ds-tbgrid dd{font-size:.88rem;font-weight:600;margin:0}"
+    },
+    {
+      "name": "Plate Button",
+      "kind": "button",
+      "refersTo": "plate-button",
+      "description": "The primary action on the sheet: solid ink, sheet-coloured label caps. Its alt sibling is a hairline outline.",
+      "html": "<p class=\"ds-deskgo\"><a class=\"ds-btn\" href=\"#\">Open input 06</a><a class=\"ds-btn ds-alt\" href=\"#\">All 30 inputs</a></p>",
+      "css": ".ds-deskgo{display:flex;gap:12px;flex-wrap:wrap;align-items:center;background:#F4F3EE;padding:22px 30px;margin:0;font-family:Chivo,system-ui,sans-serif}.ds-btn{text-decoration:none;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800;padding:12px 20px;background:#141517;color:#F4F3EE;border-radius:0}.ds-btn:hover{background:#2C2E31}.ds-btn:focus-visible{outline:3px solid #FF2D78;outline-offset:2px}.ds-btn.ds-alt{background:none;color:#141517;border:1px solid rgba(20,21,23,.18)}.ds-btn.ds-alt:hover{background:none;border-color:#141517}"
+    },
+    {
+      "name": "Floor Button",
+      "kind": "button",
+      "refersTo": "floor-button",
+      "description": "The row of links under the plate, on the black floor. Hairline outline only; the floor never carries a filled button.",
+      "html": "<div class=\"ds-underplate\"><span class=\"ds-lbl\">Also</span><a class=\"ds-fbtn\" href=\"#\">The blueprint</a><a class=\"ds-fbtn\" href=\"#\">Previous input</a><a class=\"ds-fbtn\" href=\"#\">Next input</a></div>",
+      "css": ".ds-underplate{background:#111214;display:flex;gap:14px;align-items:center;flex-wrap:wrap;padding:18px 0;font-family:Chivo,system-ui,sans-serif}.ds-lbl{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:#8E8F8B;font-weight:800}.ds-fbtn{text-decoration:none;font-size:.84rem;padding:10px 15px;border:1px solid #63656A;color:#F2F1EC;border-radius:0}.ds-fbtn:hover{border-color:#8E8F8B}.ds-fbtn:focus-visible{outline:3px solid #FF2D78;outline-offset:2px}"
+    },
+    {
+      "name": "Multicore Strip",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The term's lessons as one line of equal-width channels running out of the sheet's downstage edge, with a week ruler on the same geometry.",
+      "html": "<div class=\"ds-core-wrap\"><span class=\"ds-rlbl\">Week</span><div class=\"ds-core\"><a class=\"ds-cell ds-done\" href=\"#\"><span class=\"ds-n\">01</span></a><a class=\"ds-cell ds-done\" href=\"#\"><span class=\"ds-n\">02</span></a><a class=\"ds-cell ds-done ds-at\" href=\"#\"><span class=\"ds-n\">03</span></a><a class=\"ds-cell ds-now\" href=\"#\"><span class=\"ds-n\">04</span></a><a class=\"ds-cell\" href=\"#\"><span class=\"ds-n\">05</span></a><a class=\"ds-cell\" href=\"#\"><span class=\"ds-n\">06</span></a></div><div class=\"ds-ruler\"><span>1</span><span>2</span></div></div>",
+      "css": ".ds-core-wrap{--ds-core-inset:5%;padding:0 var(--ds-core-inset);position:relative;background:#111214;font-family:Chivo,system-ui,sans-serif;padding-bottom:26px}.ds-core{display:flex}.ds-cell{flex:1 1 0;min-width:0;border-right:1px solid #63656A;padding:12px 2px 15px;text-align:center;position:relative;text-decoration:none;color:#F2F1EC;display:block}.ds-cell:first-child{border-left:1px solid #63656A}.ds-cell .ds-n{font-family:\"Chivo Mono\",ui-monospace,monospace;font-variant-numeric:tabular-nums;font-size:.66rem;color:#8E8F8B;letter-spacing:.02em}.ds-cell:hover{background:rgba(242,241,236,.07)}.ds-cell:hover .ds-n{color:#F2F1EC}.ds-cell:focus-visible{outline:3px solid #FF2D78;outline-offset:2px}.ds-cell.ds-done .ds-n{color:#9A9B97}.ds-cell.ds-at::after{content:\"\";position:absolute;left:50%;bottom:6px;width:5px;height:5px;margin-left:-2.5px;background:#F2F1EC}.ds-cell.ds-done.ds-at::after{background:#9A9B97}.ds-cell.ds-now{background:#FF2D78;clip-path:polygon(0 9%,26% 0,55% 7%,78% 1%,100% 8%,100% 91%,74% 100%,46% 92%,22% 99%,0 90%)}.ds-cell.ds-now .ds-n{color:#141517;font-weight:800;font-size:.72rem}.ds-cell.ds-now.ds-at::after{background:#141517}.ds-ruler{display:flex;padding-top:8px;border-top:1px solid #63656A;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#8E8F8B}.ds-ruler span{flex:1 1 0;min-width:0;text-align:center}.ds-rlbl{position:absolute;left:0;bottom:0;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:#8E8F8B;font-weight:800}"
+    },
+    {
+      "name": "Unit Block",
+      "kind": "card",
+      "refersTo": "unit-chip",
+      "description": "One of home's four year blocks. The term colour is a chip on the unit number, never a bar; live is said by the 4px chalk keyline and by the words in the corner.",
+      "html": "<div class=\"ds-units\"><a class=\"ds-unit\" href=\"#\"><span class=\"ds-un ds-u1\">1</span><span class=\"ds-uname\">Like a Version</span><span class=\"ds-ufocus\">Performing, popular music</span><span class=\"ds-umeta\">28 inputs &middot; 10 weeks</span><span class=\"ds-upos\">Taught</span></a><a class=\"ds-unit ds-live\" href=\"#\"><span class=\"ds-un ds-u2\">2</span><span class=\"ds-uname\">Blues to Jazz</span><span class=\"ds-ufocus\">Composing and performing, jazz</span><span class=\"ds-umeta\">30 inputs &middot; 10 weeks</span><span class=\"ds-upos\">On now</span></a></div>",
+      "css": ".ds-units{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1px;background:#63656A;font-family:Chivo,system-ui,sans-serif}.ds-unit{background:#111214;padding:22px 20px 20px;text-decoration:none;color:#F2F1EC;display:grid;grid-template-rows:auto auto auto 1fr auto;gap:8px;border-top:4px solid transparent;border-radius:0}.ds-unit:hover{background:rgba(242,241,236,.05)}.ds-unit:focus-visible{outline:3px solid #FF2D78;outline-offset:2px}.ds-un{font-size:1.5rem;line-height:1;color:#141517;font-weight:800;padding:2px 11px;justify-self:start}.ds-u1{background:#E8FF3A}.ds-u2{background:#FF2D78}.ds-uname{font-size:1.16rem;line-height:1.15;font-weight:800;text-transform:uppercase;letter-spacing:-.01em}.ds-ufocus{font-size:.85rem;color:#8E8F8B;line-height:1.35}.ds-umeta{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:#8E8F8B;padding-top:6px}.ds-upos{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800;margin-top:10px;padding-top:10px;border-top:1px solid #63656A;color:#8E8F8B}.ds-unit.ds-live{border-top-color:#F2F1EC}.ds-unit.ds-live .ds-upos{color:#F2F1EC}"
+    },
+    {
+      "name": "Input Table Row",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The hub's full term list. Taught rows go chalk-past with a strike; the current row takes the 4px chalk keyline plus a marker, never a third tape fill.",
+      "html": "<table class=\"ds-inputs\"><thead><tr><th>No</th><th>Input</th><th>Code</th></tr></thead><tbody><tr class=\"ds-done\"><td class=\"ds-n\">03</td><td class=\"ds-ti\"><a href=\"#\">Twelve bars, three chords</a></td><td class=\"ds-cd\">2.4</td></tr><tr class=\"ds-now\"><td class=\"ds-n\">04</td><td class=\"ds-ti\"><a href=\"#\">Walking the bass</a></td><td class=\"ds-cd\">2.5</td></tr><tr><td class=\"ds-n\">05</td><td class=\"ds-ti\"><a href=\"#\">Comping the changes</a></td><td class=\"ds-cd\">2.6</td></tr></tbody></table>",
+      "css": ".ds-inputs{width:100%;border-collapse:collapse;font-size:.9rem;background:#111214;color:#F2F1EC;font-family:Chivo,system-ui,sans-serif}.ds-inputs th{text-align:left;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:#8E8F8B;font-weight:800;padding:8px 12px 8px 0;border-bottom:1px solid #63656A}.ds-inputs td{padding:9px 12px 9px 0;border-bottom:1px solid #63656A;vertical-align:baseline}.ds-inputs .ds-n{font-family:\"Chivo Mono\",ui-monospace,monospace;font-variant-numeric:tabular-nums;color:#8E8F8B;font-size:.78rem;white-space:nowrap}.ds-inputs .ds-cd{color:#8E8F8B;font-size:.74rem;white-space:nowrap}.ds-inputs .ds-ti a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}.ds-inputs .ds-ti a:focus-visible{outline:3px solid #FF2D78;outline-offset:2px}.ds-inputs tr.ds-done td{color:#9A9B97}.ds-inputs tr.ds-now td{box-shadow:inset 0 4px 0 #F2F1EC,inset 0 -4px 0 #F2F1EC}.ds-inputs tr.ds-now td:first-child{box-shadow:inset 4px 0 0 #F2F1EC,inset 0 4px 0 #F2F1EC,inset 0 -4px 0 #F2F1EC}.ds-inputs tr.ds-now .ds-ti{font-weight:800}.ds-inputs tr.ds-now .ds-n::after{content:\" \\25C0\";font-size:.62em;vertical-align:middle}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Plot",
+    "overview": "The stage plot and input list a band hands a sound engineer. The whole year is one room drawn from above in chalk line on a black stage floor, and every lesson is a numbered input on a list beside it. Nothing here is decorated; everything is production paperwork, which is a genre that has to survive being read in a dark room by someone with both hands full. That is the same job the site has: it is projected in a daylit classroom and operated by a teacher holding an instrument.\n\nThe system's material logic is three surfaces stacked. The floor is black and gridded, and it carries drawn line, labels and lists. The sheet is a white panel laid on the floor and taped down, and it is where sustained reading happens. The tape is one fluoro colour per term, torn at the ends, used only as fill and marker and always carrying black ink. Long white prose never sits on the black field. Colour never sits as type on the black field. Every drawn thing is one of exactly two line weights.\n\nThe world refuses two things by name. It refuses the course-site default of equal-weight lesson cards in a grid, where week one and week nine look identical, and it refuses the light paper ground shared by the three sibling teaching sites. Year 8's Tour Tee is the sharpest anti-reference because this cohort has just spent a year inside it.",
+    "keyCharacteristics": [
+      "Black stage floor with a faint 48px drawn grid; white taped panels for anything longer than a list",
+      "Two line weights only: 1px chalk hairline, 4px painted keyline",
+      "Four fluoro tape colours, one per term, always with black ink, always torn at the ends",
+      "Square corners everywhere; no shadows, no gradients, no radii",
+      "Stencil display face in three places per page and no more",
+      "Position is stated twice: by a marker or keyline and by a word, never by colour alone",
+      "No motion authored anywhere"
+    ],
+    "rules": [
+      { "name": "The Black Ink Rule", "body": "Type on a tape colour is always ink, never white, and a tape colour is never used as type on the floor. The four fluoros are fills and markers only.", "section": "colors" },
+      { "name": "The Never-Colour-Alone Rule", "body": "No state is carried by colour by itself. The current row is taped and carries the word marking the position and the channel number. A taught lesson is dimmed and struck with a glyph. The live unit is chalk-keylined and says so in its corner.", "section": "colors" },
+      { "name": "The Two Grounds Rule", "body": "A paragraph belongs on the sheet. The floor carries labels, lists, numbers, drawn line and nothing that needs sustained reading. This is the daylit-projector constraint before it is a style rule.", "section": "colors" },
+      { "name": "The Structure-Not-Texture Rule", "body": "--hair at #63656A (3.21:1) draws structure and must clear the 3:1 non-text floor; --floor-grid at rgba(242,241,236,.03) is texture and stays faint. They are separate tokens and neither may be tuned to the other. Watch item: at 3.21:1 the hub input table reads more ruled than before. If it tips toward a spreadsheet, thin the rules' extent, never dim the token back.", "section": "colors" },
+      { "name": "The Three Places Rule", "body": "The stencil face appears in exactly three places on any page: the class mark, the input list head, and the page's own subject name. On a hub the unit name occupies the slot the rail head holds elsewhere, so the count is three there too. Cited deviation from DIRECTION.md's literal list, kept because the per-page count never rises. The CSS selector that enforces it is a single rule and is not to be extended again.", "section": "typography" },
+      { "name": "The One Selector Rule", "body": "The stencil is granted by one CSS selector. Any new surface that wants the display voice takes one of the three existing slots; it does not add a fourth.", "section": "typography" },
+      { "name": "The Ghost Bracket Rule", "body": "A non-live unit is a bracket at 26% (about 2.4:1) with a 5-5 dash, not a faded rectangle. 7 to 10 percent was tried and is about 1.1:1 on this floor, which is absent rather than weak; a full ghost rectangle crosses the live sheet and turns the drawing to mud. The dash carries 'not live', not the fade. The ghost's labels are chalk-dim at 5.76:1 and are not ghosted: the line is the ghost, the label is not.", "section": "elevation" },
+      { "name": "The Keyline-Not-Tape Rule", "body": "'The one you have open' is the 4px painted chalk keyline, always: inset on the rail's reading row, top and bottom inset on the hub table's current row, a top border on home's live unit. Tape says where the class is; the keyline says where you are.", "section": "elevation" },
+      { "name": "The Torn Ends Rule", "body": "Every edge of tape is torn. A square-cut bar of gaffer colour reads as a rectangle with a colour in it, which is the card this world exists to refuse. The tear polygon is authored per size; do not reuse the 124px polygon on a 30px element.", "section": "shapes" },
+      { "name": "The Two Weights Rule", "body": "1px for what is drawn, 4px for what bounds. A third weight on the floor is a defect.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do put anything longer than a list on the sheet. Labels, numbers, drawn line and short lists live on the floor; a paragraph does not.",
+      "Do state every position and status twice: a marker or keyline plus a word. Colour is never the only carrier.",
+      "Do keep the tape budget at two acts per page. A lesson page's three strips are two acts: the corner pair holds one object down, the rail's row marks the row. A hub spends its two on the standing line and the live channel. A fourth mark is a defect.",
+      "Do draw structure at --hair (3.21:1) and leave texture at --floor-grid. If a surface reads over-ruled, shorten the rules' extent.",
+      "Do author a torn polygon per element size.",
+      "Do treat --core-inset in the stylesheet and SH_X in plots.py as one number in two files.",
+      "Do keep bring to its closed set of seven: the six instrument, log and headphone values plus 'Pens', which comes from the school's own assessment task notification and is used only where a paper is sat under examination conditions. An eighth has to be argued for.",
+      "Do self-host every face. Nothing loads from a CDN."
+    ],
+    "donts": [
+      "Don't put white type on a tape colour, or a tape colour as type on the floor.",
+      "Don't introduce a third line weight on the floor, a corner radius, a gradient, or a cast shadow.",
+      "Don't widen the stencil selector. Three places per page; a new surface takes one of the three slots.",
+      "Don't add a fourth face. Chivo and Chivo Mono are one superfamily and that is the budget.",
+      "Don't cut tape square. A square-cut bar of gaffer colour is the card this world exists to refuse.",
+      "Don't render a non-live state as a fade alone. The dash carries 'not live'; the fade only accompanies it, and ghost labels stay at full AA.",
+      "Don't dim a lesson that has no page yet. It lacks the link, not the standing.",
+      "Don't draw the room at a third scale. It is large on the hub, small in a lesson page's spec column, and absent on home.",
+      "Don't add motion. The page is operated hands-busy.",
+      "Don't add a decorative element to the eyebrow line. It survives on the argument that it is pure state."
+    ]
+  }
+}

@@ -157,12 +157,16 @@ def rail(site, term, current_no, reading_no):
 
     foot = ""
     if term.get("blueprint"):
-        items = []
-        for b in term["blueprint"]:
-            if b.get("built"):
-                items.append(f'<a href="{base}/{term["id"]}/blueprint/{b["slug"]}/">{e(b["title"])}</a>')
-            else:
-                items.append(f'<span class="soon">{e(b["title"])}<i>not on the site yet</i></span>')
+        built_sheets = [b for b in term["blueprint"] if b.get("built")]
+        waiting = [b for b in term["blueprint"] if not b.get("built")]
+        items = [f'<a href="{base}/{term["id"]}/blueprint/{b["slug"]}/">{e(b["title"])}</a>'
+                 for b in built_sheets]
+        # One line for the sheets that are not here yet, not one line each. Four
+        # repetitions of the same absence on every page of the term is the
+        # absence shouting louder than the sheets would.
+        if waiting:
+            names = ", ".join(e(b["title"]) for b in waiting)
+            items.append(f'<span class="soon">{names}<i>not on the site yet</i></span>')
         foot = f'<div class="railfoot"><b>The blueprint</b>{"".join(items)}</div>'
 
     # A <details>, not a scripted toggle: on a phone the list closes so the
@@ -193,6 +197,21 @@ def is_assessment(lesson):
     return bool(lesson.get("assessmentEvent"))
 
 
+def by(track):
+    """Who the recording is by, on its own line, but only where the meta field
+    has not already said it. Half the sets locate a track by its artist and half
+    by its era, so the two fields overlap on some rows and not others. A student
+    finding the right recording at home needs the name; a student reading
+    "The Beatles &middot; The Beatles" needs it once."""
+    artist = (track.get("artist") or "").strip()
+    meta = (track.get("meta") or "").lower()
+    if not artist:
+        return ""
+    if any(w for w in artist.lower().split() if len(w) > 2 and w in meta):
+        return ""
+    return f'<i>{e(artist)}</i>'
+
+
 def lesson_page(site, course, term, lesson, current_no):
     """comp D. The plate is the reading surface and long prose never sits on the
     black floor."""
@@ -214,6 +233,10 @@ def lesson_page(site, course, term, lesson, current_no):
     if b.get("bring"):
         meta.append(("Bring", b["bring"]))
     fields = "".join(f"<div><dt>{e(k)}</dt><dd class=\"mono\">{e(v)}</dd></div>" for k, v in meta)
+    # The row is ruled into as many cells as it has fields. A fixed five-column
+    # grid gives the assessment lessons, which carry no repertoire, one
+    # double-width cell and a rhythm that disagrees with every other page.
+    tbcols = f"tbgrid c{len(meta)}"
 
     clauses = []
     for i, c in enumerate(b["clauses"]):
@@ -228,7 +251,8 @@ def lesson_page(site, course, term, lesson, current_no):
     if b.get("plot") in PLOTS:
         spec.append(f'<div class="plot"><h4>Stage plot</h4>{PLOTS[b["plot"]]()}</div>')
     if b.get("listen"):
-        tracks = "".join(f'<div class="tr"><b>{e(t["title"])}</b><span class="mono">{e(t["meta"])}</span></div>'
+        tracks = "".join(f'<div class="tr"><span class="w"><b>{e(t["title"])}</b>{by(t)}</span>'
+                         f'<span class="mono">{e(t["meta"])}</span></div>'
                          for t in b["listen"])
         spec.append(f'<div class="blk"><h4>Listen</h4><div class="listen">{tracks}</div></div>')
     if b.get("patched"):
@@ -264,7 +288,7 @@ def lesson_page(site, course, term, lesson, current_no):
         <div class="titleblock">
           <p class="of mono">Input {n:02d} of {total} &middot; {standing}</p>
           <h1>{e(lesson['title'])}</h1>
-          <dl class="tbgrid">{fields}</dl>
+          <dl class="{tbcols}">{fields}</dl>
         </div>
         <div class="rider">
           <div class="clauses">
@@ -384,17 +408,19 @@ def term_page(site, course, term, current_no, reading_term):
 
     blueprint = ""
     if term.get("blueprint"):
-        items = "".join(
-            (f'<a href="{site["base"]}/{term["id"]}/blueprint/{b["slug"]}/">{e(b["title"])}</a>'
-             if b.get("built") else
-             f'<span class="soon">{e(b["title"])}<i>not on the site yet</i></span>')
-            for b in term["blueprint"])
-        blueprint = f'<div class="bpbar"><b>The blueprint</b><div>{items}</div></div>'
+        parts = [f'<a href="{site["base"]}/{term["id"]}/blueprint/{b["slug"]}/">{e(b["title"])}</a>'
+                 for b in term["blueprint"] if b.get("built")]
+        waiting = [b for b in term["blueprint"] if not b.get("built")]
+        if waiting:  # one line, as on the rail
+            names = ", ".join(e(b["title"]) for b in waiting)
+            parts.append(f'<span class="soon">{names}<i>not on the site yet</i></span>')
+        blueprint = f'<div class="bpbar"><b>The blueprint</b><div>{"".join(parts)}</div></div>'
 
     body = f"""<main class="termpage" id="main">
   <div class="termhead">
-    <p class="of mono">Unit {term['n']} of 4 &middot; {len(term['lessons'])} inputs &middot; {e(term['focus'])}</p>
+    <p class="of mono">Unit {term['n']} of 4 &middot; {len(term['lessons'])} inputs</p>
     <h1>{e(term['name'])}</h1>
+    <p class="focus">{e(term['focus'])}</p>
     {standing}
   </div>
 
@@ -415,7 +441,7 @@ def term_page(site, course, term, current_no, reading_term):
 
   <h2 class="listhead">Every input<i class="mono">{state}</i></h2>
   <table class="inputs">
-    <thead><tr><th>CH</th><th>Input</th><th>Content</th><th>Outcomes</th></tr></thead>
+    <thead><tr><th>CH</th><th>Input</th><th>Content</th><th class="oc">Outcomes</th></tr></thead>
     <tbody>{"".join(rows)}</tbody>
   </table>
 </main>"""

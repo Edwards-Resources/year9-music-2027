@@ -24,7 +24,13 @@
 }
 
 :root{
-  --floor:#111214; --chalk:#F2F1EC; --chalk-dim:#8E8F8B; --chalk-past:#9A9B97; --hair:#313337;
+  /* --hair is every rule and control border drawn on the floor. At #313337 it
+     was 1.48:1 and disappeared on a projector in a daylit room, which is a
+     product constraint here rather than a matter of taste. #63656A is 3.21:1,
+     over the 3:1 non-text floor, and still a chalk hairline rather than a
+     second keyline. The floor's own background grid is separate, and stays
+     faint: it is texture, not structure. */
+  --floor:#111214; --chalk:#F2F1EC; --chalk-dim:#8E8F8B; --chalk-past:#9A9B97; --hair:#63656A;
   --t1:#E8FF3A; --t2:#FF2D78; --t3:#FF6A1F; --t4:#3DFF7D;
   --sheet:#F4F3EE; --ink:#141517; --ink-dim:#5D5F63; --rule:rgba(20,21,23,.18);
   --tape:var(--t1);
@@ -131,7 +137,11 @@ a.ch:hover{background:rgba(242,241,236,.05)}
 .titleblock{padding:34px 34px 0;border-bottom:2px solid var(--ink)}
 .titleblock .of{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:14px}
 .titleblock h1{font-size:clamp(2.1rem,4.6vw,3.7rem);line-height:.96;text-transform:uppercase;max-width:15ch}
+/* Ruled into as many cells as the lesson has fields, so an assessment lesson
+   with no repertoire keeps even cells instead of one double-width one. */
 .tbgrid{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--rule);margin-top:26px}
+.tbgrid.c3{grid-template-columns:repeat(3,1fr)}
+.tbgrid.c4{grid-template-columns:repeat(4,1fr)}
 .tbgrid div{padding:11px 14px 13px 0;border-right:1px solid var(--rule)}
 .tbgrid div:last-child{border-right:0;padding-right:0}
 .tbgrid dt{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:4px}
@@ -160,8 +170,10 @@ a.ch:hover{background:rgba(242,241,236,.05)}
 .listen{border:1px solid var(--rule);padding:13px}
 .listen .tr{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-top:1px solid var(--rule);font-size:.84rem}
 .listen .tr:first-of-type{border-top:0}
-.listen .tr b{font-weight:600}
-.listen .tr span{font-size:.72rem;color:var(--ink-dim);white-space:nowrap}
+.listen .tr .w{min-width:0}
+.listen .tr b{font-weight:600;display:block}
+.listen .tr i{font-style:normal;display:block;font-size:.74rem;color:var(--ink-dim);margin-top:1px}
+.listen .tr .mono{font-size:.72rem;color:var(--ink-dim);white-space:nowrap}
 
 .keep{margin:30px 34px 0;border-top:2px solid var(--ink);padding-top:18px;font-size:1.1rem;line-height:1.35;max-width:50ch;font-weight:600}
 .keep b{display:block;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:8px;font-weight:800}
@@ -177,7 +189,11 @@ a.ch:hover{background:rgba(242,241,236,.05)}
    downstage edge: the drawing stops at that edge and the strip starts 0px
    under it, so the channels read as coming out of the room. */
 .termpage{padding:42px 40px 70px;max-width:1180px}
+/* The line above the unit name says where the unit sits in the year and how
+   many inputs it holds, and nothing else. What the unit is about reads under
+   the name, as a deck, because a description above a heading is decoration. */
 .termhead .of{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--chalk-dim);margin-bottom:14px}
+.termhead .focus{margin-top:10px;font-size:1rem;color:var(--chalk-dim)}
 .termhead h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:.98;text-transform:uppercase}
 /* No accent stripe. The tape colours are fills and markers, never a rule down
    the side of a note, and the 4px keyline bounds things rather than decorating
@@ -254,7 +270,7 @@ a.cell:hover .n{color:var(--chalk)}
 .inputs td{padding:9px 12px 9px 0;border-bottom:1px solid var(--hair);vertical-align:baseline}
 .inputs .wkrow th{padding-top:22px;color:var(--chalk-dim);border-bottom:0}
 .inputs .n{color:var(--chalk-dim);font-size:.78rem;white-space:nowrap}
-.inputs .cd,.inputs .oc{color:var(--chalk-dim);font-size:.74rem;white-space:nowrap}
+.inputs td.cd,.inputs td.oc{color:var(--chalk-dim);font-size:.74rem;white-space:nowrap}
 .inputs .ti a{text-decoration-thickness:1px;text-underline-offset:3px}
 .inputs tr.done td{color:var(--chalk-past)}
 .inputs tr.at .ti{font-weight:800}
