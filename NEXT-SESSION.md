@@ -87,22 +87,47 @@ gapfill for `check` to answer. Year 10's `build.py` has both and is the
 reference implementation, but the rendering has to be redesigned for this
 world, not ported.
 
-## The next task, and why it moved
+## The embed is done, 17 August 2026
 
-**Embed the verified repertoire.** This was filed last session as mechanical
-cleanup. It is not: **the four guides are dead without it.** A cue table whose
-timestamps cannot seek a player is a list of numbers. So the order is embed,
-then guide, then the explains.
+Commit `7e88582`, **not pushed**. All 24 site-eligible picks are in `data/` as an
+`embed` field and play in place: 35 rows across 20 lessons, 24 distinct works,
+every id re-checked live through oEmbed with every channel matching the
+register. The field is called `embed`, not `id`, matching the three sibling
+sites. The two barred excerpts stayed off the site and out of the repo.
 
-- `PRODUCT.md` names "the year's repertoire with embedded listening" as a
-  must-carry and says audio and video are embedded from their host, never
-  uploaded. `build.py` carries no `iframe` or embed code anywhere and the
-  `listen` block is a plain text list: title, artist, duration.
-- **All 26 repertoire picks across all four terms are fully verified with live
-  ids**, sitting in `Music7-10_Y9_RepertoireRegister.md`. They were deliberately
-  never written into `data/` because nothing rendered one yet.
-- The work: add an `id` field per track across all four terms' `data/`, wire a
-  player into the `listen` block in `build.py`, rebuild.
+**The name of the work is the control.** A 24px button in its own column was
+built first and cost the work's name 34px in a 240px block, which put all three
+of Term 4 input 08's titles onto two lines each. `assets/site.js` is new and is
+the only script on the site: it folds the recording into the row, one player at
+a time per block, and it takes a start time **because that is the seam the
+guide's cue table plugs into**. With scripting off the row is still a link to
+the recording. Both rulings are in `DESIGN.md`, in a rewritten listen-block
+section.
+
+Focus inside the plate is now ink rather than the term's tape, because tape on
+the sheet runs 1.01 to 1 in Term 1 and 1.20 in Term 4 and this block put the
+first focusable element on the sheet. Also in `DESIGN.md`.
+
+Three things noticed and deliberately not changed, all needing Matthew's eye
+rather than a session's judgement:
+
+- **The player is 210px wide**, inside the 240px block inside the 300px spec
+  column. It works and the recording sits under the work it names, but YouTube's
+  own controls are cramped at that size. Whether it should break out of the
+  column is a decision about the spec column, not about this block.
+- **Term 1 input 04 reads "With or Without You / U2" then "U2" again.** `by()`
+  suppresses the artist line when a word of the artist appears in the meta, but
+  only for words longer than two characters, and the guard exists to stop short
+  words matching spuriously. Pre-existing, one row.
+- **`DESIGN.md` said the listen block's mono column was a duration**; it is the
+  locating fact and always was. Corrected in passing. The register does carry a
+  verified duration for all 24, so a duration column is available if wanted.
+
+## The next task
+
+**The four guides**, then the 35 explains. The guide is what the embed was
+blocking: a cue table whose timestamps cannot seek a player is a list of
+numbers, and now they can.
 
 Two things the world already decides for the block design, before anyone opens
 the CSS:
@@ -125,7 +150,6 @@ the CSS:
   and a bank of motifs. **The triage now depends on this**: four inputs were
   rejected for an explain on the grounds that a sheet is the right artefact for
   them, so if the sheets are never built, that content is nowhere.
-- **Nothing is embedded.** See above; this is now the next task.
 - **No book-work content.** Triaged, ruled on, not written.
 
 ## Decisions waiting on Matthew
@@ -246,12 +270,8 @@ history. Matthew's call, and it is still open.
 **No model needed** to rule on the `worked` question. It is one decision and the
 argument is in this file.
 
-**Sonnet, medium** for the embedding work, which is the next task: add an `id`
-per track across all four terms' `data/`, wire a player into the `listen` block,
-rebuild. Every id is already verified and sitting in the register, so this is
-mechanical, but it gates the four guides.
-
-**Opus, medium** for designing `explain` and `guide` into this world. Neither
+**Opus, medium** for designing `explain` and `guide` into this world, which is
+the next task now the embed is in. Neither
 block type exists in `build.py`, the Year 10 versions live in a different design
 system, and this is the first block in the world that is read rather than done.
 A composition decision, not a port.
