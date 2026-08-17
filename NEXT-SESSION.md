@@ -3,18 +3,19 @@
 ## Where this stands, 17 August 2026
 
 **All three surfaces are built, all four terms are poured, the finish review is
-closed, and the book-work triage is done and ruled on. The next task is the
-embedding fix, which is now a prerequisite rather than a cleanup.**
+closed, the book-work triage is ruled on, and the repertoire is embedded. The
+next task is the `guide` and `explain` blocks, which the embed was blocking.**
 
 - Live at **https://edwards-resources.github.io/year9-music-2027/**. The live
-  site is the 17 August push; the repo has moved ahead of it since.
+  site is the 17 August push; the repo is four commits ahead of it.
 - Repo `Edwards-Resources/year9-music-2027`, public, Pages serving `main`
   `/docs`.
-- Last commit: `fcf0769 Triage the book-work gap across all 123 inputs`. **Not
-  pushed.**
+- The work commit is `7e88582 Embed the verified repertoire in the listen
+  block`, with two handoff commits above it. **None of the four pushed.**
 - Session write-ups in the vault at `projects/School Master/Session Logs/2026/`:
-  `Year 9 Lesson Depth Triage.md` (this session), `Year 9 Finish Review and
-  DESIGN.md`, and one per term pour. All linked from that folder's `_index.md`.
+  `Year 9 Repertoire Embedded and the Listen Player.md` (this session), `Year 9
+  Lesson Depth Triage.md`, `Year 9 Finish Review and DESIGN.md`, and one per
+  term pour. All linked from that folder's `_index.md`.
 
 | File | What it is |
 | --- | --- |
@@ -22,9 +23,10 @@ embedding fix, which is now a prerequisite rather than a cleanup.**
 | `DIRECTION.md` | The direction contract, the rules, the anti-references, the fonts. |
 | `DESIGN.md` | The design system as built, with every ruling and every gap. **System of record for the design.** |
 | `DESIGN-NOTES.md` | The build record for the hub and home. Says so at the top. |
-| `LESSON-DEPTH-TRIAGE.md` | **New.** Which of the 123 inputs get book-work content, and which do not. Governs the pour. |
-| `README.md` | How to build, how to author a lesson, what must never go on the site. |
+| `LESSON-DEPTH-TRIAGE.md` | Which of the 123 inputs get book-work content, and which do not. Governs the pour. |
+| `README.md` | How to build, how to author a lesson, what a `listen` track looks like, what must never go on the site. |
 | `build.py` | Reads `data/`, writes `docs/`. Standard library only. |
+| `assets/site.js` | **New.** The only script on the site. Unfolds a recording inside a listen row, and carries the seek seam the guide's cue times will use. |
 | `plots.py` | The four unit sheets at hub scale, plus the small stage plot. |
 | `tools/extract_program.py` | Pulls the lesson skeleton out of the four unit programs. |
 | `data/` | `site.json`, `course/course.json`, four `course/termN/term.json`. |
@@ -168,13 +170,19 @@ the CSS:
    with Opus.
 4. **`DIRECTION.md` and the comp D approval sidecar name Matthew**, and both are
    already in pushed history. Same question as Year 8, smaller.
-5. **Whether to push.** The repo is several commits ahead of the live site.
+5. **Whether to push.** The repo is four commits ahead of the live site, and the
+   embed is the first of those four that a class would notice.
+6. **Should the player break out of the 240px listen block?** It renders at
+   210px and YouTube's own controls are cramped there. It is a decision about
+   the spec column rather than about this block, and Matthew is the one
+   projecting it in a room. One line either way.
 
 Settled and no longer decisions: the push and history rewrite of 17 August; the
 three torn strips are two acts of taping; the `artist` field is rendered rather
 than deleted under a rule written into `DESIGN.md`; `bring` is a closed set of
 seven and the seventh is recorded with its source; the guide count and the
-A-with-promotion rule above.
+A-with-promotion rule above; the listen block's player, the name-is-the-control
+ruling and ink focus on the sheet, all three now in `DESIGN.md`.
 
 ## The leak that keeps recurring
 
@@ -231,6 +239,16 @@ history. Matthew's call, and it is still open.
   stop meaning anything.
 - **Contrast is a product constraint here, not a style preference.** Every text
   pair in use passes AA. Check every new dimmed state on the black ground.
+- **Focus is tape on the floor and ink on the sheet.** Tape on cream measures
+  1.01:1 in Term 1 and 1.20:1 in Term 4, so anything focusable inside the plate
+  needs the ink ring, which `.plate :focus-visible` already gives it. The
+  general form of that trap: **a rule can be complete for every case that
+  exists and wrong for the first new one.** An `explain` or a `guide` carrying a
+  link is the next thing to land on the sheet.
+- **`assets/site.js` is the only script and stays small.** Anything it does has
+  to work without it: the listen row is a real link to the recording first and a
+  player second, the rail is a `<details>` rather than a scripted toggle, and
+  the guide's cue times must be real `watch?t=` links before they are seeks.
 - **Two torn tape strips per page at most**, counting a corner pair as one act.
 - **The stencil face is not a heading face.** One CSS selector enforces it.
   Read as "the page's own subject name": the lesson title, the unit name, and on
@@ -271,10 +289,11 @@ history. Matthew's call, and it is still open.
 argument is in this file.
 
 **Opus, medium** for designing `explain` and `guide` into this world, which is
-the next task now the embed is in. Neither
-block type exists in `build.py`, the Year 10 versions live in a different design
-system, and this is the first block in the world that is read rather than done.
-A composition decision, not a port.
+the next task now the embed is in. Neither block type exists in `build.py`, the
+Year 10 versions live in a different design system, and this is the first block
+in the world that is read rather than done. A composition decision, not a port.
+Start with `guide`: there are only four, the player they need now exists, and
+one built guide settles the cue grammar before 35 explains commit to a shape.
 
 **Sonnet, medium** for writing the 35 explains once the blocks exist. Routine
 authoring against a settled, signed-off scope.
