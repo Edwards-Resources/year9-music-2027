@@ -43,7 +43,54 @@
         "Listening set from the repertoire register.",
         "Provisional answer sheet."
       ],
-      "enduring": "A work reflects personal and shared identities, values and experiences."
+      "enduring": "A work reflects personal and shared identities, values and experiences.",
+      "body": {
+        "lead": "We are learning how music reflects the identity and experience of the people who make it.",
+        "repertoire": "Music of Australia",
+        "bring": "Headphones",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "The question is opened rather than answered. Is a work Australian because of where it was made, who made it, what it is about, or how it sounds?"
+          },
+          {
+            "kind": "In the room",
+            "text": "Three works, one for each of those answers. Listen for what each one tells you about the people who made it."
+          },
+          {
+            "kind": "On your own",
+            "text": "Write your provisional answer and keep it. You get it handed back in Week 10 to see what moved."
+          }
+        ],
+        "criteria": [
+          "I can explain what a work reflects about the people who made it.",
+          "I can give a reason for calling a work Australian, or for not."
+        ],
+        "listen": [
+          {
+            "title": "Khe Sanh",
+            "meta": "Cold Chisel"
+          },
+          {
+            "title": "A Foreign Affair",
+            "meta": "Client Liaison"
+          },
+          {
+            "title": "Chandelier",
+            "meta": "Sia"
+          }
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Listening set, three works"
+          },
+          {
+            "n": "R2",
+            "text": "Provisional answer sheet"
+          }
+        ]
+      }
     },
     {
       "number": 2,
@@ -70,7 +117,43 @@
         "Model responses, strong and weak.",
         "AT3 criteria."
       ],
-      "enduring": "Music applies ALARM to build well-formed dot points, not paragraphs."
+      "enduring": "Music applies ALARM to build well-formed dot points, not paragraphs.",
+      "body": {
+        "lead": "We are learning to write an analytical dot point in the form a marker expects.",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "The dot point has three parts and always the same three: the feature, what it sounds like and where in the excerpt, then why it is there."
+          },
+          {
+            "kind": "In the room",
+            "text": "Terminology and structure are taught together, because a precise word in the wrong structure still loses the mark."
+          },
+          {
+            "kind": "On your own",
+            "text": "Three dot points on one short excerpt, marked live in front of you against the AT3 criteria."
+          }
+        ],
+        "criteria": [
+          "I can write a dot point with a feature, a location and a reason.",
+          "I can tell a well-formed dot point from a vague one."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "ALARM matrix"
+          },
+          {
+            "n": "R2",
+            "text": "Model responses, strong and weak"
+          },
+          {
+            "n": "R3",
+            "text": "AT3 criteria"
+          }
+        ]
+      }
     },
     {
       "number": 3,
@@ -98,7 +181,44 @@
         "AT3 criteria.",
         "Excerpt set."
       ],
-      "enduring": "An examination measures a routine that was built long before the paper."
+      "enduring": "An examination measures a routine that was built long before the paper.",
+      "body": {
+        "lead": "We are learning to analyse the elements of music under examination conditions.",
+        "repertoire": "Music of Australia",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "The weekly aural routine moves into examination format today. Excerpt played three times, one element, written response, timed."
+          },
+          {
+            "kind": "In flat.io",
+            "text": "Your aural notebook lives here all term, so every response is in one place when you revise in Week 7."
+          },
+          {
+            "kind": "In the room",
+            "text": "Responses are marked against the AT3 criteria and returned the same lesson. The real paper's timing starts now so it is ordinary by Week 8."
+          }
+        ],
+        "criteria": [
+          "I can write a response to one element in the time allowed.",
+          "I can work to the paper's timing without being reminded."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "flat.io aural notebook"
+          },
+          {
+            "n": "R2",
+            "text": "Timer and AT3 criteria"
+          },
+          {
+            "n": "R3",
+            "text": "Excerpt set"
+          }
+        ]
+      }
     },
     {
       "number": 4,
@@ -125,7 +245,44 @@
         "Melodic contour diagrams.",
         "Timer."
       ],
-      "enduring": "Precision about one element beats vagueness about four."
+      "enduring": "Precision about one element beats vagueness about four.",
+      "body": {
+        "lead": "We are learning to analyse pitch and melody precisely.",
+        "repertoire": "Music of Australia",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Pitch and melody in Australian repertoire: range, contour, the intervals that give a tune its shape, and where the melody sits in the texture."
+          },
+          {
+            "kind": "In the room",
+            "text": "The same excerpt three times with a different pitch question each time. Repeated listening only works if the target changes."
+          },
+          {
+            "kind": "On your own",
+            "text": "Two dot points on melody, written to time. Precision about one element beats vagueness about four."
+          }
+        ],
+        "criteria": [
+          "I can describe a melody's shape and range.",
+          "I can say what the melodic writing achieves."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Excerpt set"
+          },
+          {
+            "n": "R2",
+            "text": "Melodic contour diagrams"
+          },
+          {
+            "n": "R3",
+            "text": "Timer"
+          }
+        ]
+      }
     },
     {
       "number": 5,
@@ -152,7 +309,44 @@
         "Context word bank.",
         "ALARM matrix."
       ],
-      "enduring": "The meaning of a work is carried by the music, not only by the words."
+      "enduring": "The meaning of a work is carried by the music, not only by the words.",
+      "body": {
+        "lead": "We are learning to explain how a work reflects shared understandings and values.",
+        "repertoire": "Music of Australia",
+        "bring": "Headphones",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "A work examined for whose experience it carries. The lyric is the easy answer; the question is how the music carries it."
+          },
+          {
+            "kind": "In the room",
+            "text": "Identity and values discussed with care and with evidence. An opinion about a song is not yet a reading of it."
+          },
+          {
+            "kind": "On your own",
+            "text": "One dot point on a musical feature that carries the meaning. The feature, not the words."
+          }
+        ],
+        "criteria": [
+          "I can point to a musical feature that carries a work's meaning.",
+          "I can explain what the work reflects about the people in it."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Listening set"
+          },
+          {
+            "n": "R2",
+            "text": "Context word bank"
+          },
+          {
+            "n": "R3",
+            "text": "ALARM matrix"
+          }
+        ]
+      }
     },
     {
       "number": 6,
@@ -179,7 +373,51 @@
         "Room kit.",
         "Recording device."
       ],
-      "enduring": "Performing a style is applying its conventions, not only its pitches."
+      "enduring": "Performing a style is applying its conventions, not only its pitches.",
+      "body": {
+        "lead": "We are learning to interpret repertoire from a particular genre and style.",
+        "repertoire": "Music of Australia",
+        "bring": "Your instrument",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "The class band plays Great Southern Land, interpreting it rather than reproducing it, with a part matched to what you can already play."
+          },
+          {
+            "kind": "With the band",
+            "text": "Name the conventions while you are playing them. What has to be right for this to sound like what it is?"
+          },
+          {
+            "kind": "On your own",
+            "text": "The performance is recorded and played back against the original. Listen for the gap and say where it is."
+          }
+        ],
+        "criteria": [
+          "I can play in the style of the work rather than only the notes.",
+          "I can name a convention of the style I played."
+        ],
+        "listen": [
+          {
+            "title": "Great Southern Land",
+            "meta": "Icehouse"
+          }
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Charts"
+          },
+          {
+            "n": "R2",
+            "text": "Room kit"
+          },
+          {
+            "n": "R3",
+            "text": "Recording device"
+          }
+        ]
+      }
     },
     {
       "number": 7,
@@ -206,7 +444,44 @@
         "Layer diagram sheet.",
         "Timer."
       ],
-      "enduring": "Texture is countable, and counting it is where the analysis starts."
+      "enduring": "Texture is countable, and counting it is where the analysis starts.",
+      "body": {
+        "lead": "We are learning to analyse texture and tone colour precisely.",
+        "repertoire": "Music of Australia",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Texture and tone colour in three Australian works: how many layers there are, what each one is doing, and what each sound source contributes."
+          },
+          {
+            "kind": "In the room",
+            "text": "Layer by layer, with the mix isolated wherever the recording allows it. Texture is countable, and counting it is where the analysis starts."
+          },
+          {
+            "kind": "On your own",
+            "text": "Two dot points, written to time and marked against the criteria. One element each, as always."
+          }
+        ],
+        "criteria": [
+          "I can describe the layers in an excerpt.",
+          "I can say what each sound source contributes."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Excerpt set"
+          },
+          {
+            "n": "R2",
+            "text": "Layer diagram sheet"
+          },
+          {
+            "n": "R3",
+            "text": "Timer"
+          }
+        ]
+      }
     },
     {
       "number": 8,
@@ -233,7 +508,50 @@
         "Structure map sheet.",
         "Timer."
       ],
-      "enduring": "Two questions about time are not the same question."
+      "enduring": "Two questions about time are not the same question.",
+      "body": {
+        "lead": "We are learning to analyse structure and duration as separate questions.",
+        "repertoire": "Music of Australia",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "One excerpt mapped for structure: the sections, the order they come in, and how much time each one gets."
+          },
+          {
+            "kind": "In the room",
+            "text": "Then the same excerpt for duration: metre, tempo and how the piece uses time. Two questions about time are not the same question."
+          },
+          {
+            "kind": "On your own",
+            "text": "Timed writing under examination conditions, one dot point on each of the two."
+          }
+        ],
+        "criteria": [
+          "I can map an excerpt's structure.",
+          "I can describe its use of duration without repeating the structure answer."
+        ],
+        "listen": [
+          {
+            "title": "Sounds of Then",
+            "meta": "GANGgajang"
+          }
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Structure map sheet"
+          },
+          {
+            "n": "R2",
+            "text": "Timer"
+          },
+          {
+            "n": "R3",
+            "text": "AT3 criteria"
+          }
+        ]
+      }
     },
     {
       "number": 9,
@@ -260,7 +578,43 @@
         "AT3 criteria.",
         "Marked exemplars."
       ],
-      "enduring": "Understanding the criteria is faster than guessing what is wanted."
+      "enduring": "Understanding the criteria is faster than guessing what is wanted.",
+      "body": {
+        "lead": "We are learning to judge a response the way a marker judges it.",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In pairs",
+            "text": "Real responses, anonymised, marked against the AT3 criteria. Award the mark, then justify it to the person next to you."
+          },
+          {
+            "kind": "In the room",
+            "text": "What a vague response costs, shown in marks rather than described. The marker's view made visible."
+          },
+          {
+            "kind": "On your own",
+            "text": "Remark your own Week 1 response. Understanding the criteria is faster than guessing what is wanted."
+          }
+        ],
+        "criteria": [
+          "I can award a mark against the criteria.",
+          "I can justify the mark I awarded."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Anonymised responses"
+          },
+          {
+            "n": "R2",
+            "text": "AT3 criteria"
+          },
+          {
+            "n": "R3",
+            "text": "Marked exemplars"
+          }
+        ]
+      }
     },
     {
       "number": 10,
@@ -286,7 +640,39 @@
         "AT3 notification and criteria.",
         "Sample question set."
       ],
-      "enduring": "Nothing on the paper is a surprise except the excerpt."
+      "enduring": "Nothing on the paper is a surprise except the excerpt.",
+      "body": {
+        "lead": "We are learning what AT3 asks for and how the term's work prepares for it.",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "AT3 is issued today: an aural paper of about 30 minutes, sat in Week 8, and it names the elements it examines."
+          },
+          {
+            "kind": "In the room",
+            "text": "The shape of it. Objective identification items, short written answers, one partly unseen excerpt, and no extended response."
+          },
+          {
+            "kind": "On your own",
+            "text": "Map the paper against the writing you have already done. Nothing on it is a surprise except the excerpt."
+          }
+        ],
+        "criteria": [
+          "I can describe the paper's structure.",
+          "I can say what each part of it asks of me."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "AT3 notification and criteria"
+          },
+          {
+            "n": "R2",
+            "text": "Sample question set"
+          }
+        ]
+      }
     },
     {
       "number": 11,
@@ -312,7 +698,40 @@
         "School and community consultation guidance.",
         "NESA protocols material."
       ],
-      "enduring": "Protocols come before the listening, not alongside it."
+      "enduring": "Protocols come before the listening, not alongside it.",
+      "body": {
+        "lead": "We are learning the protocols that govern how we study this music.",
+        "repertoire": "Music of Australia",
+        "bring": "Headphones",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Before any listening: the protocols for studying the music of Aboriginal and Torres Strait Islander Peoples. They come first, not alongside."
+          },
+          {
+            "kind": "In the room",
+            "text": "What this class may do with the material, what it may not, and why permission and attribution are not formalities."
+          },
+          {
+            "kind": "In the room",
+            "text": "The works for this block are chosen through the school's consultation. They are named in class once that is done, and not before."
+          }
+        ],
+        "criteria": [
+          "I can state the protocols that apply here.",
+          "I can say why they exist."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "School and community consultation guidance"
+          },
+          {
+            "n": "R2",
+            "text": "NESA protocols material"
+          }
+        ]
+      }
     },
     {
       "number": 12,
@@ -338,7 +757,44 @@
         "Repertoire selected through consultation.",
         "Context material."
       ],
-      "enduring": "Understanding the protocols informs how the music is studied and interpreted."
+      "enduring": "Understanding the protocols informs how the music is studied and interpreted.",
+      "body": {
+        "lead": "We are learning to describe how Place, Country and Languages are reflected in this music.",
+        "repertoire": "Music of Australia",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Repertoire selected through the consultation, heard with last lesson's protocols already in force rather than restated as a preamble."
+          },
+          {
+            "kind": "In the room",
+            "text": "The relationship between a work and the Country it belongs to, described in the terms the community itself uses."
+          },
+          {
+            "kind": "On your own",
+            "text": "A written response, with the protocols applied to how you write it as well as to how you listened."
+          }
+        ],
+        "criteria": [
+          "I can describe how a work reflects Place, Country or Languages.",
+          "I can use the terms the community uses."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Repertoire selected through consultation"
+          },
+          {
+            "n": "R2",
+            "text": "Context material"
+          },
+          {
+            "n": "R3",
+            "text": "Glossary of the terms used"
+          }
+        ]
+      }
     },
     {
       "number": 13,
@@ -365,7 +821,44 @@
         "Attribution model.",
         "Timer."
       ],
-      "enduring": "Correct attribution is part of the analysis, not an afterthought."
+      "enduring": "Correct attribution is part of the analysis, not an afterthought.",
+      "body": {
+        "lead": "We are learning to apply respectful protocols while we analyse.",
+        "repertoire": "Music of Australia",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Extended listening from the consulted repertoire. The protocols govern how the class listens, how it discusses and how it writes."
+          },
+          {
+            "kind": "In the room",
+            "text": "Attribution practised until it is automatic: the artist, the community and the source, correctly, every time."
+          },
+          {
+            "kind": "On your own",
+            "text": "Timed writing on one element. Correct attribution is part of the analysis, not an afterthought to it."
+          }
+        ],
+        "criteria": [
+          "I can analyse this music with the protocols applied.",
+          "I can attribute a work correctly without being prompted."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Consulted repertoire"
+          },
+          {
+            "n": "R2",
+            "text": "Attribution model"
+          },
+          {
+            "n": "R3",
+            "text": "Timer"
+          }
+        ]
+      }
     },
     {
       "number": 14,
@@ -392,7 +885,50 @@
         "Context material.",
         "ALARM matrix."
       ],
-      "enduring": "Music does work in the world, and the working is audible."
+      "enduring": "Music does work in the world, and the working is audible.",
+      "body": {
+        "lead": "We are learning how music can influence and challenge ideas.",
+        "repertoire": "Music of Australia",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "One Australian work examined for what changed because of it. Music does work in the world, and the working is audible."
+          },
+          {
+            "kind": "In the room",
+            "text": "The argument and the music that carries it are separated. A song can be right about something and still be badly made."
+          },
+          {
+            "kind": "On your own",
+            "text": "Two dot points: one on a musical feature, one on the effect that feature has."
+          }
+        ],
+        "criteria": [
+          "I can explain what a work argued.",
+          "I can say how the music carried the argument."
+        ],
+        "listen": [
+          {
+            "title": "I Was Only 19",
+            "meta": "Redgum, 1983"
+          }
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Listening set"
+          },
+          {
+            "n": "R2",
+            "text": "Context material"
+          },
+          {
+            "n": "R3",
+            "text": "ALARM matrix"
+          }
+        ]
+      }
     },
     {
       "number": 15,
@@ -419,7 +955,54 @@
         "Timeline.",
         "Timer."
       ],
-      "enduring": "The same music can mean different things at different distances."
+      "enduring": "The same music can mean different things at different distances.",
+      "body": {
+        "lead": "We are learning to evaluate music's effect at more than one scale.",
+        "repertoire": "Music of Australia",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "A second work, the same question, twenty years later. The point being made is about music rather than about one song."
+          },
+          {
+            "kind": "In the room",
+            "text": "Local, national and international are three different sizes of effect, and a work can manage one of them without the others."
+          },
+          {
+            "kind": "On your own",
+            "text": "Timed writing under examination conditions. Separate a local effect from a national one and give the evidence for both."
+          }
+        ],
+        "criteria": [
+          "I can distinguish a local effect from a national one.",
+          "I can support the distinction with evidence."
+        ],
+        "listen": [
+          {
+            "title": "I Was Only 19",
+            "meta": "Redgum, 1983"
+          },
+          {
+            "title": "77%",
+            "meta": "The Herd, 2003"
+          }
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Listening set"
+          },
+          {
+            "n": "R2",
+            "text": "Timeline"
+          },
+          {
+            "n": "R3",
+            "text": "Timer"
+          }
+        ]
+      }
     },
     {
       "number": 16,
@@ -446,7 +1029,45 @@
         "Protocol checklist.",
         "Room kit."
       ],
-      "enduring": "Cultural significance and protocols apply to performing, not only to listening."
+      "enduring": "Cultural significance and protocols apply to performing, not only to listening.",
+      "body": {
+        "lead": "We are learning to apply protocols when performing this music.",
+        "repertoire": "Music of Australia",
+        "bring": "Your instrument",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Repertoire selected through the school's consultation, with the protocols applied to the performance itself and not only to the study of it."
+          },
+          {
+            "kind": "In the room",
+            "text": "What may be performed, by whom, in what setting, and what has to be asked first. Four questions, answered before anyone plays."
+          },
+          {
+            "kind": "With the band",
+            "text": "Attribution is rehearsed as part of the performance, in the same run as the music rather than tacked on at the end."
+          }
+        ],
+        "criteria": [
+          "I can say what I must check before performing this work.",
+          "I can do the checking rather than assume it has been done."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Consulted repertoire"
+          },
+          {
+            "n": "R2",
+            "text": "Protocol checklist"
+          },
+          {
+            "n": "R3",
+            "text": "Room kit"
+          }
+        ]
+      }
     },
     {
       "number": 17,
@@ -473,7 +1094,45 @@
         "Recording agreement.",
         "Room kit."
       ],
-      "enduring": "How a work is performed is part of respecting what it is."
+      "enduring": "How a work is performed is part of respecting what it is.",
+      "body": {
+        "lead": "We are learning that cultural significance changes how music should be performed.",
+        "repertoire": "Music of Australia",
+        "bring": "Your instrument",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "With the band",
+            "text": "The performance refined, with attention to what the music is for. What it is for changes how it should be played."
+          },
+          {
+            "kind": "In the room",
+            "text": "Restrictions and permissions treated as musical facts rather than administrative ones. They are part of the piece."
+          },
+          {
+            "kind": "In the room",
+            "text": "Recorded, and what the recording may be used for is agreed before the record button rather than afterwards."
+          }
+        ],
+        "criteria": [
+          "I can explain how a work's significance affects the way we play it.",
+          "I can agree the use of a recording before it is made."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Consulted repertoire"
+          },
+          {
+            "n": "R2",
+            "text": "Recording agreement"
+          },
+          {
+            "n": "R3",
+            "text": "Room kit"
+          }
+        ]
+      }
     },
     {
       "number": 18,
@@ -499,7 +1158,50 @@
         "Art music listening set from the repertoire register.",
         "Score extracts."
       ],
-      "enduring": "The concert tradition is one Australian music among several."
+      "enduring": "The concert tradition is one Australian music among several.",
+      "body": {
+        "lead": "We are learning to analyse the elements of music in Australian art music.",
+        "repertoire": "Art music",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "The notated concert tradition, written here by Australian composers working in it and against it. Kakadu runs about fifteen minutes, so we take an excerpt."
+          },
+          {
+            "kind": "In the room",
+            "text": "One work across two elements, with the terminology of the concert tradition taught as we go rather than assumed."
+          },
+          {
+            "kind": "On your own",
+            "text": "Timed writing, marked against the criteria. The concert tradition is one Australian music among several."
+          }
+        ],
+        "criteria": [
+          "I can analyse an art music work using the correct terminology.",
+          "I can write on two elements of the same work."
+        ],
+        "listen": [
+          {
+            "title": "Kakadu",
+            "meta": "Sculthorpe, 1988"
+          }
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Art music listening set"
+          },
+          {
+            "n": "R2",
+            "text": "Score extracts"
+          },
+          {
+            "n": "R3",
+            "text": "Timer"
+          }
+        ]
+      }
     },
     {
       "number": 19,
@@ -525,7 +1227,43 @@
         "Unseen excerpt verified against the repertoire register.",
         "Timer."
       ],
-      "enduring": "An unseen excerpt tests listening, which is why it cannot be a work the class has met."
+      "enduring": "An unseen excerpt tests listening, which is why it cannot be a work the class has met.",
+      "body": {
+        "lead": "We are learning to analyse a work we have never heard before.",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "The first genuinely unseen excerpt. It is checked against the register beforehand, so it is unseen in fact and not only in intention."
+          },
+          {
+            "kind": "In the room",
+            "text": "A method for an unfamiliar work: what to listen for first, second and third, and what to write down while it is still playing."
+          },
+          {
+            "kind": "On your own",
+            "text": "Full timed response, marked and returned this lesson. Nothing is gained by holding it over to next week."
+          }
+        ],
+        "criteria": [
+          "I can produce a full response to an unfamiliar excerpt.",
+          "I can produce it in the time allowed."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Unseen excerpt, checked against the register"
+          },
+          {
+            "n": "R2",
+            "text": "Timer"
+          },
+          {
+            "n": "R3",
+            "text": "AT3 criteria"
+          }
+        ]
+      }
     },
     {
       "number": 20,
@@ -552,7 +1290,43 @@
         "Context word bank.",
         "Timer."
       ],
-      "enduring": "A context claim has to be supported by the sound, not by a hunch."
+      "enduring": "A context claim has to be supported by the sound, not by a hunch.",
+      "body": {
+        "lead": "We are learning to write about context in the form an examination expects.",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Context in examination form: what the excerpt suggests about style, culture, history or society, in correct terminology and without invention."
+          },
+          {
+            "kind": "In the room",
+            "text": "A defensible inference and a guess look much the same on the page. Marked examples show what actually separates them."
+          },
+          {
+            "kind": "On your own",
+            "text": "Timed writing on context only. A context claim has to be supported by the sound, not by a hunch."
+          }
+        ],
+        "criteria": [
+          "I can write a context statement supported by what I heard.",
+          "I can tell an inference from a guess in my own writing."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Marked examples"
+          },
+          {
+            "n": "R2",
+            "text": "Context word bank"
+          },
+          {
+            "n": "R3",
+            "text": "Timer"
+          }
+        ]
+      }
     },
     {
       "number": 21,
@@ -579,7 +1353,43 @@
         "Timer.",
         "Answer booklet."
       ],
-      "enduring": "Technique is worth marks that knowledge alone does not collect."
+      "enduring": "Technique is worth marks that knowledge alone does not collect.",
+      "body": {
+        "lead": "We are learning the technique that makes the paper survivable.",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Reading the question, budgeting the time, and using the playings for different jobs rather than doing the same thing three times."
+          },
+          {
+            "kind": "In the room",
+            "text": "What to do when the first playing produces nothing, and how to recover on the second. It happens to everybody."
+          },
+          {
+            "kind": "On your own",
+            "text": "The full practice paper begun under timing. Technique is worth marks that knowledge alone does not collect."
+          }
+        ],
+        "criteria": [
+          "I can budget my time across the paper.",
+          "I can use each playing for a different purpose."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Practice paper"
+          },
+          {
+            "n": "R2",
+            "text": "Answer booklet"
+          },
+          {
+            "n": "R3",
+            "text": "Timer"
+          }
+        ]
+      }
     },
     {
       "number": 22,
@@ -605,7 +1415,39 @@
         "Practice paper and marking guideline.",
         "Timer."
       ],
-      "enduring": "The last rehearsal is for finding the gap, not for confirming the strengths."
+      "enduring": "The last rehearsal is for finding the gap, not for confirming the strengths.",
+      "body": {
+        "lead": "We are learning to find and close our own gaps before the real paper.",
+        "bring": "Pens",
+        "clauses": [
+          {
+            "kind": "On your own",
+            "text": "The final practice paper, sat under full conditions. Treat it as the paper, because that is the only way it is worth anything."
+          },
+          {
+            "kind": "In pairs",
+            "text": "Marked in class against the guideline. The two questions that cost the class the most marks are retaught on the spot."
+          },
+          {
+            "kind": "On your own",
+            "text": "One line on what you will do differently on the day. The last rehearsal is for finding the gap, not for confirming the strengths."
+          }
+        ],
+        "criteria": [
+          "I can identify my weakest question type.",
+          "I can say how I will handle it in the paper."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Practice paper and marking guideline"
+          },
+          {
+            "n": "R2",
+            "text": "Timer"
+          }
+        ]
+      }
     },
     {
       "number": 23,
@@ -632,7 +1474,43 @@
         "Timer.",
         "Examination seating."
       ],
-      "enduring": "The paper measures the routine, and the routine has been running since Week 1."
+      "enduring": "The paper measures the routine, and the routine has been running since Week 1.",
+      "body": {
+        "lead": "We are learning to evaluate how the elements are manipulated and combined under examination conditions.",
+        "bring": "Pens",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "AT3 is sat today. About 30 minutes plus five minutes reading time, examination seating, closed book, no notes and no devices."
+          },
+          {
+            "kind": "On your own",
+            "text": "Each excerpt is played more than once with writing time between playings. You may annotate the paper while it plays."
+          },
+          {
+            "kind": "Assessed",
+            "text": "Marked against the criteria you were issued in Week 4. Answer every question; an empty line cannot earn anything."
+          }
+        ],
+        "criteria": [
+          "I can complete the paper in the time allowed.",
+          "I can write a response to every question."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "AT3 paper, audio and answer booklet"
+          },
+          {
+            "n": "R2",
+            "text": "Examination seating"
+          },
+          {
+            "n": "R3",
+            "text": "Timer"
+          }
+        ]
+      }
     },
     {
       "number": 24,
@@ -658,7 +1536,39 @@
         "The paper and its audio.",
         "Whiteboard."
       ],
-      "enduring": "The debrief is worth more than the mark if it happens the same week."
+      "enduring": "The debrief is worth more than the mark if it happens the same week.",
+      "body": {
+        "lead": "We are learning from the paper while it is still fresh.",
+        "bring": "Headphones and log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Debrief while the paper is still in your head. Which excerpt was hardest, and what would you have wanted to practise more?"
+          },
+          {
+            "kind": "In the room",
+            "text": "The unseen excerpt replayed and analysed properly, with no marks attached to it this time."
+          },
+          {
+            "kind": "On your own",
+            "text": "Your notes feed the planning for Term 4 and for Year 10. A debrief this week is worth more than the mark."
+          }
+        ],
+        "criteria": [
+          "I can say which question type cost me marks.",
+          "I can say why it cost me them."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "The paper and its audio"
+          },
+          {
+            "n": "R2",
+            "text": "Whiteboard"
+          }
+        ]
+      }
     },
     {
       "number": 25,
@@ -685,7 +1595,50 @@
         "Instrument range charts.",
         "Process log."
       ],
-      "enduring": "Arranging is a decision about purpose, audience and forces."
+      "enduring": "Arranging is a decision about purpose, audience and forces.",
+      "body": {
+        "lead": "We are learning to arrange an existing work for a different purpose and audience.",
+        "repertoire": "Music of Australia",
+        "bring": "Process log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "An Australian work from the term's repertoire, arranged for the people and the instruments actually in this room."
+          },
+          {
+            "kind": "In the room",
+            "text": "What changes when the forces change: register, texture, who carries the melody, and what gets lost on the way."
+          },
+          {
+            "kind": "On your own",
+            "text": "Draft the arrangement plan and log it. Arranging is a decision about purpose, audience and forces."
+          }
+        ],
+        "criteria": [
+          "I can plan an arrangement that suits the players in this room.",
+          "I can say what my arrangement loses as well as what it gains."
+        ],
+        "listen": [
+          {
+            "title": "Great Southern Land",
+            "meta": "Icehouse"
+          }
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Charts"
+          },
+          {
+            "n": "R2",
+            "text": "Instrument range charts"
+          },
+          {
+            "n": "R3",
+            "text": "Process log"
+          }
+        ]
+      }
     },
     {
       "number": 26,
@@ -712,7 +1665,44 @@
         "Consultation guidance.",
         "Process log."
       ],
-      "enduring": "Some material may be studied and not adapted, and knowing the difference is the skill."
+      "enduring": "Some material may be studied and not adapted, and knowing the difference is the skill.",
+      "body": {
+        "lead": "We are learning to apply protocols when we adapt somebody else's music.",
+        "repertoire": "Music of Australia",
+        "bring": "Process log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Significance and protocols applied to arranging. Some material may be studied and not adapted, and knowing the difference is the skill."
+          },
+          {
+            "kind": "In the room",
+            "text": "Permission, attribution and intellectual property in a real case rather than in the abstract."
+          },
+          {
+            "kind": "On your own",
+            "text": "Your plan is checked against the protocols before any more work goes into it."
+          }
+        ],
+        "criteria": [
+          "I can check my arrangement against the protocols.",
+          "I can say what I may not change."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Protocol checklist"
+          },
+          {
+            "n": "R2",
+            "text": "Consultation guidance"
+          },
+          {
+            "n": "R3",
+            "text": "Process log"
+          }
+        ]
+      }
     },
     {
       "number": 27,
@@ -739,7 +1729,44 @@
         "Draft parts.",
         "Process log."
       ],
-      "enduring": "An arrangement is a hypothesis until somebody plays it."
+      "enduring": "An arrangement is a hypothesis until somebody plays it.",
+      "body": {
+        "lead": "We are learning to test an arrangement by playing it.",
+        "bring": "Instrument and log",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "With the band",
+            "text": "First draft played in the room, badly, and fixed in front of everybody. An arrangement is a hypothesis until somebody plays it."
+          },
+          {
+            "kind": "In the room",
+            "text": "The gap between the plan and the sound is found by ear, not by reading the parts again."
+          },
+          {
+            "kind": "On your own",
+            "text": "Log what changed the moment you first heard it. That is the entry worth having."
+          }
+        ],
+        "criteria": [
+          "I can identify what is not working once I hear it.",
+          "I can fix one of those things before the next draft."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Room kit"
+          },
+          {
+            "n": "R2",
+            "text": "Draft parts"
+          },
+          {
+            "n": "R3",
+            "text": "Process log"
+          }
+        ]
+      }
     },
     {
       "number": 28,
@@ -766,7 +1793,44 @@
         "Revised parts.",
         "Running order."
       ],
-      "enduring": "The second draft is where the arrangement becomes playable."
+      "enduring": "The second draft is where the arrangement becomes playable.",
+      "body": {
+        "lead": "We are learning to refine an arrangement through rehearsal.",
+        "bring": "Instrument and printed parts",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "With the band",
+            "text": "Second draft rehearsed with the fixes from draft one applied. Balance, entries and endings, the same three as Term 1."
+          },
+          {
+            "kind": "In the room",
+            "text": "Final parts printed and the running order set. The second draft is where an arrangement becomes playable."
+          },
+          {
+            "kind": "On your own",
+            "text": "Mark the roadmap on your own part, so that nobody is counting bars in the performance."
+          }
+        ],
+        "criteria": [
+          "I can bring my arrangement to a standard the class can perform.",
+          "I can rehearse a fix rather than describe one."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Room kit"
+          },
+          {
+            "n": "R2",
+            "text": "Revised parts"
+          },
+          {
+            "n": "R3",
+            "text": "Running order"
+          }
+        ]
+      }
     },
     {
       "number": 29,
@@ -793,7 +1857,45 @@
         "Recording device.",
         "Attribution notes."
       ],
-      "enduring": "Presenting the reasoning is part of presenting the work."
+      "enduring": "Presenting the reasoning is part of presenting the work.",
+      "body": {
+        "lead": "We are learning to interpret and present a work we have arranged.",
+        "repertoire": "Music of Australia",
+        "bring": "Your instrument",
+        "plot": "band",
+        "clauses": [
+          {
+            "kind": "With the band",
+            "text": "Arrangements performed to the class, unmarked, with the attribution stated out loud before each one."
+          },
+          {
+            "kind": "In the room",
+            "text": "One sentence from each arranger on what you changed and why. Presenting the reasoning is part of presenting the work."
+          },
+          {
+            "kind": "On your own",
+            "text": "Recorded for your process log and for the evidence file."
+          }
+        ],
+        "criteria": [
+          "I can present my arrangement.",
+          "I can explain one decision in it."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Room kit"
+          },
+          {
+            "n": "R2",
+            "text": "Recording device"
+          },
+          {
+            "n": "R3",
+            "text": "Attribution notes"
+          }
+        ]
+      }
     },
     {
       "number": 30,
@@ -820,7 +1922,43 @@
         "AT3 criteria.",
         "Process log."
       ],
-      "enduring": "Feedback that does not produce a rewrite has not been used."
+      "enduring": "Feedback that does not produce a rewrite has not been used.",
+      "body": {
+        "lead": "We are learning to use examination feedback to improve the next piece of writing.",
+        "bring": "Process log",
+        "clauses": [
+          {
+            "kind": "In the room",
+            "text": "Marked papers back with written feedback. Read it against the criteria rather than against the mark."
+          },
+          {
+            "kind": "On your own",
+            "text": "Write a context response again on the excerpt you did worst on, and put the two side by side."
+          },
+          {
+            "kind": "In the room",
+            "text": "The term closes by reading back the answer you wrote in Week 1, and by naming what Term 4 needs: the writing turns into a rationale."
+          }
+        ],
+        "criteria": [
+          "I can rewrite a weak response.",
+          "I can show what improved in the rewrite."
+        ],
+        "patched": [
+          {
+            "n": "R1",
+            "text": "Marked papers"
+          },
+          {
+            "n": "R2",
+            "text": "AT3 criteria"
+          },
+          {
+            "n": "R3",
+            "text": "Process log"
+          }
+        ]
+      }
     }
   ]
 }
