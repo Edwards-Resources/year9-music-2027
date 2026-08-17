@@ -2,30 +2,27 @@
 
 ## Where this stands, 17 August 2026
 
-**All three surfaces are built, all four terms are poured, and the finish review
-is closed. The site is 123 of 123 inputs and the build is finished by its own
-contract's definition.**
+**All three surfaces are built, all four terms are poured, the finish review is
+closed, and the book-work triage is done and ruled on. The next task is the
+embedding fix, which is now a prerequisite rather than a cleanup.**
 
-- Live at **https://edwards-resources.github.io/year9-music-2027/**. Pushed and
-  checked against the live URL on 17 August 2026: home, `term3/index.html` and
-  `term3/07/index.html` all return 200. All four terms are live and complete.
+- Live at **https://edwards-resources.github.io/year9-music-2027/**. The live
+  site is the 17 August push; the repo has moved ahead of it since.
 - Repo `Edwards-Resources/year9-music-2027`, public, Pages serving `main`
   `/docs`.
-- Last pushed commit: `482b24e Record the history rewrite and the push in the
-  handoff`. History from `2b40718` to `5d9f05e` was rewritten before pushing to
-  take an artist name out of one commit; see the leak note below.
-- Session write-up in the vault at
-  `projects/School Master/Session Logs/2026/Year 9 Finish Review and DESIGN.md`,
-  linked from that folder's `_index.md`.
-- Session write-up in the vault at
-  `projects/School Master/Session Logs/2026/Year 9 Term 3 Content Pour.md`,
-  linked from that folder's `_index.md`.
+- Last commit: `fcf0769 Triage the book-work gap across all 123 inputs`. **Not
+  pushed.**
+- Session write-ups in the vault at `projects/School Master/Session Logs/2026/`:
+  `Year 9 Lesson Depth Triage.md` (this session), `Year 9 Finish Review and
+  DESIGN.md`, and one per term pour. All linked from that folder's `_index.md`.
 
 | File | What it is |
 | --- | --- |
 | `PRODUCT.md` | Product truth. |
 | `DIRECTION.md` | The direction contract, the rules, the anti-references, the fonts. |
-| `DESIGN-NOTES.md` | What the hub and home are, what was ruled, what is still open. |
+| `DESIGN.md` | The design system as built, with every ruling and every gap. **System of record for the design.** |
+| `DESIGN-NOTES.md` | The build record for the hub and home. Says so at the top. |
+| `LESSON-DEPTH-TRIAGE.md` | **New.** Which of the 123 inputs get book-work content, and which do not. Governs the pour. |
 | `README.md` | How to build, how to author a lesson, what must never go on the site. |
 | `build.py` | Reads `data/`, writes `docs/`. Standard library only. |
 | `plots.py` | The four unit sheets at hub scale, plus the small stage plot. |
@@ -33,145 +30,90 @@ contract's definition.**
 | `data/` | `site.json`, `course/course.json`, four `course/termN/term.json`. |
 | `docs/` | Build output. Generated, never edited by hand. |
 | `.impeccable/mocks/comp-d-thedesk.html` | Comp D, approved. Governs the lesson page only. |
-| `DESIGN.md` | The design system as built, with every ruling and every gap. Written at the finish review, 17 August 2026. |
 
-## What the Term 3 pour built, the session before the review
+## What the triage decided
 
-### Term 3 poured
+Read `LESSON-DEPTH-TRIAGE.md` in full before writing anything. The short version:
 
-**30 bodies, so every input of every term now has a page.** The house style is
-unchanged. Where Term 3 sits against the three terms that set it:
+**76 of 123 inputs are untouched** and stay lesson plans. Every practice,
+rehearsal, performing, workshop, feedback, reflection, logging, assessment
+sitting and issue-the-task lesson. Those pages were never broken.
 
-- **90 clauses, mean 19.6 words**, against 21.2 across the other three. Three
-  clauses on every page, two success criteria on every page, two or three
-  patched-in rows, as everywhere else.
-- **Leads mean 12.2 words** against 12.5. Most are the program's learning
-  intention verbatim, which is what the other terms do too.
-- **`Assessed` is spent once**, on input 23, the only lesson where marks are
-  taken. Same reading as Term 4: the practice paper in input 22 is sat under
-  full conditions but is not a mark, so it does not get it.
-- **`plot: band` is on six lessons**, the ones where the room is actually a band
-  on the floor: the Week 2 performance, the two Week 6 performance lessons and
-  the three arrangement workshops. Terms 1 and 2 were at 15 and 14, Term 4 at 1.
-- **`In flat.io` is on one clause.** The unit names flat.io once, as the aural
-  notebook that holds the weekly routine. Terms 1 and 2 together carried 16 and
-  Term 4 carried 13, but this is a paper-and-pen examination term and writing
-  more would be describing a different room.
-- **Seven `listen` blocks, ten tracks.** Against 13 blocks and 22 tracks across
-  the other three terms.
+| | Inputs | `explain` A | `explain` B | `guide` |
+| --- | --- | --- | --- | --- |
+| Term 1 | 33 | 7 | 5 | 1 |
+| Term 2 | 30 | 7 | 3 | 1 |
+| Term 3 | 30 | 11 | 4 | 1 |
+| Term 4 | 30 | 9 | 1 | 1 |
+| **Total** | **123** | **34** | **13** | **4** |
 
-### The repertoire is now fully verified
+A-only is about **8,500 words**; A-and-B about 11,750. Year 10 ran 12 explains
+across 28 inputs, which is 43 percent, so both options here are tighter per
+input than the precedent.
 
-**All nine outstanding Term 3 picks went the full order**: Apple explicitness
-flag, then oEmbed for a live id on the right channel, then duration. All nine
-came back clean and the ids are in the repertoire register, off this repo. Six
-things came out of it that are worth carrying:
+**Matthew ruled, 17 August:**
 
-1. **Two titles in the register were wrong** and are corrected. One was missing
-   its article and its feature credit; one had a singular where the released
-   title is plural. Both were caught by the Apple lookup, which is an argument
-   for doing the explicitness check first rather than treating it as a
-   formality.
-2. **Three of the nine sit on `- Topic` channels** where the official channel
-   carries only an edit, a live version or a remix. Recorded with the reason
-   each time, as the three poured terms already do.
-3. **One sits on a label channel**, the band's own, which is the same reading as
-   the Term 4 pick that sits on a film label's channel.
-4. **The Week 6 art music pick's Topic channel is the conductor's**, not the
-   orchestra's, which is how the auto-generated channels credit that recording.
-   The duration matches the Apple master to the second, so it is the right
-   recording under a surprising name. A second conductor's reading is recorded
-   beside it in case the other is wanted.
-5. **One track is not flagged by Apple but is pointed political writing**, and
-   the Week 5 lesson is built on exactly that. The flag is recorded as what it
-   is, along with a note that Matthew should hear it through before Week 5
-   rather than treat a clean flag as the whole answer.
-6. **The ninth pick was already verified**, but its record lived only in the
-   register's Section 3 beside the ruling that freed the artist, which read from
-   the forward table as an unverified pick. It is written out in both places now
-   and was re-checked live today.
+1. **Four guides confirmed**, one per term: T1 #04, T2 #02, T3 #14, T4 #02.
+2. **A only, with individual Bs promoted where a lesson really needs it.** The
+   gate, so it cannot quietly reinflate to 47: **promote a B only when writing
+   an A explain hits content that is not there** - a specific dependency, not a
+   preference - and **name every promotion in the commit message** beside the A
+   explain that forced it.
+3. **T3 #14 is promoted before starting**, making it 35. It was the only one of
+   the four guide lessons whose explain was marked B, which was an
+   inconsistency in the triage rather than a judgement.
 
-The register generator is `School Master/Tools/y9_repertoire_register.py` and it
-has been re-run, so `Music7-10_Y9_RepertoireRegister.md` is current.
+Most likely to be promoted once writing starts, on current reading: **T2 #15**
+(drum notation, since Part A requires writing a drum part) and **T1 #01** (the
+four ensemble roles, which three later explains lean on).
 
-### The two barred works
+## The one question still open
 
-**Neither is named on any page, and the count of barred works has not changed.**
-Both are unseen excerpts, so naming them on a page the class can read is the one
-thing that destroys them. They live in the register off this repo and that is
-still the only place they are written down. **Do not copy them into a note here.**
+**Does Year 9 get a `worked` block as well?** Asked and explained; the session
+ended before it was ruled on. It is not more exposition: it is one exam
+question, one full-mark answer, the reasoning broken into ALARM rungs, and **a
+zero-mark answer that looks fine and is not**. The zero answer is the half that
+does the work, and the whole block is cheaper than an explain, about 150 words.
 
-Their absence is not silent. Input 19 says the excerpt is checked against the
-register beforehand so that it is unseen in fact and not only in intention, and
-input 23 describes the paper without describing what is on it. Neither page
-carries a `repertoire` field, because naming even the area narrows the field for
-a student reading ahead.
+Three inputs want one instead of 250 words of prose, and in all three the
+lesson already contains a worked example that currently only happens out loud:
 
-### The Weeks 4 to 6 block, written without filling it
+- **T3 #09**, students mark real anonymised responses and justify the mark
+- **T4 #19**, a strong rationale read and marked, then a weak one
+- **T1 #26**, a model log entry written together, then a weak one improved
 
-The block has no named repertoire because the selection goes through the
-school's consultation and has not been made. The pages say so, in the student's
-own reading, on the page where it belongs: input 11's third clause says the
-works are chosen through the school's consultation and are named in class once
-that is done, and not before. Inputs 12, 13, 16, 17 and 26 then refer to "the
-consulted repertoire" rather than working around a hole.
+Recommendation on file: **yes to `worked`, no to `check`**, since Year 9 has no
+gapfill for `check` to answer. Year 10's `build.py` has both and is the
+reference implementation, but the rendering has to be redesigned for this
+world, not ported.
 
-That is a teaching fact rather than an apology, and it is one the unit program
-already makes: protocols come before the listening, and the consultation is part
-of the protocols. None of the six pages carries a `listen` block, because there
-is nothing to name yet. When Matthew makes the selection, those pages gain
-`listen` blocks and nothing else about them needs to change.
+## The next task, and why it moved
 
-### One new value in a closed set
+**Embed the verified repertoire.** This was filed last session as mechanical
+cleanup. It is not: **the four guides are dead without it.** A cue table whose
+timestamps cannot seek a player is a list of numbers. So the order is embed,
+then guide, then the explains.
 
-**`bring: "Pens"` is new**, and it is on exactly two pages: the final practice
-paper and AT3 itself. The previous six values are all instrument, log or
-headphones, which are the right answers for a performing or composing term and
-the wrong answer for a supervised written paper. The words are not invented:
-the AT3 notification says "Bring pens. No notes, no devices." So the set is
-seven now, the seventh comes from the school's own task notification, and it is
-used only where a paper is sat under examination conditions.
+- `PRODUCT.md` names "the year's repertoire with embedded listening" as a
+  must-carry and says audio and video are embedded from their host, never
+  uploaded. `build.py` carries no `iframe` or embed code anywhere and the
+  `listen` block is a plain text list: title, artist, duration.
+- **All 26 repertoire picks across all four terms are fully verified with live
+  ids**, sitting in `Music7-10_Y9_RepertoireRegister.md`. They were deliberately
+  never written into `data/` because nothing rendered one yet.
+- The work: add an `id` field per track across all four terms' `data/`, wire a
+  player into the `listen` block in `build.py`, rebuild.
 
-## A leak that was settled before pushing
+Two things the world already decides for the block design, before anyone opens
+the CSS:
 
-**Done, 17 August 2026.** One of the two barred works (the Week 7 excerpt) was
-named by artist in the commit that first recorded the Term 2 repertoire
-verification, in a sentence about the verification record rather than about the
-work itself. It was never in `docs/`, so it was never served. The commit was
-rewritten with `git rebase -i` (the artist reference replaced with
-"the barred-work rows"), the whole 14-commit stack was replayed on top of it,
-and the rewritten history was checked with `git log -p | grep` before pushing:
-zero hits for the artist's name or the work's title anywhere in the pushed
-history. All 15 commits, `2b40718` through `5d9f05e`, are now pushed and live.
+- An `explain` is sustained prose, and **long white prose never sits on the
+  black field**, so it sits on the sheet. It is the first block in this world
+  that is **read rather than done**, so it cannot take a clause `kind`.
+- A `guide`'s timestamps are counts, and counts here are mono, like the input
+  numbers on the rail. That grammar already exists.
 
-The general lesson, recorded by two sessions running now: the handoff file is
-the thing that leaks, because it is the only file in this repo that discusses
-what must not be on the site. Sweep it hardest, every time, before committing.
-
-## The finish review, 17 August 2026
-
-**Done. `DESIGN.md` is written and the contract's FINISH block is satisfied.**
-The review ran fresh against comp D, the contract and `PRODUCT.md`, and closed at
-"fix". Six defects were fixed and rebuilt, three rulings were taken and recorded,
-one item is left for Matthew. It is all in the commit message of `8214b06` and in
-`DESIGN.md`; the short version:
-
-- `--hair` went from 1.48:1 to 3.21:1, which closes the oldest open question in
-  this repo. The meta row is now ruled to its field count. The `artist` field is
-  rendered rather than deleted, but only where `meta` has not already said it.
-  The four unbuilt blueprint sheets are one line instead of four dead labels.
-  The hub's description moved below the unit name. The Outcomes header hides
-  with its column at 390. The small stage plot's label no longer overprints a
-  monitor wedge.
-- **Mobile is proven at 390 for the first time**: `scrollWidth` equals
-  `clientWidth` on all three surfaces. Note for whoever captures next: Chrome
-  headless on macOS will not render below about 400px wide, so a
-  `--window-size=390` screenshot is a wider layout cropped, not a mobile view.
-  Render the page in a 390px iframe inside a wider window instead.
-- `DESIGN.md` is now the system of record for the design. `DESIGN-NOTES.md`
-  stays as the build record for the hub and home, and says so at the top.
-
-## What is genuinely missing
+## What is still genuinely missing
 
 - **No AT3 exam paper.** Open on the program thread, not this one. Earlier
   versions of this file called it AT4; AT3 is the aural paper and the one the
@@ -180,80 +122,65 @@ one item is left for Matthew. It is all in the commit message of `8214b06` and i
   a student cannot yet get back to the progression, the voicings and the rules.
   `data/course/term2/term.json` holds them at `built: false` and no other term
   has any, though `PRODUCT.md` says Term 4 supplies a timing sheet, a template
-  and a bank of motifs. This is authoring work, not design work, and it is now
-  the largest real gap in the site.
-- **Nothing is embedded.** `PRODUCT.md` names "the year's repertoire with
-  embedded listening" as a must-carry, and separately says audio and video are
-  embedded from their host, never uploaded. `build.py` carries no `iframe` or
-  embed code anywhere, and the `listen` block is a plain text list: title,
-  artist, duration. This despite all 26 repertoire picks across all four terms
-  being fully verified with live YouTube ids, sitting in
-  `Music7-10_Y9_RepertoireRegister.md`. The ids were deliberately never written
-  into `data/` because nothing renders one yet, per the standing note carried
-  since the Term 2 pour. Spotted by Matthew, 17 August 2026, checking the live
-  site. Design and data work: the block needs a rendered player and `data/`
-  needs an `id` field per track, term by term.
-- **No book-work or on-screen fill-in content at all.** The sibling Year 10 site
-  has two block types built for exactly this: `explain` (about 250 words, for
-  anything a student needs to write in their book that currently only lives in
-  Matthew's head or a slide deck) and `guide` (a cue table for a video he'd stop
-  and talk over). Neither block type exists in Year 9's `build.py` or its
-  lesson data. What Year 9 has instead is `clauses`, which describe what
-  happens in the room rather than carry teaching content or a worksheet a
-  student fills in on screen. Also spotted 17 August 2026. On Year 10 this
-  content went in triaged, lesson by lesson, with Matthew's sign-off on the
-  list before any writing started, specifically to stop it turning into a
-  textbook. The same triage pass has never been run for Year 9.
+  and a bank of motifs. **The triage now depends on this**: four inputs were
+  rejected for an explain on the grounds that a sheet is the right artefact for
+  them, so if the sheets are never built, that content is nowhere.
+- **Nothing is embedded.** See above; this is now the next task.
+- **No book-work content.** Triaged, ruled on, not written.
 
 ## Decisions waiting on Matthew
 
-1. **Rewrite `year8-music`'s published history?** See below. **Recommendation:
+1. **Does Year 9 get a `worked` block?** See above. **Recommendation: yes to
+   `worked`, no to `check`.**
+2. **Rewrite `year8-music`'s published history?** See below. **Recommendation:
    no.**
-2. **Embedded listening and book-work content: build for every lesson, or
-   triage first?** Both gaps above are real and both are undecided in scope.
-   **Recommendation: triage before writing**, the Year 10 precedent. For
-   embedding, that likely means every `listen` block gets a player (the ids
-   are already verified, so this is closer to mechanical than the book-work
-   question). For book-work, decide lesson by lesson whether something needs
-   to go in a student's book at all before writing prose for it, the same test
-   Year 10 used: does this introduce something new the student writes down, or
-   would Matthew stop and talk over it. Get sign-off on the list before
-   writing.
-3. **Home's four unit blocks are equal weight**, which is the one arrangement the
-   thesis names and refuses. The review's ruling is **unequal weight, not a
-   drawing**: the live unit takes the block and carries its own inputs, the other
-   three compress to a line each, which is the live/not-live logic the hub's
-   ghost bracket already owns. A year-scale drawing was proposed and withdrawn,
-   because a third instance of the sheet is the metaphor doing overtime, which
-   `DESIGN-NOTES.md` had already ruled out once. Half a session with Opus.
+3. **Home's four unit blocks are equal weight**, which is the one arrangement
+   the thesis names and refuses. The review's ruling is **unequal weight, not a
+   drawing**: the live unit takes the block and carries its own inputs, the
+   other three compress to a line each, which is the live/not-live logic the
+   hub's ghost bracket already owns. A year-scale drawing was proposed and
+   withdrawn, because a third instance of the sheet is the metaphor doing
+   overtime, which `DESIGN-NOTES.md` had already ruled out once. Half a session
+   with Opus.
 4. **`DIRECTION.md` and the comp D approval sidecar name Matthew**, and both are
    already in pushed history. Same question as Year 8, smaller.
+5. **Whether to push.** The repo is several commits ahead of the live site.
 
-Settled this session: the push, and the history rewrite that cleared the artist
-name out before pushing. See the leak note above.
+Settled and no longer decisions: the push and history rewrite of 17 August; the
+three torn strips are two acts of taping; the `artist` field is rendered rather
+than deleted under a rule written into `DESIGN.md`; `bring` is a closed set of
+seven and the seventh is recorded with its source; the guide count and the
+A-with-promotion rule above.
 
-Settled at the finish review and no longer decisions: the three torn strips are
-two acts of taping; the `artist` field is rendered rather than deleted, under a
-rule written into `DESIGN.md`; `bring` is a closed set of seven and the seventh
-is recorded with its source.
+## The leak that keeps recurring
+
+The general lesson, recorded by three sessions running now: **the handoff file
+is the thing that leaks**, because it is the only file in this repo that has to
+discuss what must not be on the site in order to warn about it. **Naming a thing
+to track its status is the same leak as naming it to prove its absence.** Sweep
+this file hardest, every time, before **committing**.
+
+The two barred works are unseen excerpts. They live in the register off this
+repo and that is still the only place they are written down. **Do not copy them
+into a note here.** Their absence is not silent: input 19 says the excerpt is
+checked against the register beforehand, and input 23 describes the paper
+without describing what is on it. Neither page carries a `repertoire` field.
+
+`LESSON-DEPTH-TRIAGE.md` was swept before its commit: zero em dashes, no names,
+no repertoire titles.
 
 ## The Year 8 repo
 
-The 16 August handoff said `year8-music` had **the school's name** in it
-including in served pages. **That was wrong.** The school's name, its initials
-and the words for a high school all return zero on a word-boundary search across
-every blob in all 31 commits; the apparent hits were substring and
-regex-wildcard noise.
+The 16 August handoff said `year8-music` had the school's name in it including
+in served pages. **That was wrong**; the apparent hits were substring and
+regex-wildcard noise. **Do not write the search terms out here to make that
+claim checkable.** The 16 August handoff did, and in doing so put the school's
+name into this public repo for the first time, in the one sentence documenting
+its absence somewhere else. Fixed in history as well as forward.
 
-**Do not write the search terms out here to make that claim checkable.** The
-16 August handoff did, and in doing so it put the school's name into this public
-repo for the first time, in the one sentence that was documenting its absence
-somewhere else. That is fixed in history as well as forward.
-
-The real leak was **the teacher's first name on all 105 served pages**, baked in
-by `build.py`. Fixed forward to "the user", matching what this repo already
-does, plus the same name out of `PRODUCT.md` and three source comments. Pushed,
-and the live pages were checked: the name returns zero on every one of them.
+The real leak was the teacher's first name on all 105 served pages, baked in by
+`build.py`. Fixed forward to "the user", plus the same name out of `PRODUCT.md`
+and three source comments. Pushed and verified on the live pages.
 
 **Why not rewrite the history:** it is his own first name, on his own resources,
 published under an org called `Edwards-Resources` at
@@ -263,6 +190,12 @@ history. Matthew's call, and it is still open.
 
 ## Watch out for
 
+- **A blueprint sheet is not an explain.** A sheet holds the what, an explain
+  holds the why. Four inputs were rejected on this ground, so writing an explain
+  for them puts the sheet's content on the wrong page, in prose, twice.
+- **No explain may name repertoire in the Term 3 Weeks 4 to 6 block.** T3 #11,
+  #12 and #16 carry explains and all three must stay general. This is the single
+  easiest place in the whole pour to leak a title.
 - **`SH_X` in `plots.py` and `--core-inset` in `site.css` are both 5%.** Change
   one without the other and the multicore quietly stops reading as plugged into
   the sheet. Both files say so.
@@ -274,9 +207,7 @@ history. Matthew's call, and it is still open.
   stop meaning anything.
 - **Contrast is a product constraint here, not a style preference.** Every text
   pair in use passes AA. Check every new dimmed state on the black ground.
-  `--hair` at `#313337` is 1.48:1 and is still an open question.
-- **Two torn tape strips per page at most.** The hub spends two: the standing
-  line and the taped channel. See the open ruling above for the lesson page.
+- **Two torn tape strips per page at most**, counting a corner pair as one act.
 - **The stencil face is not a heading face.** One CSS selector enforces it.
   Read as "the page's own subject name": the lesson title, the unit name, and on
   home the title of the lesson on the desk. Do not widen it further.
@@ -288,30 +219,23 @@ history. Matthew's call, and it is still open.
 - **A 390px screenshot from headless Chrome on macOS is a lie.** Chrome will not
   render a window below about 400px wide, so `--window-size=390,H` renders a
   wider layout and crops the PNG to 390. It looks exactly like a broken mobile
-  layout and cost this session a false review failure. Render the page in a
+  layout and cost one session a false review failure. Render the page in a
   **390px iframe inside a wider window** and capture that, or measure
-  `documentElement.scrollWidth` against `clientWidth` in a 390px iframe, which is
-  the check that actually answers the question.
-- **`DESIGN.md` is the system of record for the design now.** Read it before
-  touching CSS, alongside `DIRECTION.md`. It carries the named rules, the cited
-  deviations and the gaps, and most of its rules are held by review rather than
-  by the build, so nothing will stop you breaking them.
+  `documentElement.scrollWidth` against `clientWidth` in a 390px iframe.
+- **`DESIGN.md` is the system of record for the design.** Read it before
+  touching CSS, alongside `DIRECTION.md`. Most of its rules are held by review
+  rather than by the build, so nothing will stop you breaking them.
 - **The repo is public and git history is permanent.** Sweep any new file before
-  **committing**, not just before pushing, and sweep this file hardest. **Ask
-  Matthew before pushing.**
-- **The register is generated.** `Music7-10_Y9_RepertoireRegister.md` says so at
-  the top. Verification records go into
+  **committing**, not just before pushing. **Ask Matthew before pushing.**
+- **The register is generated.** Verification records go into
   `School Master/Tools/y9_repertoire_register.py` and the generator is re-run;
-  editing the markdown by hand is thrown away on the next run.
-- **Serving the build is fixed now, so stop making scratchpad symlinks.**
-  `base` is `/year9-music-2027`, so a server has to be rooted at a directory
-  whose child has that exact name. Every session so far built that directory in
-  its own scratchpad, which died with the session and left another dead entry in
-  the School Master root `.claude/launch.json`; there were six of them by this
-  morning. `Sites/.serve/` now holds a permanent symlink to each of the four
-  sites' `docs/`, with a README, and one config called **`course-sites` on port
-  8820** serves all four. The six dead entries are gone. `.serve/` sits above
-  every repo, so nothing in it is committed or published.
+  editing `Music7-10_Y9_RepertoireRegister.md` by hand is thrown away next run.
+- **Serving the build: stop making scratchpad symlinks.** `base` is
+  `/year9-music-2027`, so a server has to be rooted at a directory whose child
+  has that exact name. `Sites/.serve/` holds a permanent symlink to each of the
+  four sites' `docs/`, and one config called **`course-sites` on port 8820**
+  serves all four. `.serve/` sits above every repo, so nothing in it is
+  committed or published.
 
   ```
   http://localhost:8820/year9-music-2027/
@@ -319,24 +243,25 @@ history. Matthew's call, and it is still open.
 
 ## Model and effort
 
-**Opus, medium** to triage the book-work gap first, before any of it is written:
-walk all 123 lessons and mark which ones actually need an `explain` or `guide`
-block against the Year 10 test, and get Matthew's sign-off on the list. This is
-a judgement call, not writing, and doing it wrong in either direction is
-expensive: too little and the absent-student problem stays unsolved, too much
-and it turns into a textbook, which is exactly what triage stopped on Year 10.
+**No model needed** to rule on the `worked` question. It is one decision and the
+argument is in this file.
 
-**Sonnet, medium** for embedding the verified repertoire once the block design
-is settled: add an `id` field per track across all four terms' `data/`, wire a
-player into the `listen` block in `build.py`, and rebuild. Mechanical, since
-every id is already verified and sitting in the register.
+**Sonnet, medium** for the embedding work, which is the next task: add an `id`
+per track across all four terms' `data/`, wire a player into the `listen` block,
+rebuild. Every id is already verified and sitting in the register, so this is
+mechanical, but it gates the four guides.
+
+**Opus, medium** for designing `explain` and `guide` into this world. Neither
+block type exists in `build.py`, the Year 10 versions live in a different design
+system, and this is the first block in the world that is read rather than done.
+A composition decision, not a port.
+
+**Sonnet, medium** for writing the 35 explains once the blocks exist. Routine
+authoring against a settled, signed-off scope.
 
 **Opus, medium** for home's unequal-weight rebuild. A composition decision on
 the one surface that never had a comp, and the fix has to be looked at beside
 the incumbent before it is kept.
 
-**Sonnet, medium** for the four blueprint sheets when they are written. They are
-authored teaching material on an established page shape, not new design.
-
-**Sonnet, medium** for writing the book-work content itself once the triage list
-above is approved. Routine authoring against a settled scope, not a design task.
+**Sonnet, medium** for the four blueprint sheets when they are written. Authored
+teaching material on an established page shape, not new design.
