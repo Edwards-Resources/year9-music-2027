@@ -10,7 +10,12 @@
   **not pushed**. Ask before pushing, and read the history note below first.
 - Repo `Edwards-Resources/year9-music-2027`, public, Pages serving `main`
   `/docs`.
-- Last pushed commit: `3cb15fb`. Everything after it is local.
+- Last pushed commit: `3cb15fb`. Everything after it is local. This session's
+  tip is `00f678a Note the permanent serve directory in the handoff`, on top of
+  `9af4f84` and `9d57384 Pour the Term 3 lesson bodies`.
+- Session write-up in the vault at
+  `projects/School Master/Session Logs/2026/Year 9 Term 3 Content Pour.md`,
+  linked from that folder's `_index.md`.
 
 | File | What it is |
 | --- | --- |
