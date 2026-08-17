@@ -2,17 +2,18 @@
 
 ## Where this stands, 17 August 2026
 
-**All three surfaces are built and all four terms are poured. The site is 123 of
-123 inputs.**
+**All three surfaces are built, all four terms are poured, and the finish review
+is closed. The site is 123 of 123 inputs and the build is finished by its own
+contract's definition.**
 
 - Live at **https://edwards-resources.github.io/year9-music-2027/**. The live
   site is still the **16 August** build. All four pours are committed and
   **not pushed**. Ask before pushing, and read the history note below first.
 - Repo `Edwards-Resources/year9-music-2027`, public, Pages serving `main`
   `/docs`.
-- Last pushed commit: `3cb15fb`. Everything after it is local. This session's
-  tip is `00f678a Note the permanent serve directory in the handoff`, on top of
-  `9af4f84` and `9d57384 Pour the Term 3 lesson bodies`.
+- Last pushed commit: `3cb15fb`. Everything after it is local. The tip is
+  `8214b06 Close the finish review and write DESIGN.md`, on top of `c8b7640`
+  and the four pour commits.
 - Session write-up in the vault at
   `projects/School Master/Session Logs/2026/Year 9 Term 3 Content Pour.md`,
   linked from that folder's `_index.md`.
@@ -29,6 +30,7 @@
 | `data/` | `site.json`, `course/course.json`, four `course/termN/term.json`. |
 | `docs/` | Build output. Generated, never edited by hand. |
 | `.impeccable/mocks/comp-d-thedesk.html` | Comp D, approved. Governs the lesson page only. |
+| `DESIGN.md` | The design system as built, with every ruling and every gap. Written at the finish review, 17 August 2026. |
 
 ## What was built this session
 
@@ -145,13 +147,40 @@ The general lesson is the one the last session already recorded and this session
 repeated: the handoff file is the thing that leaks, because it is the only file
 in this repo that discusses what must not be on the site.
 
+## The finish review, 17 August 2026
+
+**Done. `DESIGN.md` is written and the contract's FINISH block is satisfied.**
+The review ran fresh against comp D, the contract and `PRODUCT.md`, and closed at
+"fix". Six defects were fixed and rebuilt, three rulings were taken and recorded,
+one item is left for Matthew. It is all in the commit message of `8214b06` and in
+`DESIGN.md`; the short version:
+
+- `--hair` went from 1.48:1 to 3.21:1, which closes the oldest open question in
+  this repo. The meta row is now ruled to its field count. The `artist` field is
+  rendered rather than deleted, but only where `meta` has not already said it.
+  The four unbuilt blueprint sheets are one line instead of four dead labels.
+  The hub's description moved below the unit name. The Outcomes header hides
+  with its column at 390. The small stage plot's label no longer overprints a
+  monitor wedge.
+- **Mobile is proven at 390 for the first time**: `scrollWidth` equals
+  `clientWidth` on all three surfaces. Note for whoever captures next: Chrome
+  headless on macOS will not render below about 400px wide, so a
+  `--window-size=390` screenshot is a wider layout cropped, not a mobile view.
+  Render the page in a 390px iframe inside a wider window instead.
+- `DESIGN.md` is now the system of record for the design. `DESIGN-NOTES.md`
+  stays as the build record for the hub and home, and says so at the top.
+
 ## What is genuinely missing
 
-- **No AT4 exam paper.** Open on the program thread, not this one.
-- **No DESIGN.md and no finish review.** The direction contract ends with
-  "unreviewed and undocumented is unfinished". `DESIGN-NOTES.md` is a record of
-  decisions, not a substitute for either. **This is now the whole of the
-  remaining work on this repo**, plus the push decision.
+- **No AT3 exam paper.** Open on the program thread, not this one. Earlier
+  versions of this file called it AT4; AT3 is the aural paper and the one the
+  notification promises, which is what `PRODUCT.md` records.
+- **The four blueprint sheets do not exist**, so half the STORY block is unmet:
+  a student cannot yet get back to the progression, the voicings and the rules.
+  `data/course/term2/term.json` holds them at `built: false` and no other term
+  has any, though `PRODUCT.md` says Term 4 supplies a timing sheet, a template
+  and a bank of motifs. This is authoring work, not design work, and it is now
+  the largest real gap in the site.
 
 ## Decisions waiting on Matthew
 
@@ -161,24 +190,21 @@ in this repo that discusses what must not be on the site.
 2. **Rewrite the three unpushed commits?** See above. **Recommendation: yes.**
 3. **Rewrite `year8-music`'s published history?** See below. **Recommendation:
    no.**
-4. **The lesson page carries three pieces of torn tape, not two** - the plate's
-   two corner strips plus the rail's current row. Either the two corners count
-   as one act of taping the plate down, or the build has been over budget since
-   the first commit. Inherited from comp D. A ruling is owed at the finish
-   review.
+4. **Home's four unit blocks are equal weight**, which is the one arrangement the
+   thesis names and refuses. The review's ruling is **unequal weight, not a
+   drawing**: the live unit takes the block and carries its own inputs, the other
+   three compress to a line each, which is the live/not-live logic the hub's
+   ghost bracket already owns. A year-scale drawing was proposed and withdrawn,
+   because a third instance of the sheet is the metaphor doing overtime, which
+   `DESIGN-NOTES.md` had already ruled out once. **This is the only design work
+   left on the site.** Half a session with Opus.
 5. **`DIRECTION.md` and the comp D approval sidecar name Matthew**, and both are
    already in pushed history. Same question as Year 8, smaller.
-6. **The `artist` field in a `listen` entry is never rendered, and the case for
-   deleting it is now closed as far as evidence goes.** Across all 123 pages,
-   identification is carried by `meta` or by clause prose, and `artist` has never
-   once been read. Term 3 hit the `white-space:nowrap` squeeze a fourth time and
-   solved it the same way: the Week 1 set uses short titles with the artist in
-   `meta`, and the longest released title on the site was shortened for the page
-   rather than allowed to wrap. **Recommendation: the field goes at the finish
-   review.**
-7. **`bring` is a set of seven now, not six.** Recorded above. Worth a line in
-   DESIGN.md either way, because a closed set that quietly grows is how a
-   convention stops being one.
+
+Settled at the finish review and no longer decisions: the three torn strips are
+two acts of taping; the `artist` field is rendered rather than deleted, under a
+rule written into `DESIGN.md`; `bring` is a closed set of seven and the seventh
+is recorded with its source.
 
 ## The Year 8 repo
 
@@ -251,10 +277,12 @@ history. Matthew's call, and it is still open.
 
 ## Model and effort
 
-**Opus, medium**, for the finish review and DESIGN.md, which is what is left. It
-is a judgement pass over an approved contract with seven rulings queued for it,
-and the contract itself says the build is not finished until it happens.
+**Haiku, low** for the history rewrite and the push, once Matthew has decided.
+It is mechanical and the decisions are written down above.
 
-**Haiku, low** if the only task is the history rewrite and the push, once
-Matthew has decided. It is mechanical, and the decisions are already written
-down above.
+**Opus, medium** for home's unequal-weight rebuild, which is the only design work
+left. It is a composition decision on the one surface that never had a comp, and
+the fix has to be looked at beside the incumbent before it is kept.
+
+**Sonnet, medium** for the four blueprint sheets when they are written. They are
+authored teaching material on an established page shape, not new design.
