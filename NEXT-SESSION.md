@@ -12,8 +12,12 @@ contract's definition.**
 - Repo `Edwards-Resources/year9-music-2027`, public, Pages serving `main`
   `/docs`.
 - Last pushed commit: `3cb15fb`. Everything after it is local. The tip is
-  `8214b06 Close the finish review and write DESIGN.md`, on top of `c8b7640`
-  and the four pour commits.
+  `88306ff Sharpen the handoff after the review`, on top of `83cef7c`, `8214b06
+  Close the finish review and write DESIGN.md`, `c8b7640` and the four pour
+  commits.
+- Session write-up in the vault at
+  `projects/School Master/Session Logs/2026/Year 9 Finish Review and DESIGN.md`,
+  linked from that folder's `_index.md`.
 - Session write-up in the vault at
   `projects/School Master/Session Logs/2026/Year 9 Term 3 Content Pour.md`,
   linked from that folder's `_index.md`.
