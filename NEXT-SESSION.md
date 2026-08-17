@@ -32,7 +32,7 @@ contract's definition.**
 | `.impeccable/mocks/comp-d-thedesk.html` | Comp D, approved. Governs the lesson page only. |
 | `DESIGN.md` | The design system as built, with every ruling and every gap. Written at the finish review, 17 August 2026. |
 
-## What was built this session
+## What the Term 3 pour built, the session before the review
 
 ### Term 3 poured
 
@@ -254,6 +254,17 @@ history. Matthew's call, and it is still open.
 - **No school name anywhere in the repository**, and no student names, work or
   marks, ever. `noindex` on every page.
 - **Never `git stash` in these repos** now that `docs/` is tracked build output.
+- **A 390px screenshot from headless Chrome on macOS is a lie.** Chrome will not
+  render a window below about 400px wide, so `--window-size=390,H` renders a
+  wider layout and crops the PNG to 390. It looks exactly like a broken mobile
+  layout and cost this session a false review failure. Render the page in a
+  **390px iframe inside a wider window** and capture that, or measure
+  `documentElement.scrollWidth` against `clientWidth` in a 390px iframe, which is
+  the check that actually answers the question.
+- **`DESIGN.md` is the system of record for the design now.** Read it before
+  touching CSS, alongside `DIRECTION.md`. It carries the named rules, the cited
+  deviations and the gaps, and most of its rules are held by review rather than
+  by the build, so nothing will stop you breaking them.
 - **The repo is public and git history is permanent.** Sweep any new file before
   **committing**, not just before pushing, and sweep this file hardest. **Ask
   Matthew before pushing.**
