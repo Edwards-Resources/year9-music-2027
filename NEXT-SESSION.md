@@ -230,12 +230,19 @@ history. Matthew's call, and it is still open.
   the top. Verification records go into
   `School Master/Tools/y9_repertoire_register.py` and the generator is re-run;
   editing the markdown by hand is thrown away on the next run.
-- **Serving the build needs a directory whose child is named
-  `year9-music-2027`**, because `base` is `/year9-music-2027`. This session used
-  a symlink in its own scratchpad and a config named `year9-t3` on port 8815 in
-  the School Master root `.claude/launch.json`. That scratchpad dies with the
-  session, so that config is dead too, as are `year9-t4` and the three older
-  `year9` configs beside it. Someone should sweep them.
+- **Serving the build is fixed now, so stop making scratchpad symlinks.**
+  `base` is `/year9-music-2027`, so a server has to be rooted at a directory
+  whose child has that exact name. Every session so far built that directory in
+  its own scratchpad, which died with the session and left another dead entry in
+  the School Master root `.claude/launch.json`; there were six of them by this
+  morning. `Sites/.serve/` now holds a permanent symlink to each of the four
+  sites' `docs/`, with a README, and one config called **`course-sites` on port
+  8820** serves all four. The six dead entries are gone. `.serve/` sits above
+  every repo, so nothing in it is committed or published.
+
+  ```
+  http://localhost:8820/year9-music-2027/
+  ```
 
 ## Model and effort
 
