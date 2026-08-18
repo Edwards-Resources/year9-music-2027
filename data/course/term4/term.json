@@ -81,7 +81,27 @@
       "n": "R3",
       "text": "Screen and game listening set"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Five ways to develop a motif",
+     "body": [
+      {
+       "p": "A motif is a short idea, a few notes, distinctive enough to recognise and simple enough to survive being changed twenty times over. The five devices below are how you get the twenty changes out of it without writing new material from scratch."
+      },
+      {
+       "ul": [
+        "**Repetition.** The motif returns unchanged. Sounds like the easy option, and it is: use it to establish the idea before anything else happens to it.",
+        "**Sequence.** The motif repeats at a different pitch, its shape intact. This is repetition that moves.",
+        "**Inversion.** Every interval flips direction: a rise becomes a fall of the same size. The motif's rhythm survives; its shape turns upside down.",
+        "**Augmentation.** Every note value stretches, usually doubled. The same tune, slower and heavier.",
+        "**Fragmentation.** Only part of the motif survives, usually its most distinctive part, isolated and repeated on its own."
+       ]
+      },
+      {
+       "p": "A motif built to survive these five is short, has a clear rhythmic profile, and doesn't rely on one specific register to make sense. Test a new motif by mentally running it through all five before you decide it's worth developing: if none of them do anything interesting to it, the motif itself is probably the problem, not the device."
+      }
+     ]
+    }
    }
   },
   {
@@ -192,6 +212,24 @@
        ]
       }
      ]
+    },
+    "explain": {
+     "title": "What has to survive for a leitmotif to still mean the same thing",
+     "body": [
+      {
+       "p": "A motif becomes a leitmotif the moment it gets attached to something specific — a character, a place, an idea — and is changed as that thing changes. The attachment is what makes it mean something, rather than just being a tune that keeps coming back."
+      },
+      {
+       "ul": [
+        "**Something has to stay constant.** A rhythm, an interval shape, a contour, whichever feature you choose, it has to survive every transformation, or the audience loses the thread and the leitmotif stops working.",
+        "**Everything else is free to move.** Tempo, orchestration, harmony, dynamics, even the key, can all change around the constant feature without breaking the attachment.",
+        "**The transformation has to mean something.** A leitmotif slowed and darkened when its character is in danger is doing a job. The same change for no dramatic reason is just variation with no attachment behind it."
+       ]
+      },
+      {
+       "p": "The test of a leitmotif is whether a listener who doesn't know the plot could still guess that this is the same idea, changed, rather than a new idea that happens to share a few notes. Keep the constant feature simple enough to survive four or five transformations, and specific enough that it couldn't be mistaken for something else."
+      }
+     ]
     }
    }
   },
@@ -270,7 +308,25 @@
       "n": "R3",
       "text": "Comparison sheet"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Written to a length, or written for no fixed length at all",
+     "body": [
+      {
+       "p": "A film composer knows exactly how long a cue has to be before they write a note, because the picture is locked. A game composer writing a loop does not, because the player decides how long that moment lasts, and the music has to survive however long that turns out to be."
+      },
+      {
+       "ul": [
+        "**Film music is written once, for a fixed length.** Every gesture can be placed to land at an exact second, because that second is not going to move.",
+        "**Game music is written to repeat indefinitely**, so it can never build to an ending, or the ending arrives while the player is still exploring. It has to feel complete at every possible moment it might stop.",
+        "**The seam has to disappear.** A loop's last bar has to lead back into its first bar without a listener noticing the join, which is a compositional problem film music never has to solve at all."
+       ]
+      },
+      {
+       "p": "Neither approach is harder than the other; they are solving different problems. A film composer's skill is precision against a fixed clock. A game composer's skill is writing something that has no natural ending and making that feel like a strength rather than a limitation."
+      }
+     ]
+    }
    }
   },
   {
@@ -467,7 +523,25 @@
       "n": "R2",
       "text": "Playback with loop enabled"
      }
-    ]
+    ],
+    "explain": {
+     "title": "What makes a loop survive its twentieth play",
+     "body": [
+      {
+       "p": "A loop that sounds great once and grating by the fifth repeat has not failed technically. It has failed at the one job a loop actually has, which is different from the job a normal piece of music has."
+      },
+      {
+       "ul": [
+        "**Harmony that doesn't resolve too hard.** A loop that lands on a full, final-sounding cadence announces an ending every single time it comes back around, which fights against the fact that it's about to keep going.",
+        "**Variation inside the loop.** Even small internal changes, a different accent, a filled-in gap, stop the ear from fully predicting every repeat before it happens.",
+        "**A seam that doesn't click.** The last beat has to lead into the first beat as if no join happened at all: matching dynamics, matching articulation, and nothing held or cut off right at the join."
+       ]
+      },
+      {
+       "p": "The only real test is the one the lesson uses: set it looping and leave it running twenty times. Whatever makes you want to reach over and stop it is the actual problem, and it is very rarely the part you'd have guessed while you were still writing it."
+      }
+     ]
+    }
    }
   },
   {
@@ -748,7 +822,31 @@
       "n": "R3",
       "text": "Tempo calculator"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Choosing a tempo so the hits land on a beat",
+     "body": [
+      {
+       "p": "A timing sheet lists events and the exact times they happen. The composer's job is to choose a tempo that puts as many of those times as possible on a beat you can actually write music to, rather than in the gap between two beats."
+      },
+      {
+       "p": "Say a hit point falls at 4.2 seconds. At 100 beats per minute, each beat is 0.6 seconds long, and 4.2 seconds is seven beats in exactly, so the hit lands right on a beat with no adjustment needed. At 96 beats per minute, each beat is 0.625 seconds, and 4.2 seconds is 6.72 beats in, most of the way through a beat rather than on one, a hit point you'd have to fudge or ignore."
+      },
+      {
+       "h": "The arithmetic"
+      },
+      {
+       "ul": [
+        "**Convert the hit time to beats** by dividing it by the length of one beat in seconds (60 divided by the tempo).",
+        "**Look at the result.** A whole number, or something very close to it, means the hit lands cleanly. A number in the middle means it doesn't.",
+        "**Adjust the tempo, not the picture,** and recheck every other hit point against the new tempo — moving it to fix one hit can break another."
+       ]
+      },
+      {
+       "p": "This is arithmetic you do before you write a single bar, because a tempo chosen after the fact almost never lines every hit point up by luck."
+      }
+     ]
+    }
    }
   },
   {
@@ -935,7 +1033,25 @@
       "n": "R2",
       "text": "Orchestration comparison files"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Same notes, different meaning",
+     "body": [
+      {
+       "p": "Orchestration is not decoration added after the notes are decided. It is part of what the notes mean. The same eight bars, unchanged, will sound urgent in one instrumentation and gentle in another, without a single pitch or rhythm being touched."
+      },
+      {
+       "ul": [
+        "**Register is a decision, not a default.** The same line an octave lower reads as darker, heavier, or more ominous, even though it is, note for note, the identical melody.",
+        "**Instrument choice carries its own associations before it plays a single expressive note.** A solo violin and a solo trumpet, playing the same phrase, arrive already meaning something different to a listener.",
+        "**Doubling and thinning change weight, not just volume.** The same line played by one instrument versus doubled across three changes how substantial the idea feels, independent of how loud it is."
+       ]
+      },
+      {
+       "p": "Because the notes themselves don't change, orchestration is one of the few decisions in composition you can test directly against itself: play the same material two ways, back to back, and the difference is the orchestration and nothing else. That is exactly the comparison this lesson asks you to run on your own opening."
+      }
+     ]
+    }
    }
   },
   {
@@ -1062,7 +1178,25 @@
       "n": "R2",
       "text": "Marking reference sheet"
      }
-    ]
+    ],
+    "explain": {
+     "title": "A marking is an instruction, not decoration",
+     "body": [
+      {
+       "p": "A dynamic, an articulation, a tempo marking: each one is an instruction to a player who has never heard the piece in your head, and it only works if it says exactly what you meant rather than what looked complete on the page."
+      },
+      {
+       "ul": [
+        "**Mark the whole draft, not the opening.** A piece with detailed markings for eight bars and nothing after them is asking a player to guess for everything that follows, and they will guess differently from what you intended.",
+        "**Match the convention to the style.** An orchestral part expects dynamics, articulation and bowing or breath marks placed a specific way; a rhythm section chart expects chord symbols and rhythmic notation with far fewer written dynamics, because those players are reading a different kind of instruction. Marking a rhythm chart like an orchestral part gives a player far more than they need, and sometimes less of what actually matters to them.",
+        "**Test it on someone who hasn't seen it.** If a player sight-reading your part does something you didn't intend, the marking failed, whatever it says on the page — a marking is only correct if it does its job on somebody who cannot ask you what you meant."
+       ]
+      },
+      {
+       "p": "The gap between what you meant and what a stranger's sight-reading actually produces is the same gap the melody-notation check in Term 1 was after. You find it by testing the part on someone else, not by rereading your own writing."
+      }
+     ]
+    }
    }
   },
   {
@@ -1426,7 +1560,25 @@
       "n": "R2",
       "text": "Project audit sheet"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Where every sound in your project came from",
+     "body": [
+      {
+       "p": "A sound library, a sample pack, and a recording you made yourself carry three different sets of rules about what you're allowed to do with them, and knowing which one applies to each sound in your project is a compositional responsibility, not paperwork bolted on at the end."
+      },
+      {
+       "ul": [
+        "**Licensed libraries and sample packs** usually permit use in coursework, but the licence terms still apply, and a “free” sound is not automatically a sound with no conditions attached.",
+        "**A sample of someone else's recorded work** is a different case again: using an identifiable excerpt of another artist's recording is closer to using their composition than it is to using a licensed sound effect, and the protocols from Term 1's sharing lesson apply here too, before the piece is even finished.",
+        "**Something you recorded or performed yourself** is the one category where the rights are straightforwardly yours, which is part of why so much of this course is built around composing and playing your own material rather than assembling other people's."
+       ]
+      },
+      {
+       "p": "Auditing your own project means being able to answer, for every single sound in it, where it came from and whether you're allowed to hand it in under that source. If you can't answer both for a sound, that is the sound to replace, not the sound to hope nobody asks about."
+      }
+     ]
+    }
    }
   },
   {
