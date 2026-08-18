@@ -127,11 +127,12 @@ it.
 
 ## Still open
 
-- **Home's four unit blocks are equal weight**, which is the arrangement the
-  THESIS names and refuses. The review's ruling is unequal weight: the live unit
-  takes the block and carries its own inputs, the other three compress to a line
-  each. **Explicitly not a year-scale drawing**, which is the call this file made
-  above and which the review accepted. Waiting on the user.
+- ~~**Home's four unit blocks are equal weight.**~~ **Built 18 August 2026.**
+  The live unit opens in place and carries its own thirty inputs on the
+  multicore; the other three fold to a line each; the stack stays in unit order
+  so nothing is lifted out of sequence. No year-scale drawing was added, which
+  was the explicit half of the ruling. The strip's 5% inset is zeroed on this
+  surface because there is no room here for it to align to.
 - **The four blueprint sheets do not exist**, so half the STORY block is unmet.
   The rail and the hub bar now name them on one line instead of four dead
   labels, which is a smaller absence, not a filled one.

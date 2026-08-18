@@ -683,9 +683,18 @@ def home_page(site, course, terms, current_term, current_no):
     four units, because this world's argument is that the student is standing
     on all of it and only one set of lines is live.
 
+    The year runs down the page in order and the four units are not equal. The
+    three that are not live fold to a line each; the live one opens in place
+    and carries its own thirty inputs on the multicore. That is the THESIS's
+    own refusal made structural: week one and week nine cannot look identical
+    if only one of them is open. It was built as four equal blocks in a row
+    until 18 August 2026, which was the arrangement the THESIS names.
+
     No plan drawing here. The room is large on the term hub and small on a
     lesson page; a fifth, year-sized room would be a third scale of the same
-    device and would say nothing the four unit blocks do not already say.
+    device and would say nothing the open unit does not already say. The
+    multicore is a different object, not the room at a fourth size: a stage box
+    is a real thing on its own and does not need the plot drawn above it.
     """
     base = site["base"]
     total = sum(len(t["lessons"]) for t in terms)
@@ -729,21 +738,49 @@ def home_page(site, course, terms, current_term, current_no):
         n_l = len(t["lessons"])
         live = t["id"] == current_term["id"]
         built = sum(1 for l in t["lessons"] if l.get("body"))
-        if live and current_no is not None:
-            pos = f"On input {current_no:02d}"
-        elif t["n"] < current_term["n"]:
-            pos = "Taught"
+        a = t["assessment"]
+        href = f'{base}/{t["id"]}/'
+        # How much of the unit is on the site. Silent once every input has a
+        # page, because then the count is not news; loud while it is short.
+        if built == n_l:
+            pages = ""
+        elif built == 0:
+            pages = " &middot; no pages yet"
+        elif built == 1:
+            pages = f" &middot; 1 of {n_l} pages"
         else:
-            pos = "Ahead"
-        pages = ("no pages yet" if built == 0
-                 else "1 page" if built == 1 else f"{built} pages")
-        units.append(f"""<a class="unit{' live' if live else ''}" href="{base}/{t['id']}/"
-      data-term="{t['id']}">
+            pages = f" &middot; {built} of {n_l} pages"
+
+        if live:
+            # The open unit. It gets the space because it is the one being
+            # taught, so the block moves down the page as the year runs rather
+            # than sitting where it was drawn. Position is stated in words here
+            # and drawn on the strip below, never on the keyline alone.
+            pos = (f"On input {current_no:02d} of {n_l}" if current_no is not None
+                   else f"The current unit &middot; {n_l} inputs")
+            units.append(f"""<section class="unit open" data-term="{t['id']}"
+      aria-label="{e(t['name'])}, the current unit">
+      <div class="uhead">
+        <span class="un mono">{t['n']}</span>
+        <h3 class="uname"><a href="{href}">{e(t['name'])}</a></h3>
+        <p class="upos mono">{pos}{pages}</p>
+        <p class="ufocus">{e(t['focus'])}</p>
+      </div>
+      <div class="urun">
+        <div class="uruninner">{multicore(site, t, current_no, True)}</div>
+      </div>
+      <p class="umeta mono">{e(a['name'])} &middot; {e(a['type'])}
+        &middot; due {e(a['due'])} &middot; {e(a['weighting'])}</p>
+    </section>""")
+        else:
+            # Folded. One line, and the whole line is the link to the unit.
+            pos = "Taught" if t["n"] < current_term["n"] else "Ahead"
+            units.append(f"""<a class="unit fold" href="{href}" data-term="{t['id']}">
       <span class="un mono">{t['n']}</span>
       <span class="uname">{e(t['name'])}</span>
       <span class="ufocus">{e(t['focus'])}</span>
-      <span class="umeta mono">{n_l} inputs &middot; {e(t['assessment']['type'])} &middot; {e(t['assessment']['weighting'])}</span>
-      <span class="upos mono">{pos} &middot; {pages}</span>
+      <span class="umeta mono">{n_l} inputs &middot; {e(a['type'])} &middot; {e(a['weighting'])}</span>
+      <span class="upos mono">{pos}{pages}</span>
     </a>""")
 
     body = f"""<main class="home" id="main">

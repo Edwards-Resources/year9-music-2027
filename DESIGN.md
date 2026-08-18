@@ -152,7 +152,7 @@ A near-black stage floor, a chalk white line on it, a warm white sheet laid over
 - **Gaffer Orange, Term 3** (`{colors.tape-t3}`): the same slot on Term 3 surfaces.
 - **Gaffer Green, Term 4** (`{colors.tape-t4}`): the same slot on Term 4 surfaces.
 
-The four are never in play at once except on home's year strip, where they appear as four small chips on unit numbers. `--tape` resolves from `body[data-term]`, so every component reads "the term's colour" and never a named term.
+The four are never in play at once except on home's year stack, where they appear as four chips on unit numbers, the open unit's larger than the three folded ones. `--tape` resolves from `body[data-term]`, so every component reads "the term's colour" and never a named term.
 
 ### Neutral
 - **Stage Floor** (`{colors.floor}`): the page ground on every surface.
@@ -214,7 +214,7 @@ over to it. They are not available anywhere else.
 
 **The term hub** is the one surface where the room is large: max 1180px, unit head and standing line, then the unit's full-width SVG sheet, then the multicore strip running out of its bottom edge, then the assessment bar, the blueprint bar and the full input table. The multicore's `--core-inset` (5%) must equal `SH_X/ROOM_X` in `plots.py` (60 of 1200) or the strip stops reading as plugged into the sheet. Change one and you change the other.
 
-**Home** is max 1180px: heading, the desk plate at max 820px, then the four unit blocks on an auto-fit grid at minmax(250px, 1fr) with a 1px hairline gap doing the ruling.
+**Home** is max 1180px: heading, the desk plate at max 820px, then the year as a single stack of four rows with a 1px hairline gap doing the ruling. The rows are **not** equal. The three units that are not live fold to one line on a five-track grid (chip, name, focus, assessment meta, status); the live one opens in place and carries its own thirty inputs on the multicore, under a 4px chalk keyline inset on its left edge. The stack stays in unit order, so the open block travels down the page as the year runs and the shape of the surface is itself a position statement. On home the multicore's `--core-inset` is zeroed and replaced by a 38px left gutter for the ruler's own label: the 5% inset exists to line the strip up with the room's two walls, and there is no room on this surface to line it up with.
 
 **Rhythm.** Gutters run 40px at page level, 34px inside the plate, 22px in the rail, 16px at narrow widths. The body grid is 48px, which is the drawing's own unit.
 
@@ -243,7 +243,7 @@ Mobile is proven at 390: `documentElement.scrollWidth` equals `clientWidth` on h
 
 **The Ghost Bracket Rule.** A non-live unit is a bracket at 26% (about 2.4:1) with a 5-5 dash, not a faded rectangle. 7 to 10 percent was tried and is about 1.1:1 on this floor, which is absent rather than weak; a full ghost rectangle crosses the live sheet and turns the drawing to mud. The **dash** carries "not live", not the fade. The ghost's *labels* are chalk-dim at 5.76:1 and are not ghosted: the line is the ghost, the label is not.
 
-**The Keyline-Not-Tape Rule.** "The one you have open" is the 4px painted chalk keyline, always: inset on the rail's reading row, top and bottom inset on the hub table's current row, a top border on home's live unit. Tape says where the class is; the keyline says where you are.
+**The Keyline-Not-Tape Rule.** "The one you have open" is the 4px painted chalk keyline, always: inset on the rail's reading row, top and bottom inset on the hub table's current row, a left inset on home's open unit. Tape says where the class is; the keyline says where you are.
 
 ## Shapes
 
@@ -395,8 +395,10 @@ Four SVG drawings, one per unit, all built by `plots.py` on one shared frame: a 
 ### Input table
 The full term list as a ruled table: hairline rules, dim mono numbers, dim label headers, week rows as spanning sub-headers. Taught rows go chalk-past; the current row takes the 4px chalk keyline top and bottom plus a ◀ after its number, never a third tape fill.
 
-### Unit blocks (home)
-Four blocks on a hairline-gap grid. Each carries its own term colour as a **chip on the unit number** with ink on it, never as a bar across the block. Four coloured bars side by side read as a rainbow. The live unit is said by a 4px chalk top border and by the words in its corner, never by the colour.
+### The year stack (home)
+Four rows on a hairline-gap stack, unequal by design, because equal-weight blocks in a grid are the arrangement the THESIS names and refuses. The three units that are not live fold to a line each: chip, name, focus, assessment meta, and Taught or Ahead at the right. The live unit opens in place and carries its own thirty inputs on the multicore, with the assessment line under a hairline below it. Each row carries its own term colour as a **chip on the unit number** with ink on it, never as a bar across the row. Four coloured bars side by side read as a rainbow. Which unit is open is said three ways and never by the colour: by the size of the block, by the 4px chalk keyline inset on its left edge, and by the words in its corner.
+
+The multicore is reused here rather than a second device being invented, and it is not the room at a fourth scale: a stage box is a real object on its own and does not need the plot drawn above it. Home spends the same two tape acts a hub spends, the desk plate's corner strip and the live channel.
 
 ## Do's and Don'ts
 
@@ -431,7 +433,7 @@ Four blocks on a hairline-gap grid. Each carries its own term colour as a **chip
 ### Known gaps in the system
 
 - **The blueprint sheets do not exist.** `data/course/term2/term.json` carries four sheets flagged `built: false`; no other term carries any. PRODUCT.md lists the composing blueprints under must-carry and the STORY block promises a student can get back to the blueprint, the progression, the voicings and the rules without asking twice. **That half of STORY is unmet.** The rail's foot and the hub's blueprint bar name the missing sheets on one line rather than one dead label each, which is a smaller absence, not a filled one.
-- **Home's four unit blocks are equal weight**, which is the arrangement the THESIS names and refuses. **Open, remedy with the user.** The finish review's ruling is unequal weight: the live unit takes the block and carries its own inputs, the other three compress to a line each. Explicitly *not* a year-scale drawing, because a third instance of the sheet is the metaphor doing overtime.
+- ~~**Home's four unit blocks are equal weight.**~~ **Closed 18 August 2026.** The finish review's ruling was unequal weight, and home was rebuilt to it: the live unit takes the block and carries its own inputs on the multicore, the other three fold to a line each, and the stack stays in unit order. No year-scale drawing was added, which was the explicit part of the ruling.
 - **No AT3 exam paper**, so no examination-paper surface exists in the system yet.
 - **The type ramp is looser than six roles.** The six above are the roles the
   system reasons in, but `assets/site.css` carries sixteen literal font sizes,
