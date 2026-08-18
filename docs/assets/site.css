@@ -129,6 +129,8 @@ a.ch:hover{background:rgba(242,241,236,.05)}
 .railfoot b{display:block;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--chalk-dim);font-weight:800;margin-bottom:9px}
 .railfoot a,.railfoot .soon{display:block;font-size:.85rem;text-decoration:none;padding:6px 0;border-bottom:1px solid var(--hair)}
 .railfoot a:hover{color:var(--tape)}
+/* the page you have open, same keyline the input list uses for a lesson */
+.railfoot a.reading{box-shadow:inset 4px 0 0 var(--chalk);padding-left:10px}
 .railfoot .soon{color:var(--chalk-dim)}
 .railfoot .soon i{font-style:normal;display:block;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase}
 
@@ -287,6 +289,15 @@ a.ch:hover{background:rgba(242,241,236,.05)}
 
 .keep{margin:30px 34px 0;border-top:2px solid var(--ink);padding-top:18px;font-size:1.1rem;line-height:1.35;max-width:50ch;font-weight:600}
 .keep b{display:block;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:8px;font-weight:800}
+
+/* ---------------------------------------------------------- the blueprint page
+   The same plate a lesson reads on, with no rider: a blueprint has no week and
+   nothing patched in, so the title block goes straight to the drawing and the
+   rules under it. */
+.titleblock.bp{padding-bottom:26px}
+.bpsheet{margin:26px 34px 0;border:1px solid var(--rule);padding:16px}
+.bpsheet svg{display:block;width:100%;height:auto}
+.bprules ul{margin-bottom:0}
 
 /* --------------------------------------------- under the plate, the floor */
 .underplate{max-width:960px;margin-top:34px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}

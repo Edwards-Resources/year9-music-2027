@@ -133,6 +133,20 @@ it.
   so nothing is lifted out of sequence. No year-scale drawing was added, which
   was the explicit half of the ruling. The strip's 5% inset is zeroed on this
   surface because there is no room here for it to align to.
-- **The four blueprint sheets do not exist**, so half the STORY block is unmet.
-  The rail and the hub bar now name them on one line instead of four dead
-  labels, which is a smaller absence, not a filled one.
+- ~~**The four blueprint sheets do not exist**~~ **Built 18 August 2026.** Four
+  pages at `{term}/blueprint/{slug}/`, one plate each, no rider and no meta row
+  because a blueprint has no week and nothing patched in: the title block goes
+  straight to the drawing and the rules under it. The drawings are `plots.py`
+  functions, same as the four unit sheets, but drawn in ink on sheet-coloured
+  ground rather than chalk on the floor, because a blueprint sheet lives inside
+  the plate, and the Two Grounds Rule decides the ink from the ground rather
+  than from habit — `small_stage()` had already set this precedent for the
+  lesson page's spec column and the blueprint sheets follow it, not the four
+  hub-scale drawings next to them in the same file. No ghost brackets and no
+  4px downstage edge either: a blueprint is not one of the four rooms and
+  nothing plugs into it from below, so what carries over from the unit sheets
+  is the habit of naming a document in its own corner, not the frame itself.
+  The rail's foot and the hub's blueprint bar, which already linked to
+  `built: true` sheets, now have four to link to instead of a `not on the site
+  yet` line; the current sheet gets the same 4px reading keyline a lesson row
+  gets, on the link rather than a channel.

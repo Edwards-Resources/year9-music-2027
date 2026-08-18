@@ -400,3 +400,229 @@ def small_stage():
              f'letter-spacing="1.1"><text x="14" y="121">DOWNSTAGE</text></g>')
     return (f'<svg viewBox="0 0 220 134" width="100%" role="img" '
             f'aria-label="{SMALL_ALT}">{"".join(o)}</svg>')
+
+
+# ----------------------------------------------------------- the blueprint
+# Four sheets of Term 2's own paperwork, not a fifth and sixth unit plan.
+# Same corner-labelled, bounded-sheet convention as the four units above
+# (production paperwork names itself), but with no ghost brackets and no
+# downstage edge: a blueprint sheet is not one of the four rooms and nothing
+# plugs into it from below. What is shared with the units is the habit of
+# labelling a document in its own corner, not the frame itself.
+
+BPW, BPH = 900, 300
+BPW2, BPH2 = 900, 210
+
+# Ink on sheet, not chalk on floor. The four unit drawings above are chalk
+# because the hub lays them on the black floor; a blueprint sheet sits on the
+# plate instead (comp D's ground, sheet-coloured), the same ground small_stage()
+# already draws on, and the Two Grounds Rule decides the ink from the ground
+# rather than from habit.
+BP_INK, BP_DIM = "#141517", "#5D5F63"
+
+
+def _bpframe(w, h, name):
+    return (f'<rect x="1" y="1" width="{w - 2}" height="{h - 2}" fill="none" '
+            f'stroke="{BP_INK}" stroke-width="1"/>'
+            f'<text x="18" y="26" fill="{BP_DIM}" font-family="Chivo, sans-serif" '
+            f'font-size="10" letter-spacing="2.6">{name}</text>')
+
+
+def _bphead(left, right, title, note):
+    return (f'<text x="{left}" y="52" fill="{BP_INK}" font-family="Chivo, sans-serif" '
+            f'font-size="15" font-weight="700" letter-spacing="1.2">{title}</text>'
+            f'<text x="{right}" y="52" fill="{BP_DIM}" font-family="Chivo Mono, monospace" '
+            f'font-size="11" text-anchor="end" letter-spacing="1.4">{note}</text>')
+
+
+def _bptag(x, y, num):
+    return (f'<rect x="{x}" y="{y}" width="19" height="16" fill="none" '
+            f'stroke="{BP_INK}" stroke-width="1"/>'
+            f'<text x="{x + 9.5}" y="{y + 12}" fill="{BP_INK}" '
+            f'font-family="Chivo Mono, monospace" font-size="11" '
+            f'text-anchor="middle">{num}</text>')
+
+
+def _bplbl(x, y, text, anchor="middle", size=10):
+    return (f'<text x="{x}" y="{y}" fill="{BP_DIM}" font-family="Chivo, sans-serif" '
+            f'font-size="{size}" text-anchor="{anchor}" letter-spacing="2.2">{text}</text>')
+
+
+def bp_progression():
+    """The 12-bar frame in roman numerals, the movable half of the pair unit2's
+    hub chart already draws concretely. That chart is one performance of this
+    blueprint, in F; this is the numbers under it that do not change when the
+    key does, which is the whole point of lesson 4."""
+    left, right = 60, 840
+    romans = ["I", "I", "I", "I", "IV", "IV", "I", "I", "V", "IV", "I", "I"]
+    fkeys = ["F7", "F7", "F7", "F7", "B♭7", "B♭7",
+             "F7", "F7", "C7", "B♭7", "F7", "F7"]
+    o = [_bpframe(BPW, BPH, "PROGRESSION"),
+         _bphead(left, right, "12-bar blues, I–IV–V", "movable: same numbers, any key")]
+    barw = (right - left) / 4
+    for row in range(3):
+        y = 96 + row * 68
+        o.append(f'<line x1="{left}" y1="{y}" x2="{right}" y2="{y}" '
+                 f'stroke="{BP_INK}" stroke-width="1"/>')
+        for b in range(4):
+            i = row * 4 + b
+            bx = left + barw * b
+            o.append(f'<line x1="{bx:.1f}" y1="{y - 16}" x2="{bx:.1f}" y2="{y + 16}" '
+                     f'stroke="{BP_INK}" stroke-width="1"/>')
+            o.append(f'<text x="{bx + barw / 2:.1f}" y="{y - 24}" fill="{BP_INK}" '
+                     f'font-family="Chivo, sans-serif" font-size="18" font-weight="700" '
+                     f'text-anchor="middle">{romans[i]}</text>')
+            o.append(f'<text x="{bx + barw / 2:.1f}" y="{y + 30}" fill="{BP_DIM}" '
+                     f'font-family="Chivo Mono, monospace" font-size="11" '
+                     f'text-anchor="middle" letter-spacing="1">{fkeys[i]}</text>')
+        o.append(f'<line x1="{right}" y1="{y - 16}" x2="{right}" y2="{y + 16}" '
+                 f'stroke="{BP_INK}" stroke-width="1"/>')
+        if row == 2:
+            o.append(f'<line x1="{right - 6}" y1="{y - 16}" x2="{right - 6}" y2="{y + 16}" '
+                     f'stroke="{BP_INK}" stroke-width="1"/>')
+    return "".join(o)
+
+
+VOICINGS = [
+    ("I7", "F7", [("1", "F"), ("3", "A"), ("5", "C"), ("♭7", "E♭")]),
+    ("IV7", "B♭7", [("1", "B♭"), ("3", "D"), ("5", "F"), ("♭7", "A♭")]),
+    ("V7", "C7", [("1", "C"), ("3", "E"), ("5", "G"), ("♭7", "B♭")]),
+]
+
+
+def bp_voicings():
+    """Three four-note stacks, root to flattened seventh, one per chord the
+    progression names. A note is a filled dot rather than a real key or a real
+    notehead, the same abstraction unit1's kit and mics already use: the
+    interval order is what carries the shape, not a claim about how a piano
+    key actually looks."""
+    o = [_bpframe(BPW, BPH, "VOICINGS"),
+         _bphead(60, 840, "Dominant 7th, root to ♭7",
+                 "movable: 1, 3, 5, ♭7 in any key")]
+    cxs = [220, 470, 720]
+    base_y, step = 250, 42
+    for cx, (roman, chord, notes) in zip(cxs, VOICINGS):
+        o.append(f'<text x="{cx}" y="86" fill="{BP_INK}" font-family="Chivo, sans-serif" '
+                 f'font-size="16" font-weight="700" text-anchor="middle">{roman}'
+                 f'<tspan fill="{BP_DIM}" font-size="12" dx="6">{chord}</tspan></text>')
+        top_y = base_y - (len(notes) - 1) * step
+        o.append(f'<line x1="{cx}" y1="{base_y}" x2="{cx}" y2="{top_y}" '
+                 f'stroke="{BP_INK}" stroke-width="1"/>')
+        for i, (deg, name) in enumerate(notes):
+            y = base_y - i * step
+            o.append(f'<circle cx="{cx}" cy="{y}" r="5" fill="{BP_INK}"/>')
+            o.append(_bptag(cx - 78, y - 8, deg))
+            o.append(f'<text x="{cx + 16}" y="{y + 4}" fill="{BP_INK}" '
+                     f'font-family="Chivo Mono, monospace" font-size="12">{name}</text>')
+    return "".join(o)
+
+
+def bp_drum_pattern():
+    """One bar of swing: the ride's long-short cell twice over, the hi-hat
+    closing on 2 and 4, the snare backbeat sitting with it. Written on the same
+    triplet-eighth grid a jazz chart uses, twelve units to the bar, three to
+    the beat, because that is the grid the swung "and" actually falls on."""
+    left, right = 200, 840
+    top, rowh = 88, 62
+    gw = right - left
+    colw = gw / 12
+    rows = [("RIDE", [0, 2, 3, 6, 8, 9]), ("SNARE", [3, 9]), ("HI-HAT", [3, 9])]
+    o = [_bpframe(BPW, BPH, "DRUM PATTERN"),
+         _bphead(left, right, "Swing feel, one bar", "ride · backbeat · hi-hat on 2 & 4")]
+    for c in range(0, 13, 3):
+        x = left + colw * c
+        o.append(f'<line x1="{x:.1f}" y1="{top}" x2="{x:.1f}" y2="{top + 3 * rowh}" '
+                 f'stroke="{BP_INK}" stroke-width="1"/>')
+    for beat in range(4):
+        x = left + colw * (beat * 3 + 1.5)
+        o.append(_bplbl(x, top - 12, str(beat + 1), size=10))
+    for ri, (label, hits) in enumerate(rows):
+        y = top + ri * rowh
+        if ri:
+            o.append(f'<line x1="{left - 130}" y1="{y}" x2="{right}" y2="{y}" '
+                     f'stroke="{BP_INK}" stroke-width="1"/>')
+        mid = y + rowh / 2
+        o.append(f'<text x="{left - 150}" y="{mid + 4:.1f}" fill="{BP_DIM}" '
+                 f'font-family="Chivo, sans-serif" font-size="11" '
+                 f'letter-spacing="2.2">{label}</text>')
+        for c in hits:
+            x = left + colw * (c + 0.5)
+            if ri == 0:
+                o.append(f'<path d="M{x - 6:.1f} {mid - 6:.1f} L{x + 6:.1f} {mid + 6:.1f} '
+                         f'M{x - 6:.1f} {mid + 6:.1f} L{x + 6:.1f} {mid - 6:.1f}" '
+                         f'stroke="{BP_INK}" stroke-width="1"/>')
+            else:
+                o.append(f'<rect x="{x - 9:.1f}" y="{mid - 5:.1f}" width="18" height="10" '
+                         f'fill="{BP_INK}"/>')
+    o.append(f'<line x1="{left - 150}" y1="{top}" x2="{left - 150}" y2="{top + 3 * rowh}" '
+             f'stroke="{BP_INK}" stroke-width="1"/>')
+    return "".join(o)
+
+
+def bp_walking_bass():
+    """The two rules, shown once: root on the change, approach by step or by
+    semitone. F7 to B♭7 is bar 4 into bar 5 of the progression above, the
+    first change in the form, so the excerpt is the change a student meets
+    first rather than an invented one."""
+    left, right = 80, 820
+    notes = [("F", "root"), ("A", ""), ("C", ""), ("A", "approach"),
+             ("B♭", "root"), ("D", ""), ("F", ""), ("D", "")]
+    o = [_bpframe(BPW2, BPH2, "WALKING BASS"),
+         _bphead(left, right, "F7 to B♭7, the first change in the form",
+                 "root · step or semitone · root")]
+    y = 130
+    barmid = (left + right) / 2
+    o.append(f'<line x1="{left}" y1="{y}" x2="{right}" y2="{y}" '
+             f'stroke="{BP_INK}" stroke-width="1"/>')
+    o.append(f'<line x1="{left}" y1="{y - 18}" x2="{left}" y2="{y + 18}" '
+             f'stroke="{BP_INK}" stroke-width="1"/>')
+    o.append(f'<line x1="{barmid}" y1="{y - 18}" x2="{barmid}" y2="{y + 18}" '
+             f'stroke="{BP_INK}" stroke-width="1"/>')
+    o.append(f'<line x1="{right}" y1="{y - 18}" x2="{right}" y2="{y + 18}" '
+             f'stroke="{BP_INK}" stroke-width="1"/>')
+    o.append(f'<text x="{left + 4}" y="{y - 26}" fill="{BP_DIM}" '
+             f'font-family="Chivo Mono, monospace" font-size="11">F7</text>')
+    o.append(f'<text x="{barmid + 4}" y="{y - 26}" fill="{BP_DIM}" '
+             f'font-family="Chivo Mono, monospace" font-size="11">B♭7</text>')
+    step = (right - left) / 8
+    for i, (name, tag) in enumerate(notes):
+        x = left + step * (i + 0.5)
+        o.append(f'<circle cx="{x:.1f}" cy="{y}" r="5" fill="{BP_INK}"/>')
+        o.append(f'<text x="{x:.1f}" y="{y + 30}" fill="{BP_INK}" '
+                 f'font-family="Chivo Mono, monospace" font-size="12" '
+                 f'text-anchor="middle">{name}</text>')
+        if tag:
+            o.append(_bplbl(x, y - 34, tag, size=9))
+    return "".join(o)
+
+
+BP_DRAW = {
+    "12-bar-progression": (bp_progression, BPW, BPH),
+    "piano-voicings": (bp_voicings, BPW, BPH),
+    "drum-pattern": (bp_drum_pattern, BPW, BPH),
+    "walking-bass-rules": (bp_walking_bass, BPW2, BPH2),
+}
+
+BP_ALT = {
+    "12-bar-progression": ("The 12-bar blues frame in roman numerals, three "
+        "systems of four bars: I for four bars, IV for two, I for two, then V, "
+        "IV, I and I, with the F-key chord names written small underneath each "
+        "numeral."),
+    "piano-voicings": ("Three four-note dominant 7th voicings, root to "
+        "flattened seventh, for I7, IV7 and V7: F7 spelled F, A, C, E flat; "
+        "B flat 7 spelled B flat, D, F, A flat; C7 spelled C, E, G, B flat."),
+    "drum-pattern": ("One bar of swing feel on a twelve-unit triplet grid: the "
+        "ride pattern hitting a long-short cell twice, the snare backbeat on "
+        "beats 2 and 4, and the hi-hat closing with it on 2 and 4."),
+    "walking-bass-rules": ("An eight-note walking bass line over the "
+        "progression's first chord change, F7 to B flat 7: F, A, C, A into B "
+        "flat, D, F, D, landing on the root at the change and approaching it "
+        "by semitone the note before."),
+}
+
+
+def blueprint(slug):
+    """The sheet for blueprint item `slug`, at plate scale."""
+    draw, w, h = BP_DRAW[slug]
+    return (f'<svg class="plot-bp" viewBox="0 0 {w} {h}" '
+            f'role="img" aria-label="{BP_ALT[slug]}">{draw()}</svg>')

@@ -1,104 +1,143 @@
 # Next session: Year 9 Music 2027
 
-## Where this stands, 18 August 2026 (later)
+## Where this stands, 18 August 2026 (later still)
 
-**Home's year section is rebuilt to unequal weight.** This was the last
-open item from the finish review, and the one the THESIS had been naming
-and refusing on its own front door since the site was built.
+**The four blueprint sheets are built.** This was the last open item in
+`DESIGN.md`'s known gaps and the last unmet half of STORY: a student can now
+get back to the progression, the voicings, the pattern and the rules at their
+own address, `{term}/blueprint/{slug}/`, not just inside a lesson.
 
-The year is now a stack in unit order, not four equal blocks in a row:
-
-- The three units that are not live **fold to a line each** - chip, name,
-  focus, assessment meta, and Taught or Ahead at the right.
-- The live unit **opens in place** and carries its own thirty inputs on
-  the multicore, under the 4px chalk keyline the rail uses for the page
-  you have open, with the assessment line under a hairline below it.
-- Nothing is lifted out of sequence, so the open block travels down the
-  page as the year runs and the shape of the surface is itself a position
-  statement.
-- **No year-scale room was added**, which was the explicit half of the
-  ruling. The multicore is reused rather than a second device invented.
-- On home the strip's `--core-inset` is zeroed and replaced by a 38px
-  gutter for the ruler's own label. `SH_X` and the hub's 5% are untouched
-  and still one number in two files.
-
-Verified in the browser at 1440, 1180 and 390. No console errors. At 390,
-home, hub and lesson all report `scrollWidth == clientWidth`.
-
-- Rebuilt clean: `python3 build.py` → 128 pages, 123 of 123 inputs authored.
-- `DESIGN.md` and `DESIGN-NOTES.md` updated: the gap is closed in both, the
-  keyline rule now says "a left inset on home's open unit", and the "Unit
-  blocks (home)" section is rewritten as "The year stack (home)".
-- **Committed as `a7c0ae6`. Not pushed** - the live site is still on
-  `2edb548` until Matthew says to push.
+- `plots.py` gained a `blueprint(slug)` dispatcher and four drawing
+  functions: `bp_progression` (the 12-bar frame in roman numerals, F-key
+  chords written small underneath, the movable half of the pair unit2's hub
+  chart already draws concretely), `bp_voicings` (three four-note dominant
+  7th stacks, root to ♭7, for I7/IV7/V7), `bp_drum_pattern` (one bar of swing
+  on a 12-unit triplet grid: ride, snare backbeat, hi-hat on 2 and 4), and
+  `bp_walking_bass` (an 8-note excerpt over the form's first change, F7 to
+  B♭7, root on the change and a semitone approach into it).
+- **They are drawn in ink on sheet, not chalk on floor**, which is the one
+  real bug this session hit and fixed: the first pass reused `CHALK`/`DIM`
+  and the roman numerals and header text were invisible (near-white on
+  near-white) until switched to `BP_INK`/`BP_DIM`, the same ground
+  `small_stage()` already draws on. **Two Grounds Rule, not spotted from
+  reading DESIGN.md alone** — it only bit because the blueprint sheet lives
+  inside the plate and the four unit sheets it borrows the corner-label habit
+  from live on the floor. Verified by grepping the built SVGs for `fill=`;
+  none carry `#F2F1EC` or `#8E8F8B` any more.
+- `build.py` gained `blueprint_page()` (the plate with no rider and no meta
+  row: title block straight to the drawing, straight to a `read`-shaped rules
+  block) and wired it into `main()`'s per-term loop. `rail()` gained a
+  `reading_bp` parameter so the current sheet gets the same 4px keyline a
+  lesson row gets, on the railfoot link rather than a channel.
+- `data/course/term2/term.json`'s four blueprint entries are `built: true`
+  with a `deck` sentence and a `rules` list each, hand-edited at the file's
+  1-space indent (not round-tripped through `json.dump`).
+- `assets/site.css` gained `.titleblock.bp`, `.bpsheet` and `.railfoot
+  a.reading`; `.bprules` reuses the `.read` family the guide/explain/worked
+  blocks already carry, so no new prose styling was needed.
+- `DESIGN.md` and `DESIGN-NOTES.md` updated: the known-gap entry is closed
+  with strikethrough, and a new **The blueprint sheet** component entry sits
+  under **The unit sheets** in DESIGN.md, naming the ink-not-chalk departure
+  explicitly so it doesn't get re-broken by a future edit that copies a unit
+  sheet function as a starting point.
+- Rebuilt clean: `python3 build.py` → 132 pages (128 + 4), 123 of 123 inputs
+  still authored. Verified in the browser: all four sheets render correctly
+  on desktop and at 390 with no horizontal overflow; the hub's blueprint bar
+  and every term 2 lesson's rail foot now link to all four sheets with no
+  `not on the site yet` line left anywhere in `docs/`.
+- **Not yet committed.** Working tree has `DESIGN.md`, `DESIGN-NOTES.md`,
+  `assets/site.css`, `build.py`, `plots.py`, `data/course/term2/term.json`,
+  every `docs/term2/*/index.html` (the railfoot changed on all of them) and
+  the new `docs/term2/blueprint/` tree.
 
 ## Next task
 
-Pick from "What's left" below, in roughly this order of value:
+Nothing left in `DESIGN.md`'s known gaps closes from inside this repo except
+the two below, which are smaller. Pick from "What's left":
 
-1. **The four blueprint sheets** (`data/course/term2/term.json`, `built: false`)
-   - now the only open item in `DESIGN.md`'s known gaps that this repo can
-   close. Four rejected explains depend on them, and half the STORY block
-   is unmet until they exist.
-2. **No AT3 exam paper** - program thread, not this repo's build thread.
-3. **Hoochie Coochie Man's harmonic rhythm** (T2 #02's `listen`) - not
+1. **No AT3 exam paper** — program thread, not this repo's build thread.
+   Needs Matthew's AT3 materials before there is anything to build against.
+2. **Hoochie Coochie Man's harmonic rhythm** (T2 #02's `listen`) — not
    urgent, reads fine as a plain row without it.
+3. Otherwise: **general content review** now that the site is functionally
+   complete (123 of 123 lessons, all four blueprint sheets). A read-through
+   for tone, factual slips, and whether the drum-pattern/walking-bass content
+   in this session matches what Matthew actually teaches (it was authored
+   from the term's own lesson text and PRODUCT.md, not from a lesson plan he
+   supplied, so it is worth his eyes before students see it) would be more
+   valuable than new build work.
 
 ## Model and effort recommendation
 
-**Sonnet, medium** for the blueprint sheets - routine authoring against a
-shape `term1`'s guide and `plots.py` already establish.
+**Sonnet, low** for a first pass reviewing this session's blueprint content
+against what's actually taught — reading and flagging, not building.
+**Opus, medium** only if the review turns up a genuine musical or pedagogical
+correction that needs rethinking rather than a wording fix.
 
 ## Watch out for
 
 Everything in the previous handoffs still applies: `SH_X` and the hub's
-`--core-inset` both 5% (home's zero is a documented local override, not a
-change to that pair), nothing below the sheet's bottom edge, `GHOST` means
-the other three units and nothing else, contrast as a product constraint,
-focus as tape-on-floor/ink-on-sheet, `assets/site.js` staying small and
-working without it, two tape strips per page at most (home spends its two
-on the desk plate's corner and the live channel), the stencil face never
-used as a heading face, elements of music not "concepts of music", no
-school name or student data anywhere, never `git stash` in this repo, the
-390px-screenshot trap, `DESIGN.md` as the system of record, sweep before
-committing not just before pushing, the register being generated, the
-`.serve/` symlink setup for local preview (`course-sites` on port 8820
-serves all four sites), and italics need `_underscores_`, not `*asterisks*`.
+`--core-inset` both 5% (home's zero is a documented local override), nothing
+below the sheet's bottom edge, `GHOST` means the other three units and
+nothing else, contrast as a product constraint, focus as
+tape-on-floor/ink-on-sheet, `assets/site.js` staying small and working
+without it, two tape strips per page at most, the stencil face never used as
+a heading face, elements of music not "concepts of music", no school name or
+student data anywhere, never `git stash` in this repo, the 390px-screenshot
+trap, `DESIGN.md` as the system of record, sweep before committing not just
+before pushing, the register being generated, the `.serve/` symlink setup for
+local preview (`course-sites` on port 8820 serves all four sites), and
+italics need `_underscores_`, not `*asterisks*`.
 
-Two additions:
+One addition this session, worth promoting to a standing rule for `plots.py`:
 
-- **Editing `data/*.json` by round-tripping through `json.dump` reformats
-  the whole file** (this repo's JSON is hand-set at 1-space indent). Insert
-  new keys with a text edit at the existing indent, then validate with
-  `python3 -c "import json; json.load(open(path))"` and rebuild.
-- **The in-app browser caches `site.css` hard.** A rebuild will show new
-  HTML against the old stylesheet and look like the CSS edit silently
-  failed. Bust it in the page rather than reloading:
-  `const s=document.querySelector('link[rel=stylesheet]'); s.href=s.href.split('?')[0]+'?cb='+performance.now()`.
-  A `?v=` on the page URL does not do it.
+- **A drawing's colour comes from its ground, not from the file it lives in.**
+  `plots.py` now carries two colour pairs, `CHALK`/`DIM` for the floor and
+  `BP_INK`/`BP_DIM` for the sheet, and every new drawing function has to pick
+  the right one by asking where the `<svg>` will actually sit in the page,
+  not by copying the nearest existing function. This bit once already; it
+  will bite again if a fifth blueprint-style sheet or a small-plate variant
+  gets added by copy-paste from `unit2()` instead of from `small_stage()` or
+  `bp_progression()`.
+
+The two still-open items from last session's leftovers, unchanged:
+
+- **Editing `data/*.json` by round-tripping through `json.dump` reformats the
+  whole file.** Insert new keys with a text edit at the existing indent, then
+  validate with `python3 -c "import json; json.load(open(path))"` and
+  rebuild.
+- **The in-app browser caches `site.css` hard.** Bust it in the page rather
+  than reloading, or just open a fresh tab, which is what worked reliably
+  this session when a reused tab started returning stale
+  `innerWidth`/screenshot state after a scroll.
 
 ## Decisions waiting on Matthew
 
-1. **Push?** `a7c0ae6` is local. The live site does not have the home
-   rebuild until it is pushed.
-2. **The third work in T1 #04's cue sheet** still has no cue times (audio
+1. **Push?** Nothing has been pushed yet this session — see "Not yet
+   committed" above; commit first, then this question repeats.
+2. **The blueprint content itself.** The drum pattern, the voicings and the
+   walking bass excerpt are musically standard but were authored from the
+   term's own lesson text rather than from a lesson plan or notation Matthew
+   supplied. Worth his read before Week 5 (input 13, comping and voicings)
+   and Week 4 (input 12, walking bass) arrive.
+3. **The third work in T1 #04's cue sheet** still has no cue times (audio
    won't download). Four or five, set with the recording playing.
-3. **Rewrite `year8-music`'s published history?** Recommendation: no. It's
-   his own name on his own resources at his own org.
-4. **`DIRECTION.md` and the comp D sidecar name Matthew**, already in
-   pushed history. Same question as Year 8, smaller.
-5. **Should the player break out of the 240px listen block?** One line
-   either way, Matthew's call since he's the one projecting it.
+4. **Rewrite `year8-music`'s published history?** Recommendation: no.
+5. **`DIRECTION.md` and the comp D sidecar name Matthew**, already in pushed
+   history. Same question as Year 8, smaller.
+6. **Should the player break out of the 240px listen block?** Matthew's call.
 
 ## The leak that keeps recurring
 
 Same standing warning as every recent handoff: **this file is the one place
 in the repo that has to discuss what must not be on the site, in order to
-warn about it.** Swept before this commit: no school name, no student
-names, no repertoire named in the T3 Weeks 4-6 sense, and the two barred
-works are not named here either. This session added no content, only
-layout, so nothing new was written that could carry a name.
+warn about it.** Swept before this session's commit: no school name, no
+student names, no repertoire named in the T3 Weeks 4-6 sense, and the two
+barred works are not named here either. This session's new content (the
+blueprint sheets) names only chord letters, roman numerals, note names and
+drum stems, none of which are the leak this note exists to catch.
 
 ## Last commit
 
-`a7c0ae6 Rebuild home's year section to unequal weight` (local, not pushed)
+`a7c0ae6 Rebuild home's year section to unequal weight` (local, not pushed).
+This session's work is staged for a new commit, not yet made.

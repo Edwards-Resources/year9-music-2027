@@ -392,6 +392,9 @@ The term's thirty lessons as one line of equal-width channels running out of the
 ### The unit sheets (signature)
 Four SVG drawings, one per unit, all built by `plots.py` on one shared frame: a 1080×250 sheet bounded by a 1px chalk rule, named in its own top corner the way production paperwork is, ghost brackets stepped above it, a 4px painted downstage edge below. **What is shared is the frame, not the drawing.** Inside the frame each unit is the document that unit's musicians actually use: a stage plot, a chord chart, a listening set-up, a cue sheet. Do not force a fifth unit into a floor plan because the first one was one.
 
+### The blueprint sheet
+Term 2's own paperwork, one plate per sheet at `{term}/blueprint/{slug}/`, added 18 August 2026: the 12-bar progression in roman numerals, the piano voicings, the drum pattern, the walking bass rules. Not a fifth and sixth unit. The page is the lesson page's plate with no rider and no meta row, because a blueprint has no week and nothing patched in: title block straight to the drawing, straight to a `read`-shaped block of rules under it. The drawing is a `plots.py` function like the four unit sheets, corner-named the same way, but **in ink on the sheet rather than chalk on the floor**, because it sits inside the plate: the Two Grounds Rule decides the ink from the ground, not from which file draws it, and `small_stage()`'s ink-on-sheet convention is the one this inherits, not the hub sheets sitting next to it in `plots.py`. No ghost brackets and no 4px downstage edge: a blueprint is not one of the four rooms and nothing plugs into it from below. The rail's foot and the hub's blueprint bar link straight to it; the sheet you have open takes the same 4px reading keyline a lesson row takes, on the link itself rather than on a channel.
+
 ### Input table
 The full term list as a ruled table: hairline rules, dim mono numbers, dim label headers, week rows as spanning sub-headers. Taught rows go chalk-past; the current row takes the 4px chalk keyline top and bottom plus a ◀ after its number, never a third tape fill.
 
@@ -432,7 +435,7 @@ The multicore is reused here rather than a second device being invented, and it 
 
 ### Known gaps in the system
 
-- **The blueprint sheets do not exist.** `data/course/term2/term.json` carries four sheets flagged `built: false`; no other term carries any. PRODUCT.md lists the composing blueprints under must-carry and the STORY block promises a student can get back to the blueprint, the progression, the voicings and the rules without asking twice. **That half of STORY is unmet.** The rail's foot and the hub's blueprint bar name the missing sheets on one line rather than one dead label each, which is a smaller absence, not a filled one.
+- ~~**The blueprint sheets do not exist.**~~ **Closed 18 August 2026.** All four of `data/course/term2/term.json`'s sheets are `built: true` and have a page at `{term}/blueprint/{slug}/`: the progression in roman numerals, the piano voicings, the drum pattern, and the walking bass rules. STORY's promise is met. See **The blueprint sheet** under Components for what the page is.
 - ~~**Home's four unit blocks are equal weight.**~~ **Closed 18 August 2026.** The finish review's ruling was unequal weight, and home was rebuilt to it: the live unit takes the block and carries its own inputs on the multicore, the other three fold to a line each, and the stack stays in unit order. No year-scale drawing was added, which was the explicit part of the ruling.
 - **No AT3 exam paper**, so no examination-paper surface exists in the system yet.
 - **The type ramp is looser than six roles.** The six above are the roles the

@@ -145,7 +145,7 @@ def layout(site, course, terms, title, body, description="", term=None, active_i
 # ------------------------------------------------------------------ the rail
 
 
-def rail(site, term, current_no, reading_no):
+def rail(site, term, current_no, reading_no, reading_bp=None):
     """The input list. Permanent, and it carries every lesson of the term rather
     than a window onto it (comp D, binding).
 
@@ -153,6 +153,10 @@ def rail(site, term, current_no, reading_no):
     up to and is the one torn tape strip the rail is allowed; `reading` is the
     page you have open and is marked with the 4px painted keyline, because a
     second tape strip in the rail would break the two-strips-a-page rule.
+
+    `reading_bp` is the same keyline, on a blueprint link in the foot rather
+    than a channel in the body, for when the page open is one of the four
+    sheets rather than a lesson.
     """
     base = site["base"]
     rows, week = [], None
@@ -189,7 +193,10 @@ def rail(site, term, current_no, reading_no):
     if term.get("blueprint"):
         built_sheets = [b for b in term["blueprint"] if b.get("built")]
         waiting = [b for b in term["blueprint"] if not b.get("built")]
-        items = [f'<a href="{base}/{term["id"]}/blueprint/{b["slug"]}/">{e(b["title"])}</a>'
+        items = [(f'<a class="reading" aria-current="page" '
+                   f'href="{base}/{term["id"]}/blueprint/{b["slug"]}/">{e(b["title"])}</a>'
+                   if b["slug"] == reading_bp else
+                   f'<a href="{base}/{term["id"]}/blueprint/{b["slug"]}/">{e(b["title"])}</a>')
                  for b in built_sheets]
         # One line for the sheets that are not here yet, not one line each. Four
         # repetitions of the same absence on every page of the term is the
@@ -671,6 +678,61 @@ def term_page(site, course, term, current_no, reading_term):
                   f"{term['name']}, input by input.", term=term, active_id=term["id"])
 
 
+# --------------------------------------------------------- the blueprint sheet
+
+
+def blueprint_page(site, course, terms, term, sheet, current_no):
+    """The blueprint, on its own plate. What STORY promises: a student can get
+    back to the progression, the voicings, the pattern or the rules without
+    asking twice, so each sheet is a real page with its own address rather
+    than a drawing that only exists inside a lesson.
+
+    Same plate the lesson page reads on, because this is still a document read
+    on the sheet rather than done on the floor, and the same rail beside it so
+    the input list does not disappear the moment a student leaves a lesson.
+    There is no rider and no meta row: a blueprint is not a lesson and has no
+    week, no content code, nothing patched in. What it has is the drawing and
+    the rules under it, so the plate goes straight from the title block to the
+    read.
+    """
+    base = site["base"]
+    others = [b for b in term["blueprint"]
+              if b["slug"] != sheet["slug"] and b.get("built")]
+    other_links = "".join(
+        f'<a href="{base}/{term["id"]}/blueprint/{o["slug"]}/">{e(o["title"])}</a>'
+        for o in others)
+    rules = "".join(f"<li>{rich(r)}</li>" for r in sheet["rules"])
+
+    body = f"""<div class="wrap">
+{rail(site, term, current_no, None, reading_bp=sheet["slug"])}
+  <main class="stagearea" id="main">
+    <div class="plate-wrap">
+      <span class="tapestrip tl" aria-hidden="true"></span>
+      <span class="tapestrip tr" aria-hidden="true"></span>
+      <article class="plate">
+        <div class="titleblock bp">
+          <p class="of mono">The blueprint &middot; {e(term['name'])}</p>
+          <h1>{e(sheet['title'])}</h1>
+        </div>
+        <div class="bpsheet">{plots.blueprint(sheet['slug'])}</div>
+        <section class="read bprules">
+          <h2>How it works</h2>
+          <p>{rich(sheet['deck'])}</p>
+          <ul>{rules}</ul>
+        </section>
+      </article>
+    </div>
+    <div class="underplate">
+      <span class="lbl">Blueprint</span>{other_links}
+      <span class="lbl">Unit</span>
+      <a href="{base}/{term['id']}/">All {len(term['lessons'])} inputs</a>
+    </div>
+  </main>
+</div>"""
+    return layout(site, course, terms, sheet["title"], body,
+                  sheet["deck"], term=term, active_id=term["id"])
+
+
 # ---------------------------------------------------------- the home surface
 
 
@@ -878,14 +940,20 @@ def main():
     for term in TERMS:
         write([term["id"], "index.html"], term_page(site, course, term, current_no, reading_term))
         pages += 1
+        term_current = current_no if term["id"] == reading_term else None
         for lesson in term["lessons"]:
             if not lesson.get("body"):
                 continue  # No page until the lesson is authored. See NEXT-SESSION.md.
             write([term["id"], f"{lesson['number']:02d}", "index.html"],
-                  lesson_page(site, course, term, lesson,
-                              current_no if term["id"] == reading_term else None))
+                  lesson_page(site, course, term, lesson, term_current))
             pages += 1
             lessons += 1
+        for sheet in term.get("blueprint", []):
+            if not sheet.get("built"):
+                continue  # No page until the sheet is drawn. See NEXT-SESSION.md.
+            write([term["id"], "blueprint", sheet["slug"], "index.html"],
+                  blueprint_page(site, course, TERMS, term, sheet, term_current))
+            pages += 1
 
     write(["index.html"], home_page(site, course, TERMS, current_term, current_no))
     pages += 1

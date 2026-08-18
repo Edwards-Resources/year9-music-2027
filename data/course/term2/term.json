@@ -22,22 +22,47 @@
   {
    "title": "12-bar progression",
    "slug": "12-bar-progression",
-   "built": false
+   "built": true,
+   "deck": "The frame every blues in this unit is built on, in numbers rather than letters, so it moves to whatever key you compose in.",
+   "rules": [
+    "Twelve bars, three systems of four: bar 1 is home (I), bar 5 moves away (IV), bar 9 pulls back (V).",
+    "The numbers do not change when the key does. Lesson 4 already asked you to prove that in three keys.",
+    "F is the class's shared key, written in small type under each numeral. Your own piece can sit in any key that suits the players in your band."
+   ]
   },
   {
    "title": "Piano voicings",
    "slug": "piano-voicings",
-   "built": false
+   "built": true,
+   "deck": "Four-note dominant 7th shapes for the chords the progression names: root, third, fifth and flattened seventh, stacked in that order.",
+   "rules": [
+    "Play the shape as a block on beat 1 of the bar it belongs to, then leave space. Comping is not strumming through the whole bar.",
+    "The same four numbers build the chord in any key: 1, 3, 5, ♭7. F7, B♭7 and C7 are written out because they are this progression's three chords.",
+    "Guitar plays the same four notes on its own strings. Nobody in the rhythm section is exempt from knowing the shape."
+   ]
   },
   {
    "title": "Drum pattern",
    "slug": "drum-pattern",
-   "built": false
+   "built": true,
+   "deck": "One bar of swing feel: the ride pattern that carries the time, the hi-hat closing on beats 2 and 4, and the snare backbeat sitting with it.",
+   "rules": [
+    "The ride is not four even quarter notes. It swings: long-short, long-short, twice a bar.",
+    "Hi-hat and snare land together, on beats 2 and 4. That is the backbeat, and it does not move.",
+    "Play the pattern from the notation once, then close the book and play it from memory. Lesson 15 is where that habit starts."
+   ]
   },
   {
    "title": "Walking bass rules",
    "slug": "walking-bass-rules",
-   "built": false
+   "built": true,
+   "deck": "Two rules, applied at every chord change: land on the root, and approach the next root by step or by semitone.",
+   "rules": [
+    "Root on the change. The first note after a chord changes is always that chord's root, in reach of the hand that is about to play it.",
+    "Approach by step or by semitone. The note right before a change leads into the next root from a note or a semitone away, never a leap.",
+    "Everything between the root and the approach note is your choice: a scale step, a chord tone, a passing note. The two rules bound it; they do not fill it in for you.",
+    "Everybody in the band can play a walking line, at pitch or in octaves. Lesson 12 is not only for whoever plays bass."
+   ]
   }
  ],
  "lessons": [
