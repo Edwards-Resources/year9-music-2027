@@ -1443,7 +1443,30 @@
       "n": "R2",
       "text": "Model rationales, strong and weak"
      }
-    ]
+    ],
+    "worked": {
+     "question": "Write one paragraph of your rationale, about sixty words: name a decision, say what it does, and connect it to the brief.",
+     "brief": "250 words is too long to print twice, so this is one decision at the length the plan already asks for. Both of these are about sixty words and both sound like a rationale. Only one of them names anything a marker could check against the piece.",
+     "model": "I built the boss theme from the tutorial level's four-note motif, inverted and moved from solo flute to low brass at half the speed. The register change makes the same idea sound heavier rather than curious, which is what a boss needs. The brief asks for a musical idea that returns changed, not a new one, and this is that idea returning.",
+     "rungs": [
+      {
+       "move": "Name the decision",
+       "text": "Say what was actually done, specific enough to check against the recording. _Inverted the motif and moved it to low brass._ “Made the boss music scarier” is not a decision, it is a mood."
+      },
+      {
+       "move": "Say what it does",
+       "text": "Say what the decision changes about the sound — register, rhythm, instrumentation — not how it makes the writer feel. _Heavier rather than curious_ names an effect a listener can hear."
+      },
+      {
+       "move": "Connect it to the brief",
+       "text": "Point at the actual line the decision is answering, not the brief in general. _An idea that returns changed, not a new one_ is a requirement someone can look up; “fits the boss fight” is not."
+      }
+     ],
+     "zero": {
+      "answer": "For the boss level I wanted the music to feel really intense and scary, because bosses are supposed to be the hardest part of the game. I used a lot of low, dark sounds to build tension, and I think it fits the fight really well and makes the moment feel important and powerful.",
+      "why": "It is the right length and it sounds like a rationale, but no decision is named. “A lot of low, dark sounds” could describe any boss cue in any game, and “fits the fight really well” gestures at the brief without pointing at anything in it. A rationale that only describes a feeling could have been written before the piece existed — one that names a decision could only be written after it."
+     }
+    }
    }
   },
   {

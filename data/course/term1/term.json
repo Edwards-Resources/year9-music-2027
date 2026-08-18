@@ -1790,7 +1790,30 @@
       "n": "R1",
       "text": "Process log template in flat.io or the class book"
      }
-    ]
+    ],
+    "worked": {
+     "question": "Log what you tried in today's session, and why you kept what you kept.",
+     "brief": "Both of these are the length a real log entry runs to, and only one of them is a record. The difference is not detail for its own sake — it's whether a stranger reading the entry could tell what was tried and why it was kept, or only that the writer felt good about it.",
+     "model": "Tried the intro on solo guitar, then moved the same four bars to piano an octave higher. The guitar strumming crowded the vocal entry at bar 5; the piano left space under it and the entry landed cleaner. Keeping the piano opening, and rewriting the guitar part to come in under the second verse instead, where there's already a gap.",
+     "rungs": [
+      {
+       "move": "Name",
+       "text": "Say exactly what was tried, not just that something was. _Guitar, then piano an octave higher, same four bars._ A note that only says “tried a new intro” could be about anyone's song."
+      },
+      {
+       "move": "Change",
+       "text": "Say what happened as a result, heard rather than felt. _The guitar crowded the vocal entry; the piano left space._ This is the line a diary skips, because it takes listening back rather than remembering how it felt."
+      },
+      {
+       "move": "Reason",
+       "text": "Say why the decision was made, tied to what changed. _Keeping the piano version because it left room for the voice._ A log without a reason is a list of things that happened, not a record of a decision."
+      }
+     ],
+     "zero": {
+      "answer": "Worked on my song today, it sounds better now. Tried a new intro and I liked it more, so I'm keeping it. Might work on the verse next lesson.",
+      "why": "It reads like an entry and it has the right length, but it records nothing. “Sounds better” names no sound, no instrument, no bar — swap it under any other change to any other song and the sentence still stands. A log says what was tried and what was heard; a diary says how it felt. **That's the whole distinction this block exists to draw**, and it's the first thing to fix when the class turns this entry into a strong one together."
+     }
+    }
    }
   },
   {
