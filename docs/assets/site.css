@@ -249,6 +249,42 @@ a.ch:hover{background:rgba(242,241,236,.05)}
    half a metre of another company's chrome is not a document. */
 .guide .frame{max-width:480px}
 
+/* ------------------------------------------------------- the read: worked */
+/* Two takes: the same task answered twice, once so it earns and once so it does
+   not. A comparison, so everything in it is built to be read across. Same
+   section furniture as its two siblings and no new furniture of its own.
+   The mark value rides on the label row, joined to it by a middot, which is
+   what the plate's own header line already does with a count and a status
+   (Input 09 of 30, on the desk). Set after the question instead it reads as
+   part of the sentence, and right-aligned it lands in the middle of the plate,
+   because the reading measure stops at 66ch while the section rule above it
+   runs the document's full width. A figure alone out there is an orphan, not a
+   column. */
+.worked>h2 .mono{font-size:.62rem;color:var(--ink-dim);font-weight:400;letter-spacing:.12em;white-space:nowrap;margin-left:9px}
+.worked>h3{max-width:48ch}
+.worked .brief{margin-bottom:4px}
+.take{margin-top:22px}
+.take h4{margin-top:0}
+/* Both specimens are marked, and the two marks are the world's own two line
+   weights used as an argument: 4px bounds what is kept, 1px draws what is not.
+   No fill and no tint, which the sheet does not take anyway, and the words above
+   each say it as well, so nothing here is carried by a mark alone.
+   The failing take is not dimmed. It is the half a student has to study, and the
+   page is projected while the room compares the two. */
+.said{padding:2px 0 2px 18px;margin-bottom:0}
+.kept .said{border-left:4px solid var(--ink)}
+.dropped .said{border-left:1px solid var(--rule)}
+.dropped .said+p{margin-top:12px}
+/* A rung is a clause: a named move with a sentence under it, in the same 46px
+   gutter the clauses and the cue times use, so the one column of figures runs
+   down the whole plate. Ruled per row like a clause and unlike a cue, because
+   each rung carries its own head and unruled they run together. */
+.rungs{list-style:none;margin-top:15px;max-width:66ch}
+.rungs li{display:grid;grid-template-columns:46px 1fr;gap:16px;padding:13px 0;border-top:1px solid var(--rule)}
+.rungs .n{font-size:.78rem;color:var(--ink-dim);padding-top:3px}
+.rungs h5{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim);font-weight:800;margin-bottom:6px}
+.rungs p{max-width:none;margin-bottom:0}
+
 .keep{margin:30px 34px 0;border-top:2px solid var(--ink);padding-top:18px;font-size:1.1rem;line-height:1.35;max-width:50ch;font-weight:600}
 .keep b{display:block;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:8px;font-weight:800}
 
@@ -460,7 +496,7 @@ a.cell:hover .n{color:var(--chalk)}
   .tbgrid{grid-template-columns:repeat(2,1fr)}
   .tbgrid div:last-child{padding-right:14px}
   .titleblock,.clauses,.keep{padding-left:20px;padding-right:20px}
-  .keep{margin-left:20px;margin-right:20px;padding-left:0;padding-right:0}
+  .keep,.read{margin-left:20px;margin-right:20px;padding-left:0;padding-right:0}
   .spec{padding-left:20px;padding-right:20px}
   .termpage{padding:26px 16px 50px}
   /* The sheet and the strip pan together as one thing.
@@ -480,7 +516,7 @@ a.cell:hover .n{color:var(--chalk)}
 }
 @media(max-width:620px){
   .tbgrid{grid-template-columns:1fr 1fr}
-  .cl{grid-template-columns:34px 1fr;gap:10px}
+  .cl,.cues li,.rungs li{grid-template-columns:34px 1fr;gap:10px}
   /* the outcomes column is the first thing a phone can lose: it is on the
      lesson page, and the input list is for finding a lesson */
   .inputs .oc{display:none}

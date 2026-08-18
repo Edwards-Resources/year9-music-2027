@@ -695,7 +695,27 @@
       "n": "R3",
       "text": "Marked exemplars"
      }
-    ]
+    ],
+    "worked": {
+     "question": "Describe the tone colour in the opening of the excerpt.",
+     "marks": "2 marks",
+     "brief": "Both of these are the length students actually write, and one of them is worth nothing. The difference is not effort and it is not vocabulary. It is whether the sentence could have been written by someone who never heard the excerpt.",
+     "model": "Bright and thin tone colour in the opening: one clean electric guitar with no distortion, high in its range, playing on its own for about eight bars before anything else comes in.",
+     "rungs": [
+      {
+       "move": "Identify",
+       "text": "Name the quality, in words that belong to tone colour. _Bright and thin._ This is the first mark and it is the one most often thrown away, because “a nice sound” names no quality at all and could sit under any excerpt in the paper."
+      },
+      {
+       "move": "Describe",
+       "text": "Add what is making that sound and where it is. _One clean electric guitar, high in its range, alone for about eight bars._ The test for the second mark is whether a marker could hear the opening from your words without playing the recording."
+      }
+     ],
+     "zero": {
+      "answer": "The tone colour in the opening is very effective and creates a great atmosphere for the piece.",
+      "why": "It reads like an answer, it is a whole sentence, and it earns nothing. Nothing in it could only have been written by someone who heard this excerpt: put any other opening under it and the sentence still stands. **Effect without a named sound is the most common way a full page of writing earns no marks at all**, and it is the thing to check for first when you mark somebody else's response today."
+     }
+    }
    }
   },
   {

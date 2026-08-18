@@ -368,6 +368,61 @@ def explain_block(x):
             f'<h3>{rich(x["title"])}</h3>{"".join(parts)}</section>')
 
 
+
+def worked_block(w):
+    """Two takes: the same task answered twice, once so it earns and once so it
+    does not.
+
+    The third block in this world that is read rather than done, and the first
+    that shows rather than tells. `LESSON-DEPTH-TRIAGE.md` gives it to three
+    inputs where the taught distinction is a difference between two pieces of
+    writing that look alike on the page: a log entry against a diary entry, a
+    dot point that earns a mark against one that does not, a rationale that
+    names its decisions against one that describes its feelings. None of those
+    survives being described. All three are seen in one look or not at all.
+
+    So the composition is a comparison and everything in it is built to be read
+    across rather than down. It is a section of the document like its two
+    siblings, taking the plate's own left edge and the 2px ink rule, and it
+    reuses the world's furniture rather than inventing any:
+
+    - The question takes the read block's own h3, with its marks in mono
+      immediately after it, because a count is mono here and because a single
+      right-aligned figure with nothing under it reads as an orphan rather than
+      as a column.
+    - **Both specimens are marked, and the two marks are the world's own two
+      line weights.** The take that works is bound by the 4px painted keyline,
+      the take that does not is drawn with the 1px sheet rule, at the same
+      inset. That is the two weights rule used as an argument: 4px bounds what
+      is kept, 1px draws what is not. No fill, no tint and no colour, which the
+      sheet does not take anyway, and each is said in words as well.
+    - **A rung is a clause.** A named move with a sentence under it, in the same
+      46px gutter the clauses and the cue times use, so the one column of
+      figures runs down the whole plate. The moves are ALARM's where the task is
+      a dot point and the task's own where it is not; the shape is what carries,
+      not the vocabulary.
+
+    The failing take is not dimmed and is not folded away. It is the half of the
+    block a student has to study closely, and a page that is projected while the
+    class compares the two has to hold both at once.
+    """
+    marks = (f'<span class="mono">&middot; {e(w["marks"])}</span>'
+             if w.get("marks") else "")
+    brief = f'<p class="brief">{rich(w["brief"])}</p>' if w.get("brief") else ""
+    rungs = ""
+    if w.get("rungs"):
+        rungs = '<ol class="rungs">' + "".join(
+            f'<li><span class="n mono">{i:02d}</span>'
+            f'<div><h5>{e(r["move"])}</h5><p>{rich(r["text"])}</p></div></li>'
+            for i, r in enumerate(w["rungs"], 1)) + "</ol>"
+    return (f'<section class="read worked"><h2>Two takes{marks}</h2>'
+            f'<h3>{rich(w["question"])}</h3>{brief}'
+            f'<div class="take kept"><h4>The one that works</h4>'
+            f'<p class="said">{rich(w["model"])}</p>{rungs}</div>'
+            f'<div class="take dropped"><h4>The one that doesn\u2019t</h4>'
+            f'<p class="said">{rich(w["zero"]["answer"])}</p>'
+            f'<p>{rich(w["zero"]["why"])}</p></div></section>')
+
 def lesson_page(site, course, term, lesson, current_no):
     """comp D. The plate is the reading surface and long prose never sits on the
     black floor."""
@@ -420,12 +475,15 @@ def lesson_page(site, course, term, lesson, current_no):
     # The read, under the rider and above the keep. The order inside it is the
     # teaching order and is fixed here rather than by the data: you hear the
     # thing before you are told what it is, which is what clause 01 of the one
-    # input carrying both actually says.
+    # input carrying both actually says, and you are shown it done after you
+    # have been told what it is.
     read = ""
     if b.get("guide"):
         read += guide_block(b["guide"])
     if b.get("explain"):
         read += explain_block(b["explain"])
+    if b.get("worked"):
+        read += worked_block(b["worked"])
 
     keep = ""
     if lesson.get("enduring"):
@@ -739,12 +797,37 @@ def assert_no_doubled_work(terms):
                     "listen block. The cue sheet keeps it; take it out of listen.")
 
 
+def assert_worked_complete(terms):
+    """A worked block has both takes.
+
+    The block is a comparison and there is nothing else in it. One answer with
+    its reasoning shown is an explain with a quotation in it, and it would print
+    under a heading saying two takes with one take under it. Held by the build
+    rather than by review because the failing take is the half an author is
+    tempted to leave for later, and the half the three inputs were given this
+    block for.
+    """
+    for term in terms:
+        for lesson in term["lessons"]:
+            w = (lesson.get("body") or {}).get("worked")
+            if not w:
+                continue
+            missing = [k for k in ("question", "model") if not w.get(k)]
+            zero = w.get("zero") or {}
+            missing += [f"zero.{k}" for k in ("answer", "why") if not zero.get(k)]
+            if missing:
+                raise SystemExit(
+                    f"{term['id']} input {lesson['number']:02d}: the worked block "
+                    f"is missing {', '.join(missing)}. Two takes means two.")
+
+
 def main():
     global TERMS
     site = load("site.json")
     course = load("course", "course.json")
     TERMS = [load("course", t, "term.json") for t in course["terms"]]
     assert_no_doubled_work(TERMS)
+    assert_worked_complete(TERMS)
 
     reading_term = course.get("currentTerm") or TERMS[0]["id"]
     current_term = next(t for t in TERMS if t["id"] == reading_term)

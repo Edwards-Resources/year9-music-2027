@@ -210,7 +210,7 @@ over to it. They are not available anywhere else.
 
 **The lesson page** is a two-column grid: a fixed 312px left rail and a fluid stage area. The rail is permanent and carries all thirty channels of the term, not a window onto them. The stage area holds one plate at max 960px, taped at its two top corners, and a row of floor buttons under it. Inside the plate, a title block, then a meta row ruled into as many cells as the lesson has fields (three, four or five via `tbgrid c3/c4/c5`, so an assessment lesson carrying no repertoire keeps even cells), then a rider grid of a fluid clause column beside a fixed 300px spec column, then **the read** where the lesson has one, then the keep-this block.
 
-**The plate's sections** are the document's own divisions and each is opened by the 2px ink rule: title block, rider, read, keep. The read is where a `guide` and an `explain` sit, in that order and fixed in `build.py` rather than by the data, because the teaching order is that you hear a thing before you are told what it is. Each read block takes the plate's own left edge, and its content sits in a 66ch column under a full-width rule, so the section divider spans the document and the paperwork inside it does not.
+**The plate's sections** are the document's own divisions and each is opened by the 2px ink rule: title block, rider, read, keep. The read is where a `guide`, an `explain` and a `worked` sit, in that order and fixed in `build.py` rather than by the data, because the teaching order is that you hear a thing before you are told what it is, and you are shown it done after you have been told. Each read block takes the plate's own left edge, and its content sits in a 66ch column under a full-width rule, so the section divider spans the document and the paperwork inside it does not.
 
 **The term hub** is the one surface where the room is large: max 1180px, unit head and standing line, then the unit's full-width SVG sheet, then the multicore strip running out of its bottom edge, then the assessment bar, the blueprint bar and the full input table. The multicore's `--core-inset` (5%) must equal `SH_X/ROOM_X` in `plots.py` (60 of 1200) or the strip stops reading as plugged into the sheet. Change one and you change the other.
 
@@ -300,13 +300,13 @@ Three rulings inside that, in the order they were forced:
 - **Not a button in its own column.** A 24px control column was built first and cost the work's name 34px in a block that is 240 wide, which put all three of Term 4 input 08's titles onto two lines each. The mark inside the name costs one line's indent and nothing on the rest, and it makes the whole title the target, which is what a tracklist does everywhere else these students have met one.
 - **The player is the block's width**, 210px inside the 240px block inside the 300px spec column. Small, and deliberately not broken out of the column: the recording belongs under the work it names. If the room needs it bigger, that is one rule, and it is a decision about the spec column rather than about this block.
 
-### The read: the cue sheet and the long version
+### The read: the cue sheet, the long version and the two takes
 
-Added 17 August 2026. The first two blocks in this world that are **read rather than done**, which is the fact that decides everything about them.
+Added 17 August 2026, joined by a third on 18 August. The blocks in this world that are **read rather than done**, which is the fact that decides everything about them.
 
-Neither is a fourth clause. Every clause carries a `kind` and every kind names where the doing happens (In the room, With the band, On your own, In flat.io); there is no doing in either of these, so neither can take one. They are sections of the document instead, siblings of the title block and the keep block, and they take that structure's furniture: the plate's own left edge, and the 2px ink rule that already divides this sheet.
+None of them is a fourth clause. Every clause carries a `kind` and every kind names where the doing happens (In the room, With the band, On your own, In flat.io); there is no doing in any of these, so none can take one. They are sections of the document instead, siblings of the title block and the keep block, and they take that structure's furniture: the plate's own left edge, and the 2px ink rule that already divides this sheet.
 
-Both are on the sheet rather than the floor because both are paragraphs. That is the Two Grounds Rule, not a preference.
+All three are on the sheet rather than the floor because all three are paragraphs. That is the Two Grounds Rule, not a preference.
 
 **The long version** (`explain`) is one block of about 250 words on an input that introduces something a student writes in their book. `LESSON-DEPTH-TRIAGE.md` governs which inputs get one. A label in caps, the explain's own title at the 1.1rem step, then prose at 66ch with optional caps subheads and a list. The list marker is the success criteria's dash, which is now the sheet's one list marker, but without the rule under each item: the criteria are a checklist and are ruled like one, and this is a set inside a paragraph's argument.
 
@@ -326,6 +326,53 @@ Four rulings inside it:
 `assets/site.js` is the only script on the site and this is all it does.
 
 **Held by the build:** a work walked through in the cue sheet may not also be a row in the listen block on the same page. All four guide inputs already carry a listen block holding exactly the works their guide walks, so the default outcome of authoring a guide is the same names printed twice on one plate. `assert_no_doubled_work()` fails the build, proven by mutation.
+
+**The two takes** (`worked`) is the same task answered twice, once so it earns and once so it
+does not. Added 18 August 2026 for the three inputs the depth triage found where the taught
+distinction is a difference between two pieces of writing that look alike on the page: a log
+entry against a diary entry, a dot point that earns a mark against one that does not, a
+rationale that names its decisions against one that describes its feelings. None of those
+survives being described, which is why none of the three took an explain. All three are seen
+in one look or not at all.
+
+So the block is a comparison and every part of it is built to be read across. It invents no
+furniture:
+
+- **The label row carries the mark value**, joined by a middot, which is what the plate's own
+  header line already does with a count and a status (Input 09 of 30, on the desk). Set after
+  the question it reads as part of the sentence; right-aligned it lands in the middle of the
+  plate, because the reading measure stops at 66ch while the section rule above runs the
+  document's full width. A figure out there alone is an orphan, not a column.
+- **The question takes the read block's own h3**, the step the explain's title already uses,
+  held to 48ch because it is a sentence to read rather than a title to scan.
+- **Both specimens are marked, and the two marks are the world's own two line weights.** The
+  take that works is bound by the 4px painted keyline; the take that does not is drawn with
+  the 1px sheet rule, at the same 18px inset. That is the Two Weights Rule used as an
+  argument: 4px bounds what is kept, 1px draws what is not. No fill, no tint and no colour,
+  which the sheet does not take anyway, and the label above each says it in words as well, so
+  nothing here is carried by a mark alone.
+- **A rung is a clause.** A named move with a sentence under it, in the same 46px gutter the
+  clause numbers and the cue times use, so one column of figures runs down the whole plate and
+  the rungs land on it exactly. Ruled 1px per row like a clause and unlike a cue, because each
+  rung carries its own head and unruled they run together. The moves are ALARM's where the
+  task is a dot point and the task's own where it is not; what carries is the shape, not the
+  vocabulary.
+- **The rungs' rules stop at the reading measure**, with the specimen, so neither crosses empty
+  sheet. That is the same fault the cue sheet was held to 66ch to avoid.
+
+Two rulings inside it:
+
+- **The failing take is not dimmed and is not folded away.** It is the half a student has to
+  study closely, and the page is projected while the room compares the two. Year 10's version
+  of this block greys its zero-mark answer; this one does not, because a greyed paragraph on a
+  projector in a daylit room is a paragraph nobody reads.
+- **Two takes means two.** `assert_worked_complete()` fails the build if the question, the
+  model or either half of the failing take is missing, proven by mutation. One answer with its
+  reasoning shown is an explain with a quotation in it, and it would print under a heading
+  saying two takes with one take under it.
+
+**No script.** Nothing in this block is pressed, so `assets/site.js` is unchanged and still
+does one thing. The block is the first read block that needs nothing from it.
 
 ### Focus on the sheet
 The term's tape is the focus colour, which holds on the floor: every tape reads between 5.26 and 16.78 to 1 against it. **On the sheet it does not.** Tape on cream runs 1.01 to 1 (Term 1), 1.20 (Term 4), 2.58 (Term 3) and 3.20 (Term 2), so in two of the four units a keyboard user would get no visible ring at all. **Inside the plate the ring is ink**, same 3px at the same 2px offset, 16.44 to 1.
@@ -393,5 +440,5 @@ Four blocks on a hairline-gap grid. Each carries its own term colour as a **chip
   role, but it is a ramp held by hand rather than by tokens. New work takes the
   nearest existing step; it does not add a seventeenth.
 - **Rules with no enforcement.** The tape budget, the two line weights, the three stencil places and the closed `bring` set are all conventions held by review, not by the build. `build.py` and `plots.py` validate none of them; only the stencil rule has a single CSS selector that makes widening it a visible act, and only the doubled-work rule has a build guard.
-- **One explain and one guide exist.** Both block types are built, documented and rendered, on Term 1 input 04. The other 34 explains and three guides are authored content and are not written. The design is settled; what it is filled with is not.
-- **Cue times have to be measured, and only two are.** Term 1 input 04's cue times were measured off the recordings rather than remembered: chroma against the 24 triads gives the chord grid, self-similarity at every lag from 3 to 20 seconds gives the loop length, and folding tonic-ness onto that period gives where each pass starts. With or Without You measures an 8.73s loop at 110.0 BPM and Someone Like You a 7.11s loop at 135 BPM, both matching the published tempo, which is the check that the method works. **Let It Be could not be fetched**, so it has no cues and stays in the listen block. A guide's cue times are a claim about a recording; they are measured or they wait for an ear.
+- **Thirty-three explains, four guides and one worked block exist.** All three block types are built, documented and rendered. What is not written is two explains and two worked blocks: Term 3 input 09 carries the worked exemplar, and Term 1 input 26 and Term 4 input 19 are the two the triage gave the block to and are still to be authored. The design is settled; what it is filled with is nearly complete.
+- **Cue times have to be measured, and all but one work's are.** Term 1 input 04's cue times were measured off the recordings rather than remembered: chroma against the 24 triads gives the chord grid, self-similarity at every lag from 3 to 20 seconds gives the loop length, and folding tonic-ness onto that period gives where each pass starts. With or Without You measures an 8.73s loop at 110.0 BPM and Someone Like You a 7.11s loop at 135 BPM, both matching the published tempo, which is the check that the method works. **Let It Be could not be fetched**, so it has no cues and stays in the listen block. A guide's cue times are a claim about a recording; they are measured or they wait for an ear. The other three guides were measured on 18 August 2026 and are documented in the handoff: Term 2 input 02 by the same method extended to a 12-bar period, and Term 3 input 14 and Term 4 input 02 by a measured loudness envelope instead, because neither is loop form and `loop.py`'s method does not apply to them at all.

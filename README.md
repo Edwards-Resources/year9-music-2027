@@ -41,9 +41,9 @@ written. See input 02 of `term2` for the shape: `lead`, `clauses`, `criteria`,
 An input with no body still appears in the input list and on the term page. It just
 has no link.
 
-## The read: `explain` and `guide`
+## The read: `guide`, `explain` and `worked`
 
-Two optional blocks that sit under the rider, in that order whatever order the data is
+Three optional blocks that sit under the rider, in that order whatever order the data is
 in. `LESSON-DEPTH-TRIAGE.md` says which inputs get one; do not add either to an input
 the triage did not name. Input 04 of `term1` carries both and is the worked example.
 
@@ -66,6 +66,26 @@ A `guide` is a cue sheet. `at` is seconds into the recording:
               "cues": [{ "at": 8, "text": "..." }] }]
 }
 ```
+
+A `worked` is two takes: the same task answered twice, once so it earns and once so it does
+not. Three inputs get one instead of an explain. `rungs` are optional and each is a named
+move with a sentence under it, ALARM's moves where the task is a dot point and the task's
+own where it is not:
+
+```json
+"worked": {
+  "question": "Describe the tone colour in the opening of the excerpt.",
+  "marks": "2 marks",
+  "brief": "...",
+  "model": "the answer that works",
+  "rungs": [{ "move": "Identify", "text": "..." }],
+  "zero": { "answer": "the answer that does not", "why": "..." }
+}
+```
+
+**Two takes means two.** `question`, `model`, `zero.answer` and `zero.why` are all required
+and the build fails without them. Write the failing answer at the length students actually
+write, and make it one that looks fine: an obviously lazy answer teaches nothing.
 
 **A work in the cue sheet is not also a row in `listen`.** All four guide inputs already
 list the works their guide walks, so take them out of `listen` when you write the guide;

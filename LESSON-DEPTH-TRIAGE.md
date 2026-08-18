@@ -197,6 +197,8 @@ embed, then guide.
    `check`.** T1 #26, T3 #09 and T4 #19 take a `worked` block instead of a 250-word
    explain: a model answer with the reasoning shown, and a zero-mark answer that looks
    fine and is not. No `check`, since Year 9 has no gapfill for it to answer.
+   **Designed, built and documented on 18 August 2026** as the two takes block; see
+   `DESIGN.md`. T3 #09 carries the exemplar, T1 #26 and T4 #19 are still to be written.
 3. **Confirm the four guides**, or cut to two. Recommendation: **keep four**, one per term,
    but build them after the embedding work rather than alongside it.
 
@@ -206,5 +208,7 @@ embed, then guide.
 only with individual Bs promoted against the named gate, T3 #14 promoted before starting,
 and `worked` yes / `check` no.
 
-Written so far: the `explain` and the `guide` on T1 #04. Everything else on this list is
-still to be written.
+Written as at 18 August 2026: all four guides, 33 of the 35 explains, and the worked
+block on T3 #09. Still to be written: the explains on T3 #09 and T4 #19 are not owed,
+because both take a worked block instead, and what is actually outstanding is the worked
+block on T1 #26 and on T4 #19.
