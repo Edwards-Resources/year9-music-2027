@@ -13,15 +13,10 @@ content — nothing from that list is outstanding.
   for T4 #19, and T1 #26's task (a log entry) has no mark value at all. Both
   omit the field rather than guess, per the design rule in `README.md`.
 - Rebuilt clean: `python3 build.py` → 128 pages, 123 of 123 inputs authored.
-- **Not committed and not pushed.** Ask before either. Changed:
-  `data/course/term1/term.json`, `data/course/term4/term.json`,
-  `docs/term1/26/index.html`, `docs/term4/19/index.html`, `DESIGN.md`
-  (known-gaps line updated), `LESSON-DEPTH-TRIAGE.md` (outstanding-work line
-  updated).
-- Vault session log **not yet written** for this session — do it if picking
-  this up as a fresh session rather than continuing this one.
-- Live site unchanged at **https://edwards-resources.github.io/year9-music-2027/**
-  — this session's work is one commit behind it, same as last handoff.
+- **Committed and pushed** as `2edb548`. Live site is now current with this
+  work: **https://edwards-resources.github.io/year9-music-2027/**.
+- Vault session log written: `Session Logs/2026/Year 9 The Two Remaining
+  Worked Blocks.md`, linked in `_index.md`.
 
 ## Next task
 
@@ -88,5 +83,4 @@ about "the intro" of an unnamed student song, T4 #19 about a fictional AT4
 
 ## Last commit
 
-`a174c0b Roll the handoff: the worked block is built, two blocks left to write`
-(this session's changes are staged in the working tree, not yet committed)
+`2edb548 Write the two remaining worked blocks: T1 #26 and T4 #19` (pushed)
