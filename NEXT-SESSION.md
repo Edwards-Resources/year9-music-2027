@@ -45,10 +45,8 @@ own address, `{term}/blueprint/{slug}/`, not just inside a lesson.
   on desktop and at 390 with no horizontal overflow; the hub's blueprint bar
   and every term 2 lesson's rail foot now link to all four sheets with no
   `not on the site yet` line left anywhere in `docs/`.
-- **Not yet committed.** Working tree has `DESIGN.md`, `DESIGN-NOTES.md`,
-  `assets/site.css`, `build.py`, `plots.py`, `data/course/term2/term.json`,
-  every `docs/term2/*/index.html` (the railfoot changed on all of them) and
-  the new `docs/term2/blueprint/` tree.
+- **Committed and pushed as `99ff4ec`.** The live site now has all four
+  blueprint sheets.
 
 ## Next task
 
@@ -113,19 +111,17 @@ The two still-open items from last session's leftovers, unchanged:
 
 ## Decisions waiting on Matthew
 
-1. **Push?** Nothing has been pushed yet this session — see "Not yet
-   committed" above; commit first, then this question repeats.
-2. **The blueprint content itself.** The drum pattern, the voicings and the
+1. **The blueprint content itself.** The drum pattern, the voicings and the
    walking bass excerpt are musically standard but were authored from the
    term's own lesson text rather than from a lesson plan or notation Matthew
    supplied. Worth his read before Week 5 (input 13, comping and voicings)
    and Week 4 (input 12, walking bass) arrive.
-3. **The third work in T1 #04's cue sheet** still has no cue times (audio
+2. **The third work in T1 #04's cue sheet** still has no cue times (audio
    won't download). Four or five, set with the recording playing.
-4. **Rewrite `year8-music`'s published history?** Recommendation: no.
-5. **`DIRECTION.md` and the comp D sidecar name Matthew**, already in pushed
+3. **Rewrite `year8-music`'s published history?** Recommendation: no.
+4. **`DIRECTION.md` and the comp D sidecar name Matthew**, already in pushed
    history. Same question as Year 8, smaller.
-6. **Should the player break out of the 240px listen block?** Matthew's call.
+5. **Should the player break out of the 240px listen block?** Matthew's call.
 
 ## The leak that keeps recurring
 
@@ -139,5 +135,5 @@ drum stems, none of which are the leak this note exists to catch.
 
 ## Last commit
 
-`a7c0ae6 Rebuild home's year section to unequal weight` (local, not pushed).
-This session's work is staged for a new commit, not yet made.
+`99ff4ec Build the four blueprint sheets: progression, voicings, pattern,
+rules` (pushed; the live site has it).
