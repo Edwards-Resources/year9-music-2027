@@ -409,7 +409,31 @@
       "n": "R2",
       "text": "Printed lead sheets for the class repertoire"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Chord chart and lead sheet: two different maps",
+     "body": [
+      {
+       "p": "A chord chart carries only the harmony: bar lines and chord symbols, sometimes with rhythm slashes to show the feel. It is written for whoever is filling in the rhythm section, and it assumes you already know the tune. A lead sheet adds a stave above the chords with the melody and the lyric written out, so a singer or a melody instrument has something to read as well. Same song, two different jobs, and a band usually needs both in the room at once."
+      },
+      {
+       "h": "The signs that keep you on the road"
+      },
+      {
+       "ul": [
+        "**A repeat sign** (two dots against a thick barline) sends you back to the last repeat sign you passed, or to the start if there wasn't one.",
+        "**A first-time bar**, bracketed and labelled 1, is only played on the way through before the repeat.",
+        "**A second-time bar**, labelled 2, replaces it once you come back around."
+       ]
+      },
+      {
+       "p": "None of this is guessable from listening. It is a set of instructions for what to do next, and it only works if you read a bar or two ahead of where you are playing, not the one you are on."
+      },
+      {
+       "p": "Losing your place usually happens in exactly the same spot each time, which is useful: it means the fix is not to concentrate harder everywhere, it is to look one bar earlier at the exact turn you keep missing."
+      }
+     ]
+    }
    }
   },
   {
@@ -771,7 +795,31 @@
       "n": "R3",
       "text": "Comparison recordings"
      }
-    ]
+    ],
+    "explain": {
+     "title": "The three-part dot point: feature, evidence, reason",
+     "body": [
+      {
+       "p": "A dot point that only names a feature is a list, not analysis. ALARM moves you from _describe_ to _explain_, and a well-formed dot point does that in three parts every time: the feature, what it sounds like and where, and why it is there."
+      },
+      {
+       "h": "The three parts"
+      },
+      {
+       "ul": [
+        "**The feature.** Name it in the vocabulary of the elements of music: dynamics, tone colour, texture, and so on. Not “the music”, a specific feature of it.",
+        "**What it sounds like and where.** Point to the moment. “Loud” is not evidence; “the dynamics build from bar 9 to a forte at the chorus” is.",
+        "**Why it is there.** The effect the choice is going for, or the meaning it carries. This is the part a description leaves out, and it is the part that turns a dot point into analysis."
+       ]
+      },
+      {
+       "p": "Leave any one part out and the dot point can still read like writing, which is exactly why it is easy to hand in half-built. A feature with no location could be about any song. A location with no reason stops at description. All three, every time, is the standard from here on."
+      },
+      {
+       "p": "Practise it on a song you already know well before you use it on something you are hearing for the first time. The three parts are the same either way; only the pressure changes."
+      }
+     ]
+    }
    }
   },
   {
@@ -1071,7 +1119,29 @@
       "n": "R2",
       "text": "Practice rooms and the main room"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Isolate, slow, repeat, restore",
+     "body": [
+      {
+       "p": "Saying a run-through “went badly” does not fix anything, because it does not say what to do differently next time. A rehearsal step names the problem in musical terms and then does something about it, in a fixed order."
+      },
+      {
+       "h": "The four steps"
+      },
+      {
+       "ul": [
+        "**Isolate.** Find the smallest passage that actually breaks down, not the whole verse around it. Two bars, sometimes less.",
+        "**Slow.** Play that passage well under tempo, slow enough that nobody has to guess a note or a rhythm.",
+        "**Repeat.** Play it again at that slow tempo until it is correct more than once in a row, not just once by luck.",
+        "**Restore.** Bring the tempo back up in steps, not in one jump, and stop the moment it breaks down again — that is your next isolate."
+       ]
+      },
+      {
+       "p": "The order matters. Slowing down before you have isolated the actual problem just makes the whole passage take longer to get wrong in. Restoring tempo too fast undoes the fix, because the hands relearn the mistake at speed faster than they learn the correction underneath it."
+      }
+     ]
+    }
    }
   },
   {
@@ -1319,7 +1389,26 @@
       "n": "R2",
       "text": "Worked example of an attribution"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Before a recording of your group goes anywhere",
+     "body": [
+      {
+       "p": "A rehearsal recording feels private right up until someone wants to post it, and then four separate questions apply, all before anyone presses share."
+      },
+      {
+       "ul": [
+        "**Copyright.** The song itself belongs to someone. Performing it in class is one thing; publishing a recording of it publicly is another, and it usually needs a permission you do not have.",
+        "**Permission.** Everyone visible or audible in the recording, not just the person posting it, has to agree to being shared. Silence is not agreement.",
+        "**Attribution.** If it is shared, the songwriter and original artist are credited properly, not just the band performing it.",
+        "**The school account.** A school platform has its own rules about what may be posted from it, separate from copyright and permission, and those rules apply whether or not everyone in the video is fine with it."
+       ]
+      },
+      {
+       "p": "None of these checks is optional because the recording “is only going to a few people”. A private chat is still a place a recording can be copied out of, and once it is out, none of these four questions can be undone."
+      }
+     ]
+    }
    }
   },
   {
@@ -1626,7 +1715,29 @@
       "n": "R2",
       "text": "Term repertoire"
      }
-    ]
+    ],
+    "explain": {
+     "title": "What actually changes at the chorus",
+     "body": [
+      {
+       "p": "Verse and chorus are easy to say and hard to define, because the honest answer is that several things change at once, and a song rarely signals all of them the same way twice."
+      },
+      {
+       "h": "What to listen for"
+      },
+      {
+       "ul": [
+        "**Melody.** The chorus usually carries a different, more memorable tune, often higher or more repeated than the verse.",
+        "**Lyric.** The verse tells the story and moves it forward; the chorus usually repeats the same words each time, carrying the song's main idea rather than its plot.",
+        "**Texture and dynamics.** A chorus is very often fuller and louder than the verse before it, with more instruments in and the dynamics stepped up.",
+        "**The approach.** Songs usually signal a chorus is coming: a fill, a held note, a drop to almost nothing right before the fullest moment lands."
+       ]
+      },
+      {
+       "p": "The structure of a song is a decision, not a rule a songwriter is following. Map three different songs and you will find three different combinations of these changes, which is the actual evidence that someone chose this shape rather than the shape being the only way a song can go."
+      }
+     ]
+    }
    }
   },
   {
@@ -1932,7 +2043,29 @@
       "n": "R3",
       "text": "Note entry drill sheet"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Getting the rhythm right on the page",
+     "body": [
+      {
+       "p": "A melody you can sing but cannot write down is not notation yet. Getting it onto the page correctly matters because someone else, including you in six months, has to be able to play it back from the symbols alone."
+      },
+      {
+       "h": "The usual errors"
+      },
+      {
+       "ul": [
+        "**Wrong rhythm values.** A note held for the wrong length looks fine on the page and sounds wrong the moment it is played back — check note values against what you actually sang, not what looks tidy.",
+        "**Missing rests.** Silence is part of the rhythm. Leaving a rest out shortens every note after it by the same amount, and the error compounds the further you go.",
+        "**Ties across the beat.** A note held over a barline or across a strong beat needs a tie, not a single note value that happens to be the right length.",
+        "**Melody against the chord.** Check the notes you have written actually sit inside or make sense against the chord underneath at that bar. If they clash and you did not mean them to, you have probably written the wrong note, not found a deliberate dissonance."
+       ]
+      },
+      {
+       "p": "The check is always the same: play it back and listen for the gap between what you meant and what you actually wrote. That gap is where the missing beats are hiding."
+      }
+     ]
+    }
    }
   },
   {
