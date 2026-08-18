@@ -155,7 +155,28 @@
       "n": "R3",
       "text": "AT3 criteria"
      }
-    ]
+    ],
+    "explain": {
+     "title": "The dot point, now against a marker's criteria",
+     "body": [
+      {
+       "p": "You already know the shape: a feature, what it sounds like and where, and why it is there. What's different in an examination response is that a real marker is checking each part against a criteria sheet, not just reading for sense."
+      },
+      {
+       "h": "What a marker is actually checking"
+      },
+      {
+       "ul": [
+        "**The feature has to be named precisely.** “The rhythm” is not a feature. “Syncopation in the melody” is.",
+        "**The location has to be specific enough to check.** “Later in the piece” cannot be verified against the recording. A bar number, a timing, or a clearly identified section can.",
+        "**The reason has to connect to the feature you named**, not restate the general mood of the piece. If your reason would work unchanged for a different feature, it isn't doing its job."
+       ]
+      },
+      {
+       "p": "A precise word in the wrong structure still loses the mark, and a correct structure with vague words loses it just as fast. Both have to be right at once, which is why this lesson marks live: seeing exactly where a real response gains or loses a mark is faster than being told the rule in the abstract."
+      }
+     ]
+    }
    }
   },
   {
@@ -284,7 +305,26 @@
       "n": "R3",
       "text": "Timer"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Melody: range, contour, shape",
+     "body": [
+      {
+       "p": "Pitch and melody are two different questions asked together. Pitch is where the notes sit; melody is what they do once you put them in order."
+      },
+      {
+       "ul": [
+        "**Range** is the distance from the lowest note to the highest, described as wide or narrow rather than guessed at.",
+        "**Contour** is the overall shape as the melody moves: rising, falling, arch-shaped, or built from small repeated cells.",
+        "**Interval shape** is what actually gets you from one note to the next: stepwise movement sounds smooth, leaps sound more dramatic, and a melody that mixes both has decided where to spend each.",
+        "**Where the melody sits in the texture** matters as much as what it does: the same tune sung alone reads differently from the same tune buried under three other layers."
+       ]
+      },
+      {
+       "p": "Precision beats coverage here. One dot point that nails the contour and says exactly what effect it creates is worth more than a dot point that mentions range, contour and interval all at once without landing on any of them. The lesson gives you the same excerpt three times because a different target each time forces exactly that kind of precision."
+      }
+     ]
+    }
    }
   },
   {
@@ -484,7 +524,25 @@
       "n": "R3",
       "text": "Timer"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Texture is countable",
+     "body": [
+      {
+       "p": "Texture analysis starts with a number: how many layers are actually in the excerpt right now. Not felt, counted."
+      },
+      {
+       "ul": [
+        "**Count the layers.** Melody, harmony, bass, percussion — isolate each one in turn if the recording allows it, and say how many are sounding at once.",
+        "**Say what each layer is doing.** A layer can carry the melody, fill harmony underneath, mark the pulse, or add colour without doing any of those three. Two layers doing the same job is a different texture from two layers each doing something different.",
+        "**Tone colour is the source, not the pitch.** A guitar and a piano can play the same note and sound completely different — that difference is tone colour, and it needs its own vocabulary rather than being folded into “instrumentation”."
+       ]
+      },
+      {
+       "p": "A texture answer that says “it builds up” has counted nothing. A texture answer that says “a solo voice at the opening becomes four layers by the second verse: melody, backing vocal, guitar and bass” has, and that second version is the one that scores."
+      }
+     ]
+    }
    }
   },
   {
@@ -555,7 +613,26 @@
       "n": "R3",
       "text": "AT3 criteria"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Structure and duration are two separate questions",
+     "body": [
+      {
+       "p": "Both are about time, which is exactly why they get confused. Structure asks what order the sections come in and how big each one is. Duration asks how the piece moves through time from moment to moment: its metre, its tempo, its use of longer and shorter note values."
+      },
+      {
+       "ul": [
+        "**Structure** is the big shape: intro, verse, chorus, bridge, however many sections there are and in what order. Answering it means naming sections and their proportions, not just listing them.",
+        "**Metre** is how the beats are grouped, in twos, threes, fours, and whether it stays constant or changes.",
+        "**Tempo** is the speed of the pulse, and whether it is steady or moves.",
+        "**Use of duration** is the pattern of long and short note values across the piece, and what that pattern does to the feel."
+       ]
+      },
+      {
+       "p": "The trap is answering a duration question with a structure answer, because both can sound like they're describing “what happens over time”. Ask which question was actually asked: does it want the shape of the piece, or the piece's relationship to the clock underneath it? They are graded separately, and a structure answer to a duration question earns nothing."
+      }
+     ]
+    }
    }
   },
   {
@@ -735,7 +812,25 @@
       "n": "R2",
       "text": "NESA protocols material"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Before any listening: the protocols",
+     "body": [
+      {
+       "p": "Before this block plays a single excerpt, the protocols that govern how this class studies music of Aboriginal and Torres Strait Islander Peoples are stated in full, because they apply to how the material is used, not just to what is said about it afterwards."
+      },
+      {
+       "ul": [
+        "**Permission is not a formality.** Music connected to Country, ceremony or community can carry restrictions on who may hear it, perform it, or discuss it, and those restrictions are set by the community it belongs to, not by this classroom.",
+        "**Attribution names the community, not just an artist.** Where a work comes from, and whose knowledge and Country it carries, is part of what has to be said about it correctly, every time it is discussed.",
+        "**Consultation decides what this class studies.** The specific works for this block are selected through the school's own consultation process, and named in class only once that process is complete, not before, and not by guesswork in the meantime."
+       ]
+      },
+      {
+       "p": "These protocols are not a preamble to the listening that comes after. They are the condition the listening happens under. Everything this block does with a work, in class or in writing, applies them, and that starts here, before anything has been heard."
+      }
+     ]
+    }
    }
   },
   {
@@ -798,7 +893,25 @@
       "n": "R3",
       "text": "Glossary of the terms used"
      }
-    ]
+    ],
+    "explain": {
+     "title": "A work and the Country it belongs to",
+     "body": [
+      {
+       "p": "Describing how Place, Country and Languages appear in a piece of music is not the same task as describing its key or its instrumentation. It asks how the music itself carries a relationship to a specific Country, and that relationship is described in the terms the community itself uses for it, not in borrowed general language."
+      },
+      {
+       "ul": [
+        "**Language in the music is not decoration.** Where a song is sung in a Language, that Language carries meaning and connection that a translation does not fully hold, and analysis needs to say so rather than treat the words as incidental to the music.",
+        "**Place and Country can be reflected in sound as well as in words** — in the instruments used, in melodic material connected to a specific Country, or in how a work marks a relationship to land that a listener from outside it would not recognise unprompted.",
+        "**Use the community's own terms.** Where a source describes a relationship in specific language — a place name, a Language name, a description of significance — that is the correct term to use, not a generic substitute that sounds equivalent but isn't."
+       ]
+      },
+      {
+       "p": "This is analysis under the same protocols as the previous lesson, applied now to how you write rather than only to how you listen. Getting the terms right is part of getting the analysis right, not a separate courtesy on top of it."
+      }
+     ]
+    }
    }
   },
   {
@@ -949,6 +1062,24 @@
          "text": "It fades rather than finishing on a chord. A work like this does not get a triumphant last note."
         }
        ]
+      }
+     ]
+    },
+    "explain": {
+     "title": "Separating the argument from the music that carries it",
+     "body": [
+      {
+       "p": "A song can be right about something and still be badly made, and a song can be brilliantly made in service of an argument you disagree with. Judging the two together blurs both judgements, so this lesson asks for them apart."
+      },
+      {
+       "ul": [
+        "**What did the work argue?** State the argument itself, in your own words, the way you'd summarise any position, not the song's mood, its subject matter, or how it made you feel.",
+        "**What musical feature carried it?** Name a specific feature — a lyric delivered over a bare texture, a melody that stays plain rather than building, a specific instrumental choice — and say what that feature does to how the argument lands.",
+        "**Connect the two, in that order.** The feature only matters because of the effect it has on the argument's force. Naming a feature without saying what it does to the argument is description; saying what the argument was without naming how the music carries it is a lyric summary, not music analysis."
+       ]
+      },
+      {
+       "p": "Music doing work in the world is not a metaphor: a listener's response to an argument really can change because of how it was set to music rather than only what was said. That working is what this pair of dot points is asking you to make audible."
       }
      ]
     }
@@ -1289,7 +1420,25 @@
       "n": "R3",
       "text": "AT3 criteria"
      }
-    ]
+    ],
+    "explain": {
+     "title": "A method for something you've never heard",
+     "body": [
+      {
+       "p": "An unfamiliar excerpt is not a blank page. It's a task with an order, and the order matters more than how much you already know about the style."
+      },
+      {
+       "ul": [
+        "**First playing: get oriented.** Tempo, mood, obvious instrumentation, the genre if it's recognisable. Write almost nothing down; just build a mental frame to hang detail on.",
+        "**Second playing: hunt for detail.** Go section by section if you can, and write down specific, nameable features as you hear them, not afterwards from memory.",
+        "**Third playing: check and fill gaps.** Confirm what you wrote against what you actually hear this time, and fill in whatever you know is still missing rather than starting again from scratch."
+       ]
+      },
+      {
+       "p": "Writing down everything on the first playing is the most common way to waste it: you end up chasing your own pen instead of listening, and you lose the overview that only comes from listening with nothing to write yet. Three playings, three different jobs, done in order, produces a fuller response than three identical attempts at the same job."
+      }
+     ]
+    }
    }
   },
   {
@@ -1352,7 +1501,25 @@
       "n": "R3",
       "text": "Timer"
      }
-    ]
+    ],
+    "explain": {
+     "title": "A defensible inference, not a guess",
+     "body": [
+      {
+       "p": "A context sentence and a guess can look identical on the page. The difference isn't confidence, it's whether the claim is actually supported by something in the sound."
+      },
+      {
+       "ul": [
+        "**Start from a specific feature**, not a general impression. “This sounds old” is a guess; “the recording quality and the acoustic instrumentation suggest an early recording” is a claim built on something you can point to.",
+        "**Name the kind of context**, so the marker knows what you're claiming: style, culture, history or era, or the social or geographic setting the music suggests.",
+        "**Stop where the evidence stops.** A context sentence that goes further than what you actually heard, naming a specific date, a specific artist, a specific place, without evidence for that specificity, turns a defensible inference back into a guess, just a more detailed-sounding one."
+       ]
+      },
+      {
+       "p": "The test is simple: could you point to the exact sound that led you to the claim? If yes, it's an inference. If the honest answer is “it just sounds like it”, it's a guess wearing an inference's sentence structure, and a marker can tell the difference even when you can't."
+      }
+     ]
+    }
    }
   },
   {
@@ -1415,7 +1582,25 @@
       "n": "R3",
       "text": "Timer"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Three playings, three jobs",
+     "body": [
+      {
+       "p": "The paper gives you the same excerpt three times, and using all three playings for the same task is the single biggest way marks get left behind, because it means two of the three genuinely earned nothing."
+      },
+      {
+       "ul": [
+        "**Read the question before the first playing.** You cannot listen efficiently for something you don't yet know you're being asked.",
+        "**Budget the time before you start writing**, against how many marks the question is worth, not against how much you feel like you have to say.",
+        "**Give each playing a different job**, orient, then detail, then check, the same order as an unfamiliar excerpt, because in the exam every excerpt is functionally unfamiliar."
+       ]
+      },
+      {
+       "p": "The first playing produces nothing useful sometimes. That happens to everybody, and the recovery is the same either way: use the second playing to do what the first should have done, rather than panicking and hoping the third saves you. Technique like this is worth real marks on its own, separate from what you actually know about the music, which is exactly why it gets practised under real timing rather than talked about in the abstract."
+      }
+     ]
+    }
    }
   },
   {
@@ -1729,7 +1914,25 @@
       "n": "R3",
       "text": "Process log"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Studied against adapted: knowing which one you're allowed to do",
+     "body": [
+      {
+       "p": "Some music may be studied and discussed but not adapted or performed differently from how it was created, and knowing which situation you're in is the actual skill here, not a rule to recite, a judgement to make correctly every time."
+      },
+      {
+       "ul": [
+        "**Permission covers use, not just access.** Being able to hear a work, or even having studied it under the protocols already covered, does not automatically mean you have permission to arrange it. Those are two separate permissions.",
+        "**Attribution in an arrangement has to survive the changes you make.** Crediting the original creator and the tradition or community a work comes from doesn't stop being required just because you've changed the instrumentation or the style.",
+        "**Intellectual property here is not the same as ordinary copyright.** Some material carries community ownership and cultural protocols that continue to apply regardless of who holds a copyright, and a plan that only checks copyright has checked the wrong thing."
+       ]
+      },
+      {
+       "p": "This is why the check happens before the work goes into the arrangement, not after: a plan is easy to redirect, and a finished arrangement of something that should not have been adapted is not."
+      }
+     ]
+    }
    }
   },
   {
