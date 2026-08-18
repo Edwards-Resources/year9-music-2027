@@ -224,6 +224,28 @@
        ]
       }
      ]
+    },
+    "explain": {
+     "title": "Hearing a blues before you can see the chart",
+     "body": [
+      {
+       "p": "The twelve-bar blues is built from just three chords, I, IV and V, moved through in a fixed order every time. Once you know the order, counting a chorus stops being guesswork: it becomes counting to twelve, in fours, four times."
+      },
+      {
+       "h": "What tells you it's a blues in the first two bars"
+      },
+      {
+       "ul": [
+        "**The chord itself, not just the note.** Chord I is usually a dominant seventh, not a plain major triad — there's a flattened seventh built into home itself, which is already a blues sound before anything else happens.",
+        "**Blue notes.** A flattened third or fifth leaning against the major chord underneath, played as an inflection rather than a clash.",
+        "**The shuffle.** Quavers played unevenly, long-short rather than even, so the groove has the same lean as the blue notes.",
+        "**The turnaround.** The last two bars almost always do something recognisable to point back to bar one, even before you've heard where bar one was."
+       ]
+      },
+      {
+       "p": "None of this needs the chord chart in front of you. They are things a listener can hear inside two bars without it, which is exactly the skill this lesson asks for: recognise the genre by its features, then count the form underneath it."
+      }
+     ]
     }
    }
   },
@@ -352,7 +374,28 @@
       "n": "R3",
       "text": "Keyboards"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Same numbers, any key",
+     "body": [
+      {
+       "p": "You already know that a roman numeral names what a chord is doing rather than what it's called — chord I is home, wherever home happens to be. The blues uses three of those numbers: I, IV and V."
+      },
+      {
+       "ul": [
+        "**I is home.** Chord one, built on the key note. Where the form starts and where it always lands.",
+        "**IV moves away**, but gently — built a fourth above home, close enough that it never feels like it has left for good.",
+        "**V pulls.** Built a fifth above home, it is the chord with the strongest urge to resolve back to I, which is exactly why the form uses it right before the turnaround."
+       ]
+      },
+      {
+       "p": "Change key and every letter name changes — I in C is C, I in G is G — but the numbers do not, because they describe a relationship, not a pitch. That is the whole reason a band can call “blues in Bb” and every player instantly knows the form without it being written out again: the numbers, not the letters, are what everyone already has memorised."
+      },
+      {
+       "p": "Labelling a progression is just naming each chord's number instead of its letter, and playing the same progression in a new key is the proof you actually understand the relationship, rather than just the shape under your fingers in one key alone."
+      }
+     ]
+    }
    }
   },
   {
@@ -412,7 +455,28 @@
       "n": "R2",
       "text": "Backing track"
      }
-    ]
+    ],
+    "explain": {
+     "title": "The blues scale, by degree",
+     "body": [
+      {
+       "p": "The blues scale is the minor pentatonic with one extra note added: **1, b3, 4, #4, 5, b7**. Six notes, and every one of them is available over all three chords of the form without needing to change scale when the harmony moves to IV or V — which is part of why the blues works the way it does."
+      },
+      {
+       "h": "What makes a note 'blue'"
+      },
+      {
+       "ul": [
+        "**b3 and b7** clash gently against the major chord underneath, which is a dominant seventh chord built on a major third. That friction, not a mistake, is the blues sound.",
+        "**#4, the blue note proper,** sits right between IV and V. It is almost never held still — it is bent into or slid through on the way to a neighbouring note, which is why it barely counts as a fixed pitch at all.",
+        "**Leaning, not landing.** A blue note played dead in tune and held still stops sounding blue. The pitch is meant to move."
+       ]
+      },
+      {
+       "p": "Write the six degrees onto whatever key you're playing in today, and the shape under your fingers stays the same the next time the class changes key — because you learned the relationships, not one fixed set of notes."
+      }
+     ]
+    }
    }
   },
   {
@@ -471,7 +535,25 @@
       "n": "R2",
       "text": "Paired excerpts, straight and swung"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Swing, syncopation, backbeat: three separate things",
+     "body": [
+      {
+       "p": "These three get lumped together because they usually turn up in the same music, but they are three separate features, and a paper can ask about any one of them alone."
+      },
+      {
+       "ul": [
+        "**Swing** is a rhythmic feel: quavers played unevenly, the first of each pair held slightly longer than the second, instead of split evenly. It changes how the beat feels without changing which notes are played.",
+        "**Syncopation** is an accent landing where you don't expect it — off the beat, or on a normally weak part of the bar — so the rhythm pulls against the pulse rather than sitting on it.",
+        "**The backbeat** is a specific accent on beats 2 and 4 of a 4/4 bar, almost always carried by the snare drum. It is what makes you nod on the “off” beats rather than the strong ones."
+       ]
+      },
+      {
+       "p": "A piece can swing without being syncopated, and can be heavily syncopated while played perfectly straight. Telling them apart by ear means asking three separate questions of what you're hearing — is the quaver pair even, is an accent in an unexpected place, is beat 2 and 4 marked — rather than one general impression of “groovy”."
+      }
+     ]
+    }
    }
   },
   {
@@ -612,7 +694,25 @@
       "n": "R2",
       "text": "Timeline handout"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Call and response, before it had a name",
+     "body": [
+      {
+       "p": "The blues did not begin from nothing in the early twentieth century. It carries specific practices forward from West African musical traditions, transmitted through work songs and spirituals sung by enslaved and later free Black communities in the American South."
+      },
+      {
+       "ul": [
+        "**Call and response.** A leader sings or plays a phrase, a group answers it. It is a structural principle in many West African musical traditions, and it survives directly into the blues' leader-and-band phrasing, and into the way a blues vocal line is often answered by an instrumental fill.",
+        "**Blue notes.** The bent, leaned-on pitches that don't sit on a piano's fixed notes reflect vocal and instrumental inflections common in West African singing and playing, carried into instruments that were never built to make them.",
+        "**Work songs and spirituals.** Songs sung to coordinate labour, and songs of worship and endurance, carried rhythm, call and response and these vocal inflections together, and both are direct ancestors of the blues' own form and feel."
+       ]
+      },
+      {
+       "p": "None of this is a footnote to the blues — it is the blues' actual history, carried forward by people who kept the practice alive under conditions designed to erase it. Naming where a feature came from is not optional colour on an analysis; for this style, it is part of getting the analysis right."
+      }
+     ]
+    }
    }
   },
   {
@@ -1346,7 +1446,26 @@
       "n": "R3",
       "text": "Headphones"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Four decisions, made on purpose",
+     "body": [
+      {
+       "p": "A melody is not just notes chosen one after another. It is answers to four decisions, made deliberately rather than landed on by accident."
+      },
+      {
+       "ul": [
+        "**Register.** Where the melody sits in pitch. Too high for all 16 bars and it's exhausting to sing or hard to hit cleanly; too low and it disappears under the band. Most melodies live within a register and only push to its edges for effect.",
+        "**Rhythm.** Whether the melody moves in long notes, short notes, or a mix, and whether it sits on the beat or pushes against it. This is often the first thing a listener notices, before the actual pitches.",
+        "**What repeats.** A melody with nothing repeated is hard to remember, and a melody that only repeats never goes anywhere. A phrase, or the shape of one, usually returns at least once, often changed slightly the second time.",
+        "**Where the phrase stops.** Phrases need somewhere to land — a long note, a rest, a return to a home pitch — so the listener can hear where one idea ends and the next begins."
+       ]
+      },
+      {
+       "p": "Write with these four in mind and you can explain every choice in your own melody. Write without them and you can still end up with something that sounds fine, but you won't be able to say why it works, which is exactly what the rationale later in the term is going to ask you to do."
+      }
+     ]
+    }
    }
   },
   {
@@ -1409,7 +1528,25 @@
       "n": "R3",
       "text": "The players themselves"
      }
-    ]
+    ],
+    "explain": {
+     "title": "Writing for the hands that will actually play it",
+     "body": [
+      {
+       "p": "A walking bass line or a drum part is not finished when it looks right on the page. It's finished when the specific person playing it, on the instrument they actually have, can play it at tempo without needing three days to learn one bar."
+      },
+      {
+       "ul": [
+        "**Range.** A bass guitar's lowest open string is E, and a line that keeps dropping below it, or climbs so high it runs out of usable string, is not written for the instrument in the room. Check the bottom and the top against what the player can actually reach.",
+        "**Hand position.** A line that jumps around the neck constantly is harder to play in tempo than one that mostly stays in one position and moves out of it on purpose. Walking bass, especially, wants mostly stepwise or small-interval movement for exactly this reason.",
+        "**Tempo.** A pattern that is playable slowly can become impossible at the tempo the piece is actually meant to go. Test every part at full tempo, not just at the speed you wrote it in."
+       ]
+      },
+      {
+       "p": "The check that actually matters is not whether the pattern looks correct against the rules you were given — it's whether the classmate who has to play it can. They are the reference, not the range chart, because a chart cannot tell you whether a particular stretch is comfortable in their hands."
+      }
+     ]
+    }
    }
   },
   {
