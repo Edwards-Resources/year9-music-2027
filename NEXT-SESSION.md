@@ -7,16 +7,20 @@ exist in `build.py`, in the CSS, in `site.js` and in `DESIGN.md`, and Term 1
 input 04 carries a real one of each. The next task is writing the other 34
 explains and three guides, which is authoring against a settled shape.**
 
-- Live at **https://edwards-resources.github.io/year9-music-2027/**. The live
-  site is the 17 August push; the repo is now six commits ahead of it.
+- Live at **https://edwards-resources.github.io/year9-music-2027/**, and for the
+  first time in a while the live site **is** the repo: the seven-commit backlog
+  was pushed on 17 August night and verified serving. The embed and both read
+  blocks are live. Only this handoff's own last commit sits unpushed.
 - Repo `Edwards-Resources/year9-music-2027`, public, Pages serving `main`
   `/docs`.
-- The work commits are `7e88582 Embed the verified repertoire in the listen
-  block` and the read-block commit above it. **None pushed.**
+- The work commits are `e987725 Design the read into the world` and
+  `8edc663 Record the worked ruling and sign off the depth triage`, on top of
+  `7e88582 Embed the verified repertoire in the listen block`.
 - Session write-ups in the vault at `projects/School Master/Session Logs/2026/`:
-  `Year 9 Repertoire Embedded and the Listen Player.md`, `Year 9 Lesson Depth
-  Triage.md`, `Year 9 Finish Review and DESIGN.md`, and one per term pour. All
-  linked from that folder's `_index.md`. **This session is not yet written up.**
+  `Year 9 The Read Blocks.md` (this session), `Year 9 Repertoire Embedded and
+  the Listen Player.md`, `Year 9 Lesson Depth Triage.md`, `Year 9 Finish Review
+  and DESIGN.md`, and one per term pour. All linked from that folder's
+  `_index.md`.
 
 ### What the two blocks are
 
@@ -221,9 +225,9 @@ commit message beside the A that forced it.
    the spec column rather than about this block, and Matthew is the one
    projecting it in a room. One line either way.
 
-Settled and no longer decisions: `worked` yes and `check` no (17 August); the
-push of 17 August night, which put the embed and both read blocks live; the push
-and history rewrite of 17 August; the
+Settled and no longer decisions: `worked` yes and `check` no (17 August night);
+the push of 17 August night, which put the embed and both read blocks live and
+cleared the seven-commit backlog; the push and history rewrite of 17 August; the
 three torn strips are two acts of taping; the `artist` field is rendered rather
 than deleted under a rule written into `DESIGN.md`; `bring` is a closed set of
 seven and the seventh is recorded with its source; the guide count and the
