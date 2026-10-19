@@ -6,3 +6,7 @@
    scrolls sideways. */
 .plan-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .plot-large { display: block; width: 100%; min-width: 46rem; height: auto; }
+
+/* A blueprint sheet is drawn at 900 wide, so it needs less room than a unit
+   drawing before it scrolls. */
+.bp-scroll .plot-bp { display: block; width: 100%; min-width: 36rem; height: auto; }

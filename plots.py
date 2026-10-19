@@ -361,6 +361,9 @@ TYPE_SCALE = 1.35
 
 
 def _scale_type(svg):
+    # Not used on the blueprint sheets: they are drawn at 900 wide, a card
+    # shows them a little larger than the old plate did, and their key letters
+    # sit too close to the next line's numerals to take any more size.
     def up(m):
         return f'{m.group(1)}="{float(m.group(2)) * TYPE_SCALE:.3g}"'
     return re.sub(r'(font-size|letter-spacing)="([\d.]+)"', up, svg)
@@ -436,25 +439,23 @@ def small_stage():
 BPW, BPH = 900, 300
 BPW2, BPH2 = 900, 210
 
-# Ink on sheet, not chalk on floor. The four unit drawings above are chalk
-# because the hub lays them on the black floor; a blueprint sheet sits on the
-# plate instead (comp D's ground, sheet-coloured), the same ground small_stage()
-# already draws on, and the Two Grounds Rule decides the ink from the ground
-# rather than from habit.
+# Ink on sheet. These were always ink, because a blueprint sheet sat on the
+# light plate rather than the old black floor; since the shell everything sits
+# on a white card, so every drawing in this file is ink now.
 BP_INK, BP_DIM = "#141517", "#5D5F63"
 
 
 def _bpframe(w, h, name):
+    # The name used to sit in the corner. On the shell the page's head card
+    # names the sheet, so the frame carries none (name is kept for the callers).
     return (f'<rect x="1" y="1" width="{w - 2}" height="{h - 2}" fill="none" '
-            f'stroke="{BP_INK}" stroke-width="1"/>'
-            f'<text x="18" y="26" fill="{BP_DIM}" font-family="Chivo, sans-serif" '
-            f'font-size="10" letter-spacing="2.6">{name}</text>')
+            f'stroke="{BP_INK}" stroke-width="1"/>')
 
 
 def _bphead(left, right, title, note):
-    return (f'<text x="{left}" y="52" fill="{BP_INK}" font-family="Chivo, sans-serif" '
+    return (f'<text x="{left}" y="52" fill="{BP_INK}" font-family="Atkinson Hyperlegible, sans-serif" '
             f'font-size="15" font-weight="700" letter-spacing="1.2">{title}</text>'
-            f'<text x="{right}" y="52" fill="{BP_DIM}" font-family="Chivo Mono, monospace" '
+            f'<text x="{right}" y="52" fill="{BP_DIM}" font-family="Atkinson Hyperlegible, sans-serif" '
             f'font-size="11" text-anchor="end" letter-spacing="1.4">{note}</text>')
 
 
@@ -462,12 +463,12 @@ def _bptag(x, y, num):
     return (f'<rect x="{x}" y="{y}" width="19" height="16" fill="none" '
             f'stroke="{BP_INK}" stroke-width="1"/>'
             f'<text x="{x + 9.5}" y="{y + 12}" fill="{BP_INK}" '
-            f'font-family="Chivo Mono, monospace" font-size="11" '
+            f'font-family="Atkinson Hyperlegible, sans-serif" font-size="11" '
             f'text-anchor="middle">{num}</text>')
 
 
 def _bplbl(x, y, text, anchor="middle", size=10):
-    return (f'<text x="{x}" y="{y}" fill="{BP_DIM}" font-family="Chivo, sans-serif" '
+    return (f'<text x="{x}" y="{y}" fill="{BP_DIM}" font-family="Atkinson Hyperlegible, sans-serif" '
             f'font-size="{size}" text-anchor="{anchor}" letter-spacing="2.2">{text}</text>')
 
 
@@ -484,7 +485,9 @@ def bp_progression():
          _bphead(left, right, "12-bar blues, I–IV–V", "movable: same numbers, any key")]
     barw = (right - left) / 4
     for row in range(3):
-        y = 96 + row * 68
+        # 74 apart, with the key letter tucked under its own line, so it never
+        # touches the numeral above the next line (it did once in Atkinson).
+        y = 96 + row * 74
         o.append(f'<line x1="{left}" y1="{y}" x2="{right}" y2="{y}" '
                  f'stroke="{BP_INK}" stroke-width="1"/>')
         for b in range(4):
@@ -493,10 +496,10 @@ def bp_progression():
             o.append(f'<line x1="{bx:.1f}" y1="{y - 16}" x2="{bx:.1f}" y2="{y + 16}" '
                      f'stroke="{BP_INK}" stroke-width="1"/>')
             o.append(f'<text x="{bx + barw / 2:.1f}" y="{y - 24}" fill="{BP_INK}" '
-                     f'font-family="Chivo, sans-serif" font-size="18" font-weight="700" '
+                     f'font-family="Atkinson Hyperlegible, sans-serif" font-size="18" font-weight="700" '
                      f'text-anchor="middle">{romans[i]}</text>')
-            o.append(f'<text x="{bx + barw / 2:.1f}" y="{y + 30}" fill="{BP_DIM}" '
-                     f'font-family="Chivo Mono, monospace" font-size="11" '
+            o.append(f'<text x="{bx + barw / 2:.1f}" y="{y + 27}" fill="{BP_DIM}" '
+                     f'font-family="Atkinson Hyperlegible, sans-serif" font-size="11" '
                      f'text-anchor="middle" letter-spacing="1">{fkeys[i]}</text>')
         o.append(f'<line x1="{right}" y1="{y - 16}" x2="{right}" y2="{y + 16}" '
                  f'stroke="{BP_INK}" stroke-width="1"/>')
@@ -525,7 +528,7 @@ def bp_voicings():
     cxs = [220, 470, 720]
     base_y, step = 250, 42
     for cx, (roman, chord, notes) in zip(cxs, VOICINGS):
-        o.append(f'<text x="{cx}" y="86" fill="{BP_INK}" font-family="Chivo, sans-serif" '
+        o.append(f'<text x="{cx}" y="86" fill="{BP_INK}" font-family="Atkinson Hyperlegible, sans-serif" '
                  f'font-size="16" font-weight="700" text-anchor="middle">{roman}'
                  f'<tspan fill="{BP_DIM}" font-size="12" dx="6">{chord}</tspan></text>')
         top_y = base_y - (len(notes) - 1) * step
@@ -536,7 +539,7 @@ def bp_voicings():
             o.append(f'<circle cx="{cx}" cy="{y}" r="5" fill="{BP_INK}"/>')
             o.append(_bptag(cx - 78, y - 8, deg))
             o.append(f'<text x="{cx + 16}" y="{y + 4}" fill="{BP_INK}" '
-                     f'font-family="Chivo Mono, monospace" font-size="12">{name}</text>')
+                     f'font-family="Atkinson Hyperlegible, sans-serif" font-size="12">{name}</text>')
     return "".join(o)
 
 
@@ -565,8 +568,9 @@ def bp_drum_pattern():
             o.append(f'<line x1="{left - 130}" y1="{y}" x2="{right}" y2="{y}" '
                      f'stroke="{BP_INK}" stroke-width="1"/>')
         mid = y + rowh / 2
-        o.append(f'<text x="{left - 150}" y="{mid + 4:.1f}" fill="{BP_DIM}" '
-                 f'font-family="Chivo, sans-serif" font-size="11" '
+        # Clear of the left rule, which stands at left - 150.
+        o.append(f'<text x="{left - 140}" y="{mid + 4:.1f}" fill="{BP_DIM}" '
+                 f'font-family="Atkinson Hyperlegible, sans-serif" font-size="11" '
                  f'letter-spacing="2.2">{label}</text>')
         for c in hits:
             x = left + colw * (c + 0.5)
@@ -604,15 +608,15 @@ def bp_walking_bass():
     o.append(f'<line x1="{right}" y1="{y - 18}" x2="{right}" y2="{y + 18}" '
              f'stroke="{BP_INK}" stroke-width="1"/>')
     o.append(f'<text x="{left + 4}" y="{y - 26}" fill="{BP_DIM}" '
-             f'font-family="Chivo Mono, monospace" font-size="11">F7</text>')
+             f'font-family="Atkinson Hyperlegible, sans-serif" font-size="11">F7</text>')
     o.append(f'<text x="{barmid + 4}" y="{y - 26}" fill="{BP_DIM}" '
-             f'font-family="Chivo Mono, monospace" font-size="11">B♭7</text>')
+             f'font-family="Atkinson Hyperlegible, sans-serif" font-size="11">B♭7</text>')
     step = (right - left) / 8
     for i, (name, tag) in enumerate(notes):
         x = left + step * (i + 0.5)
         o.append(f'<circle cx="{x:.1f}" cy="{y}" r="5" fill="{BP_INK}"/>')
         o.append(f'<text x="{x:.1f}" y="{y + 30}" fill="{BP_INK}" '
-                 f'font-family="Chivo Mono, monospace" font-size="12" '
+                 f'font-family="Atkinson Hyperlegible, sans-serif" font-size="12" '
                  f'text-anchor="middle">{name}</text>')
         if tag:
             o.append(_bplbl(x, y - 34, tag, size=9))
