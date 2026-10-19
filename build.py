@@ -25,11 +25,14 @@ import json
 import os
 import re
 import shutil
+import sys
 from datetime import date
 
 import plots
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, ROOT)
+import shell as S  # noqa: E402  the shared page shell, copied in by music-shell/sync.py
 DATA = os.path.join(ROOT, "data")
 OUT = os.path.join(ROOT, "docs")
 ASSETS = os.path.join(ROOT, "assets")
@@ -67,13 +70,6 @@ def rich(s):
             out = "".join(p if i % 2 == 0 else f"<{tag}>{p}</{tag}>"
                           for i, p in enumerate(parts))
     return out
-
-
-def mmss(sec):
-    """A cue time. Minutes are not padded and seconds always are, which is how a
-    player writes it and so how a student will read it back off the screen."""
-    sec = int(sec)
-    return f"{sec // 60}:{sec % 60:02d}"
 
 
 def write(path_parts, markup):
@@ -125,7 +121,7 @@ def layout(site, course, terms, title, body, description="", term=None, active_i
 <title>{full_title}</title>
 <meta name="description" content="{e(description)}">
 <link rel="preload" href="{base}/assets/fonts/chivo-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{base}/assets/site.css">
+<link rel="stylesheet" href="{base}/assets/legacy.css">
 </head>
 <body{tape}>
 {DIRECTION}
@@ -136,7 +132,7 @@ def layout(site, course, terms, title, body, description="", term=None, active_i
   <p>{e(site['canvasNote'])}</p>
   <p class="mono">Updated {date.today().strftime('%-d %B %Y')}</p>
 </footer>
-<script src="{base}/assets/site.js" defer></script>
+<script src="{base}/assets/legacy.js" defer></script>
 </body>
 </html>
 """
@@ -217,15 +213,12 @@ def rail(site, term, current_no, reading_no, reading_bp=None):
 </nav>"""
 
 
-# --------------------------------------------------------------- the drawing
-# The lesson page's small drawing. plots.py carries it, same as the hub's.
-
-
-PLOTS = {"band": plots.small_stage}
-
-
-
-# --------------------------------------------------------------- the lesson
+# ------------------------------------------------------ the lesson, on the shell
+#
+# Lesson pages are built by the shared shell (shell.py). Everything below only
+# translates this site's data into the shell's components. The term hubs, the
+# home page and the blueprint sheets still use the old layout() until they move
+# across.
 
 
 def is_assessment(lesson):
@@ -234,306 +227,115 @@ def is_assessment(lesson):
     return bool(lesson.get("assessmentEvent"))
 
 
+def shell_site(site, course):
+    """The site dict the shell's page() needs."""
+    nav = [("Home", "/", "home")] + [(f"Term {t['n']}", f"/{t['id']}/", t["id"]) for t in TERMS]
+    return {"base": site["base"], "title": course["name"], "year": 9, "key": "y9-2027",
+            "foot": site["canvasNote"], "nav": nav, "noindex": site.get("noindex")}
+
+
 def by(track):
-    """Who the recording is by, on its own line, but only where the meta field
-    has not already said it. Half the sets locate a track by its artist and half
-    by its era, so the two fields overlap on some rows and not others. A student
-    finding the right recording at home needs the name; a student reading
-    "The Beatles &middot; The Beatles" needs it once."""
+    """Who the recording is by, but only where the meta field has not already
+    said it. Half the sets locate a track by its artist and half by its era, so
+    the two fields overlap on some rows and not others."""
     artist = (track.get("artist") or "").strip()
     meta = (track.get("meta") or "").lower()
     if not artist:
         return ""
     if any(w for w in artist.lower().split() if len(w) > 2 and w in meta):
         return ""
-    return f'<i>{e(artist)}</i>'
+    return artist
 
 
-def play_link(vid, title):
-    """The name of a work, as the control that plays it.
-
-    Written once and used by both blocks that name a recording. The listen block
-    established the ruling on 17 August 2026 and the guide inherits it rather
-    than inventing a second way to start a player: a student who has learned
-    that a work's name is pressable on one block should not have to learn a
-    button on the next.
-
-    Both marks ride in the link and the CSS shows one. Swapping the shape in the
-    stylesheet keeps the state in one place, and site.js only ever has to set
-    aria-expanded. With scripting off this is what the markup says it is, a link
-    to the recording.
-    """
-    marks = ('<svg class="mark go" viewBox="0 0 10 12" aria-hidden="true">'
-             '<path d="M0 0 10 6 0 12Z"/></svg>'
-             '<svg class="mark stop" viewBox="0 0 10 12" aria-hidden="true">'
-             '<path d="M0 1H10V11H0Z"/></svg>')
-    return (f'<a class="play" href="https://www.youtube.com/watch?v={vid}"'
-            f' data-yt="{vid}" data-work="{title}">'
-            f'{marks}<span class="vh">Play </span>{title}</a>')
+def term_schedule(term, current_no):
+    """The term's lessons grouped by week, for S.schedule. `now` is where the
+    class is up to; an assessment lesson says so in words."""
+    groups, order = {}, []
+    for l in term["lessons"]:
+        if l["week"] not in groups:
+            groups[l["week"]] = []
+            order.append(l["week"])
+        st = None
+        if current_no is not None and l["number"] == current_no:
+            st = "now"
+        elif current_no is not None and l["number"] < current_no:
+            st = "done"
+        built = bool(l.get("body"))
+        groups[l["week"]].append({
+            "n": f'{l["number"]:02d}', "title": l["title"], "meta": l["contentCode"], "state": st,
+            "at": is_assessment(l), "href": f'/{term["id"]}/{l["number"]:02d}/' if built else None})
+    return [(f"Week {w}", groups[w]) for w in order]
 
 
-def track_row(track):
-    """One row of the listen block, with its player folded away.
+def blueprint_card(site, term):
+    """The term's blueprint sheets, which are their own pages. Standalone only:
+    every one is a link."""
+    sheets = term.get("blueprint") or []
+    if not sheets:
+        return ""
+    base = site["base"]
+    links = "".join(f'<a class="btn btn-quiet int" href="{base}/{term["id"]}/blueprint/{b["slug"]}/">{e(b["title"])}</a>'
+                    for b in sheets if b.get("built"))
+    waiting = [b["title"] for b in sheets if not b.get("built")]
+    soon = f'<p class="fine">{e(", ".join(waiting))}: not on the site yet.</p>' if waiting else ""
+    return S.section("blueprint", "The blueprint", "plot", None, f'<p class="btns">{links}</p>{soon}')
 
-    The row keeps the documented block shape: work, artist under it where the
-    meta field has not said it, locating fact in mono at the right. What is new
-    is that **the name of the work is the control**, marked with a triangle and
-    playing the recording inside the row.
-
-    The control is the name rather than a button in its own column because the
-    column is 300px and the block sits inside it at 240. A 24px control column
-    took 34px off the work name and put three of Term 4 input 08's three titles
-    onto two lines each; a mark inside the name costs one line's indent and
-    nothing on the rest. It also makes the whole title the target, which is
-    what a tracklist does everywhere else a student has met one.
-
-    Not three permanent iframes either. Term 3 input 01 and Term 4 input 08
-    both carry three works; embedded outright that is 500px of another
-    company's chrome sitting on the sheet and the block stops being a list.
-    Folded away, the block is unchanged until a student asks for a track, and
-    nothing is requested from the host until they do.
-
-    With scripting off the control is what the markup says it is: a link to the
-    recording. site.js upgrades it into a player in place.
-    """
-    title, meta = e(track["title"]), f'<span class="mono">{e(track["meta"])}</span>'
-    if not track.get("embed"):
-        # A track with no verified id keeps its row and is simply not playable.
-        # The register's rule is that nothing is written into a lesson before it
-        # is verified, so this is the shape of a pick still going through that.
-        return f'<div class="tr"><span class="w"><b>{title}</b>{by(track)}</span>{meta}</div>'
-    play = play_link(e(track["embed"]), title)
-    return f'<div class="tr"><span class="w"><b>{play}</b>{by(track)}</span>{meta}</div>'
-
-
-def guide_block(g):
-    """The cue sheet: a work, and the times in it worth stopping at.
-
-    A guide exists where the teacher would stop the recording and talk over it,
-    which the depth triage found four times in 123 inputs. Three of those four
-    walk more than one work, so the block is a list of works rather than one
-    work with a list under it.
-
-    The composition is the world's own: a cue time is a count, counts here are
-    mono, and the number gutter it sits in is the 46px the clause numbers use
-    directly above it, so one column of figures runs down the whole plate. The
-    cue text is a sentence, which is why this is not in the 300px spec column
-    with the listen block.
-
-    Only the time is a link. The cue text stays text so it can be read off a
-    projector and copied into a book without a student pressing it by accident,
-    and the time is a real `watch?t=` link before site.js makes it a seek.
-
-    The player folds out under the work's own name, above that work's cues, so
-    a teacher pressing a cue sees the recording and the rest of the list at
-    once. It is capped rather than run to the block's full width: this sits on
-    a document, and half a metre of another company's chrome is not a document.
-    """
-    works = []
-    for w in g["works"]:
-        vid = e(w["embed"])
-        cues = "".join(
-            f'<li><a class="cue mono" data-at="{int(c["at"])}"'
-            f' href="https://www.youtube.com/watch?v={vid}&amp;t={int(c["at"])}s">'
-            f'{mmss(c["at"])}<span class="vh"> into {e(w["title"])}</span></a>'
-            f'<span>{rich(c["text"])}</span></li>'
-            for c in w["cues"])
-        meta = f'<span class="mono">{e(w["meta"])}</span>' if w.get("meta") else ""
-        works.append(f'<div class="gw"><h3>{play_link(vid, e(w["title"]))}{meta}</h3>'
-                     f'<ol class="cues">{cues}</ol></div>')
-    brief = f'<p class="brief">{rich(g["brief"])}</p>' if g.get("brief") else ""
-    return (f'<section class="read guide"><h2>Cue sheet</h2>{brief}'
-            f'<div class="gws">{"".join(works)}</div></section>')
-
-
-def explain_block(x):
-    """The long version: the taught content, written down.
-
-    The first block in this world that is read rather than done, which is what
-    decides everything about it. It cannot take a clause `kind`, because every
-    clause kind names where the doing happens and there is no doing here. So it
-    is not a fourth clause; it is a section of the document, a sibling of the
-    title block and the keep block, and it takes the plate's own left edge and
-    the 2px ink rule that already divides this sheet.
-
-    It is on the sheet rather than the floor because it is a paragraph, which
-    is the two grounds rule and not a preference.
-
-    One per input and about 250 words, per the depth triage. The subheads and
-    the list are there because a definition set reads better broken up than as
-    four paragraphs; they are not licence to grow the block.
-    """
-    parts = []
-    for item in x["body"]:
-        if "h" in item:
-            parts.append(f'<h4>{rich(item["h"])}</h4>')
-        elif "ul" in item:
-            parts.append("<ul>" + "".join(f"<li>{rich(i)}</li>" for i in item["ul"]) + "</ul>")
-        else:
-            parts.append(f'<p>{rich(item["p"])}</p>')
-    return (f'<section class="read explain"><h2>The long version</h2>'
-            f'<h3>{rich(x["title"])}</h3>{"".join(parts)}</section>')
-
-
-
-def worked_block(w):
-    """Two takes: the same task answered twice, once so it earns and once so it
-    does not.
-
-    The third block in this world that is read rather than done, and the first
-    that shows rather than tells. `LESSON-DEPTH-TRIAGE.md` gives it to three
-    inputs where the taught distinction is a difference between two pieces of
-    writing that look alike on the page: a log entry against a diary entry, a
-    dot point that earns a mark against one that does not, a rationale that
-    names its decisions against one that describes its feelings. None of those
-    survives being described. All three are seen in one look or not at all.
-
-    So the composition is a comparison and everything in it is built to be read
-    across rather than down. It is a section of the document like its two
-    siblings, taking the plate's own left edge and the 2px ink rule, and it
-    reuses the world's furniture rather than inventing any:
-
-    - The question takes the read block's own h3, with its marks in mono
-      immediately after it, because a count is mono here and because a single
-      right-aligned figure with nothing under it reads as an orphan rather than
-      as a column.
-    - **Both specimens are marked, and the two marks are the world's own two
-      line weights.** The take that works is bound by the 4px painted keyline,
-      the take that does not is drawn with the 1px sheet rule, at the same
-      inset. That is the two weights rule used as an argument: 4px bounds what
-      is kept, 1px draws what is not. No fill, no tint and no colour, which the
-      sheet does not take anyway, and each is said in words as well.
-    - **A rung is a clause.** A named move with a sentence under it, in the same
-      46px gutter the clauses and the cue times use, so the one column of
-      figures runs down the whole plate. The moves are ALARM's where the task is
-      a dot point and the task's own where it is not; the shape is what carries,
-      not the vocabulary.
-
-    The failing take is not dimmed and is not folded away. It is the half of the
-    block a student has to study closely, and a page that is projected while the
-    class compares the two has to hold both at once.
-    """
-    marks = (f'<span class="mono">&middot; {e(w["marks"])}</span>'
-             if w.get("marks") else "")
-    brief = f'<p class="brief">{rich(w["brief"])}</p>' if w.get("brief") else ""
-    rungs = ""
-    if w.get("rungs"):
-        rungs = '<ol class="rungs">' + "".join(
-            f'<li><span class="n mono">{i:02d}</span>'
-            f'<div><h5>{e(r["move"])}</h5><p>{rich(r["text"])}</p></div></li>'
-            for i, r in enumerate(w["rungs"], 1)) + "</ol>"
-    return (f'<section class="read worked"><h2>Two takes{marks}</h2>'
-            f'<h3>{rich(w["question"])}</h3>{brief}'
-            f'<div class="take kept"><h4>The one that works</h4>'
-            f'<p class="said">{rich(w["model"])}</p>{rungs}</div>'
-            f'<div class="take dropped"><h4>The one that doesn\u2019t</h4>'
-            f'<p class="said">{rich(w["zero"]["answer"])}</p>'
-            f'<p>{rich(w["zero"]["why"])}</p></div></section>')
 
 def lesson_page(site, course, term, lesson, current_no):
-    """comp D. The plate is the reading surface and long prose never sits on the
-    black floor."""
     base = site["base"]
     b = lesson["body"]
     n, total = lesson["number"], len(term["lessons"])
-
-    if lesson["number"] == current_no:
-        standing = "on the desk"
-    elif current_no is not None and lesson["number"] < current_no:
-        standing = "taught"
-    else:
-        standing = "coming up"
-
-    meta = [("Unit", term["name"]), ("Week", str(lesson["week"])),
-            ("Content", lesson["contentCode"])]
+    kicker = f'{term["name"]} · Week {lesson["week"]}'
+    if n == current_no:
+        kicker = "Up to here · " + kicker
+    meta = f'Lesson {n} of {total} · {lesson["contentCode"]}'
     if b.get("repertoire"):
-        meta.append(("Repertoire", b["repertoire"]))
-    if b.get("bring"):
-        meta.append(("Bring", b["bring"]))
-    fields = "".join(f"<div><dt>{e(k)}</dt><dd class=\"mono\">{e(v)}</dd></div>" for k, v in meta)
-    # The row is ruled into as many cells as it has fields. A fixed five-column
-    # grid gives the assessment lessons, which carry no repertoire, one
-    # double-width cell and a rhythm that disagrees with every other page.
-    tbcols = f"tbgrid c{len(meta)}"
+        meta += f' · {b["repertoire"]}'
+    hd = S.head(lesson["title"], kicker=kicker, num=n, meta=meta,
+                chips=[f'Bring: {b["bring"]}'] if b.get("bring") else ())
+    it = S.intent(b["lead"], criteria=b.get("criteria") or (), outcomes=lesson.get("outcomes") or ())
 
-    clauses = []
-    for i, c in enumerate(b["clauses"]):
-        clauses.append(f'<div class="cl"><span class="n mono">{i+1:02d}</span>'
-                       f'<div><h3>{e(c["kind"])}</h3><p>{e(c["text"])}</p></div></div>')
-    if b.get("criteria"):
-        items = "".join(f"<li>{e(c)}</li>" for c in b["criteria"])
-        clauses.append(f'<div class="cl"><span class="n mono">{len(b["clauses"])+1:02d}</span>'
-                       f'<div><h3>You can do it when</h3><ul class="sc">{items}</ul></div></div>')
-
-    spec = []
-    if b.get("plot") in PLOTS:
-        spec.append(f'<div class="plot"><h4>Stage plot</h4>{PLOTS[b["plot"]]()}</div>')
-    if b.get("listen"):
-        tracks = "".join(track_row(t) for t in b["listen"])
-        spec.append(f'<div class="blk"><h4>Listen</h4><div class="listen">{tracks}</div></div>')
+    side = ""
+    if b.get("plot") == "band":
+        side += S.side_card("Stage plot", "plot", plots.small_stage(), cls="plot")
     if b.get("patched"):
-        rows = "".join(f'<div class="row"><span class="n mono">{e(p["n"])}</span><span>{e(p["text"])}</span></div>'
-                       for p in b["patched"])
-        spec.append(f'<div class="blk"><h4>Patched in</h4>{rows}</div>')
-    if lesson.get("outcomes"):
-        codes = "".join(f'<span class="mono">{e(c)}</span>' for c in lesson["outcomes"])
-        spec.append(f'<div class="blk"><h4>Outcomes</h4><div class="codes">{codes}</div></div>')
+        side += S.list_card("You'll need", "kit", [p["text"] for p in b["patched"]])
+    secs = [S.steps([(c["kind"], c["text"]) for c in b["clauses"]], title="What we do", side=side)]
 
-    # The read, under the rider and above the keep. The order inside it is the
-    # teaching order and is fixed here rather than by the data: you hear the
-    # thing before you are told what it is, which is what clause 01 of the one
-    # input carrying both actually says, and you are shown it done after you
-    # have been told what it is.
-    read = ""
-    if b.get("guide"):
-        read += guide_block(b["guide"])
-    if b.get("explain"):
-        read += explain_block(b["explain"])
-    if b.get("worked"):
-        read += worked_block(b["worked"])
+    if b.get("listen"):
+        secs.append(S.listen([{"title": t["title"], "embed": t.get("embed"), "by": by(t),
+                               "meta": t.get("meta", "")} for t in b["listen"]]))
+    g = b.get("guide")
+    if g:
+        secs.append(S.cues([{"title": w["title"], "embed": w["embed"], "meta": w.get("meta", ""),
+                             "cues": [(c["at"], c["text"]) for c in w["cues"]]} for w in g["works"]],
+                           brief=g.get("brief", "")))
+    x = b.get("explain")
+    if x:
+        secs.append(S.learn(x["body"], title=x["title"]))
+    w = b.get("worked")
+    if w:
+        secs.append(S.worked(question=w["question"], marks=w.get("marks"), lead=w.get("brief"),
+                             model=w["model"], rungs=[(r["move"], r["text"]) for r in w.get("rungs") or []],
+                             zero=(w["zero"]["answer"], w["zero"]["why"]), title="Two takes",
+                             labels=("The one that works", "The one that doesn’t")))
+    end = [S.keep(lesson["enduring"])] if lesson.get("enduring") else []
 
-    keep = ""
-    if lesson.get("enduring"):
-        keep = f'<div class="keep"><b>Worth keeping</b>{e(lesson["enduring"])}</div>'
+    ls = term["lessons"]
+    idx = next(i for i, l in enumerate(ls) if l["number"] == n)
+    prev_l = next((l for l in reversed(ls[:idx]) if l.get("body")), None)
+    next_l = next((l for l in ls[idx + 1:] if l.get("body")), None)
+    pn = (("Previous", prev_l["title"], f'/{term["id"]}/{prev_l["number"]:02d}/') if prev_l else None,
+          ("Next", next_l["title"], f'/{term["id"]}/{next_l["number"]:02d}/') if next_l else None)
 
-    # Under the plate, back on the floor.
-    idx = next(i for i, l in enumerate(term["lessons"]) if l["number"] == n)
-    nxt = next((l for l in term["lessons"][idx+1:] if l.get("body")), None)
-    under = []
-    if nxt:
-        under.append('<span class="lbl">Next</span>'
-                     f'<a href="{base}/{term["id"]}/{nxt["number"]:02d}/">'
-                     f'{nxt["number"]:02d} &middot; {e(nxt["title"])}</a>')
-    under.append('<span class="lbl">Term</span>'
-                 f'<a href="{base}/{term["id"]}/">All {total} inputs</a>')
-
-    body = f"""<div class="wrap">
-{rail(site, term, current_no, n)}
-  <main class="stagearea" id="main">
-    <div class="plate-wrap">
-      <span class="tapestrip tl" aria-hidden="true"></span>
-      <span class="tapestrip tr" aria-hidden="true"></span>
-      <article class="plate">
-        <div class="titleblock">
-          <p class="of mono">Input {n:02d} of {total} &middot; {standing}</p>
-          <h1>{e(lesson['title'])}</h1>
-          <dl class="{tbcols}">{fields}</dl>
-        </div>
-        <div class="rider">
-          <div class="clauses">
-            <p class="lead">{e(b['lead'])}</p>
-            {"".join(clauses)}
-          </div>
-          <div class="spec">{"".join(spec)}</div>
-        </div>
-        {read}{keep}
-      </article>
-    </div>
-    <div class="underplate">{"".join(under)}</div>
-  </main>
-</div>"""
-    return layout(site, course, TERMS, f"{n:02d} {lesson['title']}", body,
-                  b["lead"], term=term, active_id=term["id"])
+    extras = S.fold(f'This term: {term["name"]}, {total} lessons',
+                    S.schedule(term_schedule(term, current_no), base=base, label="This term",
+                               title=term["name"]))
+    extras += blueprint_card(site, term)
+    return S.page(shell_site(site, course), title=f"{n:02d} {lesson['title']}",
+                  body=S.lesson(hd, it, secs, end), description=b["lead"],
+                  crumbs=[("Home", "/"), (term["name"], f'/{term["id"]}/'), (f"Lesson {n}", None)],
+                  nav_current=term["id"], prevnext=pn, extras=extras)
 
 
 # ------------------------------------------------------------- the term hub

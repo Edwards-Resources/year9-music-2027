@@ -370,7 +370,7 @@ def small_stage():
     """
     ink, dim = "#141517", "#5D5F63"
     st = f'fill="none" stroke="{ink}" stroke-width="1"'
-    n = (f'<g fill="{ink}" font-family="Chivo Mono, monospace" font-size="8" '
+    n = (f'<g fill="{ink}" font-family="Atkinson Hyperlegible, sans-serif" font-size="8" '
          f'text-anchor="middle">')
     o = [f'<rect x="8" y="8" width="204" height="118" {st}/>',
          f'<line x1="8" y1="126" x2="212" y2="126" stroke="{ink}" stroke-width="2"/>']
@@ -396,7 +396,7 @@ def small_stage():
     # One label, on the left where the floor is empty. The drawing carried
     # "STAGE PLOT" in its own corner as well as in the heading above it, and
     # "DOWNSTAGE EDGE" ran straight through the right-hand wedge at this size.
-    o.append(f'<g fill="{dim}" font-family="Chivo, sans-serif" font-size="7" '
+    o.append(f'<g fill="{dim}" font-family="Atkinson Hyperlegible, sans-serif" font-size="7" '
              f'letter-spacing="1.1"><text x="14" y="121">DOWNSTAGE</text></g>')
     return (f'<svg viewBox="0 0 220 134" width="100%" role="img" '
             f'aria-label="{SMALL_ALT}">{"".join(o)}</svg>')
