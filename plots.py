@@ -4,14 +4,13 @@ The first version of this file drew all four units as the same floor plan with
 different things standing on it. That was wrong, and it is worth recording how,
 so it does not come back: a 12-bar blues is time, not floor space, so a band
 standing on a chord progression taped across the floor is a picture no musician
-has ever drawn. It read as music-adjacent and meant nothing. That is the failure
-DIRECTION.md already names, the metaphor doing overtime.
+has ever drawn. It read as music-adjacent and meant nothing: the metaphor doing
+overtime.
 
 What is shared is the frame, not the drawing. Every unit is one sheet of
-production paperwork: bounded, named in its top corner, with the other three
-stacked under it as ghost line and a 4px painted edge along the bottom that the
-multicore plugs into. Inside that frame each unit is the document that unit's
-musicians actually use.
+production paperwork: bounded, with the other three stacked above it as ghost
+line and a 4px edge along the bottom. Inside that frame each unit is the
+document that unit's musicians actually use.
 
     1 Like a Version      a stage plot, with the input numbers that tie each
                           source to a line on the input list
@@ -23,9 +22,9 @@ musicians actually use.
     4 Level Up            a cue sheet, timecode across the top, stems down the
                           side
 
-Two line weights, as the world allows: a 1px chalk hairline for what is drawn
-and a 4px painted keyline for what bounds. At this viewBox the page renders
-about 1:1, so 1 and 4 here are 1px and 4px on the floor.
+Two line weights: a 1px hairline for what is drawn and a 4px keyline for what
+bounds. Since the shared shell (19 October 2026) every drawing sits on a white
+card, so every drawing is ink. DESIGN.md has the rules.
 """
 
 import re

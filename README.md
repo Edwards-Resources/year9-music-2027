@@ -3,22 +3,29 @@
 Lesson material for a Year 9 Music elective, published with GitHub Pages. Students read
 it; assessment stays in Canvas.
 
-Read `DIRECTION.md` before touching any CSS, and `.impeccable/mocks/comp-d-thedesk.html`
-before touching the lesson page. Comp D is the approved composition and it is king.
+Every page is built on the shared music shell (`shell.py`, `assets/shell.css`,
+`assets/shell.js`), the same look as the other music sites with Year 9's green accent.
+Read `DESIGN.md` before changing how anything looks. The shell's own files here are
+copies: never edit them in this repo. They are edited in `music-shell/`, a local repo
+beside this one, and synced in.
 
 ## How it works
 
 - `data/` is the source of truth. `site.json`, `course/course.json`, and one
   `course/termN/term.json` per term.
-- `build.py` turns that into static pages in `docs/`. Standard library only, no
-  dependencies to install and nothing to keep updated.
+- `build.py` turns that into static pages in `docs/` by handing the data to the shell.
+  Standard library only, no dependencies to install and nothing to keep updated.
+- `plots.py` draws the unit drawings, the small stage plot and the blueprint sheets.
+  These are this site's own; the shell does not know about them.
 - `docs/` is what GitHub Pages serves. It is generated. Never edit it by hand.
 
 ## Building
 
 ```
-python3 build.py
+/usr/bin/python3 build.py
 ```
+
+The build has to run on the Mac's own Python 3.9, so no newer syntax.
 
 ## Where the lessons come from
 
@@ -35,19 +42,23 @@ behind. Adjustments are teacher-side only and none of it reaches the site.
 
 A lesson gets a page when, and only when, it has a `body`. Everything the extractor
 produces is the teacher's voice and is not student-facing prose, so the body has to be
-written. See input 02 of `term2` for the shape: `lead`, `clauses`, `criteria`,
+written. See lesson 02 of `term2` for the shape: `lead`, `clauses`, `criteria`,
 `listen`, `patched`, `plot`, `repertoire`, `bring`.
 
-An input with no body still appears in the input list and on the term page. It just
-has no link.
+A lesson with no body still appears in its term's schedule. It just has no link.
+
+The field names are from the site's first design and stay as they are; the page uses
+plain words for them. `patched` prints as "You'll need", `clauses` as "What we do",
+and `plot: "band"` adds the small stage plot beside it.
 
 ## The read: `guide`, `explain` and `worked`
 
-Three optional blocks that sit under the rider, in that order whatever order the data is
-in. `LESSON-DEPTH-TRIAGE.md` says which inputs get one; do not add either to an input
-the triage did not name. Input 04 of `term1` carries both and is the worked example.
+Three optional blocks that sit after "What we do", in that order whatever order the data
+is in. `LESSON-DEPTH-TRIAGE.md` says which lessons get one; do not add one to a lesson
+the triage did not name. Lesson 04 of `term1` carries a guide and an explain and is the
+worked example.
 
-An `explain` is about 250 words. One per input. `body` items are `p`, `h` (a subhead)
+An `explain` is about 250 words. One per lesson. `body` items are `p`, `h` (a subhead)
 or `ul`, and `**bold**` and `_italic_` work inside any of them:
 
 ```json
@@ -68,7 +79,7 @@ A `guide` is a cue sheet. `at` is seconds into the recording:
 ```
 
 A `worked` is two takes: the same task answered twice, once so it earns and once so it does
-not. Three inputs get one instead of an explain. `rungs` are optional and each is a named
+not. Three lessons get one instead of an explain. `rungs` are optional and each is a named
 move with a sentence under it, ALARM's moves where the task is a dot point and the task's
 own where it is not:
 
@@ -87,7 +98,7 @@ own where it is not:
 and the build fails without them. Write the failing answer at the length students actually
 write, and make it one that looks fine: an obviously lazy answer teaches nothing.
 
-**A work in the cue sheet is not also a row in `listen`.** All four guide inputs already
+**A work in the cue sheet is not also a row in `listen`.** All four guide lessons already
 list the works their guide walks, so take them out of `listen` when you write the guide;
 the build fails if you do not.
 
@@ -98,8 +109,9 @@ with the recording and an ear.
 
 ## The live position
 
-`currentTerm` and `currentLesson` in `data/course/course.json`. That is the one row in
-the input list wearing the term's tape, and it is updated from the daily debriefs.
+`currentTerm` and `currentLesson` in `data/course/course.json`, updated from the daily
+debriefs. That lesson says "Up to here" on its own page, on its term's hub and on home,
+and home opens its unit.
 
 ## Repertoire
 

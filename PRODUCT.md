@@ -84,9 +84,9 @@ The blueprint is not a concession to weak students. It is how this teacher teach
 - No em dashes in anything student-facing or teacher-facing.
 - **Elements of music, never "concepts of music".** That wording is 2003 and 2009 syllabus language and has already bitten the Year 10 site twice.
 - **Only the ten real outcome codes exist:** MU5-PER-01/02, MU5-LIS-01/02, MU5-COM-01/02, and for Life Skills MULS-PER-01/02/03, MULS-LIS-01/02, MULS-COM-01/02/03. Outcome wording is copied verbatim from the syllabus, never paraphrased.
-- **A visual world of its own.** Each year group gets its own world and the others are anti-references. **Year 8's Tour Tee is the sharpest anti-reference here**, because this cohort has just spent a year inside it, followed by Year 10's Marker Zine, Year 11's On Air, the superseded Liner Notes / Billing comps, and the `sample/` Rehearsal Marks world rejected during the Year 8 build.
-- **Not cream plus a serif.** Recorded as a standing warning in the course design before the site existed. The three shipped siblings are all light paper grounds, so a fourth paper ground is the house default rather than a choice.
-- **Distinctive and engaging, not a plain school course site**, carried forward from all three siblings. The structural virtues hold inside the world: unambiguous course to term to lesson hierarchy, visible position, short scannable lesson pages, generous type, accessibility as a requirement.
+- **One shared look across the music sites, one accent per year group.** Since 19 October 2026 every page is built on the shared music shell (direction B, Stage Card), with Year 9 in green. This reversed the earlier rule that each year group gets its own visual world: students moving up a year now meet the same page shapes and the same plain words. See `DESIGN.md`.
+- **The world before it**, kept as history: **The Plot** (16 August to 19 October 2026, the year as the room drawn from above). Its drawings survive as real documents in `plots.py`; its look does not. Its comps are in `.impeccable/mocks/`.
+- **Distinctive and engaging, not a plain school course site.** The structural virtues hold on the shell: unambiguous course to term to lesson hierarchy, visible position, short scannable lesson pages, generous type, accessibility as a requirement.
 
 ## Evidence on Hand
 

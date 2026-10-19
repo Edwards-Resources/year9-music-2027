@@ -1,152 +1,40 @@
-# Design notes: the term hub and the home surface
+# Design notes: the move to the shared shell
 
-Neither surface had a comp. Both were designed in the build on 16 August 2026.
-This file records what they are and what was decided, so the finish review has
-something to review against. It is not DESIGN.md, which is still owed.
+`DESIGN.md` is the system of record for this site. This file records why things are the way they are: the decisions made when the site moved onto the shared music shell (19 October 2026), and the one mistake from the original build that is worth never repeating.
 
-## The term hub
-
-**The shape.** Unit head and where the class is, then the unit's sheet of
-paperwork at full width, then the multicore running out of its bottom edge, then
-the assessment bar, the blueprint, and the full input list as a table.
-
-**The multicore** is the one thing held from comp B, and this is its first build.
-Every channel is the same width. On this surface that is the point rather than
-the failing the thesis complains about: on a multicore the channels *are* equal,
-and what separates them is what is patched into each.
-
-**It is plugged in, not placed under.** `SH_X` in `plots.py` and `--core-inset`
-in `site.css` are both 5%, so the strip starts exactly under the sheet's left
-edge and ends under its right one. Nothing is drawn below the sheet's bottom
-edge. Change one of those two numbers and you must change the other, or the
-device quietly stops working.
-
-**The week ruler** mirrors the strip's flex geometry exactly, so a week boundary
-falls on a channel boundary. The word "Week" sits in the 5% gutter rather than in
-the flex row, because a label in the row pushes every week off its channel.
-
-## The ghost layer, rebuilt
-
-Comp B drew the other three units at 7 to 10 percent opacity, which is about
-1.1:1 on this floor. It was not weak, it was absent. Two changes:
-
-1. **26 percent, about 2.4:1**, and the **dash** rather than the fade is what
-   carries "not live". A state never rests on the contrast step alone.
-2. **A bracket, not a rectangle.** Each ghost is the top edge and two side stubs
-   running down to where the live sheet starts, which is what a stack of paper
-   looks like from above. A full ghost rectangle crosses everything on the live
-   sheet and turns the drawing to mud, which was the other half of why B's
-   version did not work.
-
-They are stepped by unit distance, so the year sits in order and the unit next to
-this one is closest.
+The notes on the hub and home as they were designed in The Plot (16 to 18 August 2026: the multicore, the week ruler, the tape budget, the stencil face) are in this file's history up to commit `47576ad`. None of those devices exists now.
 
 ## The drawings, and the mistake worth keeping a record of
 
-The first build drew all four units as the same floor plan with different things
-standing on it. The read on it from the user was that the pictures were "in that uncanny
-valley range of they look like they are related to music but also make no real
-sense at all. Like a person wouldn't do that." That was correct, and the worst of
-them was unit 2: a band standing on a 12-bar chord progression taped across the
-floor. A blues is time, not floor space. No musician has ever drawn that.
+The first build drew all four units as the same floor plan with different things standing on it. The read on it from the teacher was that the pictures were "in that uncanny valley range of they look like they are related to music but also make no real sense at all. Like a person wouldn't do that." That was correct, and the worst was unit 2: a band standing on a 12-bar chord progression taped across the floor. A blues is time, not floor space. No musician has ever drawn that.
 
-The cause was mine and it is the failure `DIRECTION.md` already names: I decided
-the room-from-above had to apply to all four units and then forced each unit into
-a floor plan whether or not it had anything to do with floors. The metaphor doing
-overtime.
+The cause was deciding the room-from-above had to apply to all four units and then forcing each unit into a floor plan whether or not it had anything to do with floors. The metaphor doing overtime.
 
-**What is shared is now the frame, not the drawing.** Every unit is one sheet of
-production paperwork: bounded, named in its own top corner the way real
-paperwork is, ghosts above, painted edge below. Inside that frame each unit is
-the document that unit's musicians actually use.
+**What is shared is the frame, not the drawing.** Each unit is the document that unit's musicians actually use: a stage plot, a chord chart, a listening set-up, a cue sheet. The lesson page's small drawing was changed the same way, from five circles with instrument names to a real stage plot in miniature. This survived the shell unchanged, because it was never about the look.
 
-| Unit | Sheet | Why it is real |
-| --- | --- | --- |
-| 1 Like a Version | Stage plot | Kit drawn as a kit, amps upstage of the players who use them, mics as a head on a stand, every source carrying the input number that finds it on the list |
-| 2 Blues to Jazz | Chord chart | Twelve bars as three systems of four, slashes for the beats, chord symbols above and roman numerals below, which is where analysis goes |
-| 3 Sounds of Australia | Listening set-up | The equilateral triangle every stereo reference uses, speakers toed in, 60 degrees at the seat |
-| 4 Level Up | Cue sheet | Timecode across the top, stems down the side, a bar where each stem plays. This one was already right |
+## Decisions made on the way across
 
-The lesson page's small drawing was changed the same way, from five circles with
-instrument names to a real stage plot in miniature, and its heading changed from
-"The room" to "Stage plot". That is a content fix inside comp D's composition,
-not a change to the composition.
+**Lessons (increment 3).**
 
-## The home surface
+- The stage plot became a side card beside In class, "Stage plot", and "Patched in" became "You'll need". The rest of the old vocabulary went the same way: "Input" is "Lesson", "On the desk" is "Up to here".
+- `small_stage()` was recoloured to ink on white and moved to Atkinson. It also lost its "STAGE PLOT" corner label, since the card says it, and "DOWNSTAGE EDGE" became "DOWNSTAGE" on the empty left of the floor, because at that size it ran through the right-hand wedge.
+- `body.lead` is printed once, as the learning intention, because it is the same sentence as `intention` in every lesson.
+- "Bring" moved to a chip on the head card, since it is the one thing a student acts on before the lesson.
 
-Two jobs in this order: put the class on the lesson it is actually on, then show
-the whole year as four units.
+**Term hubs (increment 4).**
 
-**The desk plate** is the page's one torn strip, on the one thing home certainly
-has to do. The lead is a sentence, so it reads on a taped panel and never on the
-black floor.
+- **The multicore strip retired**, with the week ruler and the 5% alignment that tied it to the drawing. The shell's schedule says the same thing in words, grouped by week. The 4px edge along the bottom of each unit drawing stays, as the frame's second line weight, though nothing plugs into it now.
+- **Per-term tape colours retired.** One accent per year group replaces the four tapes.
+- The four unit drawings were recoloured to ink, their corner names removed, and their lettering scaled up by 1.35 to read at card size. The ghost brackets stayed, at 34 percent on white, which is about the 2.4:1 the chalk version was tuned to.
 
-**No plan drawing on home.** The sheet is large on the hub and small on a lesson
-page. A third, year-sized one would be the same device at a third scale saying
-nothing the four unit blocks do not already say.
+**Home and the blueprint sheets (increment 5).**
 
-**The four units carry their tape colour as a chip on the unit number**, black
-ink on it, not as a bar across the top of the block. Four coloured bars side by
-side read as a rainbow, and a square-cut bar of gaffer colour is what rule 6
-exists to refuse. Which unit is live is said by the 4px chalk keyline and by the
-words in the corner, never by the colour.
+- **Home** is a head card, "Up to here" with the lesson's lead and an "All 30 lessons" button, then the four units as `card_grid` cards on the ground (not inside a section card), the live one open. No year-scale drawing, which was already the ruling in The Plot: a third, year-sized drawing would say nothing the four units do not.
+- **Closed `card_grid` cards place their four pieces explicitly** in the shell. Flowing kicker, title, text and meta into three columns scrambled them.
+- **Blueprint sheets** are a head card, "The sheet", "How it works" and previous and next between sheets, with the term fold and the blueprint links under them as on lessons. Their drawings moved to Atkinson and lost their corner names, and were not type-scaled.
+- Atkinson is wider than Chivo, so two drawings were adjusted: the progression's rows are 74 apart, and the drum pattern's labels start clear of the left rule.
 
-## Rulings made in the build
+## Still worth knowing
 
-- **The stencil face.** `DIRECTION.md` allows three places: the class mark, the
-  input list head, and the lesson title. Read as the page's own subject name,
-  that is the lesson title on a lesson page, the unit name on the hub, and on
-  home the title of the lesson on the desk. Still one selector in the CSS. Widen
-  it further and it stops being a display voice. **Flag for the finish review.**
-- **The tape budget.** The hub spends two: the standing line and the taped
-  channel. The input table's current row was a tape fill and is now the 4px
-  keyline, because a third would have said nothing the first two had not.
-- **Mobile.** The sheet and the strip scroll together inside one container at
-  720px. Thirty channels across a phone is 11px each and a 1200-unit drawing in
-  340 points cannot be read either; scrolling them separately would break the
-  alignment that is the whole device. The full input list is underneath for
-  anyone who would rather not drag.
-
-## Settled at the finish review, 17 August 2026
-
-The finish review ran on 17 August 2026 and `DESIGN.md` is written. **`DESIGN.md`
-is now the system of record for this site's design**; this file stays as the
-build record for the two surfaces that had no comp, and nothing below overrides
-it.
-
-- **The three pieces of torn tape are two acts.** A corner pair holds one object
-  down, one strip marks the row. The approval sidecar's own wording is the
-  reading. A fourth mark is a defect.
-- **`--hair` is fixed.** `#313337` at 1.48:1 is now `#63656A` at 3.21:1. It draws
-  only structural rules and control borders; the floor's background grid is a
-  separate faint rgba and stayed where it was.
-- **The ghost bracket stands as built.** The review first asked for the other
-  three units' real drawings at 7 to 10 percent and withdrew it once this file
-  was in front of it. The bracket at 26 percent with the dash carrying "not live"
-  is the answer. The ghost labels are chalk-dim at 5.76:1 and are not ghosted.
-
-## Still open
-
-- ~~**Home's four unit blocks are equal weight.**~~ **Built 18 August 2026.**
-  The live unit opens in place and carries its own thirty inputs on the
-  multicore; the other three fold to a line each; the stack stays in unit order
-  so nothing is lifted out of sequence. No year-scale drawing was added, which
-  was the explicit half of the ruling. The strip's 5% inset is zeroed on this
-  surface because there is no room here for it to align to.
-- ~~**The four blueprint sheets do not exist**~~ **Built 18 August 2026.** Four
-  pages at `{term}/blueprint/{slug}/`, one plate each, no rider and no meta row
-  because a blueprint has no week and nothing patched in: the title block goes
-  straight to the drawing and the rules under it. The drawings are `plots.py`
-  functions, same as the four unit sheets, but drawn in ink on sheet-coloured
-  ground rather than chalk on the floor, because a blueprint sheet lives inside
-  the plate, and the Two Grounds Rule decides the ink from the ground rather
-  than from habit — `small_stage()` had already set this precedent for the
-  lesson page's spec column and the blueprint sheets follow it, not the four
-  hub-scale drawings next to them in the same file. No ghost brackets and no
-  4px downstage edge either: a blueprint is not one of the four rooms and
-  nothing plugs into it from below, so what carries over from the unit sheets
-  is the habit of naming a document in its own corner, not the frame itself.
-  The rail's foot and the hub's blueprint bar, which already linked to
-  `built: true` sheets, now have four to link to instead of a `not on the site
-  yet` line; the current sheet gets the same 4px reading keyline a lesson row
-  gets, on the link rather than a channel.
+- **The data keeps its old field names** (`clauses`, `patched`, `plot`, `guide`). Renaming them would churn every term file and the extractor for no student benefit, so the words changed on the page only.
+- **Contrast is still a product constraint.** The page is projected in a daylit room. The shell holds this for its own components; anything drawn in `plots.py` has to be checked by eye at card size, since the shell cannot see inside an SVG.
