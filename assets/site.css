@@ -1,1 +1,8 @@
 /* Year 9 furniture only. Everything else comes from shell.css. */
+
+/* The unit's drawing on its hub. It is drawn at 1200 wide and its lettering is
+   sized for that, so on a phone it keeps a readable width and scrolls sideways
+   inside its card rather than shrinking to a smudge. The page itself never
+   scrolls sideways. */
+.plan-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.plot-large { display: block; width: 100%; min-width: 46rem; height: auto; }

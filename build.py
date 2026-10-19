@@ -216,9 +216,9 @@ def rail(site, term, current_no, reading_no, reading_bp=None):
 # ------------------------------------------------------ the lesson, on the shell
 #
 # Lesson pages are built by the shared shell (shell.py). Everything below only
-# translates this site's data into the shell's components. The term hubs, the
-# home page and the blueprint sheets still use the old layout() until they move
-# across.
+# translates this site's data into the shell's components. The term hubs are on
+# the shell too (further down). The home page and the blueprint sheets still use
+# the old layout() until they move across.
 
 
 def is_assessment(lesson):
@@ -341,6 +341,8 @@ def lesson_page(site, course, term, lesson, current_no):
 # ------------------------------------------------------------- the term hub
 
 
+# The strip retired from the hub with the shell. It stays here only for the old
+# home page, and goes when the home moves across (increment 5).
 def multicore(site, term, current_no, live):
     """Thirty inputs as a single line along the downstage edge, held from comp B
     and built here for the first time.
@@ -390,94 +392,47 @@ def multicore(site, term, current_no, live):
 
 
 def term_page(site, course, term, current_no, reading_term):
-    """The term hub. The room is large here and nowhere else, the multicore runs
-    out of its downstage edge, and the full input list sits under both."""
+    """The term hub, on the shell: head card, where the class is up to, the
+    unit's own drawing at full size, the assessment, then every lesson grouped
+    by week. The multicore strip retired with the shell; the schedule says
+    the same thing in words. The blueprint sheets follow, standalone, as on
+    every lesson page."""
+    base = site["base"]
     a = term["assessment"]
+    ls = term["lessons"]
     live = term["id"] == reading_term
-    rows, week = [], None
-    for l in term["lessons"]:
-        if l["week"] != week:
-            week = l["week"]
-            rows.append(f'<tr class="wkrow"><th colspan="4" scope="rowgroup">Week {week}</th></tr>')
-        cls = []
-        if live and l["number"] == current_no:
-            cls.append("now")
-        elif live and current_no is not None and l["number"] < current_no:
-            cls.append("done")
-        if is_assessment(l):
-            cls.append("at")
-        # The rows that have a page are the exception at the moment, so the page
-        # says how many once at the top rather than tagging the other 29.
-        title = e(l["title"])
-        if l.get("body"):
-            title = f'<a href="{site["base"]}/{term["id"]}/{l["number"]:02d}/">{title}</a>'
-        rows.append(f'<tr class="{" ".join(cls)}">'
-                    f'<td class="n mono">{l["number"]:02d}</td>'
-                    f'<td class="ti">{title}</td>'
-                    f'<td class="cd mono">{e(l["contentCode"])}</td>'
-                    f'<td class="oc mono">{e(" ".join(l["outcomes"]))}</td></tr>')
+    hd = S.head(term["name"], kicker=f'Term {term["n"]} · Unit {term["n"]} of 4',
+                meta=f'{term["focus"]} · {len(ls)} lessons')
 
-    built = sum(1 for l in term["lessons"] if l.get("body"))
-    if built == 0:
-        state = "No input has a page on the site yet."
-    elif built == len(term["lessons"]):
-        state = "Every input has a page."
-    elif built == 1:
-        state = "One input has a page so far."
-    else:
-        state = f"{built} inputs have a page so far."
+    # Where the class is up to, said on every hub. A hub for another term says
+    # that it is not this one and points across.
+    cur_t = next(t for t in TERMS if t["id"] == reading_term)
+    cur = next((l for l in cur_t["lessons"] if l["number"] == current_no), None)
+    up = ""
+    if cur:
+        k = f'Lesson {current_no:02d} of {len(cur_t["lessons"])} · Week {cur["week"]}'
+        lead = ""
+        if not live:
+            k = f'Term {cur_t["n"]}, {cur_t["name"]} · {k}'
+            lead = (f'{term["name"]} is done. The class has moved on to Term {cur_t["n"]}.'
+                    if term["n"] < cur_t["n"] else
+                    f'{term["name"]} has not started yet. The class is in Term {cur_t["n"]}.')
+        up = S.upto(cur["title"], base=base, kicker=k, lead=lead,
+                    href=f'/{cur_t["id"]}/{current_no:02d}/' if cur.get("body") else None)
 
-    # Where the class is, stated in words as well as marked on the strip.
-    if live and current_no is not None:
-        cur = next((l for l in term["lessons"] if l["number"] == current_no), None)
-        standing = (f'<p class="standing"><span class="strip">On the desk</span>'
-                    f'<span class="mono">Input {current_no:02d}</span>'
-                    f'<span>{e(cur["title"])}</span></p>') if cur else ""
-    else:
-        standing = ('<p class="standing"><span class="mono">Not the current unit</span>'
-                    f'<span>{state}</span></p>')
+    plan = S.section("plan", plots.SHEET_NAME[term["n"]].capitalize(), "plot", None,
+                     f'<div class="plan-scroll">{plots.large(term["n"])}</div>')
+    at = S.assessment(a["name"], kind=a["type"], issued=a["issued"], due=a["due"],
+                      weighting=a["weighting"])
 
-    blueprint = ""
-    if term.get("blueprint"):
-        parts = [f'<a href="{site["base"]}/{term["id"]}/blueprint/{b["slug"]}/">{e(b["title"])}</a>'
-                 for b in term["blueprint"] if b.get("built")]
-        waiting = [b for b in term["blueprint"] if not b.get("built")]
-        if waiting:  # one line, as on the rail
-            names = ", ".join(e(b["title"]) for b in waiting)
-            parts.append(f'<span class="soon">{names}<i>not on the site yet</i></span>')
-        blueprint = f'<div class="bpbar"><b>The blueprint</b><div>{"".join(parts)}</div></div>'
-
-    body = f"""<main class="termpage" id="main">
-  <div class="termhead">
-    <p class="of mono">Unit {term['n']} of 4 &middot; {len(term['lessons'])} inputs</p>
-    <h1>{e(term['name'])}</h1>
-    <p class="focus">{e(term['focus'])}</p>
-    {standing}
-  </div>
-
-  <div class="plan">
-    <div class="planinner">
-      <div class="sheet">{plots.large(term["n"])}</div>
-      {multicore(site, term, current_no, live)}
-    </div>
-  </div>
-
-  <div class="atbar">
-    <span class="lbl">{e(a['name'])}</span>
-    <span>{e(a['type'])}</span>
-    <span class="mono">Issued {e(a['issued'])} &middot; due {e(a['due'])} &middot; {e(a['weighting'])}</span>
-    <span>Task and rubric in Canvas</span>
-  </div>
-  {blueprint}
-
-  <h2 class="listhead">Every input<i class="mono">{state}</i></h2>
-  <table class="inputs">
-    <thead><tr><th>CH</th><th>Input</th><th>Content</th><th class="oc">Outcomes</th></tr></thead>
-    <tbody>{"".join(rows)}</tbody>
-  </table>
-</main>"""
-    return layout(site, course, TERMS, term["name"], body,
-                  f"{term['name']}, input by input.", term=term, active_id=term["id"])
+    built = sum(1 for l in ls if l.get("body"))
+    note = "" if built == len(ls) else f"{built} of {len(ls)} lessons have a page so far."
+    sched = S.schedule(term_schedule(term, current_no if live else None), base=base,
+                       label="Every lesson", note=note)
+    return S.page(shell_site(site, course), title=term["name"], body=hd + up + plan + at + sched,
+                  description=f"{term['name']}, lesson by lesson.",
+                  crumbs=[("Home", "/"), (term["name"], None)], nav_current=term["id"],
+                  extras=blueprint_card(site, term))
 
 
 # --------------------------------------------------------- the blueprint sheet

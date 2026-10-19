@@ -28,6 +28,8 @@ and a 4px painted keyline for what bounds. At this viewBox the page renders
 about 1:1, so 1 and 4 here are 1px and 4px on the floor.
 """
 
+import re
+
 # ---------------------------------------------------------------- the frame
 
 VB_W, VB_H = 1200, 360
@@ -41,14 +43,18 @@ SH_X, SH_Y, SH_W, SH_H = 60, 92, 1080, 250
 SH_R = SH_X + SH_W                # 1140
 SH_B = SH_Y + SH_H                # 342, the edge the multicore plugs into
 
-CHALK = "#F2F1EC"
-DIM = "#8E8F8B"
-INK = "#141517"
-# The ghost line. Comp B drew the other units at 7 to 10 percent, which is about
-# 1.1:1 on this floor and simply is not there. This is 26 percent, about 2.4:1,
-# and the dash rather than the fade is what carries "not live" (rule 3: a state
-# never rests on the contrast step alone).
-GHOST = "rgba(242,241,236,.26)"
+# Ink on a white card since the shared shell (19 October 2026). The drawings
+# were chalk on the old black floor; the names stay, so CHALK is now the line
+# and the lettering, DIM the labels, and INK the knock-out on a filled shape.
+# The same treatment small_stage() got. The Two Grounds Rule still holds: the
+# ground decides the ink.
+CHALK = "#141517"
+DIM = "#5D5F63"
+INK = "#FFFFFF"
+# The ghost line: the other three units. At 34 percent on white it is about
+# 2.4:1, the contrast the chalk version was tuned to, and the dash rather than
+# the fade is what carries "not live" (a state never rests on contrast alone).
+GHOST = "rgba(20,21,23,.34)"
 
 UNIT_SHORT = {1: "Like a Version", 2: "Blues to Jazz",
               3: "Sounds of Australia", 4: "Level Up"}
@@ -76,17 +82,19 @@ def _ghosts(live_n):
             f'<path d="M{x1} {SH_Y} L{x1} {top} L{x2} {top} L{x2} {SH_Y}" '
             f'fill="none" stroke="{GHOST}" stroke-width="1" stroke-dasharray="5 5"/>'
             f'<text x="{x1 + 10}" y="{top - 7}" fill="{DIM}" '
-            f'font-family="Chivo Mono, monospace" font-size="12" '
+            f'font-family="Atkinson Hyperlegible, sans-serif" font-size="12" '
             f'letter-spacing="1.4">{n} {UNIT_SHORT[n]}</text>')
     return "".join(out)
 
 
 def _sheet(n):
-    """The bounded sheet, its name, and the 4px edge along the bottom.
+    """The bounded sheet and the 4px edge along the bottom, with the other
+    three units stacked behind it. The edge was where the multicore strip
+    plugged in on the old hub; the strip retired with the shell, and the edge
+    stays as the world's second line weight.
 
-    Production paperwork is always labelled with what it is, in a corner, so the
-    person holding six sheets can find the right one. That is the job of the
-    name in the top left; it is not a caption.
+    Production paperwork is labelled with what it is, in a corner. On the shell
+    the card's label does that job, so the sheet carries no name of its own.
     """
     return (
         f'{_ghosts(n)}'
@@ -94,9 +102,10 @@ def _sheet(n):
         f'fill="none" stroke="{CHALK}" stroke-width="1"/>'
         f'<line x1="{SH_X}" y1="{SH_B}" x2="{SH_R}" y2="{SH_B}" '
         f'stroke="{CHALK}" stroke-width="4"/>'
-        f'<text x="{SH_X + 14}" y="{SH_Y + 22}" fill="{DIM}" '
-        f'font-family="Chivo, sans-serif" font-size="10" letter-spacing="2.6">'
-        f'{SHEET_NAME[n]}</text>')
+''
+        # The sheet's name was here, in its corner. On the shell the card's own
+        # label names it, so the drawing would say it twice (as small_stage found).
+        )
 
 
 def _tag(x, y, num):
@@ -105,12 +114,12 @@ def _tag(x, y, num):
     return (f'<rect x="{x}" y="{y}" width="19" height="16" fill="none" '
             f'stroke="{CHALK}" stroke-width="1"/>'
             f'<text x="{x + 9.5}" y="{y + 12}" fill="{CHALK}" '
-            f'font-family="Chivo Mono, monospace" font-size="11" '
+            f'font-family="Atkinson Hyperlegible, sans-serif" font-size="11" '
             f'text-anchor="middle">{num}</text>')
 
 
 def _lbl(x, y, text, anchor="middle", size=10):
-    return (f'<text x="{x}" y="{y}" fill="{DIM}" font-family="Chivo, sans-serif" '
+    return (f'<text x="{x}" y="{y}" fill="{DIM}" font-family="Atkinson Hyperlegible, sans-serif" '
             f'font-size="{size}" text-anchor="{anchor}" letter-spacing="2.2">{text}</text>')
 
 
@@ -189,11 +198,13 @@ def unit2():
     # A chart is written at reading width and centred on the page, not stretched
     # to the full sheet. Bars this wide stop reading as bars.
     left, right = 200, 1000
-    o.append(f'<text x="{left}" y="{SH_Y + 40}" fill="{CHALK}" '
-             f'font-family="Chivo, sans-serif" font-size="16" font-weight="700" '
+    # The heading sits high, where the sheet's corner name used to be, so the
+    # larger hub type (TYPE_SCALE) clears the first system's chord symbols.
+    o.append(f'<text x="{left}" y="{SH_Y + 26}" fill="{CHALK}" '
+             f'font-family="Atkinson Hyperlegible, sans-serif" font-size="16" font-weight="700" '
              f'letter-spacing="1.2">12-bar blues in F</text>')
-    o.append(f'<text x="{right}" y="{SH_Y + 40}" fill="{DIM}" '
-             f'font-family="Chivo Mono, monospace" font-size="12" '
+    o.append(f'<text x="{right}" y="{SH_Y + 26}" fill="{DIM}" '
+             f'font-family="Atkinson Hyperlegible, sans-serif" font-size="12" '
              f'text-anchor="end" letter-spacing="1.4">swing &#183; 4/4</text>')
 
     barw = (right - left) / 4
@@ -207,10 +218,10 @@ def unit2():
             o.append(f'<line x1="{bx:.1f}" y1="{y - 15}" x2="{bx:.1f}" y2="{y + 15}" '
                      f'stroke="{CHALK}" stroke-width="1"/>')
             o.append(f'<text x="{bx + 10:.1f}" y="{y - 23}" fill="{CHALK}" '
-                     f'font-family="Chivo, sans-serif" font-size="15" '
+                     f'font-family="Atkinson Hyperlegible, sans-serif" font-size="15" '
                      f'font-weight="700">{chords[i]}</text>')
             o.append(f'<text x="{bx + barw / 2:.1f}" y="{y + 29}" fill="{DIM}" '
-                     f'font-family="Chivo Mono, monospace" font-size="11" '
+                     f'font-family="Atkinson Hyperlegible, sans-serif" font-size="11" '
                      f'text-anchor="middle" letter-spacing="1">{romans[i]}</text>')
             # four beats, written as slashes, which is what a chart puts there
             for s in range(4):
@@ -259,11 +270,11 @@ def unit3():
     # the seat, and the sixty degrees at it
     o.append(f'<rect x="{px - 16}" y="{py - 14}" width="32" height="28" fill="{CHALK}"/>')
     o.append(f'<text x="{px}" y="{py + 6}" fill="{INK}" '
-             f'font-family="Chivo Mono, monospace" font-size="14" '
+             f'font-family="Atkinson Hyperlegible, sans-serif" font-size="14" '
              f'text-anchor="middle">1</text>')
     o.append(f'<path d="M{px - 26} {py - 46} A 52 52 0 0 1 {px + 26} {py - 46}" {st}/>')
     o.append(f'<text x="{px}" y="{py - 54}" fill="{CHALK}" '
-             f'font-family="Chivo Mono, monospace" font-size="13" '
+             f'font-family="Atkinson Hyperlegible, sans-serif" font-size="13" '
              f'text-anchor="middle">60&#176;</text>')
     o.append(_lbl(px, py + 34, "THE SEAT YOU LISTEN FROM"))
     o.append(_lbl(px, sy - 40, "ALL THREE SIDES THE SAME LENGTH", size=9))
@@ -295,7 +306,7 @@ def unit4():
         anchor = "start" if i == 0 else "end" if i == 4 else "middle"
         o.append(f'<text x="{x + (4 if i == 0 else -4 if i == 4 else 0):.1f}" '
                  f'y="{SH_Y + 20}" fill="{CHALK}" '
-                 f'font-family="Chivo Mono, monospace" font-size="11" '
+                 f'font-family="Atkinson Hyperlegible, sans-serif" font-size="11" '
                  f'text-anchor="{anchor}">{t}</text>')
         if 0 < i < 4:
             o.append(f'<line x1="{x:.1f}" y1="{SH_Y + 26}" x2="{x:.1f}" y2="{SH_B}" '
@@ -311,7 +322,7 @@ def unit4():
         mid = y + rowh / 2
         o.append(_tag(SH_X + 16, mid - 8, i + 1))
         o.append(f'<text x="{SH_X + 46}" y="{mid + 4:.1f}" fill="{DIM}" '
-                 f'font-family="Chivo, sans-serif" font-size="11" '
+                 f'font-family="Atkinson Hyperlegible, sans-serif" font-size="11" '
                  f'letter-spacing="2.2">{s}</text>')
         for q in plays[i]:
             x = gx + gw * q / 4
@@ -343,10 +354,22 @@ ALT = {
 }
 
 
+# The lettering was sized for the old hub, where the drawing ran about 1080px
+# wide. In a shell card it runs about 890, so 10-unit labels came out near 7px.
+# Scaling the type here, once, keeps every drawing's geometry as it was drawn.
+TYPE_SCALE = 1.35
+
+
+def _scale_type(svg):
+    def up(m):
+        return f'{m.group(1)}="{float(m.group(2)) * TYPE_SCALE:.3g}"'
+    return re.sub(r'(font-size|letter-spacing)="([\d.]+)"', up, svg)
+
+
 def large(n):
     """The sheet for unit n, at hub scale."""
     return (f'<svg class="plot-large" viewBox="0 0 {VB_W} {VB_H}" '
-            f'role="img" aria-label="{ALT[n]}">{LARGE[n]()}</svg>')
+            f'role="img" aria-label="{ALT[n]}">{_scale_type(LARGE[n]())}</svg>')
 
 
 # ----------------------------------------------------------- the small plate
