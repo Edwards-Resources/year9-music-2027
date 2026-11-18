@@ -285,7 +285,7 @@
      },
      {
       "kind": "On your own",
-      "text": "Two dot points on melody, written to time. Precision about one element beats vagueness about four."
+      "text": "Fill the prompted pitch grid while you listen. Then two dot points on melody, written to time. Precision about one element beats vagueness about four."
      }
     ],
     "criteria": [
@@ -304,6 +304,10 @@
      {
       "n": "R3",
       "text": "Timer"
+     },
+     {
+      "n": "R4",
+      "text": "Element grid: pitch, prompted"
      }
     ],
     "explain": {
@@ -504,7 +508,7 @@
      },
      {
       "kind": "On your own",
-      "text": "Two dot points, written to time and marked against the criteria. One element each, as always."
+      "text": "Fill the prompted grids for texture and for timbre while you listen. Then two dot points, written to time and marked against the criteria. One element each, as always."
      }
     ],
     "criteria": [
@@ -523,6 +527,10 @@
      {
       "n": "R3",
       "text": "Timer"
+     },
+     {
+      "n": "R4",
+      "text": "Element grids: texture, and performing media and timbre, prompted"
      }
     ],
     "explain": {
@@ -586,7 +594,7 @@
      },
      {
       "kind": "On your own",
-      "text": "Timed writing under examination conditions, one dot point on each of the two."
+      "text": "Fill the prompted grids for structure and duration while you listen. Then timed writing under examination conditions, one dot point on each of the two."
      }
     ],
     "criteria": [
@@ -612,6 +620,10 @@
      {
       "n": "R3",
       "text": "AT3 criteria"
+     },
+     {
+      "n": "R4",
+      "text": "Element grids: structure and duration, prompted"
      }
     ],
     "explain": {
@@ -975,7 +987,7 @@
      },
      {
       "kind": "On your own",
-      "text": "Timed writing on one element. Correct attribution is part of the analysis, not an afterthought to it."
+      "text": "Timed writing on one element, on the blank grid. Write in what to listen for before the first playing. Correct attribution is part of the analysis, not an afterthought to it."
      }
     ],
     "criteria": [
@@ -994,6 +1006,10 @@
      {
       "n": "R3",
       "text": "Timer"
+     },
+     {
+      "n": "R4",
+      "text": "Element grid, blank, for the element being examined"
      }
     ]
    }
@@ -1351,7 +1367,7 @@
      },
      {
       "kind": "On your own",
-      "text": "Timed writing, marked against the criteria. The concert tradition is one Australian music among several."
+      "text": "Timed writing on the blank grids for the two elements, marked against the criteria. The concert tradition is one Australian music among several."
      }
     ],
     "criteria": [
@@ -1377,6 +1393,10 @@
      {
       "n": "R3",
       "text": "Timer"
+     },
+     {
+      "n": "R4",
+      "text": "Element grids, blank, for the two elements"
      }
     ]
    }
@@ -1420,7 +1440,7 @@
      },
      {
       "kind": "On your own",
-      "text": "Full timed response, marked and returned this lesson. Nothing is gained by holding it over to next week."
+      "text": "Full timed response on a blank grid, marked and returned this lesson. Nothing is gained by holding it over to next week."
      }
     ],
     "criteria": [
@@ -1439,6 +1459,10 @@
      {
       "n": "R3",
       "text": "AT3 criteria"
+     },
+     {
+      "n": "R4",
+      "text": "Element grid, blank"
      }
     ],
     "explain": {
