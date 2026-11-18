@@ -466,7 +466,7 @@
   {
    "number": 7,
    "week": 3,
-   "title": "One element per dot point: texture and tone colour",
+   "title": "One element per dot point: texture and timbre",
    "contentCode": "L20",
    "contentPoint": "Analysing elements in repertoire",
    "assessmentEvent": false,
@@ -474,12 +474,12 @@
     "MU5-LIS-01",
     "MU5-LIS-02"
    ],
-   "intention": "We are learning to analyse texture and tone colour precisely.",
+   "intention": "We are learning to analyse texture and timbre precisely.",
    "criteria": [
     "I can describe the layers in an excerpt and what each contributes."
    ],
    "steps": [
-    "Texture and tone colour analysed in three Australian works: how many layers, what each is doing, and what each sound source contributes.",
+    "Texture and timbre analysed in three Australian works: how many layers, what each is doing, and what each sound source contributes.",
     "Layer-by-layer listening with the mix isolated where recordings allow.",
     "Timed writing: two dot points, marked against the criteria."
    ],
@@ -490,13 +490,13 @@
    ],
    "enduring": "Texture is countable, and counting it is where the analysis starts.",
    "body": {
-    "lead": "We are learning to analyse texture and tone colour precisely.",
+    "lead": "We are learning to analyse texture and timbre precisely.",
     "repertoire": "Music of Australia",
     "bring": "Headphones and log",
     "clauses": [
      {
       "kind": "In the room",
-      "text": "Texture and tone colour in three Australian works: how many layers there are, what each one is doing, and what each sound source contributes."
+      "text": "Texture and timbre in three Australian works: how many layers there are, what each one is doing, and what each sound source contributes."
      },
      {
       "kind": "In the room",
@@ -535,7 +535,7 @@
        "ul": [
         "**Count the layers.** Melody, harmony, bass, percussion — isolate each one in turn if the recording allows it, and say how many are sounding at once.",
         "**Say what each layer is doing.** A layer can carry the melody, fill harmony underneath, mark the pulse, or add colour without doing any of those three. Two layers doing the same job is a different texture from two layers each doing something different.",
-        "**Tone colour is the source, not the pitch.** A guitar and a piano can play the same note and sound completely different — that difference is tone colour, and it needs its own vocabulary rather than being folded into “instrumentation”."
+        "**Timbre is the quality, not the instrument.** A guitar and a piano can play the same note and sound completely different. Naming the instrument is the performing media half of the element. Timbre is the other half: what that sound is like, in its own words, such as bright, breathy, distorted or hollow."
        ]
       },
       {
@@ -697,14 +697,14 @@
      }
     ],
     "worked": {
-     "question": "Describe the tone colour in the opening of the excerpt.",
+     "question": "Describe the timbre in the opening of the excerpt.",
      "marks": "2 marks",
      "brief": "Both of these are the length students actually write, and one of them is worth nothing. The difference is not effort and it is not vocabulary. It is whether the sentence could have been written by someone who never heard the excerpt.",
-     "model": "Bright and thin tone colour in the opening: one clean electric guitar with no distortion, high in its range, playing on its own for about eight bars before anything else comes in.",
+     "model": "Bright and thin timbre in the opening: one clean electric guitar with no distortion, high in its range, playing on its own for about eight bars before anything else comes in.",
      "rungs": [
       {
        "move": "Identify",
-       "text": "Name the quality, in words that belong to tone colour. _Bright and thin._ This is the first mark and it is the one most often thrown away, because “a nice sound” names no quality at all and could sit under any excerpt in the paper."
+       "text": "Name the quality, in words that belong to timbre. _Bright and thin._ This is the first mark and it is the one most often thrown away, because “a nice sound” names no quality at all and could sit under any excerpt in the paper."
       },
       {
        "move": "Describe",
@@ -712,7 +712,7 @@
       }
      ],
      "zero": {
-      "answer": "The tone colour in the opening is very effective and creates a great atmosphere for the piece.",
+      "answer": "The timbre in the opening is very effective and creates a great atmosphere for the piece.",
       "why": "It reads like an answer, it is a whole sentence, and it earns nothing. Nothing in it could only have been written by someone who heard this excerpt: put any other opening under it and the sentence still stands. **Effect without a named sound is the most common way a full page of writing earns no marks at all**, and it is the thing to check for first when you mark somebody else's response today."
      }
     }

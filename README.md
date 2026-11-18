@@ -85,7 +85,7 @@ own where it is not:
 
 ```json
 "worked": {
-  "question": "Describe the tone colour in the opening of the excerpt.",
+  "question": "Describe the timbre in the opening of the excerpt.",
   "marks": "2 marks",
   "brief": "...",
   "model": "the answer that works",

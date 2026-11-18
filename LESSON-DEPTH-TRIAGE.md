@@ -126,7 +126,7 @@ explains, which is the highest of the four terms and is the right answer.
 | 02 | 1 | The well-formed dot point, taught explicitly | **A** | The same three parts as T1 #11, now in examination form and against the AT3 criteria. Not a repeat: T1 teaches the shape, T3 teaches what a marker does with it. |
 | 04 | 2 | One element per dot point: pitch and melody | **A** | Range, contour, interval shape, and where the melody sits in the texture. Element vocabulary, and the paper asks for it by name. |
 | 05 | 2 | Identity in a song | B | How the music rather than the lyric carries whose experience a work is about. |
-| 07 | 3 | Texture and tone colour | **A** | Layer counting, the texture terms, and tone colour descriptors that are not "nice". |
+| 07 | 3 | Texture and timbre | **A** | Layer counting, the texture terms, and timbre descriptors that are not "nice". |
 | 08 | 3 | Structure and duration in the same excerpt | **A** | Section labels and form on one side, metre, tempo and the use of time on the other, kept apart. |
 | 09 | 3 | Marking a dot point against the criteria | **A** | What separates a mark from no mark, shown rather than described. **Wants a worked model inside it**, see the block-type question below. |
 | 11 | 4 | Protocols first | **A** | The protocols themselves, in full. Highest-value explain in the term, because the repertoire cannot be named and so the page has to carry the protocol or carry nothing. **Names no works.** |
