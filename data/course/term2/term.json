@@ -536,20 +536,21 @@
     "clauses": [
      {
       "kind": "In the room",
-      "text": "The aural routine carries on from Term 1 with this term's content: straight quavers against swung ones, told apart by ear."
+      "text": "Straight quavers against swung ones. Count 1-trip-let, 2-trip-let under the music. If the second quaver of each pair lands on “let”, it swings. If it lands between “trip” and “let”, it's straight. Then play the blues scale both ways and hear the difference."
      },
      {
       "kind": "In the room",
-      "text": "Syncopation and the backbeat are named in short excerpts, then clapped straight back."
+      "text": "Test for syncopation: clap on beats 1 and 3 while the melody plays, and count how many melody notes start with your clap. If most do, the melody sits on the beat. If very few do, it's syncopated. Then find the backbeat by clapping 2 and 4 with the snare, and clap each excerpt back."
      },
      {
       "kind": "In flat.io",
-      "text": "Write the week's routine into your aural notebook. Name what you heard rather than what it felt like."
+      "text": "Write each excerpt into your aural notebook with the test you used and what it showed. Name what you heard rather than what it felt like."
      }
     ],
     "criteria": [
      "I can tell a swung excerpt from a straight one.",
-     "I can say what makes it swing."
+     "I can say what makes it swing.",
+     "I can test a melody for syncopation by clapping on 1 and 3."
     ],
     "patched": [
      {
@@ -570,12 +571,12 @@
       {
        "ul": [
         "**Swing** is a rhythmic feel: quavers played unevenly, the first of each pair held slightly longer than the second, instead of split evenly. It changes how the beat feels without changing which notes are played.",
-        "**Syncopation** is an accent landing where you don't expect it — off the beat, or on a normally weak part of the bar — so the rhythm pulls against the pulse rather than sitting on it.",
+        "**Syncopation** is an accent landing where you don't expect it: off the beat, or on a normally weak part of the bar. The rhythm pulls against the pulse rather than sitting on it.",
         "**The backbeat** is a specific accent on beats 2 and 4 of a 4/4 bar, almost always carried by the snare drum. It is what makes you nod on the “off” beats rather than the strong ones."
        ]
       },
       {
-       "p": "A piece can swing without being syncopated, and can be heavily syncopated while played perfectly straight. Telling them apart by ear means asking three separate questions of what you're hearing — is the quaver pair even, is an accent in an unexpected place, is beat 2 and 4 marked — rather than one general impression of “groovy”."
+       "p": "A piece can swing without being syncopated, and can be heavily syncopated while played perfectly straight. Telling them apart by ear means asking three separate questions of what you're hearing, rather than settling for one general impression of “groovy”. Is the quaver pair even? Is an accent in an unexpected place? Are beats 2 and 4 marked?"
       }
      ]
     }
