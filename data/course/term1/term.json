@@ -532,6 +532,10 @@
       "text": "The class piece is played three times: once too loud, once with the melody buried, once balanced. You name the difference rather than being told it."
      },
      {
+      "kind": "With the band",
+      "text": "Build the class piece up one section at a time: drums, then bass, then chords, then the melody. As each section comes in, say what job it does: rhythmic, harmonic or melodic. Then drop one section at a time while the rest keep playing, and say what the song lost."
+     },
+     {
       "kind": "In the room",
       "text": "Amp and PA levels are then set as a decision. Where the knob was left last time is not a reason."
      },
@@ -542,7 +546,8 @@
     ],
     "criteria": [
      "I can hear when the important part is buried.",
-     "I can adjust my own volume to fix it."
+     "I can adjust my own volume to fix it.",
+     "I can say what job my part does in the band."
     ],
     "patched": [
      {
